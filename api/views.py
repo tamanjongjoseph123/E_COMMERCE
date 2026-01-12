@@ -1,0 +1,523 @@
+from rest_framework import viewsets, status, generics, permissions
+from rest_framework.decorators import action, api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.db.models import Q, Sum
+from django.db import transaction as db_transaction
+from decimal import Decimal
+
+from .models import (
+    User, Seller, Category, Product, Cart, CartItem,
+    Order, OrderItem, Wallet, Transaction
+)
+from .serializers import (
+    UserSerializer, RegisterSerializer, LoginSerializer, SellerSerializer,
+    CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer,
+    OrderSerializer, WalletSerializer, TransactionSerializer, ProfileSerializer
+)
+
+
+class IsAdmin(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user and request.user.is_authenticated and (request.user.is_admin or request.user.is_superuser)
+
+
+class IsSeller(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user and request.user.is_authenticated and request.user.is_seller
+
+
+class IsBuyer(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user and request.user.is_authenticated and request.user.is_buyer
+
+
+# Authentication Views
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def register(request):
+    serializer = RegisterSerializer(data=request.data)
+    if serializer.is_valid():
+        user = serializer.save()
+        refresh = RefreshToken.for_user(user)
+        return Response({
+            'success': True,
+            'message': 'Registration successful. Please wait for admin approval if you are a seller.',
+            'data': {
+                'user': UserSerializer(user).data,
+                'tokens': {
+                    'refresh': str(refresh),
+                    'access': str(refresh.access_token),
+                }
+            }
+        }, status=status.HTTP_201_CREATED)
+    return Response({
+        'success': False,
+        'message': 'Registration failed',
+        'errors': serializer.errors
+    }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def login(request):
+    serializer = LoginSerializer(data=request.data)
+    if serializer.is_valid():
+        user = serializer.validated_data['user']
+        refresh = RefreshToken.for_user(user)
+        return Response({
+            'success': True,
+            'message': 'Login successful',
+            'data': {
+                'user': UserSerializer(user).data,
+                'tokens': {
+                    'refresh': str(refresh),
+                    'access': str(refresh.access_token),
+                }
+            }
+        }, status=status.HTTP_200_OK)
+    return Response({
+        'success': False,
+        'message': 'Login failed',
+        'errors': serializer.errors
+    }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def refresh_token(request):
+    refresh_token = request.data.get('refresh')
+    if not refresh_token:
+        return Response({
+            'success': False,
+            'message': 'Refresh token is required'
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    try:
+        refresh = RefreshToken(refresh_token)
+        return Response({
+            'success': True,
+            'message': 'Token refreshed successfully',
+            'data': {
+                'access': str(refresh.access_token),
+            }
+        }, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Invalid refresh token',
+            'error': str(e)
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+# Admin Views
+class SellerApprovalViewSet(viewsets.ModelViewSet):
+    queryset = Seller.objects.all()
+    serializer_class = SellerSerializer
+    permission_classes = [IsAdmin]
+    
+    def get_queryset(self):
+        status_filter = self.request.query_params.get('status', None)
+        queryset = Seller.objects.all()
+        if status_filter:
+            queryset = queryset.filter(approval_status=status_filter)
+        return queryset.select_related('user')
+    
+    @action(detail=True, methods=['post'])
+    def approve(self, request, pk=None):
+        seller = self.get_object()
+        seller.approval_status = 'approved'
+        seller.save()
+        return Response({
+            'success': True,
+            'message': 'Seller approved successfully',
+            'data': self.get_serializer(seller).data
+        })
+    
+    @action(detail=True, methods=['post'])
+    def reject(self, request, pk=None):
+        seller = self.get_object()
+        seller.approval_status = 'rejected'
+        seller.save()
+        return Response({
+            'success': True,
+            'message': 'Seller rejected',
+            'data': self.get_serializer(seller).data
+        })
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    
+    def get_permissions(self):
+        if self.action in ['create', 'update', 'destroy']:
+            return [IsAdmin()]
+        return [AllowAny()]
+    
+    def get_queryset(self):
+        # For public access, only show active categories
+        # Admins can see all categories
+        if self.request.user.is_authenticated and (self.request.user.is_admin or self.request.user.is_superuser):
+            return Category.objects.all()
+        return Category.objects.filter(is_active=True)
+    
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user, is_active=True)
+    
+    @action(detail=True, methods=['get'])
+    def products(self, request, pk=None):
+        category = self.get_object()
+        products = Product.objects.filter(category=category, is_active=True)
+        serializer = ProductSerializer(products, many=True, context={'request': request})
+        return Response({
+            'success': True,
+            'message': f'Products in {category.name}',
+            'data': serializer.data
+        })
+
+
+class UserManagementViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAdmin]
+    
+    def get_queryset(self):
+        role_filter = self.request.query_params.get('role', None)
+        queryset = User.objects.all()
+        if role_filter:
+            queryset = queryset.filter(role=role_filter)
+        return queryset
+    
+    @action(detail=True, methods=['delete'])
+    def deactivate(self, request, pk=None):
+        user = self.get_object()
+        user.is_active = False
+        user.save()
+        return Response({
+            'success': True,
+            'message': 'User deactivated successfully'
+        })
+    
+    @action(detail=True, methods=['post'])
+    def activate(self, request, pk=None):
+        user = self.get_object()
+        user.is_active = True
+        user.save()
+        return Response({
+            'success': True,
+            'message': 'User activated successfully'
+        })
+
+
+@api_view(['GET'])
+@permission_classes([IsAdmin])
+def admin_wallets(request):
+    wallets = Wallet.objects.all().select_related('seller')
+    serializer = WalletSerializer(wallets, many=True, context={'request': request})
+    total_balance = wallets.aggregate(total=Sum('balance'))['total'] or Decimal('0.00')
+    
+    return Response({
+        'success': True,
+        'message': 'All seller wallets',
+        'data': {
+            'wallets': serializer.data,
+            'total_balance': float(total_balance)
+        }
+    })
+
+
+# Seller Views
+class SellerProductViewSet(viewsets.ModelViewSet):
+    serializer_class = ProductSerializer
+    permission_classes = [IsSeller]
+    
+    def get_queryset(self):
+        return Product.objects.filter(seller=self.request.user)
+    
+    def perform_create(self, serializer):
+        serializer.save(seller=self.request.user, is_active=True)
+    
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
+
+
+@api_view(['GET'])
+@permission_classes([IsSeller])
+def seller_wallet(request):
+    try:
+        wallet = Wallet.objects.get(seller=request.user)
+        serializer = WalletSerializer(wallet, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Wallet retrieved successfully',
+            'data': serializer.data
+        })
+    except Wallet.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Wallet not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['GET'])
+@permission_classes([IsSeller])
+def seller_categories(request):
+    """Fetch all available categories for sellers to use when creating products"""
+    categories = Category.objects.filter(is_active=True).order_by('name')
+    serializer = CategorySerializer(categories, many=True)
+    return Response({
+        'success': True,
+        'message': 'Available categories retrieved successfully',
+        'data': serializer.data
+    })
+
+
+# Buyer Views
+class ProductViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Product.objects.filter(is_active=True)
+    serializer_class = ProductSerializer
+    permission_classes = [AllowAny]
+    
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
+    
+    @action(detail=False, methods=['get'])
+    def search(self, request):
+        query = request.query_params.get('q', '')
+        if not query:
+            return Response({
+                'success': False,
+                'message': 'Search query is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        products = Product.objects.filter(
+            Q(name__icontains=query) | Q(description__icontains=query),
+            is_active=True
+        )
+        serializer = self.get_serializer(products, many=True)
+        return Response({
+            'success': True,
+            'message': f'Search results for "{query}"',
+            'data': serializer.data
+        })
+    
+    @action(detail=True, methods=['get'])
+    def seller_details(self, request, pk=None):
+        product = self.get_object()
+        seller = product.seller
+        seller_products = Product.objects.filter(seller=seller, is_active=True).exclude(id=product.id)[:5]
+        
+        return Response({
+            'success': True,
+            'message': 'Seller details retrieved',
+            'data': {
+                'seller': UserSerializer(seller).data,
+                'other_products': ProductSerializer(seller_products, many=True, context={'request': request}).data
+            }
+        })
+
+
+class CartViewSet(viewsets.ModelViewSet):
+    serializer_class = CartItemSerializer
+    permission_classes = [IsBuyer]
+    
+    def get_queryset(self):
+        cart, _ = Cart.objects.get_or_create(user=self.request.user)
+        return CartItem.objects.filter(cart=cart)
+    
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['request'] = self.request
+        return context
+    
+    def create(self, request, *args, **kwargs):
+        cart, _ = Cart.objects.get_or_create(user=request.user)
+        product_id = request.data.get('product_id')
+        quantity = int(request.data.get('quantity', 1))
+        
+        product = Product.objects.get(id=product_id)
+        
+        if product.stock < quantity:
+            return Response({
+                'success': False,
+                'message': f'Insufficient stock. Available: {product.stock}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        cart_item, created = CartItem.objects.get_or_create(
+            cart=cart,
+            product=product,
+            defaults={'quantity': quantity}
+        )
+        
+        if not created:
+            cart_item.quantity += quantity
+            if cart_item.quantity > product.stock:
+                return Response({
+                    'success': False,
+                    'message': f'Insufficient stock. Available: {product.stock}'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            cart_item.save()
+        
+        serializer = self.get_serializer(cart_item)
+        return Response({
+            'success': True,
+            'message': 'Item added to cart',
+            'data': serializer.data
+        }, status=status.HTTP_201_CREATED)
+    
+    @action(detail=True, methods=['patch'])
+    def update_quantity(self, request, pk=None):
+        cart_item = self.get_object()
+        quantity = int(request.data.get('quantity', 1))
+        
+        if quantity > cart_item.product.stock:
+            return Response({
+                'success': False,
+                'message': f'Insufficient stock. Available: {cart_item.product.stock}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        cart_item.quantity = quantity
+        cart_item.save()
+        
+        serializer = self.get_serializer(cart_item)
+        return Response({
+            'success': True,
+            'message': 'Cart item updated',
+            'data': serializer.data
+        })
+    
+    @action(detail=False, methods=['get'])
+    def cart_summary(self, request):
+        cart, _ = Cart.objects.get_or_create(user=request.user)
+        serializer = CartSerializer(cart, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Cart retrieved successfully',
+            'data': serializer.data
+        })
+
+
+@api_view(['POST'])
+@permission_classes([IsBuyer])
+def checkout(request):
+    cart, _ = Cart.objects.get_or_create(user=request.user)
+    cart_items = CartItem.objects.filter(cart=cart)
+    
+    if not cart_items.exists():
+        return Response({
+            'success': False,
+            'message': 'Cart is empty'
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    # Validate stock availability
+    for item in cart_items:
+        if item.quantity > item.product.stock:
+            return Response({
+                'success': False,
+                'message': f'Insufficient stock for {item.product.name}. Available: {item.product.stock}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+    
+    try:
+        with db_transaction.atomic():
+            # Create order
+            order = Order.objects.create(
+                buyer=request.user,
+                total_amount=cart.total_amount,
+                status='completed'
+            )
+            
+            # Create order items and update wallets
+            for cart_item in cart_items:
+                # Create order item
+                order_item = OrderItem.objects.create(
+                    order=order,
+                    product=cart_item.product,
+                    seller=cart_item.product.seller,
+                    quantity=cart_item.quantity,
+                    price=cart_item.product.price,
+                    subtotal=cart_item.subtotal
+                )
+                
+                # Update product stock
+                cart_item.product.stock -= cart_item.quantity
+                cart_item.product.save()
+                
+                # Update seller wallet
+                wallet, _ = Wallet.objects.get_or_create(seller=cart_item.product.seller)
+                wallet.balance += cart_item.subtotal
+                wallet.save()
+                
+                # Create transaction
+                Transaction.objects.create(
+                    wallet=wallet,
+                    order_item=order_item,
+                    amount=cart_item.subtotal,
+                    transaction_type='sale',
+                    description=f'Sale of {cart_item.product.name}'
+                )
+            
+            # Clear cart
+            cart_items.delete()
+            
+            order_serializer = OrderSerializer(order, context={'request': request})
+            return Response({
+                'success': True,
+                'message': 'Order placed successfully',
+                'data': order_serializer.data
+            }, status=status.HTTP_201_CREATED)
+    
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Checkout failed',
+            'error': str(e)
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([IsBuyer])
+def my_orders(request):
+    orders = Order.objects.filter(buyer=request.user).order_by('-created_at')
+    serializer = OrderSerializer(orders, many=True, context={'request': request})
+    return Response({
+        'success': True,
+        'message': 'Orders retrieved successfully',
+        'data': serializer.data
+    })
+
+
+# Profile Views (Buyer and Seller)
+@api_view(['GET', 'PUT', 'PATCH'])
+@permission_classes([IsAuthenticated])
+def profile(request):
+    """Get or update user profile"""
+    user = request.user
+    
+    if request.method == 'GET':
+        serializer = ProfileSerializer(user, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Profile retrieved successfully',
+            'data': serializer.data
+        })
+    
+    elif request.method in ['PUT', 'PATCH']:
+        serializer = ProfileSerializer(user, data=request.data, partial=request.method == 'PATCH', context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response({
+                'success': True,
+                'message': 'Profile updated successfully',
+                'data': serializer.data
+            })
+        return Response({
+            'success': False,
+            'message': 'Profile update failed',
+            'errors': serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
