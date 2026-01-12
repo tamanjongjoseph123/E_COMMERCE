@@ -149,7 +149,8 @@ e_commerce/
 **Authentication:** Buyer role required
 
 ### Product Browsing
-- `GET /api/products/` - List all active products
+- `GET /api/products/all/` - List all available products from sellers (with filtering, pagination)
+- `GET /api/products/` - List all active products (with filtering)
 - `GET /api/products/{id}/` - Get product details
 - `GET /api/products/search/?q=query` - Search products
 - `GET /api/products/{id}/seller_details/` - Get seller details and other products

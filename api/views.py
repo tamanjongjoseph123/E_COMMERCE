@@ -282,6 +282,44 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = ProductSerializer
     permission_classes = [AllowAny]
     
+    def get_queryset(self):
+        queryset = Product.objects.filter(is_active=True).select_related('seller', 'category')
+        
+        # Filter by seller if provided
+        seller_id = self.request.query_params.get('seller_id', None)
+        if seller_id:
+            queryset = queryset.filter(seller_id=seller_id)
+        
+        # Filter by category if provided
+        category_id = self.request.query_params.get('category_id', None)
+        if category_id:
+            queryset = queryset.filter(category_id=category_id)
+        
+        # Filter by price range
+        min_price = self.request.query_params.get('min_price', None)
+        max_price = self.request.query_params.get('max_price', None)
+        if min_price:
+            try:
+                queryset = queryset.filter(price__gte=float(min_price))
+            except ValueError:
+                pass
+        if max_price:
+            try:
+                queryset = queryset.filter(price__lte=float(max_price))
+            except ValueError:
+                pass
+        
+        # Ordering
+        ordering = self.request.query_params.get('ordering', None)
+        if ordering:
+            allowed_ordering = ['price', '-price', 'created_at', '-created_at', 'name', '-name']
+            if ordering in allowed_ordering:
+                queryset = queryset.order_by(ordering)
+        else:
+            queryset = queryset.order_by('-created_at')
+        
+        return queryset
+    
     def get_serializer_context(self):
         context = super().get_serializer_context()
         context['request'] = self.request
@@ -321,6 +359,81 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
                 'other_products': ProductSerializer(seller_products, many=True, context={'request': request}).data
             }
         })
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def list_all_products(request):
+    """
+    List all available products from sellers.
+    Supports filtering by seller, category, price range, and ordering.
+    """
+    queryset = Product.objects.filter(is_active=True).select_related('seller', 'category')
+    
+    # Get query parameters
+    seller_id = request.query_params.get('seller_id', None)
+    category_id = request.query_params.get('category_id', None)
+    min_price = request.query_params.get('min_price', None)
+    max_price = request.query_params.get('max_price', None)
+    ordering = request.query_params.get('ordering', '-created_at')
+    search_query = request.query_params.get('q', None)
+    
+    # Apply filters
+    if seller_id:
+        queryset = queryset.filter(seller_id=seller_id)
+    
+    if category_id:
+        queryset = queryset.filter(category_id=category_id)
+    
+    if min_price:
+        try:
+            queryset = queryset.filter(price__gte=float(min_price))
+        except ValueError:
+            pass
+    
+    if max_price:
+        try:
+            queryset = queryset.filter(price__lte=float(max_price))
+        except ValueError:
+            pass
+    
+    if search_query:
+        queryset = queryset.filter(
+            Q(name__icontains=search_query) | Q(description__icontains=search_query)
+        )
+    
+    # Apply ordering
+    allowed_ordering = ['price', '-price', 'created_at', '-created_at', 'name', '-name']
+    if ordering in allowed_ordering:
+        queryset = queryset.order_by(ordering)
+    else:
+        queryset = queryset.order_by('-created_at')
+    
+    # Get total count before pagination
+    total_count = queryset.count()
+    
+    # Pagination
+    page_size = int(request.query_params.get('page_size', 20))
+    page = int(request.query_params.get('page', 1))
+    
+    start = (page - 1) * page_size
+    end = start + page_size
+    
+    products = queryset[start:end]
+    
+    serializer = ProductSerializer(products, many=True, context={'request': request})
+    
+    return Response({
+        'success': True,
+        'message': 'All available products retrieved successfully',
+        'data': {
+            'products': serializer.data,
+            'total_count': total_count,
+            'page': page,
+            'page_size': page_size,
+            'total_pages': (total_count + page_size - 1) // page_size if total_count > 0 else 0
+        }
+    })
 
 
 class CartViewSet(viewsets.ModelViewSet):

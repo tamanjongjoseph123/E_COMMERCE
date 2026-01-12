@@ -642,9 +642,81 @@ profile_picture: <file>
 
 All buyer endpoints require buyer role authentication.
 
-### 24. List All Products
+### 24. List All Products from Sellers
+**Endpoint:** `GET /api/products/all/`  
+**Authentication:** Not required (public)
+
+**Description:** List all available products from all sellers with filtering and pagination support.
+
+**Query Parameters:**
+- `seller_id` (optional): Filter products by seller ID
+- `category_id` (optional): Filter products by category ID
+- `min_price` (optional): Minimum price filter
+- `max_price` (optional): Maximum price filter
+- `q` (optional): Search query (searches in name and description)
+- `ordering` (optional): Order results by `price`, `-price`, `created_at`, `-created_at`, `name`, `-name` (default: `-created_at`)
+- `page` (optional): Page number (default: 1)
+- `page_size` (optional): Items per page (default: 20)
+
+**Example Requests:**
+- `GET /api/products/all/` - Get all products
+- `GET /api/products/all/?category_id=1` - Get products in category 1
+- `GET /api/products/all/?seller_id=2` - Get products from seller 2
+- `GET /api/products/all/?min_price=100&max_price=500` - Get products between $100 and $500
+- `GET /api/products/all/?q=laptop` - Search for "laptop"
+- `GET /api/products/all/?ordering=price&page=1&page_size=10` - Get cheapest products, page 1, 10 per page
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "All available products retrieved successfully",
+  "data": {
+    "products": [
+      {
+        "id": 1,
+        "seller": {
+          "id": 2,
+          "email": "seller@example.com",
+          "name": "Jane Seller",
+          "role": "seller"
+        },
+        "category": {
+          "id": 1,
+          "name": "Electronics",
+          "description": "Electronic devices"
+        },
+        "name": "Laptop",
+        "description": "High-performance laptop",
+        "price": "999.99",
+        "stock": 10,
+        "image_url": "http://localhost:8000/media/products/laptop.jpg",
+        "created_at": "2024-01-01T00:00:00Z",
+        "is_active": true
+      }
+    ],
+    "total_count": 50,
+    "page": 1,
+    "page_size": 20,
+    "total_pages": 3
+  }
+}
+```
+
+---
+
+### 25. List All Products (Alternative)
 **Endpoint:** `GET /api/products/`  
 **Authentication:** Not required (public)
+
+**Description:** Alternative endpoint to list products. Supports filtering via query parameters.
+
+**Query Parameters:**
+- `seller_id` (optional): Filter by seller ID
+- `category_id` (optional): Filter by category ID
+- `min_price` (optional): Minimum price
+- `max_price` (optional): Maximum price
+- `ordering` (optional): Order by field (price, -price, created_at, -created_at, name, -name)
 
 **Response (Success - 200):**
 ```json
