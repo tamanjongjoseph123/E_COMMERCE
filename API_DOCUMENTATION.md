@@ -2,7 +2,7 @@
 
 ## Base URL
 ```
-http://localhost:8000/api/
+https://e-commerce-b0b1.onrender.com/api/
 ```
 
 ## Authentication
