@@ -1,4 +1,4 @@
-from django.db.models.signals import pre_delete, pre_save
+from django.db.models.signals import pre_delete, pre_save, post_save
 from django.dispatch import receiver
 from .models import User, Seller, Product
 
@@ -73,4 +73,11 @@ def delete_old_product_image(sender, instance, **kwargs):
             pass
         except Exception as e:
             print(f"Error deleting old product image: {e}")
+
+
+@receiver(pre_save, sender=User)
+def set_admin_role_for_superuser(sender, instance, **kwargs):
+    """Set role to 'admin' when user is a superuser"""
+    if instance.is_superuser:
+        instance.role = 'admin'
 
