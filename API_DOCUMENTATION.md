@@ -1,9 +1,6 @@
 # E-Commerce API Documentation
 
-## Base URL
-```
-https://e-commerce-b0b1.onrender.com/api/
-```
+
 
 ## Authentication
 All authenticated endpoints require a JWT token in the Authorization header:
@@ -232,18 +229,25 @@ All admin endpoints require admin role authentication.
 ```json
 {
   "name": "Electronics",
-  "description": "Electronic devices and accessories"
+  "description": "Electronic devices and accessories",
+  "image": "<file>"
 }
 ```
 
 **Response (Success - 201):**
 ```json
 {
-  "id": 1,
-  "name": "Electronics",
-  "description": "Electronic devices and accessories",
-  "created_at": "2024-01-01T00:00:00Z",
-  "created_by": 1
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Electronic devices and accessories",
+    "image": "/media/categories/electronics.jpg",
+    "image_url": "http://localhost:8000/media/categories/electronics.jpg",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "created_by": 1
+  }
 }
 ```
 
@@ -255,15 +259,21 @@ All admin endpoints require admin role authentication.
 
 **Response (Success - 200):**
 ```json
-[
-  {
-    "id": 1,
-    "name": "Electronics",
-    "description": "Electronic devices and accessories",
-    "created_at": "2024-01-01T00:00:00Z",
-    "created_by": 1
-  }
-]
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "description": "Electronic devices and accessories",
+      "image": "/media/categories/electronics.jpg",
+      "image_url": "http://localhost:8000/media/categories/electronics.jpg",
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "created_by": 1
+    }
+  ]
+}
 ```
 
 ---
@@ -276,7 +286,8 @@ All admin endpoints require admin role authentication.
 ```json
 {
   "name": "Updated Electronics",
-  "description": "Updated description"
+  "description": "Updated description",
+  "image": "<file>"
 }
 ```
 
@@ -542,6 +553,9 @@ image: <file>
       "id": 1,
       "name": "Electronics",
       "description": "Electronic devices and accessories",
+      "image": "/media/categories/electronics.jpg",
+      "image_url": "http://localhost:8000/media/categories/electronics.jpg",
+      "is_active": true,
       "created_at": "2024-01-01T00:00:00Z",
       "created_by": 1
     },
@@ -549,6 +563,9 @@ image: <file>
       "id": 2,
       "name": "Clothing",
       "description": "Apparel and fashion items",
+      "image": "/media/categories/clothing.jpg",
+      "image_url": "http://localhost:8000/media/categories/clothing.jpg",
+      "is_active": true,
       "created_at": "2024-01-01T00:00:00Z",
       "created_by": 1
     }

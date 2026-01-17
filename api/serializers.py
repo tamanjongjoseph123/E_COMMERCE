@@ -27,10 +27,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 class ProfileSerializer(serializers.ModelSerializer):
     profile_picture_url = serializers.SerializerMethodField()
+    seller_approval_status = serializers.SerializerMethodField()
     
     class Meta:
         model = User
-        fields = ['id', 'email', 'name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'date_joined', 'last_login']
+        fields = ['id', 'email', 'name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'date_joined', 'last_login', 'seller_approval_status']
         read_only_fields = ['id', 'email', 'role', 'date_joined', 'last_login']
     
     def get_profile_picture_url(self, obj):
@@ -39,6 +40,14 @@ class ProfileSerializer(serializers.ModelSerializer):
             if request:
                 return request.build_absolute_uri(obj.profile_picture.url)
             return obj.profile_picture.url
+        return None
+    
+    def get_seller_approval_status(self, obj):
+        if obj.role == 'seller':
+            try:
+                return obj.seller_profile.approval_status
+            except Seller.DoesNotExist:
+                return 'not_found'
         return None
 
 
@@ -131,7 +140,7 @@ class SellerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Seller
         fields = ['id', 'user', 'id_card', 'id_card_url', 'approval_status', 'created_at', 'updated_at']
-        read_only_fields = ['id', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'id_card', 'created_at', 'updated_at']
     
     def get_id_card_url(self, obj):
         if obj.id_card:
@@ -143,10 +152,20 @@ class SellerSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
+    
     class Meta:
         model = Category
-        fields = ['id', 'name', 'description', 'is_active', 'created_at', 'created_by']
+        fields = ['id', 'name', 'description', 'image', 'image_url', 'is_active', 'created_at', 'created_by']
         read_only_fields = ['id', 'created_at', 'created_by']
+    
+    def get_image_url(self, obj):
+        if obj.image:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(obj.image.url)
+            return obj.image.url
+        return None
 
 
 class ProductSerializer(serializers.ModelSerializer):

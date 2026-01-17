@@ -117,12 +117,26 @@ class SellerApprovalViewSet(viewsets.ModelViewSet):
     serializer_class = SellerSerializer
     permission_classes = [IsAdmin]
     
+    def create(self, request, *args, **kwargs):
+        return Response({
+            'success': False,
+            'message': 'Sellers can only be created through user registration'
+        }, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+    
     def get_queryset(self):
         status_filter = self.request.query_params.get('status', None)
         queryset = Seller.objects.all()
         if status_filter:
             queryset = queryset.filter(approval_status=status_filter)
         return queryset.select_related('user')
+    
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({
+            'success': True,
+            'data': serializer.data
+        })
     
     @action(detail=True, methods=['post'])
     def approve(self, request, pk=None):
@@ -163,6 +177,14 @@ class CategoryViewSet(viewsets.ModelViewSet):
             return Category.objects.all()
         return Category.objects.filter(is_active=True)
     
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({
+            'success': True,
+            'data': serializer.data
+        })
+    
     def perform_create(self, serializer):
         serializer.save(created_by=self.request.user, is_active=True)
     
@@ -189,6 +211,14 @@ class UserManagementViewSet(viewsets.ReadOnlyModelViewSet):
         if role_filter:
             queryset = queryset.filter(role=role_filter)
         return queryset
+    
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({
+            'success': True,
+            'data': serializer.data
+        })
     
     @action(detail=True, methods=['delete'])
     def deactivate(self, request, pk=None):
