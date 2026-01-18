@@ -22,6 +22,8 @@ urlpatterns = [
     # Seller endpoints
     path('seller/wallet/', views.seller_wallet, name='seller-wallet'),
     path('seller/categories/', views.seller_categories, name='seller-categories'),
+    path('seller/orders/', views.seller_orders, name='seller-orders'),
+    path('seller/orders/<int:order_id>/status/', views.update_order_status, name='update-order-status'),
     
     # Buyer endpoints
     path('products/all/', views.list_all_products, name='list-all-products'),

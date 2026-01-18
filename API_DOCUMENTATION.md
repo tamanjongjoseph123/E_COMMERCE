@@ -494,7 +494,61 @@ image: <file>
 
 ---
 
-### 20. View My Wallet
+### 20. View My Orders (Seller)
+**Endpoint:** `GET /api/seller/orders/`  
+**Authentication:** Seller required
+
+**Description:** View all orders that contain the seller's products. Shows complete order information including buyer details and delivery information.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Seller orders retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "buyer": {
+        "id": 1,
+        "email": "buyer@example.com",
+        "name": "John Doe",
+        "role": "buyer"
+      },
+      "items": [
+        {
+          "id": 1,
+          "product": {...},
+          "seller": {...},
+          "quantity": 2,
+          "price": "59999.99",
+          "subtotal": "119999.98"
+        }
+      ],
+      "total_amount": "119999.98",
+      "status": "pending",
+      "delivery_address": "123 Main St, Apt 4B",
+      "delivery_city": "New York",
+      "delivery_state": "NY",
+      "delivery_postal_code": "10001",
+      "delivery_phone": "+1234567890",
+      "delivery_notes": "Please call before delivering",
+      "delivered_at": null,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
+**Note:** 
+- Only shows orders that contain products from the authenticated seller
+- Orders are grouped to avoid duplicates when multiple items from same seller
+- Complete delivery information is provided for fulfillment
+- Can be used with the mark order delivered endpoint
+
+---
+
+### 21. View My Wallet
 **Endpoint:** `GET /api/seller/wallet/`  
 **Authentication:** Seller required
 
@@ -537,7 +591,7 @@ image: <file>
 
 ---
 
-### 21. Get Available Categories (Seller)
+### 22. Get Available Categories (Seller)
 **Endpoint:** `GET /api/seller/categories/`  
 **Authentication:** Seller required
 
@@ -575,7 +629,7 @@ image: <file>
 
 ---
 
-### 22. View My Profile
+### 23. View My Profile
 **Endpoint:** `GET /api/profile/`  
 **Authentication:** Buyer or Seller required
 
@@ -604,7 +658,7 @@ image: <file>
 
 ---
 
-### 23. Update My Profile
+### 24. Update My Profile
 **Endpoint:** `PUT /api/profile/` or `PATCH /api/profile/`  
 **Authentication:** Buyer or Seller required
 
@@ -658,7 +712,7 @@ profile_picture: <file>
 
 ---
 
-### 24. View Seller Profile (Public)
+### 25. View Seller Profile (Public)
 **Endpoint:** `GET /api/seller/{user_id}/profile/`  
 **Authentication:** Not required (public)
 
@@ -685,7 +739,7 @@ profile_picture: <file>
 
 ---
 
-### 25. Change Password
+### 26. Change Password
 **Endpoint:** `POST /api/auth/change-password/`  
 **Authentication:** Required (JWT token)
 
@@ -718,7 +772,7 @@ profile_picture: <file>
 
 ---
 
-### 26. Report Seller
+### 27. Report Seller
 **Endpoint:** `POST /api/reports/`  
 **Authentication:** Required (JWT token)
 
@@ -782,7 +836,7 @@ profile_picture: <file>
 
 ---
 
-### 27. View My Reports
+### 28. View My Reports
 **Endpoint:** `GET /api/reports/my/`  
 **Authentication:** Required (JWT token)
 
@@ -838,7 +892,7 @@ profile_picture: <file>
 
 ---
 
-### 28. View All Reports (Admin)
+### 29. View All Reports (Admin)
 **Endpoint:** `GET /api/admin/reports/`  
 **Authentication:** Admin required
 
@@ -884,7 +938,7 @@ profile_picture: <file>
 
 ---
 
-### 29. View Specific Report (Admin)
+### 30. View Specific Report (Admin)
 **Endpoint:** `GET /api/admin/reports/{report_id}/`  
 **Authentication:** Admin required
 
@@ -919,7 +973,7 @@ profile_picture: <file>
 
 ---
 
-### 30. Update Report (Admin)
+### 31. Update Report (Admin)
 **Endpoint:** `PUT /api/admin/reports/{report_id}/` or `PATCH /api/admin/reports/{report_id}/`  
 **Authentication:** Admin required
 
@@ -972,7 +1026,7 @@ profile_picture: <file>
 
 All buyer endpoints require buyer role authentication.
 
-### 31. List All Products from Sellers
+### 32. List All Products from Sellers
 **Endpoint:** `GET /api/products/all/`  
 **Authentication:** Not required (public)
 

@@ -692,6 +692,77 @@ def mark_order_delivered(request, order_id):
         }, status=status.HTTP_404_NOT_FOUND)
 
 
+@api_view(['PATCH'])
+@permission_classes([IsSeller])
+def update_order_status(request, order_id):
+    """Update order status (seller only)"""
+    try:
+        order = Order.objects.get(id=order_id)
+        
+        # Check if this seller has items in this order
+        has_items = order.items.filter(seller=request.user).exists()
+        if not has_items:
+            return Response({
+                'success': False,
+                'message': 'You can only update status for orders that contain your products'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        # Get new status from request
+        new_status = request.data.get('status')
+        if not new_status:
+            return Response({
+                'success': False,
+                'message': 'Status field is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validate status
+        valid_statuses = ['pending', 'processing', 'shipped', 'delivered']
+        if new_status not in valid_statuses:
+            return Response({
+                'success': False,
+                'message': f'Invalid status. Must be one of: {", ".join(valid_statuses)}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Update order status
+        order.status = new_status
+        if new_status == 'delivered':
+            from django.utils import timezone
+            order.delivered_at = timezone.now()
+        order.save()
+        
+        serializer = OrderSerializer(order, context={'request': request})
+        return Response({
+            'success': True,
+            'message': f'Order status updated to {new_status} successfully',
+            'data': serializer.data
+        })
+        
+    except Order.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Order not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['GET'])
+@permission_classes([IsSeller])
+def seller_orders(request):
+    """View all orders that contain seller's products"""
+    # Get all order items that belong to this seller
+    seller_order_items = OrderItem.objects.filter(seller=request.user).select_related('order').order_by('-order__created_at')
+    
+    # Group by order to avoid duplicates
+    order_ids = seller_order_items.values_list('order_id', flat=True).distinct()
+    orders = Order.objects.filter(id__in=order_ids).order_by('-created_at')
+    
+    serializer = OrderSerializer(orders, many=True, context={'request': request})
+    return Response({
+        'success': True,
+        'message': 'Seller orders retrieved successfully',
+        'data': serializer.data
+    })
+
+
 @api_view(['GET'])
 @permission_classes([IsBuyer])
 def my_orders(request):
