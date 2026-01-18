@@ -34,14 +34,15 @@ class FTPStorage(Storage):
     def _save(self, name, content):
         ftp = self._connect()
         
-        # Ensure we're in the base path
+        # Ensure we're in base path
         if self.base_path:
             try:
                 ftp.cwd(self.base_path)
             except:
                 pass
         
-        # Split path and create directories
+        # Normalize path to use forward slashes only
+        name = name.replace("\\", "/")
         path_parts = name.split("/")
         directory_parts = path_parts[:-1]
         filename = path_parts[-1]
@@ -61,7 +62,7 @@ class FTPStorage(Storage):
                         # Directory might already exist or permission issue
                         pass
         
-        # Ensure we're in the right directory before saving
+        # Ensure we're in right directory before saving
         if directory_parts:
             dir_path = "/".join(directory_parts)
             try:
@@ -69,7 +70,7 @@ class FTPStorage(Storage):
             except:
                 pass
         
-        # Save the file
+        # Save file
         try:
             content.seek(0)
             ftp.storbinary(f"STOR {filename}", content)
@@ -81,6 +82,8 @@ class FTPStorage(Storage):
         return name
 
     def exists(self, name):
+        # Normalize path to use forward slashes only
+        name = name.replace("\\", "/")
         try:
             ftp = self._connect()
             try:
@@ -114,6 +117,8 @@ class FTPStorage(Storage):
         """Delete a file from FTP server"""
         if not name:
             return
+        # Normalize path to use forward slashes only
+        name = name.replace("\\", "/")
         try:
             ftp = self._connect()
             # Remove leading slash if present
@@ -135,7 +140,7 @@ class FTPStorage(Storage):
                         full_path = f"{self.base_path.rstrip('/')}/{name}"
                         ftp.delete(full_path)
                     except:
-                        # Try changing to directory containing the file
+                        # Try changing to directory containing file
                         path_parts = name.split("/")
                         if len(path_parts) > 1:
                             dir_path = "/".join(path_parts[:-1])
@@ -148,7 +153,7 @@ class FTPStorage(Storage):
             else:
                 # Base path is root, try direct deletion
                 try:
-                    # Try changing to the directory containing the file
+                    # Try changing to directory containing file
                     path_parts = name.split("/")
                     if len(path_parts) > 1:
                         dir_path = "/".join(path_parts[:-1])
@@ -171,6 +176,8 @@ class FTPStorage(Storage):
             pass
     
     def size(self, name):
+        # Normalize path to use forward slashes only
+        name = name.replace("\\", "/")
         try:
             ftp = self._connect()
             try:

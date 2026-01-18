@@ -28,9 +28,18 @@ urlpatterns = [
     path('cart/checkout/', views.checkout, name='checkout'),
     path('cart/summary/', views.CartViewSet.as_view({'get': 'cart_summary'}), name='cart-summary'),
     path('orders/', views.my_orders, name='my-orders'),
+    path('orders/<int:order_id>/delivered/', views.mark_order_delivered, name='mark-order-delivered'),
     
     # Profile endpoints (Buyer and Seller)
     path('profile/', views.profile, name='profile'),
+    path('seller/<int:user_id>/profile/', views.seller_profile, name='seller-profile'),
+    path('auth/change-password/', views.change_password, name='change-password'),
+    
+    # Report endpoints
+    path('reports/', views.create_report, name='create-report'),
+    path('reports/my/', views.my_reports, name='my-reports'),
+    path('admin/reports/', views.manage_reports, name='manage-reports'),
+    path('admin/reports/<int:report_id>/', views.manage_reports, name='manage-report-detail'),
     
     # Router URLs
     path('', include(router.urls)),

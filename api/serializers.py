@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import (
     User, Seller, Category, Product, Cart, CartItem, 
-    Order, OrderItem, Wallet, Transaction
+    Order, OrderItem, Wallet, Transaction, Report
 )
 
 
@@ -31,7 +31,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['id', 'email', 'name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'date_joined', 'last_login', 'seller_approval_status']
+        fields = ['id', 'email', 'name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'store_description', 'date_joined', 'last_login', 'seller_approval_status']
         read_only_fields = ['id', 'email', 'role', 'date_joined', 'last_login']
     
     def get_profile_picture_url(self, obj):
@@ -230,8 +230,13 @@ class OrderSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Order
-        fields = ['id', 'buyer', 'items', 'total_amount', 'status', 'created_at', 'updated_at']
-        read_only_fields = ['id', 'created_at', 'updated_at']
+        fields = [
+            'id', 'buyer', 'items', 'total_amount', 'status', 
+            'delivery_address', 'delivery_city', 'delivery_state', 
+            'delivery_postal_code', 'delivery_phone', 'delivery_notes',
+            'delivered_at', 'created_at', 'updated_at'
+        ]
+        read_only_fields = ['id', 'delivered_at', 'created_at', 'updated_at']
 
 
 class TransactionSerializer(serializers.ModelSerializer):
@@ -251,4 +256,28 @@ class WalletSerializer(serializers.ModelSerializer):
         model = Wallet
         fields = ['id', 'seller', 'balance', 'transactions', 'created_at', 'updated_at']
         read_only_fields = ['id', 'balance', 'created_at', 'updated_at']
+
+
+class ReportSerializer(serializers.ModelSerializer):
+    reporter = UserSerializer(read_only=True)
+    seller = UserSerializer(read_only=True)
+    seller_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.filter(role='seller'), source='seller', write_only=True)
+    
+    class Meta:
+        model = Report
+        fields = [
+            'id', 'reporter', 'seller', 'seller_id', 
+            'report_type', 'description', 'status', 'admin_notes', 
+            'created_at', 'updated_at'
+        ]
+        read_only_fields = ['id', 'reporter', 'created_at', 'updated_at']
+    
+    def validate(self, attrs):
+        # Prevent users from reporting themselves (only during creation or when seller is updated)
+        # Get the reporter from the context (set in the view)
+        if 'seller' in attrs:
+            reporter = self.context.get('request').user
+            if reporter == attrs['seller']:
+                raise serializers.ValidationError("You cannot report yourself.")
+        return attrs
 

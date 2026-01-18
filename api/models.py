@@ -17,6 +17,7 @@ class User(AbstractUser):
     profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
     phone_number = models.CharField(max_length=20, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
+    store_description = models.TextField(blank=True, null=True, help_text="Store description for sellers")
     
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'name']
@@ -116,18 +117,26 @@ class Order(models.Model):
     STATUS_CHOICES = [
         ('pending', 'Pending'),
         ('processing', 'Processing'),
-        ('completed', 'Completed'),
+        ('shipped', 'Shipped'),
+        ('delivered', 'Delivered'),
         ('cancelled', 'Cancelled'),
     ]
     
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders', limit_choices_to={'role': 'buyer'})
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    delivery_address = models.TextField()
+    delivery_city = models.CharField(max_length=100, blank=True, null=True)
+    delivery_state = models.CharField(max_length=100, blank=True, null=True)
+    delivery_postal_code = models.CharField(max_length=20, blank=True, null=True)
+    delivery_phone = models.CharField(max_length=20, blank=True, null=True)
+    delivery_notes = models.TextField(blank=True, null=True)
+    delivered_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
-        return f"Order #{self.id} by {self.buyer.email}"
+        return f"Order #{self.id} by {self.buyer.email} - {self.status}"
 
 
 class OrderItem(models.Model):
@@ -166,4 +175,37 @@ class Transaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"{self.transaction_type} - ${self.amount} - {self.wallet.seller.email}"
+        return f"{self.transaction_type} of ${self.amount} - {self.wallet.seller.email}"
+
+
+class Report(models.Model):
+    REPORT_TYPE_CHOICES = [
+        ('fraud', 'Fraud'),
+        ('fake_product', 'Fake Product'),
+        ('poor_service', 'Poor Service'),
+        ('harassment', 'Harassment'),
+        ('spam', 'Spam'),
+        ('other', 'Other'),
+    ]
+    
+    REPORT_STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('under_review', 'Under Review'),
+        ('resolved', 'Resolved'),
+        ('dismissed', 'Dismissed'),
+    ]
+    
+    reporter = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reports_made')
+    seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reports_received', limit_choices_to={'role': 'seller'})
+    report_type = models.CharField(max_length=20, choices=REPORT_TYPE_CHOICES)
+    description = models.TextField()
+    status = models.CharField(max_length=20, choices=REPORT_STATUS_CHOICES, default='pending')
+    admin_notes = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        return f"Report against {self.seller.email} by {self.reporter.email} - {self.report_type}"

@@ -317,7 +317,7 @@ All admin endpoints require admin role authentication.
       "category": {...},
       "name": "Laptop",
       "description": "High-performance laptop",
-      "price": "999.99",
+      "price": "59999.99",
       "stock": 10,
       "image_url": "http://localhost:8000/media/products/laptop.jpg",
       "created_at": "2024-01-01T00:00:00Z",
@@ -428,7 +428,7 @@ All seller endpoints require seller role authentication.
     "category": {...},
     "name": "Laptop",
     "description": "High-performance laptop",
-    "price": "999.99",
+    "price": "59999.99",
     "stock": 10,
     "image_url": "http://localhost:8000/media/products/laptop.jpg",
     "created_at": "2024-01-01T00:00:00Z",
@@ -461,7 +461,7 @@ image: <file>
   "category": {...},
   "name": "Laptop",
   "description": "High-performance laptop",
-  "price": "999.99",
+  "price": "59999.99",
   "stock": 10,
   "image_url": "http://localhost:8000/media/products/laptop.jpg",
   "created_at": "2024-01-01T00:00:00Z",
@@ -511,7 +511,7 @@ image: <file>
       "name": "Jane Seller",
       "role": "seller"
     },
-    "balance": "1500.00",
+    "balance": "900000.00 CFA",
     "transactions": [
       {
         "id": 1,
@@ -520,10 +520,10 @@ image: <file>
           "product": {...},
           "seller": {...},
           "quantity": 2,
-          "price": "999.99",
-          "subtotal": "1999.98"
+          "price": "59999.99",
+          "subtotal": "59999.99"
         },
-        "amount": "1999.98",
+        "amount": "119999.98",
         "transaction_type": "sale",
         "description": "Sale of Laptop",
         "created_at": "2024-01-01T00:00:00Z"
@@ -595,6 +595,7 @@ image: <file>
     "profile_picture_url": "http://localhost:8000/media/profile_pictures/profile.jpg",
     "phone_number": "+1234567890",
     "address": "123 Main St, City, Country",
+    "store_description": "Welcome to my store! We sell high-quality products.",
     "date_joined": "2024-01-01T00:00:00Z",
     "last_login": "2024-01-15T10:30:00Z"
   }
@@ -614,6 +615,7 @@ image: <file>
 name: "John Updated"
 phone_number: "+1234567890"
 address: "123 Main St, City, Country"
+store_description: "Welcome to my updated store! We sell high-quality electronics and gadgets."
 profile_picture: <file>
 ```
 
@@ -631,6 +633,7 @@ profile_picture: <file>
     "profile_picture_url": "http://localhost:8000/media/profile_pictures/profile.jpg",
     "phone_number": "+1234567890",
     "address": "123 Main St, City, Country",
+    "store_description": "Welcome to my updated store! We sell high-quality electronics and gadgets.",
     "date_joined": "2024-01-01T00:00:00Z",
     "last_login": "2024-01-15T10:30:00Z"
   }
@@ -655,11 +658,321 @@ profile_picture: <file>
 
 ---
 
+### 24. View Seller Profile (Public)
+**Endpoint:** `GET /api/seller/{user_id}/profile/`  
+**Authentication:** Not required (public)
+
+**Description:** View any seller's public profile information including store description. This endpoint allows buyers and visitors to see seller details.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Seller profile retrieved successfully",
+  "data": {
+    "id": 1,
+    "email": "seller@example.com",
+    "name": "Jane Seller",
+    "role": "seller",
+    "store_description": "Welcome to my store! We sell high-quality electronics and gadgets.",
+    "profile_picture_url": "http://localhost:8000/media/profile_pictures/seller.jpg",
+    "phone_number": "+1234567890",
+    "address": "123 Store St, Shop City, Country",
+    "seller_approval_status": "approved"
+  }
+}
+```
+
+---
+
+### 25. Change Password
+**Endpoint:** `POST /api/auth/change-password/`  
+**Authentication:** Required (JWT token)
+
+**Description:** Change account password for any authenticated user (buyer, seller, or admin).
+
+**Request Body:**
+```json
+{
+  "old_password": "currentpassword123",
+  "new_password": "newpassword456",
+  "confirm_password": "newpassword456"
+}
+```
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Password changed successfully"
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Current password is incorrect"
+}
+```
+
+---
+
+### 26. Report Seller
+**Endpoint:** `POST /api/reports/`  
+**Authentication:** Required (JWT token)
+
+**Description:** Report a seller for various issues. Any authenticated user can report a seller.
+
+**Request Body:**
+```json
+{
+  "seller_id": 8,
+  "report_type": "fraud",
+  "description": "The seller is selling fake products and not delivering orders."
+}
+```
+
+**Report Type Options:**
+- `fraud` - Fraudulent activity
+- `fake_product` - Counterfeit or fake products
+- `poor_service` - Bad customer service
+- `harassment` - Harassment or abuse
+- `spam` - Spam or inappropriate content
+- `other` - Other issues
+
+**Response (Success - 201):**
+```json
+{
+  "success": true,
+  "message": "Report submitted successfully. Admin will review it.",
+  "data": {
+    "id": 1,
+    "reporter": {
+      "id": 2,
+      "name": "John Buyer",
+      "email": "buyer@example.com"
+    },
+    "seller": {
+      "id": 8,
+      "name": "Jane Seller",
+      "email": "seller@example.com"
+    },
+    "report_type": "fraud",
+    "description": "The seller is selling fake products and not delivering orders.",
+    "status": "pending",
+    "admin_notes": null,
+    "created_at": "2024-01-18T12:30:00Z",
+    "updated_at": "2024-01-18T12:30:00Z"
+  }
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Failed to submit report",
+  "errors": {
+    "seller_id": ["Seller with this ID does not exist."],
+    "reporter": ["You cannot report yourself."]
+  }
+}
+```
+
+---
+
+### 27. View My Reports
+**Endpoint:** `GET /api/reports/my/`  
+**Authentication:** Required (JWT token)
+
+**Description:** View all reports submitted by the current user and see admin responses.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Your reports retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "reporter": {
+        "id": 2,
+        "name": "John Buyer",
+        "email": "buyer@example.com"
+      },
+      "seller": {
+        "id": 8,
+        "name": "Jane Seller",
+        "email": "seller@example.com"
+      },
+      "report_type": "fraud",
+      "description": "The seller is selling fake products and not delivering orders.",
+      "status": "under_review",
+      "admin_notes": "Investigating the seller's account and recent transactions. Found multiple complaints about delivery issues.",
+      "created_at": "2024-01-18T12:30:00Z",
+      "updated_at": "2024-01-18T13:15:00Z"
+    },
+    {
+      "id": 2,
+      "reporter": {
+        "id": 2,
+        "name": "John Buyer",
+        "email": "buyer@example.com"
+      },
+      "seller": {
+        "id": 12,
+        "name": "Mike Seller",
+        "email": "mike@example.com"
+      },
+      "report_type": "poor_service",
+      "description": "Seller was rude and didn't respond to messages.",
+      "status": "resolved",
+      "admin_notes": "Issue resolved. Seller has been warned and account reviewed.",
+      "created_at": "2024-01-17T10:20:00Z",
+      "updated_at": "2024-01-18T09:45:00Z"
+    }
+  ]
+}
+```
+
+---
+
+### 28. View All Reports (Admin)
+**Endpoint:** `GET /api/admin/reports/`  
+**Authentication:** Admin required
+
+**Description:** Admin can view all submitted reports with optional filtering by status.
+
+**Query Parameters:**
+- `status` (optional): Filter by report status
+  - `pending` - Reports awaiting review
+  - `under_review` - Reports being investigated
+  - `resolved` - Reports that have been resolved
+  - `dismissed` - Reports that were dismissed
+
+**Example:** `GET /api/admin/reports/?status=pending`
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Reports retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "reporter": {
+        "id": 2,
+        "name": "John Buyer",
+        "email": "buyer@example.com"
+      },
+      "seller": {
+        "id": 8,
+        "name": "Jane Seller",
+        "email": "seller@example.com"
+      },
+      "report_type": "fraud",
+      "description": "The seller is selling fake products and not delivering orders.",
+      "status": "pending",
+      "admin_notes": null,
+      "created_at": "2024-01-18T12:30:00Z",
+      "updated_at": "2024-01-18T12:30:00Z"
+    }
+  ]
+}
+```
+
+---
+
+### 29. View Specific Report (Admin)
+**Endpoint:** `GET /api/admin/reports/{report_id}/`  
+**Authentication:** Admin required
+
+**Description:** Admin can view detailed information about a specific report.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Report retrieved successfully",
+  "data": {
+    "id": 1,
+    "reporter": {
+      "id": 2,
+      "name": "John Buyer",
+      "email": "buyer@example.com"
+    },
+    "seller": {
+      "id": 8,
+      "name": "Jane Seller",
+      "email": "seller@example.com"
+    },
+    "report_type": "fraud",
+    "description": "The seller is selling fake products and not delivering orders.",
+    "status": "pending",
+    "admin_notes": null,
+    "created_at": "2024-01-18T12:30:00Z",
+    "updated_at": "2024-01-18T12:30:00Z"
+  }
+}
+```
+
+---
+
+### 30. Update Report (Admin)
+**Endpoint:** `PUT /api/admin/reports/{report_id}/` or `PATCH /api/admin/reports/{report_id}/`  
+**Authentication:** Admin required
+
+**Description:** Admin can update report status and add admin notes. Use PUT for full update or PATCH for partial update.
+
+**Request Body:**
+```json
+{
+  "status": "under_review",
+  "admin_notes": "Investigating the seller's account and recent transactions. Found multiple complaints about delivery issues."
+}
+```
+
+**Status Options:**
+- `pending` - Reports awaiting review
+- `under_review` - Reports being investigated
+- `resolved` - Reports that have been resolved
+- `dismissed` - Reports that were dismissed
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Report updated successfully",
+  "data": {
+    "id": 1,
+    "reporter": {
+      "id": 2,
+      "name": "John Buyer",
+      "email": "buyer@example.com"
+    },
+    "seller": {
+      "id": 8,
+      "name": "Jane Seller",
+      "email": "seller@example.com"
+    },
+    "report_type": "fraud",
+    "description": "The seller is selling fake products and not delivering orders.",
+    "status": "under_review",
+    "admin_notes": "Investigating the seller's account and recent transactions. Found multiple complaints about delivery issues.",
+    "created_at": "2024-01-18T12:30:00Z",
+    "updated_at": "2024-01-18T13:15:00Z"
+  }
+}
+```
+
+---
+
 ## Buyer Endpoints
 
 All buyer endpoints require buyer role authentication.
 
-### 24. List All Products from Sellers
+### 31. List All Products from Sellers
 **Endpoint:** `GET /api/products/all/`  
 **Authentication:** Not required (public)
 
@@ -705,7 +1018,7 @@ All buyer endpoints require buyer role authentication.
         },
         "name": "Laptop",
         "description": "High-performance laptop",
-        "price": "999.99",
+        "price": "59999.99",
         "stock": 10,
         "image_url": "http://localhost:8000/media/products/laptop.jpg",
         "created_at": "2024-01-01T00:00:00Z",
@@ -744,7 +1057,7 @@ All buyer endpoints require buyer role authentication.
     "category": {...},
     "name": "Laptop",
     "description": "High-performance laptop",
-    "price": "999.99",
+    "price": "59999.99",
     "stock": 10,
     "image_url": "http://localhost:8000/media/products/laptop.jpg",
     "created_at": "2024-01-01T00:00:00Z",
@@ -772,7 +1085,7 @@ All buyer endpoints require buyer role authentication.
   "category": {...},
   "name": "Laptop",
   "description": "High-performance laptop",
-  "price": "999.99",
+  "price": "59999.99",
   "stock": 10,
   "image_url": "http://localhost:8000/media/products/laptop.jpg",
   "created_at": "2024-01-01T00:00:00Z",
@@ -799,7 +1112,7 @@ All buyer endpoints require buyer role authentication.
       "id": 1,
       "name": "Laptop",
       "description": "High-performance laptop",
-      "price": "999.99",
+      "price": "59999.99",
       ...
     }
   ]
@@ -860,11 +1173,11 @@ All buyer endpoints require buyer role authentication.
     "product": {
       "id": 1,
       "name": "Laptop",
-      "price": "999.99",
+      "price": "59999.99",
       ...
     },
     "quantity": 2,
-    "subtotal": "1999.98",
+    "subtotal": "59999.99",
     "created_at": "2024-01-01T00:00:00Z"
   }
 }
@@ -891,7 +1204,7 @@ All buyer endpoints require buyer role authentication.
     "id": 1,
     "product": {...},
     "quantity": 2,
-    "subtotal": "1999.98",
+    "subtotal": "59999.99",
     "created_at": "2024-01-01T00:00:00Z"
   }
 ]
@@ -951,10 +1264,10 @@ All buyer endpoints require buyer role authentication.
         "id": 1,
         "product": {...},
         "quantity": 2,
-        "subtotal": "1999.98"
+        "subtotal": "59999.99"
       }
     ],
-    "total_amount": "1999.98",
+    "total_amount": "119999.98",
     "created_at": "2024-01-01T00:00:00Z",
     "updated_at": "2024-01-01T00:00:00Z"
   }
@@ -966,6 +1279,30 @@ All buyer endpoints require buyer role authentication.
 ### 33. Checkout
 **Endpoint:** `POST /api/cart/checkout/`  
 **Authentication:** Buyer required
+
+**Description:** Place an order with delivery information. Cart items are converted to an order and sellers are notified.
+
+**Request Body:**
+```json
+{
+  "delivery_address": "123 Main St, Apt 4B",
+  "delivery_city": "New York",
+  "delivery_state": "NY",
+  "delivery_postal_code": "10001",
+  "delivery_phone": "+1234567890",
+  "delivery_notes": "Please call before delivering"
+}
+```
+
+**Required Fields:**
+- `delivery_address` - Street address for delivery
+
+**Optional Fields:**
+- `delivery_city` - City name
+- `delivery_state` - State/Province
+- `delivery_postal_code` - ZIP/Postal code
+- `delivery_phone` - Contact phone number
+- `delivery_notes` - Special delivery instructions
 
 **Response (Success - 201):**
 ```json
@@ -986,12 +1323,19 @@ All buyer endpoints require buyer role authentication.
         "product": {...},
         "seller": {...},
         "quantity": 2,
-        "price": "999.99",
-        "subtotal": "1999.98"
+        "price": "59999.99",
+        "subtotal": "119999.98"
       }
     ],
-    "total_amount": "1999.98",
-    "status": "completed",
+    "total_amount": "119999.98",
+    "status": "pending",
+    "delivery_address": "123 Main St, Apt 4B",
+    "delivery_city": "New York",
+    "delivery_state": "NY",
+    "delivery_postal_code": "10001",
+    "delivery_phone": "+1234567890",
+    "delivery_notes": "Please call before delivering",
+    "delivered_at": null,
     "created_at": "2024-01-01T00:00:00Z",
     "updated_at": "2024-01-01T00:00:00Z"
   }
@@ -1002,12 +1346,13 @@ All buyer endpoints require buyer role authentication.
 ```json
 {
   "success": false,
-  "message": "Cart is empty"
+  "message": "Delivery Address is required"
 }
 ```
 
 **Note:** On successful checkout:
-- Order is created with status "completed"
+- Order is created with status "pending"
+- Delivery information is saved for seller reference
 - Product stock is reduced
 - Seller wallets are updated with the sale amount
 - Transactions are created for each seller
@@ -1015,7 +1360,72 @@ All buyer endpoints require buyer role authentication.
 
 ---
 
-### 34. My Orders
+### 34. Mark Order as Delivered
+**Endpoint:** `PATCH /api/orders/{order_id}/delivered/`  
+**Authentication:** Seller required
+
+**Description:** Mark an order as delivered. Only sellers who have products in the order can mark it as delivered.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Order marked as delivered successfully",
+  "data": {
+    "id": 1,
+    "buyer": {
+      "id": 1,
+      "email": "buyer@example.com",
+      "name": "John Doe",
+      "role": "buyer"
+    },
+    "items": [
+      {
+        "id": 1,
+        "product": {...},
+        "seller": {...},
+        "quantity": 2,
+        "price": "59999.99",
+        "subtotal": "119999.98"
+      }
+    ],
+    "total_amount": "119999.98",
+    "status": "delivered",
+    "delivery_address": "123 Main St, Apt 4B",
+    "delivery_city": "New York",
+    "delivery_state": "NY",
+    "delivery_postal_code": "10001",
+    "delivery_phone": "+1234567890",
+    "delivery_notes": "Please call before delivering",
+    "delivered_at": "2024-01-18T14:30:00Z",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-18T14:30:00Z"
+  }
+}
+```
+
+**Response (Error - 403):**
+```json
+{
+  "success": false,
+  "message": "You can only mark orders that contain your products as delivered"
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Cannot mark order as delivered. Current status: delivered"
+}
+```
+
+**Order Status Flow:**
+- `pending` → `processing` → `shipped` → `delivered` → `cancelled`
+
+---
+
+### 35. My Orders
 **Endpoint:** `GET /api/orders/`  
 **Authentication:** Buyer required
 
@@ -1034,14 +1444,21 @@ All buyer endpoints require buyer role authentication.
           "product": {...},
           "seller": {...},
           "quantity": 2,
-          "price": "999.99",
-          "subtotal": "1999.98"
+          "price": "59999.99",
+          "subtotal": "119999.98"
         }
       ],
-      "total_amount": "1999.98",
-      "status": "completed",
+      "total_amount": "119999.98",
+      "status": "delivered",
+      "delivery_address": "123 Main St, Apt 4B",
+      "delivery_city": "New York",
+      "delivery_state": "NY",
+      "delivery_postal_code": "10001",
+      "delivery_phone": "+1234567890",
+      "delivery_notes": "Please call before delivering",
+      "delivered_at": "2024-01-18T14:30:00Z",
       "created_at": "2024-01-01T00:00:00Z",
-      "updated_at": "2024-01-01T00:00:00Z"
+      "updated_at": "2024-01-18T14:30:00Z"
     }
   ]
 }

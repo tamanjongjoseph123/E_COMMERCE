@@ -9,12 +9,13 @@ from decimal import Decimal
 
 from .models import (
     User, Seller, Category, Product, Cart, CartItem,
-    Order, OrderItem, Wallet, Transaction
+    Order, OrderItem, Wallet, Transaction, Report
 )
 from .serializers import (
     UserSerializer, RegisterSerializer, LoginSerializer, SellerSerializer,
     CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer,
-    OrderSerializer, WalletSerializer, TransactionSerializer, ProfileSerializer
+    OrderSerializer, WalletSerializer, TransactionSerializer, ProfileSerializer,
+    ReportSerializer
 )
 
 
@@ -264,7 +265,15 @@ class SellerProductViewSet(viewsets.ModelViewSet):
     permission_classes = [IsSeller]
     
     def get_queryset(self):
-        return Product.objects.filter(seller=self.request.user)
+        return Product.objects.filter(seller=self.request.user).order_by('-created_at')
+    
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({
+            'success': True,
+            'data': serializer.data
+        })
     
     def perform_create(self, serializer):
         serializer.save(seller=self.request.user, is_active=True)
@@ -568,11 +577,29 @@ def checkout(request):
     
     try:
         with db_transaction.atomic():
-            # Create order
+            # Get delivery information from request
+            delivery_data = request.data
+            required_fields = ['delivery_address']
+            
+            # Validate required delivery fields
+            for field in required_fields:
+                if not delivery_data.get(field):
+                    return Response({
+                        'success': False,
+                        'message': f'{field.replace("_", " ").title()} is required'
+                    }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Create order with delivery information
             order = Order.objects.create(
                 buyer=request.user,
                 total_amount=cart.total_amount,
-                status='completed'
+                status='pending',
+                delivery_address=delivery_data.get('delivery_address'),
+                delivery_city=delivery_data.get('delivery_city', ''),
+                delivery_state=delivery_data.get('delivery_state', ''),
+                delivery_postal_code=delivery_data.get('delivery_postal_code', ''),
+                delivery_phone=delivery_data.get('delivery_phone', ''),
+                delivery_notes=delivery_data.get('delivery_notes', '')
             )
             
             # Create order items and update wallets
@@ -623,6 +650,48 @@ def checkout(request):
         }, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['PATCH'])
+@permission_classes([IsSeller])
+def mark_order_delivered(request, order_id):
+    """Mark an order as delivered (seller only)"""
+    try:
+        order = Order.objects.get(id=order_id)
+        
+        # Check if this seller has items in this order
+        has_items = order.items.filter(seller=request.user).exists()
+        if not has_items:
+            return Response({
+                'success': False,
+                'message': 'You can only mark orders that contain your products as delivered'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        # Check if order is in the correct status
+        if order.status not in ['pending', 'processing', 'shipped']:
+            return Response({
+                'success': False,
+                'message': f'Cannot mark order as delivered. Current status: {order.status}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Update order status and delivery time
+        from django.utils import timezone
+        order.status = 'delivered'
+        order.delivered_at = timezone.now()
+        order.save()
+        
+        serializer = OrderSerializer(order, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Order marked as delivered successfully',
+            'data': serializer.data
+        })
+        
+    except Order.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Order not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+
+
 @api_view(['GET'])
 @permission_classes([IsBuyer])
 def my_orders(request):
@@ -664,3 +733,144 @@ def profile(request):
             'message': 'Profile update failed',
             'errors': serializer.errors
         }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def seller_profile(request, user_id):
+    """Get public seller profile information"""
+    try:
+        seller = User.objects.get(id=user_id, role='seller')
+        serializer = ProfileSerializer(seller, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Seller profile retrieved successfully',
+            'data': serializer.data
+        })
+    except User.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Seller not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def change_password(request):
+    """Change user password"""
+    user = request.user
+    old_password = request.data.get('old_password')
+    new_password = request.data.get('new_password')
+    confirm_password = request.data.get('confirm_password')
+    
+    if not old_password or not new_password or not confirm_password:
+        return Response({
+            'success': False,
+            'message': 'All fields are required'
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    if not user.check_password(old_password):
+        return Response({
+            'success': False,
+            'message': 'Current password is incorrect'
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    if new_password != confirm_password:
+        return Response({
+            'success': False,
+            'message': 'New passwords do not match'
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    user.set_password(new_password)
+    user.save()
+    
+    return Response({
+        'success': True,
+        'message': 'Password changed successfully'
+    })
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def create_report(request):
+    """Create a new report against a seller"""
+    serializer = ReportSerializer(data=request.data, context={'request': request})
+    if serializer.is_valid():
+        serializer.save(reporter=request.user)
+        return Response({
+            'success': True,
+            'message': 'Report submitted successfully. Admin will review it.',
+            'data': serializer.data
+        }, status=status.HTTP_201_CREATED)
+    return Response({
+        'success': False,
+        'message': 'Failed to submit report',
+        'errors': serializer.errors
+    }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def my_reports(request):
+    """View all reports submitted by the current user"""
+    reports = Report.objects.filter(reporter=request.user).order_by('-created_at')
+    serializer = ReportSerializer(reports, many=True, context={'request': request})
+    return Response({
+        'success': True,
+        'message': 'Your reports retrieved successfully',
+        'data': serializer.data
+    })
+
+
+@api_view(['GET', 'PUT', 'PATCH'])
+@permission_classes([IsAdmin])
+def manage_reports(request, report_id=None):
+    """Admin endpoint to manage reports"""
+    if report_id:
+        # Handle specific report
+        try:
+            report = Report.objects.get(id=report_id)
+        except Report.DoesNotExist:
+            return Response({
+                'success': False,
+                'message': 'Report not found'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        if request.method == 'GET':
+            serializer = ReportSerializer(report, context={'request': request})
+            return Response({
+                'success': True,
+                'message': 'Report retrieved successfully',
+                'data': serializer.data
+            })
+        
+        elif request.method in ['PUT', 'PATCH']:
+            serializer = ReportSerializer(report, data=request.data, partial=request.method == 'PATCH', context={'request': request})
+            if serializer.is_valid():
+                serializer.save()
+                return Response({
+                    'success': True,
+                    'message': 'Report updated successfully',
+                    'data': serializer.data
+                })
+            return Response({
+                'success': False,
+                'message': 'Failed to update report',
+                'errors': serializer.errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+    
+    else:
+        # Handle list of reports
+        if request.method == 'GET':
+            status_filter = request.query_params.get('status', None)
+            reports = Report.objects.all()
+            
+            if status_filter:
+                reports = reports.filter(status=status_filter)
+            
+            serializer = ReportSerializer(reports, many=True, context={'request': request})
+            return Response({
+                'success': True,
+                'message': 'Reports retrieved successfully',
+                'data': serializer.data
+            })
