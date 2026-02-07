@@ -29,7 +29,8 @@ Authorization: Bearer <access_token>
 ```json
 {
   "email": "user@example.com",
-  "name": "John Doe",
+  "name": "John",
+  "full_name": "John Doe",
   "password": "securepassword123",
   "password2": "securepassword123",
   "role": "buyer" | "seller",
@@ -46,7 +47,8 @@ Authorization: Bearer <access_token>
     "user": {
       "id": 1,
       "email": "user@example.com",
-      "name": "John Doe",
+      "name": "John",
+      "full_name": "John Doe",
       "role": "buyer",
       "date_joined": "2024-01-01T00:00:00Z"
     },
@@ -93,7 +95,8 @@ Authorization: Bearer <access_token>
     "user": {
       "id": 1,
       "email": "user@example.com",
-      "name": "John Doe",
+      "name": "John",
+      "full_name": "John Doe",
       "role": "buyer",
       "date_joined": "2024-01-01T00:00:00Z"
     },
@@ -165,7 +168,8 @@ All admin endpoints require admin role authentication.
       "user": {
         "id": 2,
         "email": "seller@example.com",
-        "name": "Jane Seller",
+        "name": "Jane",
+        "full_name": "Jane Seller",
         "role": "seller",
         "date_joined": "2024-01-01T00:00:00Z"
       },
@@ -342,7 +346,8 @@ All admin endpoints require admin role authentication.
   {
     "id": 1,
     "email": "user@example.com",
-    "name": "John Doe",
+    "name": "John",
+    "full_name": "John Doe",
     "role": "buyer",
     "date_joined": "2024-01-01T00:00:00Z"
   }
@@ -395,7 +400,8 @@ All admin endpoints require admin role authentication.
         "seller": {
           "id": 2,
           "email": "seller@example.com",
-          "name": "Jane Seller",
+          "name": "Jane",
+          "full_name": "Jane Seller",
           "role": "seller"
         },
         "balance": "1500.00",
@@ -562,7 +568,8 @@ image: <file>
     "seller": {
       "id": 2,
       "email": "seller@example.com",
-      "name": "Jane Seller",
+      "name": "Jane",
+      "full_name": "Jane Seller",
       "role": "seller"
     },
     "balance": "900000.00 CFA",
@@ -643,7 +650,8 @@ image: <file>
   "data": {
     "id": 1,
     "email": "user@example.com",
-    "name": "John Doe",
+    "name": "John",
+    "full_name": "John Doe",
     "role": "buyer",
     "profile_picture": "/media/profile_pictures/profile.jpg",
     "profile_picture_url": "http://localhost:8000/media/profile_pictures/profile.jpg",
@@ -666,7 +674,8 @@ image: <file>
 
 **Request Body (multipart/form-data for PUT or PATCH):**
 ```
-name: "John Updated"
+name: "John"
+full_name: "John Updated Doe"
 phone_number: "+1234567890"
 address: "123 Main St, City, Country"
 store_description: "Welcome to my updated store! We sell high-quality electronics and gadgets."
@@ -681,7 +690,8 @@ profile_picture: <file>
   "data": {
     "id": 1,
     "email": "user@example.com",
-    "name": "John Updated",
+    "name": "John",
+    "full_name": "John Updated Doe",
     "role": "buyer",
     "profile_picture": "/media/profile_pictures/profile.jpg",
     "profile_picture_url": "http://localhost:8000/media/profile_pictures/profile.jpg",
@@ -726,7 +736,8 @@ profile_picture: <file>
   "data": {
     "id": 1,
     "email": "seller@example.com",
-    "name": "Jane Seller",
+    "name": "Jane",
+    "full_name": "Jane Seller",
     "role": "seller",
     "store_description": "Welcome to my store! We sell high-quality electronics and gadgets.",
     "profile_picture_url": "http://localhost:8000/media/profile_pictures/seller.jpg",
@@ -804,12 +815,14 @@ profile_picture: <file>
     "id": 1,
     "reporter": {
       "id": 2,
-      "name": "John Buyer",
+      "name": "John",
+      "full_name": "John Buyer",
       "email": "buyer@example.com"
     },
     "seller": {
       "id": 8,
-      "name": "Jane Seller",
+      "name": "Jane",
+      "full_name": "Jane Seller",
       "email": "seller@example.com"
     },
     "report_type": "fraud",
@@ -852,18 +865,20 @@ profile_picture: <file>
       "id": 1,
       "reporter": {
         "id": 2,
-        "name": "John Buyer",
+        "name": "John",
+        "full_name": "John Buyer",
         "email": "buyer@example.com"
       },
       "seller": {
         "id": 8,
-        "name": "Jane Seller",
+        "name": "Jane",
+        "full_name": "Jane Seller",
         "email": "seller@example.com"
       },
       "report_type": "fraud",
       "description": "The seller is selling fake products and not delivering orders.",
       "status": "under_review",
-      "admin_notes": "Investigating the seller's account and recent transactions. Found multiple complaints about delivery issues.",
+      "admin_notes": "Investigating seller's account and recent transactions. Found multiple complaints about delivery issues.",
       "created_at": "2024-01-18T12:30:00Z",
       "updated_at": "2024-01-18T13:15:00Z"
     },
@@ -871,12 +886,14 @@ profile_picture: <file>
       "id": 2,
       "reporter": {
         "id": 2,
-        "name": "John Buyer",
+        "name": "John",
+        "full_name": "John Buyer",
         "email": "buyer@example.com"
       },
       "seller": {
         "id": 12,
-        "name": "Mike Seller",
+        "name": "Mike",
+        "full_name": "Mike Seller",
         "email": "mike@example.com"
       },
       "report_type": "poor_service",
@@ -917,12 +934,14 @@ profile_picture: <file>
       "id": 1,
       "reporter": {
         "id": 2,
-        "name": "John Buyer",
+        "name": "John",
+        "full_name": "John Buyer",
         "email": "buyer@example.com"
       },
       "seller": {
         "id": 8,
-        "name": "Jane Seller",
+        "name": "Jane",
+        "full_name": "Jane Seller",
         "email": "seller@example.com"
       },
       "report_type": "fraud",
@@ -953,12 +972,14 @@ profile_picture: <file>
     "id": 1,
     "reporter": {
       "id": 2,
-      "name": "John Buyer",
+      "name": "John",
+      "full_name": "John Buyer",
       "email": "buyer@example.com"
     },
     "seller": {
       "id": 8,
-      "name": "Jane Seller",
+      "name": "Jane",
+      "full_name": "Jane Seller",
       "email": "seller@example.com"
     },
     "report_type": "fraud",
@@ -1002,12 +1023,14 @@ profile_picture: <file>
     "id": 1,
     "reporter": {
       "id": 2,
-      "name": "John Buyer",
+      "name": "John",
+      "full_name": "John Buyer",
       "email": "buyer@example.com"
     },
     "seller": {
       "id": 8,
-      "name": "Jane Seller",
+      "name": "Jane",
+      "full_name": "Jane Seller",
       "email": "seller@example.com"
     },
     "report_type": "fraud",
@@ -1062,7 +1085,8 @@ All buyer endpoints require buyer role authentication.
         "seller": {
           "id": 2,
           "email": "seller@example.com",
-          "name": "Jane Seller",
+          "name": "Jane",
+          "full_name": "Jane Seller",
           "role": "seller"
         },
         "category": {
@@ -1133,7 +1157,8 @@ All buyer endpoints require buyer role authentication.
   "seller": {
     "id": 2,
     "email": "seller@example.com",
-    "name": "Jane Seller",
+    "name": "Jane",
+    "full_name": "Jane Seller",
     "role": "seller"
   },
   "category": {...},
@@ -1188,7 +1213,8 @@ All buyer endpoints require buyer role authentication.
     "seller": {
       "id": 2,
       "email": "seller@example.com",
-      "name": "Jane Seller",
+      "name": "Jane",
+      "full_name": "Jane Seller",
       "role": "seller"
     },
     "other_products": [

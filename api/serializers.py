@@ -13,7 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['id', 'email', 'name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'date_joined']
+        fields = ['id', 'email', 'name', 'full_name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'date_joined']
         read_only_fields = ['id', 'date_joined']
     
     def get_profile_picture_url(self, obj):
@@ -31,7 +31,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['id', 'email', 'name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'store_description', 'date_joined', 'last_login', 'seller_approval_status']
+        fields = ['id', 'email', 'name', 'full_name', 'role', 'profile_picture', 'profile_picture_url', 'phone_number', 'address', 'store_description', 'date_joined', 'last_login', 'seller_approval_status']
         read_only_fields = ['id', 'email', 'role', 'date_joined', 'last_login']
     
     def get_profile_picture_url(self, obj):
@@ -59,9 +59,10 @@ class RegisterSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['email', 'name', 'password', 'password2', 'role', 'id_card']
+        fields = ['email', 'name', 'full_name', 'password', 'password2', 'role', 'id_card']
         extra_kwargs = {
             'name': {'required': True},
+            'full_name': {'required': True},
             'email': {'required': True},
         }
     
@@ -84,6 +85,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             username=validated_data['email'],
             email=validated_data['email'],
             name=validated_data['name'],
+            full_name=validated_data['full_name'],
             role=role,
             password=password
         )
