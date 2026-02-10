@@ -273,17 +273,24 @@ class FapshiPaymentService:
             
             payment.save()
             
-            # Update order payment status
-            order = payment.order
-            if payment.status == 'successful':
-                order.payment_status = 'paid'
-                # Only update order status to processing if it was pending
-                if order.status == 'pending':
-                    order.status = 'processing'
-            elif payment.status in ['failed', 'expired']:
-                order.payment_status = 'failed'
-            
-            order.save()
+            # Update order payment status if order exists
+            try:
+                order = payment.order
+                if order is not None:
+                    if payment.status == 'successful':
+                        order.payment_status = 'paid'
+                        # Only update order status to processing if it was pending
+                        if order.status == 'pending':
+                            order.status = 'processing'
+                    elif payment.status in ['failed', 'expired']:
+                        order.payment_status = 'failed'
+                    
+                    order.save()
+                else:
+                    logger.info(f"No order exists for payment {payment.id} yet")
+            except Order.DoesNotExist:
+                # No order exists yet, which is normal for new payments
+                logger.info(f"No order exists for payment {payment.id} yet")
             
             return {
                 "success": True,

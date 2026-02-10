@@ -3053,3 +3053,1228 @@ INFO 2026-02-08 17:04:36,007 autoreload 11644 11200 C:\Users\TJ Rash\Desktop\INF
 INFO 2026-02-08 17:04:38,981 autoreload 12672 25408 Watching for file changes with StatReloader
 INFO 2026-02-08 17:22:29,945 autoreload 17060 14564 Watching for file changes with StatReloader
 INFO 2026-02-08 18:05:51,486 autoreload 24176 17040 Watching for file changes with StatReloader
+INFO 2026-02-10 06:39:34,183 autoreload 1562376 136782266478720 Watching for file changes with StatReloader
+INFO 2026-02-10 06:41:42,315 autoreload 1562762 128422340624512 Watching for file changes with StatReloader
+INFO 2026-02-10 06:42:07,200 autoreload 1562904 124678912610432 Watching for file changes with StatReloader
+ERROR 2026-02-10 06:51:09,776 log 1562904 124678723065536 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:09,777 log 1562904 124678818494144 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:09,779 log 1562904 124678714672832 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:10,015 log 1562904 124678714672832 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:10,052 log 1562904 124678818494144 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:15,790 log 1562904 124678818494144 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:15,996 log 1562904 124678714672832 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:16,017 log 1562904 124678818494144 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+ERROR 2026-02-10 06:51:16,232 log 1562904 124678818494144 Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'firstchoiceserver.faithhubs.org'. You may need to add 'firstchoiceserver.faithhubs.org' to ALLOWED_HOSTS.
+INFO 2026-02-10 06:52:02,345 autoreload 1562904 124678912610432 /home/joseph/apps/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-10 06:52:03,349 autoreload 1563622 123825549570176 Watching for file changes with StatReloader
+INFO 2026-02-10 06:52:04,928 autoreload 1563622 123825549570176 /home/joseph/apps/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-10 06:52:05,982 autoreload 1563658 138775540306048 Watching for file changes with StatReloader
+INFO 2026-02-10 06:52:07,639 autoreload 1563658 138775540306048 /home/joseph/apps/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-10 06:53:37,536 autoreload 1563884 134841318166656 Watching for file changes with StatReloader
+WARNING 2026-02-10 06:53:52,801 log 1563884 134841223870144 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:53:53,004 log 1563884 134841223870144 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:53:55,093 log 1563884 134841223870144 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:53:55,109 log 1563884 134841223870144 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 06:53:55,335 log 1563884 134841215477440 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:53:55,339 log 1563884 134841223870144 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 06:53:58,050 log 1563884 134841215477440 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 06:53:58,081 log 1563884 134841223870144 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:53:58,087 log 1563884 134841207084736 Not Found: /api/payments/webhook//api/cart/items/
+WARNING 2026-02-10 06:53:58,251 log 1563884 134841207084736 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 06:53:58,301 log 1563884 134841207084736 Not Found: /api/payments/webhook//api/admin/categories/
+INFO 2026-02-10 06:55:17,763 autoreload 1563884 134841318166656 /home/joseph/apps/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-10 06:55:18,859 autoreload 1564089 137950405877888 Watching for file changes with StatReloader
+WARNING 2026-02-10 06:55:40,583 log 1564089 137950295742144 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 06:55:40,585 log 1564089 137950304134848 Not Found: /api/payments/webhook//api/cart/items/
+WARNING 2026-02-10 06:55:40,594 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:55:40,808 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 06:55:40,822 log 1564089 137950304134848 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 06:58:51,097 log 1564089 137950312527552 Unauthorized: /api/admin/categories/
+WARNING 2026-02-10 06:58:51,099 log 1564089 137950304134848 Unauthorized: /api/products/all/
+WARNING 2026-02-10 06:58:51,101 log 1564089 137950295742144 Unauthorized: /api/cart/items/
+WARNING 2026-02-10 06:58:51,266 log 1564089 137950295742144 Unauthorized: /api/admin/categories/
+WARNING 2026-02-10 06:58:51,284 log 1564089 137950295742144 Unauthorized: /api/products/all/
+WARNING 2026-02-10 06:58:51,304 log 1564089 137950295742144 Unauthorized: /api/cart/items/
+WARNING 2026-02-10 06:59:40,303 log 1564089 137950312527552 Unauthorized: /api/cart/items/
+INFO 2026-02-10 07:00:11,160 views 1564089 137950295742144 Checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 07:00:11,940 views 1564089 137950295742144 Received delivery data: {}
+INFO 2026-02-10 07:00:11,940 views 1564089 137950295742144 Full request data: {'delivery_address': 'Bamenda', 'delivery_city': 'Bamenda', 'delivery_state': '', 'delivery_postal_code': '', 'delivery_phone': '+237651185719', 'delivery_notes': 'jk', 'payment_method': 'fapshi', 'mtn_phone': '651185719', 'user': {'email': 'buyertwo@gmail.com', 'id': 64, 'user_id': 64}, 'email': 'buyertwo@gmail.com', 'user_id': 64, 'buyer_email': 'buyertwo@gmail.com', 'buyer_id': 64}
+INFO 2026-02-10 07:00:11,940 views 1564089 137950295742144 Using direct delivery data: {'delivery_address': 'Bamenda', 'delivery_phone': '+237651185719', 'delivery_city': 'Bamenda', 'delivery_state': '', 'delivery_postal_code': '', 'delivery_notes': 'jk'}
+INFO 2026-02-10 07:00:12,613 payment_service 1564089 137950295742144 FapshiPaymentService initialized:
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144   API Key set: Yes
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144 Initiating payment link request:
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144   Payload: {
+  "amount": 89898,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "d7554eb0-03bd-438f-a7af-ff85932f3501",
+  "message": "Payment for checkout d7554eb0-03bd-438f-a7af-ff85932f3501",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 07:00:12,614 payment_service 1564089 137950295742144   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 07:00:27,541 payment_service 1564089 137950295742144 Response status code: 200
+INFO 2026-02-10 07:00:27,541 payment_service 1564089 137950295742144 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-L4FS/rwMPeMXpq4Y2jjnxUeo6qI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'cf785c86718bb26ec8b333ed42ab19c4;o=1', 'date': 'Tue, 10 Feb 2026 07:00:27 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 07:00:27,541 payment_service 1564089 137950295742144 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698ad78bb14e885fb3846da2",
+  "transId": "9qmc6QqMTC",
+  "dateInitiated": "2026-02-10T07:00:27.223Z"
+}
+INFO 2026-02-10 07:00:27,543 views 1564089 137950295742144 Payment initiated for checkout d7554eb0-03bd-438f-a7af-ff85932f3501
+INFO 2026-02-10 07:00:43,051 payment_service 1564089 137950295742144 FapshiPaymentService initialized:
+INFO 2026-02-10 07:00:43,052 payment_service 1564089 137950295742144   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:00:43,052 payment_service 1564089 137950295742144   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:00:43,052 payment_service 1564089 137950295742144   API Key set: Yes
+ERROR 2026-02-10 07:00:45,346 log 1564089 137950295742144 Internal Server Error: /api/payments/webhook/
+WARNING 2026-02-10 07:01:20,741 log 1564089 137950295742144 Not Found: /api/payments/webhook//api/cart/items/
+WARNING 2026-02-10 07:01:22,581 log 1564089 137950295742144 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 07:01:22,598 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/products/all/
+WARNING 2026-02-10 07:01:22,774 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/admin/categories/
+WARNING 2026-02-10 07:01:22,863 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/products/all/
+INFO 2026-02-10 07:02:12,720 views 1564089 137950312527552 Checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 07:02:13,056 views 1564089 137950312527552 Received delivery data: {}
+INFO 2026-02-10 07:02:13,057 views 1564089 137950312527552 Full request data: {'delivery_address': 'Bamenda', 'delivery_city': 'Bamenda', 'delivery_state': '', 'delivery_postal_code': '', 'delivery_phone': '+237651185719', 'delivery_notes': '', 'payment_method': 'fapshi', 'mtn_phone': '651185719', 'user': {'email': 'buyertwo@gmail.com', 'id': 64, 'user_id': 64}, 'email': 'buyertwo@gmail.com', 'user_id': 64, 'buyer_email': 'buyertwo@gmail.com', 'buyer_id': 64}
+INFO 2026-02-10 07:02:13,058 views 1564089 137950312527552 Using direct delivery data: {'delivery_address': 'Bamenda', 'delivery_phone': '+237651185719', 'delivery_city': 'Bamenda', 'delivery_state': '', 'delivery_postal_code': '', 'delivery_notes': ''}
+INFO 2026-02-10 07:02:13,739 payment_service 1564089 137950312527552 FapshiPaymentService initialized:
+INFO 2026-02-10 07:02:13,740 payment_service 1564089 137950312527552   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:02:13,740 payment_service 1564089 137950312527552   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:02:13,740 payment_service 1564089 137950312527552   API Key set: Yes
+INFO 2026-02-10 07:02:13,740 payment_service 1564089 137950312527552 Initiating payment link request:
+INFO 2026-02-10 07:02:13,740 payment_service 1564089 137950312527552   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 07:02:13,741 payment_service 1564089 137950312527552   Payload: {
+  "amount": 89898,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "e24e0d20-1752-45c6-89e8-2e43eb9a5b30",
+  "message": "Payment for checkout e24e0d20-1752-45c6-89e8-2e43eb9a5b30",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 07:02:13,741 payment_service 1564089 137950312527552   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 07:02:14,169 payment_service 1564089 137950312527552 Response status code: 200
+INFO 2026-02-10 07:02:14,169 payment_service 1564089 137950312527552 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-nJnrn5PChezjNMfEyewdOQTI8/U"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'cb596c97f8b97afbbd159ec623e66aba;o=1', 'date': 'Tue, 10 Feb 2026 07:02:14 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 07:02:14,170 payment_service 1564089 137950312527552 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698ad7f5b14e885fb3846dac",
+  "transId": "VsNvgeyRAw",
+  "dateInitiated": "2026-02-10T07:02:13.935Z"
+}
+INFO 2026-02-10 07:02:14,172 views 1564089 137950312527552 Payment initiated for checkout e24e0d20-1752-45c6-89e8-2e43eb9a5b30
+INFO 2026-02-10 07:02:28,419 payment_service 1564089 137950312527552 FapshiPaymentService initialized:
+INFO 2026-02-10 07:02:28,420 payment_service 1564089 137950312527552   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:02:28,420 payment_service 1564089 137950312527552   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:02:28,420 payment_service 1564089 137950312527552   API Key set: Yes
+ERROR 2026-02-10 07:02:30,643 log 1564089 137950312527552 Internal Server Error: /api/payments/webhook/
+WARNING 2026-02-10 07:05:27,808 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/cart/items/
+WARNING 2026-02-10 07:05:31,335 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/orders/
+WARNING 2026-02-10 07:05:31,637 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/orders/
+WARNING 2026-02-10 07:05:33,734 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/orders/
+WARNING 2026-02-10 07:05:33,950 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/orders/
+WARNING 2026-02-10 07:05:42,889 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/reports/my/
+WARNING 2026-02-10 07:05:43,091 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/reports/my/
+WARNING 2026-02-10 07:06:05,074 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/profile/
+WARNING 2026-02-10 07:06:05,275 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/profile/
+WARNING 2026-02-10 07:06:08,341 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/reports/my/
+WARNING 2026-02-10 07:06:08,595 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/reports/my/
+WARNING 2026-02-10 07:06:09,443 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/profile/
+WARNING 2026-02-10 07:06:09,657 log 1564089 137950312527552 Not Found: /api/payments/webhook//api/profile/
+INFO 2026-02-10 07:07:36,796 payment_service 1564089 137950312527552 FapshiPaymentService initialized:
+INFO 2026-02-10 07:07:36,797 payment_service 1564089 137950312527552   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:07:36,797 payment_service 1564089 137950312527552   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:07:36,797 payment_service 1564089 137950312527552   API Key set: Yes
+INFO 2026-02-10 07:08:07,357 autoreload 1564089 137950405877888 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 07:08:08,266 autoreload 1566186 131862682083456 Watching for file changes with StatReloader
+INFO 2026-02-10 07:08:29,453 payment_service 1566186 131862588552896 FapshiPaymentService initialized:
+INFO 2026-02-10 07:08:29,453 payment_service 1566186 131862588552896   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:08:29,453 payment_service 1566186 131862588552896   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:08:29,453 payment_service 1566186 131862588552896   API Key set: Yes
+ERROR 2026-02-10 07:08:31,334 log 1566186 131862588552896 Internal Server Error: /api/payments/webhook/
+INFO 2026-02-10 07:09:07,459 autoreload 1566186 131862682083456 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 07:09:08,326 autoreload 1566435 132898109685888 Watching for file changes with StatReloader
+INFO 2026-02-10 07:09:17,212 payment_service 1566435 132898015409856 FapshiPaymentService initialized:
+INFO 2026-02-10 07:09:17,212 payment_service 1566435 132898015409856   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:09:17,213 payment_service 1566435 132898015409856   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:09:17,213 payment_service 1566435 132898015409856   API Key set: Yes
+INFO 2026-02-10 07:09:17,213 views 1566435 132898015409856 Processing webhook for transaction: VsNvgeyRAw
+ERROR 2026-02-10 07:09:19,003 views 1566435 132898015409856 Webhook error: 'NoneType' object has no attribute 'payment_status'
+ERROR 2026-02-10 07:09:19,006 views 1566435 132898015409856 Traceback: Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/api/views.py", line 1181, in payment_webhook
+    result = payment_service.update_payment_status(trans_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/api/payment_service.py", line 280, in update_payment_status
+    order.payment_status = 'paid'
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'payment_status'
+
+ERROR 2026-02-10 07:09:19,008 log 1566435 132898015409856 Internal Server Error: /api/payments/webhook/
+INFO 2026-02-10 07:09:32,740 autoreload 1566435 132898109685888 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 07:09:33,620 autoreload 1566606 140382524502144 Watching for file changes with StatReloader
+INFO 2026-02-10 07:09:37,724 payment_service 1566606 140382430033600 FapshiPaymentService initialized:
+INFO 2026-02-10 07:09:37,724 payment_service 1566606 140382430033600   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 07:09:37,724 payment_service 1566606 140382430033600   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 07:09:37,724 payment_service 1566606 140382430033600   API Key set: Yes
+INFO 2026-02-10 07:09:37,724 views 1566606 140382430033600 Processing webhook for transaction: VsNvgeyRAw
+INFO 2026-02-10 07:09:39,469 payment_service 1566606 140382430033600 No order exists for payment 59 yet
+INFO 2026-02-10 07:09:40,643 views 1566606 140382430033600 Cart cleared for user buyertwo@gmail.com after successful payment
+INFO 2026-02-10 07:09:40,643 views 1566606 140382430033600 Order 49 created successfully from payment 59
+INFO 2026-02-10 07:09:40,644 views 1566606 140382430033600 Order created for user buyertwo@gmail.com with amount 89898.00
+WARNING 2026-02-10 07:10:13,049 log 1566606 140382430033600 Not Found: /api/payments/webhook//api/reports/my/
+WARNING 2026-02-10 07:10:13,243 log 1566606 140382430033600 Not Found: /api/payments/webhook//api/reports/my/
+WARNING 2026-02-10 07:10:17,099 log 1566606 140382430033600 Not Found: /api/payments/webhook//api/profile/
+WARNING 2026-02-10 07:10:17,303 log 1566606 140382430033600 Not Found: /api/payments/webhook//api/profile/
+WARNING 2026-02-10 07:10:43,961 log 1566606 140382430033600 Not Found: /api/payments/webhook//api/orders/
+WARNING 2026-02-10 07:10:44,185 log 1566606 140382430033600 Not Found: /api/payments/webhook//api/orders/
+INFO 2026-02-10 07:25:49,913 autoreload 1566606 140382524502144 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 07:25:52,373 autoreload 1568035 135612441698432 Watching for file changes with StatReloader
+INFO 2026-02-10 07:26:11,902 autoreload 1568035 135612441698432 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 07:26:12,766 autoreload 1568244 139172491305088 Watching for file changes with StatReloader
+INFO 2026-02-10 07:26:42,002 autoreload 1568244 139172491305088 /home/joseph/apps/E_COMMERCE/api/urls.py changed, reloading.
+INFO 2026-02-10 07:26:42,829 autoreload 1568311 124057494466688 Watching for file changes with StatReloader
+INFO 2026-02-10 08:20:48,761 views 1568311 124057159718592 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 08:20:49,104 payment_service 1568311 124057159718592 FapshiPaymentService initialized:
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592   API Key set: Yes
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592 Initiating payment link request:
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592   Payload: {
+  "amount": 7000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "2e628bfd-12e4-4a73-8ef2-a2033301a13f",
+  "message": "Payment for checkout 2e628bfd-12e4-4a73-8ef2-a2033301a13f",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 08:20:49,105 payment_service 1568311 124057159718592   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 08:21:02,493 payment_service 1568311 124057159718592 Response status code: 200
+INFO 2026-02-10 08:21:02,493 payment_service 1568311 124057159718592 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-X3tAvMiJint7xAEW9KmAODVqFcM"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '8b50190395a7928ad7ccc0a7326ab9db;o=1', 'date': 'Tue, 10 Feb 2026 08:21:02 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 08:21:02,494 payment_service 1568311 124057159718592 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698aea6e87a9c03d1fd87188",
+  "transId": "nWaVym3INd",
+  "dateInitiated": "2026-02-10T08:21:02.224Z"
+}
+INFO 2026-02-10 08:21:02,515 views 1568311 124057159718592 Payment initiated for optimized checkout 2e628bfd-12e4-4a73-8ef2-a2033301a13f
+INFO 2026-02-10 08:21:20,597 payment_service 1568311 124057159718592 FapshiPaymentService initialized:
+INFO 2026-02-10 08:21:20,598 payment_service 1568311 124057159718592   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 08:21:20,598 payment_service 1568311 124057159718592   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 08:21:20,598 payment_service 1568311 124057159718592   API Key set: Yes
+INFO 2026-02-10 08:21:20,598 views 1568311 124057159718592 Processing webhook for transaction: nWaVym3INd
+INFO 2026-02-10 08:21:22,308 payment_service 1568311 124057159718592 No order exists for payment 60 yet
+INFO 2026-02-10 08:21:23,548 views 1568311 124057159718592 Cart cleared for user buyertwo@gmail.com after successful payment
+INFO 2026-02-10 08:21:23,548 views 1568311 124057159718592 Order 50 created successfully from payment 60
+INFO 2026-02-10 08:21:23,548 views 1568311 124057159718592 Order created for user buyertwo@gmail.com with amount 7000.00
+INFO 2026-02-10 08:42:00,267 views 1568311 124057159718592 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 08:42:00,612 payment_service 1568311 124057159718592 FapshiPaymentService initialized:
+INFO 2026-02-10 08:42:00,612 payment_service 1568311 124057159718592   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 08:42:00,612 payment_service 1568311 124057159718592   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 08:42:00,613 payment_service 1568311 124057159718592   API Key set: Yes
+INFO 2026-02-10 08:42:00,613 payment_service 1568311 124057159718592 Initiating payment link request:
+INFO 2026-02-10 08:42:00,613 payment_service 1568311 124057159718592   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 08:42:00,613 payment_service 1568311 124057159718592   Payload: {
+  "amount": 34000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "e33f4356-57d1-403e-9fa2-1a4e5aa21611",
+  "message": "Payment for checkout e33f4356-57d1-403e-9fa2-1a4e5aa21611",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 08:42:00,614 payment_service 1568311 124057159718592   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 08:42:04,908 payment_service 1568311 124057159718592 Response status code: 200
+INFO 2026-02-10 08:42:04,910 payment_service 1568311 124057159718592 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-fXU+yg7ePQTHYotms+ZortOR2Xo"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'bb36a2d1503b5ae244b346921b5a33d0;o=1', 'date': 'Tue, 10 Feb 2026 08:42:04 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 08:42:04,910 payment_service 1568311 124057159718592 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698aef5c19b395f18431c3c2",
+  "transId": "axAuxCGLWB",
+  "dateInitiated": "2026-02-10T08:42:04.653Z"
+}
+INFO 2026-02-10 08:42:04,913 views 1568311 124057159718592 Payment initiated for optimized checkout e33f4356-57d1-403e-9fa2-1a4e5aa21611
+INFO 2026-02-10 09:21:35,382 views 1568311 124057176504000 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 09:21:35,726 payment_service 1568311 124057176504000 FapshiPaymentService initialized:
+INFO 2026-02-10 09:21:35,726 payment_service 1568311 124057176504000   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:21:35,726 payment_service 1568311 124057176504000   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:21:35,726 payment_service 1568311 124057176504000   API Key set: Yes
+INFO 2026-02-10 09:21:35,726 payment_service 1568311 124057176504000 Initiating payment link request:
+INFO 2026-02-10 09:21:35,726 payment_service 1568311 124057176504000   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 09:21:35,727 payment_service 1568311 124057176504000   Payload: {
+  "amount": 89000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "47b38177-b477-4f65-abcd-23b2131328ab",
+  "message": "Payment for checkout 47b38177-b477-4f65-abcd-23b2131328ab",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 09:21:35,727 payment_service 1568311 124057176504000   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 09:22:44,745 payment_service 1568311 124057176504000 Response status code: 200
+INFO 2026-02-10 09:22:44,746 payment_service 1568311 124057176504000 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-i37emxcDgq2fh3s+8+dG6fdpZN8"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'a1a0a276756b4c390405d4ae67ce62f2;o=1', 'date': 'Tue, 10 Feb 2026 09:22:44 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 09:22:44,746 payment_service 1568311 124057176504000 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698af8e4c5dea415cc86524e",
+  "transId": "aBU06xjeje",
+  "dateInitiated": "2026-02-10T09:22:44.499Z"
+}
+INFO 2026-02-10 09:22:44,748 views 1568311 124057176504000 Payment initiated for optimized checkout 47b38177-b477-4f65-abcd-23b2131328ab
+INFO 2026-02-10 09:24:41,874 views 1568311 124057176504000 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 09:24:42,566 payment_service 1568311 124057176504000 FapshiPaymentService initialized:
+INFO 2026-02-10 09:24:42,566 payment_service 1568311 124057176504000   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:24:42,566 payment_service 1568311 124057176504000   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:24:42,566 payment_service 1568311 124057176504000   API Key set: Yes
+INFO 2026-02-10 09:24:42,567 payment_service 1568311 124057176504000 Initiating payment link request:
+INFO 2026-02-10 09:24:42,567 payment_service 1568311 124057176504000   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 09:24:42,567 payment_service 1568311 124057176504000   Payload: {
+  "amount": 85000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "d20fb810-fe62-4492-9c1d-b85c2dec43f7",
+  "message": "Payment for checkout d20fb810-fe62-4492-9c1d-b85c2dec43f7",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 09:24:42,567 payment_service 1568311 124057176504000   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 09:24:43,023 payment_service 1568311 124057176504000 Response status code: 200
+INFO 2026-02-10 09:24:43,023 payment_service 1568311 124057176504000 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-D9qImN+pWTIu8JjkXrTlQNEt2cU"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'f05ee79d15811fdbb3bf710a0a4e17a3;o=1', 'date': 'Tue, 10 Feb 2026 09:24:42 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 09:24:43,023 payment_service 1568311 124057176504000 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698af95ac5dea415cc865251",
+  "transId": "XtAutQHd6s",
+  "dateInitiated": "2026-02-10T09:24:42.773Z"
+}
+INFO 2026-02-10 09:24:43,025 views 1568311 124057176504000 Payment initiated for optimized checkout d20fb810-fe62-4492-9c1d-b85c2dec43f7
+INFO 2026-02-10 09:24:59,222 payment_service 1568311 124057176504000 FapshiPaymentService initialized:
+INFO 2026-02-10 09:24:59,222 payment_service 1568311 124057176504000   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:24:59,222 payment_service 1568311 124057176504000   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:24:59,223 payment_service 1568311 124057176504000   API Key set: Yes
+INFO 2026-02-10 09:24:59,223 views 1568311 124057176504000 Processing webhook for transaction: XtAutQHd6s
+INFO 2026-02-10 09:25:01,011 payment_service 1568311 124057176504000 No order exists for payment 63 yet
+INFO 2026-02-10 09:26:23,658 views 1568311 124057176504000 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 09:26:23,996 payment_service 1568311 124057176504000 FapshiPaymentService initialized:
+INFO 2026-02-10 09:26:23,996 payment_service 1568311 124057176504000   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:26:23,997 payment_service 1568311 124057176504000   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:26:23,997 payment_service 1568311 124057176504000   API Key set: Yes
+INFO 2026-02-10 09:26:23,997 payment_service 1568311 124057176504000 Initiating payment link request:
+INFO 2026-02-10 09:26:23,997 payment_service 1568311 124057176504000   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 09:26:23,997 payment_service 1568311 124057176504000   Payload: {
+  "amount": 14000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "260f6a36-34a9-4be7-81f5-ba3663ac44e5",
+  "message": "Payment for checkout 260f6a36-34a9-4be7-81f5-ba3663ac44e5",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 09:26:23,997 payment_service 1568311 124057176504000   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 09:26:24,418 payment_service 1568311 124057176504000 Response status code: 200
+INFO 2026-02-10 09:26:24,419 payment_service 1568311 124057176504000 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-Gi0XxC9x4p7HmA3xCv2RVFK51P0"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '7a81d7f127f042ea2432d8170195a76c;o=1', 'date': 'Tue, 10 Feb 2026 09:26:24 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 09:26:24,419 payment_service 1568311 124057176504000 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698af9c0c5dea415cc865259",
+  "transId": "9LZmv02M70",
+  "dateInitiated": "2026-02-10T09:26:24.186Z"
+}
+INFO 2026-02-10 09:26:24,421 views 1568311 124057176504000 Payment initiated for optimized checkout 260f6a36-34a9-4be7-81f5-ba3663ac44e5
+INFO 2026-02-10 09:26:34,831 payment_service 1568311 124057176504000 FapshiPaymentService initialized:
+INFO 2026-02-10 09:26:34,831 payment_service 1568311 124057176504000   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:26:34,831 payment_service 1568311 124057176504000   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:26:34,832 payment_service 1568311 124057176504000   API Key set: Yes
+INFO 2026-02-10 09:26:34,832 views 1568311 124057176504000 Processing webhook for transaction: 9LZmv02M70
+INFO 2026-02-10 09:26:37,343 payment_service 1568311 124057176504000 No order exists for payment 64 yet
+INFO 2026-02-10 09:46:04,073 views 1568311 124057151325888 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 09:46:05,051 payment_service 1568311 124057151325888 FapshiPaymentService initialized:
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888   API Key set: Yes
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888 Initiating payment link request:
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888   Payload: {
+  "amount": 10030,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "7a68aa80-fafd-4815-bc2f-2ca22c179279",
+  "message": "Payment for checkout 7a68aa80-fafd-4815-bc2f-2ca22c179279",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 09:46:05,052 payment_service 1568311 124057151325888   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 09:46:09,301 payment_service 1568311 124057151325888 Response status code: 200
+INFO 2026-02-10 09:46:09,302 payment_service 1568311 124057151325888 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-JSAcSxrepey3NthTlAGJpsbf3og"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'e56da8927f670a14e556ecf955e8616d;o=1', 'date': 'Tue, 10 Feb 2026 09:46:09 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 09:46:09,302 payment_service 1568311 124057151325888 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698afe615a267aacd0553c77",
+  "transId": "Dyx5JCpA0A",
+  "dateInitiated": "2026-02-10T09:46:09.041Z"
+}
+INFO 2026-02-10 09:46:09,305 views 1568311 124057151325888 Payment initiated for optimized checkout 7a68aa80-fafd-4815-bc2f-2ca22c179279
+INFO 2026-02-10 09:46:44,785 payment_service 1568311 124057151325888 FapshiPaymentService initialized:
+INFO 2026-02-10 09:46:44,786 payment_service 1568311 124057151325888   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 09:46:44,786 payment_service 1568311 124057151325888   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 09:46:44,786 payment_service 1568311 124057151325888   API Key set: Yes
+INFO 2026-02-10 09:46:44,786 views 1568311 124057151325888 Processing webhook for transaction: Dyx5JCpA0A
+INFO 2026-02-10 09:46:47,373 payment_service 1568311 124057151325888 No order exists for payment 65 yet
+INFO 2026-02-10 09:46:48,760 views 1568311 124057151325888 Cart cleared for user buyertwo@gmail.com after successful payment
+INFO 2026-02-10 09:46:48,760 views 1568311 124057151325888 Order 51 created successfully from payment 65
+INFO 2026-02-10 09:46:48,760 views 1568311 124057151325888 Order created for user buyertwo@gmail.com with amount 10030.00
+INFO 2026-02-10 10:03:39,120 autoreload 1568311 124057494466688 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 10:03:40,629 autoreload 1586205 138383355248768 Watching for file changes with StatReloader
+INFO 2026-02-10 10:10:15,525 views 1586205 138383261169344 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:10:16,506 payment_service 1586205 138383261169344 FapshiPaymentService initialized:
+INFO 2026-02-10 10:10:16,507 payment_service 1586205 138383261169344   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:10:16,507 payment_service 1586205 138383261169344   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:10:16,507 payment_service 1586205 138383261169344   API Key set: Yes
+INFO 2026-02-10 10:10:16,507 payment_service 1586205 138383261169344 Initiating payment link request:
+INFO 2026-02-10 10:10:16,507 payment_service 1586205 138383261169344   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:10:16,508 payment_service 1586205 138383261169344   Payload: {
+  "amount": 10030,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "b353bdd0-6726-4d5b-86e5-25bf37ec1c50",
+  "message": "Payment for checkout b353bdd0-6726-4d5b-86e5-25bf37ec1c50",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:10:16,508 payment_service 1586205 138383261169344   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:10:17,100 payment_service 1586205 138383261169344 Response status code: 200
+INFO 2026-02-10 10:10:17,101 payment_service 1586205 138383261169344 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-hdnInXYvMLu6Cmlom3V6ugswyC4"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '8ba648c9f349b2f285d0ea5b04d2cdaf;o=1', 'date': 'Tue, 10 Feb 2026 10:10:16 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:10:17,101 payment_service 1586205 138383261169344 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b04085a267aacd0553c85",
+  "transId": "GUPFIRFFHh",
+  "dateInitiated": "2026-02-10T10:10:16.853Z"
+}
+INFO 2026-02-10 10:10:17,104 views 1586205 138383261169344 Payment initiated for optimized checkout b353bdd0-6726-4d5b-86e5-25bf37ec1c50
+INFO 2026-02-10 10:10:34,830 payment_service 1586205 138383261169344 FapshiPaymentService initialized:
+INFO 2026-02-10 10:10:34,831 payment_service 1586205 138383261169344   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:10:34,831 payment_service 1586205 138383261169344   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:10:34,831 payment_service 1586205 138383261169344   API Key set: Yes
+INFO 2026-02-10 10:10:34,831 views 1586205 138383261169344 Processing webhook for transaction: GUPFIRFFHh
+INFO 2026-02-10 10:10:37,414 payment_service 1586205 138383261169344 No order exists for payment 66 yet
+INFO 2026-02-10 10:12:02,058 views 1586205 138383040968384 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384 FapshiPaymentService initialized:
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384   API Key set: Yes
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384 Initiating payment link request:
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384   Payload: {
+  "amount": 34000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "445215e5-fdb5-4304-8551-d3f73e7e2119",
+  "message": "Payment for checkout 445215e5-fdb5-4304-8551-d3f73e7e2119",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:12:02,420 payment_service 1586205 138383040968384   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:12:02,891 payment_service 1586205 138383040968384 Response status code: 200
+INFO 2026-02-10 10:12:02,893 payment_service 1586205 138383040968384 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-F5sEyZYNSXKOqv7cDjnEv/VN/8k"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'ccb26c0c7cac2c0915f6db1122b0c6f5;o=1', 'date': 'Tue, 10 Feb 2026 10:12:02 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:12:02,894 payment_service 1586205 138383040968384 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b04725a267aacd0553c8d",
+  "transId": "qACuJYh86n",
+  "dateInitiated": "2026-02-10T10:12:02.651Z"
+}
+INFO 2026-02-10 10:12:02,896 views 1586205 138383040968384 Payment initiated for optimized checkout 445215e5-fdb5-4304-8551-d3f73e7e2119
+INFO 2026-02-10 10:12:41,401 payment_service 1586205 138383040968384 FapshiPaymentService initialized:
+INFO 2026-02-10 10:12:41,402 payment_service 1586205 138383040968384   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:12:41,402 payment_service 1586205 138383040968384   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:12:41,402 payment_service 1586205 138383040968384   API Key set: Yes
+INFO 2026-02-10 10:12:41,402 views 1586205 138383040968384 Processing webhook for transaction: qACuJYh86n
+INFO 2026-02-10 10:12:43,129 payment_service 1586205 138383040968384 No order exists for payment 67 yet
+INFO 2026-02-10 10:22:48,266 autoreload 1586205 138383355248768 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 10:22:49,833 autoreload 1588701 139180232413312 Watching for file changes with StatReloader
+INFO 2026-02-10 10:23:09,202 autoreload 1588701 139180232413312 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 10:23:10,037 autoreload 1588771 128154425745536 Watching for file changes with StatReloader
+INFO 2026-02-10 10:23:24,922 autoreload 1588771 128154425745536 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 10:23:25,788 autoreload 1588831 135129571319936 Watching for file changes with StatReloader
+INFO 2026-02-10 10:23:45,876 autoreload 1588831 135129571319936 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 10:23:46,774 autoreload 1588899 137281979199616 Watching for file changes with StatReloader
+WARNING 2026-02-10 10:24:18,692 log 1588899 137281868388032 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:24:19,112 log 1588899 137281868388032 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:24:19,542 log 1588899 137281868388032 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:24:19,964 log 1588899 137281868388032 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:24:20,337 log 1588899 137281876780736 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:24:20,400 log 1588899 137281876780736 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:24:20,978 log 1588899 137281885173440 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:24:21,193 log 1588899 137281876780736 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:24:21,612 log 1588899 137281876780736 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:24:21,974 log 1588899 137281876780736 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:24:22,393 log 1588899 137281876780736 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:24:22,771 log 1588899 137281876780736 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:24:23,161 log 1588899 137281876780736 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:24:28,589 log 1588899 137281868388032 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:24:28,799 log 1588899 137281876780736 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:24:29,033 log 1588899 137281868388032 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:24:29,295 log 1588899 137281868388032 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:24:29,512 log 1588899 137281868388032 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:24:29,732 log 1588899 137281868388032 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:24:29,957 log 1588899 137281868388032 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:24:30,183 log 1588899 137281868388032 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:24:30,422 log 1588899 137281885173440 Not Found: /api/orders/41/
+INFO 2026-02-10 10:32:46,474 views 1588899 137281625114304 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:32:47,468 payment_service 1588899 137281625114304 FapshiPaymentService initialized:
+INFO 2026-02-10 10:32:47,469 payment_service 1588899 137281625114304   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:32:47,469 payment_service 1588899 137281625114304   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:32:47,469 payment_service 1588899 137281625114304   API Key set: Yes
+INFO 2026-02-10 10:32:47,469 payment_service 1588899 137281625114304 Initiating payment link request:
+INFO 2026-02-10 10:32:47,469 payment_service 1588899 137281625114304   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:32:47,470 payment_service 1588899 137281625114304   Payload: {
+  "amount": 10030,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "451e22a3-a805-4e0c-bc57-589634fba758",
+  "message": "Payment for checkout 451e22a3-a805-4e0c-bc57-589634fba758",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:32:47,470 payment_service 1588899 137281625114304   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:32:59,856 payment_service 1588899 137281625114304 Response status code: 200
+INFO 2026-02-10 10:32:59,856 payment_service 1588899 137281625114304 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-vVaFbz1MuSJByBD/aDMChD+7GPc"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '02e3186a037ee57f68e18dc943422918;o=1', 'date': 'Tue, 10 Feb 2026 10:32:59 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:32:59,857 payment_service 1588899 137281625114304 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b095b581a2298272a9f51",
+  "transId": "bhGhhfTU03",
+  "dateInitiated": "2026-02-10T10:32:59.605Z"
+}
+INFO 2026-02-10 10:32:59,861 views 1588899 137281625114304 Payment initiated for optimized checkout 451e22a3-a805-4e0c-bc57-589634fba758
+INFO 2026-02-10 10:33:12,610 payment_service 1588899 137281625114304 FapshiPaymentService initialized:
+INFO 2026-02-10 10:33:12,613 payment_service 1588899 137281625114304   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:33:12,613 payment_service 1588899 137281625114304   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:33:12,613 payment_service 1588899 137281625114304   API Key set: Yes
+INFO 2026-02-10 10:33:12,613 views 1588899 137281625114304 Processing webhook for transaction: bhGhhfTU03
+INFO 2026-02-10 10:33:14,917 payment_service 1588899 137281625114304 No order exists for payment 68 yet
+INFO 2026-02-10 10:34:12,825 views 1588899 137281599936192 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:34:13,161 payment_service 1588899 137281599936192 FapshiPaymentService initialized:
+INFO 2026-02-10 10:34:13,161 payment_service 1588899 137281599936192   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:34:13,162 payment_service 1588899 137281599936192   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:34:13,162 payment_service 1588899 137281599936192   API Key set: Yes
+INFO 2026-02-10 10:34:13,162 payment_service 1588899 137281599936192 Initiating payment link request:
+INFO 2026-02-10 10:34:13,162 payment_service 1588899 137281599936192   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:34:13,162 payment_service 1588899 137281599936192   Payload: {
+  "amount": 12000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "00d9b2a9-00fa-4fb3-ac6e-c1a20545b13d",
+  "message": "Payment for checkout 00d9b2a9-00fa-4fb3-ac6e-c1a20545b13d",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:34:13,162 payment_service 1588899 137281599936192   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:34:14,215 payment_service 1588899 137281599936192 Response status code: 200
+INFO 2026-02-10 10:34:14,215 payment_service 1588899 137281599936192 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-32O7wJ7X2ZINl6dVlUEnFQafj4M"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '7cd4fbcb2f01494e0f02cf9bcd166700;o=1', 'date': 'Tue, 10 Feb 2026 10:34:14 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:34:14,215 payment_service 1588899 137281599936192 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b09a5581a2298272a9f59",
+  "transId": "ltFhNrqKtY",
+  "dateInitiated": "2026-02-10T10:34:13.976Z"
+}
+INFO 2026-02-10 10:34:14,217 views 1588899 137281599936192 Payment initiated for optimized checkout 00d9b2a9-00fa-4fb3-ac6e-c1a20545b13d
+INFO 2026-02-10 10:34:24,867 payment_service 1588899 137281599936192 FapshiPaymentService initialized:
+INFO 2026-02-10 10:34:24,867 payment_service 1588899 137281599936192   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:34:24,867 payment_service 1588899 137281599936192   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:34:24,868 payment_service 1588899 137281599936192   API Key set: Yes
+INFO 2026-02-10 10:34:24,868 views 1588899 137281599936192 Processing webhook for transaction: ltFhNrqKtY
+INFO 2026-02-10 10:34:27,191 payment_service 1588899 137281599936192 No order exists for payment 69 yet
+INFO 2026-02-10 10:34:30,251 views 1588899 137281599936192 Using cart items for order creation
+INFO 2026-02-10 10:34:30,416 views 1588899 137281599936192 Created OrderItem for product Learn Python the Easy Way, quantity 13
+INFO 2026-02-10 10:34:30,581 views 1588899 137281599936192 Created OrderItem for product Electric Kettle (1.7L), quantity 1
+INFO 2026-02-10 10:34:30,747 views 1588899 137281599936192 Created OrderItem for product Electric Toothbrush, quantity 1
+INFO 2026-02-10 10:34:30,915 views 1588899 137281599936192 Created OrderItem for product Cakes, quantity 4
+INFO 2026-02-10 10:34:31,098 views 1588899 137281599936192 Created OrderItem for product model, quantity 8
+INFO 2026-02-10 10:34:31,264 views 1588899 137281599936192 Cart cleared for user buyertwo@gmail.com after successful payment
+INFO 2026-02-10 10:34:31,438 views 1588899 137281599936192 Created 5 order items for order 52
+INFO 2026-02-10 10:34:31,438 views 1588899 137281599936192 Order 52 created successfully from payment 69
+INFO 2026-02-10 10:34:31,438 views 1588899 137281599936192 Order created for user buyertwo@gmail.com with amount 12000.00
+INFO 2026-02-10 10:34:31,604 views 1588899 137281599936192 Created 5 order items for order 52
+WARNING 2026-02-10 10:34:49,765 log 1588899 137281046312640 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:34:49,997 log 1588899 137281046312640 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:34:50,196 log 1588899 137281046312640 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:34:50,391 log 1588899 137281046312640 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:34:50,618 log 1588899 137281046312640 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:34:50,823 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:34:51,055 log 1588899 137281046312640 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:34:51,282 log 1588899 137281046312640 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:34:51,495 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:34:51,533 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:34:51,682 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:34:51,773 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:34:51,950 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:34:52,003 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:34:52,158 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:34:52,215 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:34:52,423 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:34:52,634 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:34:52,882 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:34:53,073 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:34:53,284 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:34:53,522 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:34:53,751 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:34:53,992 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:36:11,402 log 1588899 137281046312640 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:36:11,613 log 1588899 137281046312640 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:36:11,831 log 1588899 137281046312640 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:36:12,081 log 1588899 137281046312640 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:36:12,334 log 1588899 137281046312640 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:36:12,563 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:36:12,792 log 1588899 137281046312640 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:36:13,026 log 1588899 137281046312640 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:36:13,225 log 1588899 137281046312640 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:36:13,452 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:36:13,512 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:36:13,704 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:36:13,742 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:36:13,923 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:36:13,973 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:36:14,198 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:36:14,397 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:36:14,611 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:36:14,797 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:36:15,019 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:36:15,233 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:36:15,440 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:36:15,633 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:36:15,854 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:36:31,223 log 1588899 137281046312640 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:36:31,452 log 1588899 137281046312640 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:36:31,672 log 1588899 137281046312640 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:36:31,892 log 1588899 137281046312640 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:36:32,160 log 1588899 137281046312640 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:36:32,355 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:36:32,572 log 1588899 137281046312640 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:36:32,882 log 1588899 137281046312640 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:36:33,133 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:36:33,274 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:36:33,441 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:36:33,552 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:36:33,642 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:36:33,797 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:36:33,900 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:36:34,048 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:36:34,332 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:36:34,612 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:36:34,817 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:36:35,052 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:36:35,275 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:36:35,552 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:36:35,805 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:36:36,024 log 1588899 137281004349120 Not Found: /api/orders/41/
+INFO 2026-02-10 10:38:09,716 views 1588899 137281004349120 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:38:10,741 payment_service 1588899 137281004349120 FapshiPaymentService initialized:
+INFO 2026-02-10 10:38:10,741 payment_service 1588899 137281004349120   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:38:10,741 payment_service 1588899 137281004349120   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:38:10,741 payment_service 1588899 137281004349120   API Key set: Yes
+INFO 2026-02-10 10:38:10,741 payment_service 1588899 137281004349120 Initiating payment link request:
+INFO 2026-02-10 10:38:10,741 payment_service 1588899 137281004349120   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:38:10,742 payment_service 1588899 137281004349120   Payload: {
+  "amount": 10030,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "652e7c38-4afb-4f17-b9c6-82db717a5b5b",
+  "message": "Payment for checkout 652e7c38-4afb-4f17-b9c6-82db717a5b5b",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:38:10,742 payment_service 1588899 137281004349120   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:38:11,185 payment_service 1588899 137281004349120 Response status code: 200
+INFO 2026-02-10 10:38:11,186 payment_service 1588899 137281004349120 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-SX9uYYg2mZ+eX18DRo9NvIyiO0U"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'bc0cb54c6904319a1c17e09728314859;o=1', 'date': 'Tue, 10 Feb 2026 10:38:11 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:38:11,186 payment_service 1588899 137281004349120 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b0a92581a2298272a9f62",
+  "transId": "aTPzILv7Pr",
+  "dateInitiated": "2026-02-10T10:38:10.947Z"
+}
+INFO 2026-02-10 10:38:11,189 views 1588899 137281004349120 Payment initiated for optimized checkout 652e7c38-4afb-4f17-b9c6-82db717a5b5b
+INFO 2026-02-10 10:38:23,932 payment_service 1588899 137281004349120 FapshiPaymentService initialized:
+INFO 2026-02-10 10:38:23,933 payment_service 1588899 137281004349120   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:38:23,933 payment_service 1588899 137281004349120   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:38:23,933 payment_service 1588899 137281004349120   API Key set: Yes
+INFO 2026-02-10 10:38:23,933 views 1588899 137281004349120 Processing webhook for transaction: aTPzILv7Pr
+INFO 2026-02-10 10:38:26,206 payment_service 1588899 137281004349120 No order exists for payment 70 yet
+INFO 2026-02-10 10:38:28,421 views 1588899 137281004349120 Using cart items for order creation
+INFO 2026-02-10 10:38:28,591 views 1588899 137281004349120 Created OrderItem for product Learn Python the Easy Way, quantity 3
+INFO 2026-02-10 10:38:28,758 views 1588899 137281004349120 Created OrderItem for product model, quantity 2
+INFO 2026-02-10 10:38:28,924 views 1588899 137281004349120 Created OrderItem for product Cakes, quantity 1
+INFO 2026-02-10 10:38:29,093 views 1588899 137281004349120 Cart cleared for user buyertwo@gmail.com after successful payment
+INFO 2026-02-10 10:38:29,261 views 1588899 137281004349120 Created 3 order items for order 53
+INFO 2026-02-10 10:38:29,261 views 1588899 137281004349120 Order 53 created successfully from payment 70
+INFO 2026-02-10 10:38:29,261 views 1588899 137281004349120 Order created for user buyertwo@gmail.com with amount 10030.00
+INFO 2026-02-10 10:38:29,428 views 1588899 137281004349120 Created 3 order items for order 53
+WARNING 2026-02-10 10:38:49,955 log 1588899 137281046312640 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:38:50,176 log 1588899 137281046312640 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:38:50,394 log 1588899 137281046312640 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:38:50,595 log 1588899 137281046312640 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:38:50,825 log 1588899 137281046312640 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:38:51,074 log 1588899 137281046312640 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:38:51,300 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:38:51,533 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:38:51,658 log 1588899 137281004349120 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:38:51,770 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:38:51,882 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:38:51,980 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:38:52,105 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:38:52,174 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:38:52,312 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:38:52,439 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:38:52,552 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:38:52,662 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:38:52,772 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:38:52,998 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:38:53,233 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:38:53,453 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:38:53,650 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:38:53,872 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:38:54,197 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:38:54,455 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:39:14,482 log 1588899 137281004349120 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:39:14,712 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:39:14,912 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:39:15,113 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:39:15,334 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:39:15,585 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:39:15,811 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:39:16,047 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:39:16,272 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:39:16,505 log 1588899 137281004349120 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:39:16,524 log 1588899 137281046312640 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:39:16,822 log 1588899 137281046312640 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:39:16,831 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:39:17,083 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:39:17,096 log 1588899 137281046312640 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:39:17,321 log 1588899 137281046312640 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:39:17,327 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:39:17,553 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:39:17,792 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:39:18,062 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:39:18,303 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:39:18,530 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:39:18,731 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:39:18,962 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:39:19,191 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:39:19,432 log 1588899 137281004349120 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:42:40,547 log 1588899 137281004349120 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:42:40,772 log 1588899 137281004349120 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:42:41,011 log 1588899 137281004349120 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:42:41,288 log 1588899 137281004349120 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:42:41,543 log 1588899 137281004349120 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:42:41,782 log 1588899 137281004349120 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:42:41,984 log 1588899 137281004349120 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:42:42,192 log 1588899 137281004349120 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:42:42,421 log 1588899 137281004349120 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:42:42,714 log 1588899 137281004349120 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:42:42,962 log 1588899 137281004349120 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:42:43,181 log 1588899 137281004349120 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:42:43,433 log 1588899 137281004349120 Not Found: /api/orders/41/
+INFO 2026-02-10 10:45:55,824 views 1588899 137281046312640 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:45:56,477 payment_service 1588899 137281046312640 FapshiPaymentService initialized:
+INFO 2026-02-10 10:45:56,477 payment_service 1588899 137281046312640   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:45:56,478 payment_service 1588899 137281046312640   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:45:56,478 payment_service 1588899 137281046312640   API Key set: Yes
+INFO 2026-02-10 10:45:56,478 payment_service 1588899 137281046312640 Initiating payment link request:
+INFO 2026-02-10 10:45:56,478 payment_service 1588899 137281046312640   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:45:56,478 payment_service 1588899 137281046312640   Payload: {
+  "amount": 96000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "61f84eb8-67fe-4445-a8c5-05f3712a19c5",
+  "message": "Payment for checkout 61f84eb8-67fe-4445-a8c5-05f3712a19c5",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:45:56,478 payment_service 1588899 137281046312640   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:46:08,285 payment_service 1588899 137281046312640 Response status code: 200
+INFO 2026-02-10 10:46:08,285 payment_service 1588899 137281046312640 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-7nFcY6jkJ0hFIwvvsY+QSSlL9FA"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'bff55fe025fb8c11f08ef51074213946;o=1', 'date': 'Tue, 10 Feb 2026 10:46:08 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:46:08,285 payment_service 1588899 137281046312640 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b0c70581a2298272a9f6c",
+  "transId": "bpM77gdNze",
+  "dateInitiated": "2026-02-10T10:46:08.045Z"
+}
+INFO 2026-02-10 10:46:08,287 views 1588899 137281046312640 Payment initiated for optimized checkout 61f84eb8-67fe-4445-a8c5-05f3712a19c5
+INFO 2026-02-10 10:46:30,374 payment_service 1588899 137281046312640 FapshiPaymentService initialized:
+INFO 2026-02-10 10:46:30,374 payment_service 1588899 137281046312640   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:46:30,374 payment_service 1588899 137281046312640   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:46:30,375 payment_service 1588899 137281046312640   API Key set: Yes
+INFO 2026-02-10 10:46:30,375 views 1588899 137281046312640 Processing webhook for transaction: bpM77gdNze
+INFO 2026-02-10 10:46:32,970 payment_service 1588899 137281046312640 No order exists for payment 71 yet
+INFO 2026-02-10 10:46:35,489 views 1588899 137281046312640 Using cart items for order creation
+INFO 2026-02-10 10:46:35,680 views 1588899 137281046312640 Created OrderItem for product Electric Kettle (1.7L), quantity 2
+INFO 2026-02-10 10:46:35,864 views 1588899 137281046312640 Created OrderItem for product Face Moisturizing Cream, quantity 4
+INFO 2026-02-10 10:46:36,048 views 1588899 137281046312640 Created OrderItem for product Microwave Oven, quantity 4
+INFO 2026-02-10 10:46:36,231 views 1588899 137281046312640 Cart cleared for user buyertwo@gmail.com after successful payment
+INFO 2026-02-10 10:46:36,419 views 1588899 137281046312640 Created 3 order items for order 54
+INFO 2026-02-10 10:46:36,420 views 1588899 137281046312640 Order 54 created successfully from payment 71
+INFO 2026-02-10 10:46:36,420 views 1588899 137281046312640 Order created for user buyertwo@gmail.com with amount 96000.00
+INFO 2026-02-10 10:46:36,608 views 1588899 137281046312640 Created 3 order items for order 54
+WARNING 2026-02-10 10:47:36,018 log 1588899 137281625114304 Not Found: /api/orders/54/
+WARNING 2026-02-10 10:47:36,260 log 1588899 137281625114304 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:47:36,552 log 1588899 137281625114304 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:47:36,764 log 1588899 137281625114304 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:47:37,028 log 1588899 137281625114304 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:47:37,289 log 1588899 137281625114304 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:47:37,522 log 1588899 137281625114304 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:47:37,790 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:47:37,961 log 1588899 137281046312640 Not Found: /api/orders/54/
+WARNING 2026-02-10 10:47:37,993 log 1588899 137281046312640 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:47:38,194 log 1588899 137281046312640 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:47:38,199 log 1588899 137281625114304 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:47:38,503 log 1588899 137281625114304 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:47:38,518 log 1588899 137281046312640 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:47:38,791 log 1588899 137281046312640 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:47:38,800 log 1588899 137281625114304 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:47:39,052 log 1588899 137281625114304 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:47:39,068 log 1588899 137281046312640 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:47:39,284 log 1588899 137281046312640 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:47:39,303 log 1588899 137281046312640 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:47:39,522 log 1588899 137281046312640 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:47:39,732 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:47:40,041 log 1588899 137281046312640 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:47:40,237 log 1588899 137281046312640 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:47:40,512 log 1588899 137281046312640 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:47:40,735 log 1588899 137281046312640 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:47:41,026 log 1588899 137281046312640 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:47:41,262 log 1588899 137281046312640 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:48:15,745 log 1588899 137281625114304 Not Found: /api/orders/54/
+WARNING 2026-02-10 10:48:15,964 log 1588899 137281625114304 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:48:16,212 log 1588899 137281625114304 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:48:16,444 log 1588899 137281625114304 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:48:16,661 log 1588899 137281625114304 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:48:16,960 log 1588899 137281625114304 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:48:17,175 log 1588899 137281625114304 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:48:17,435 log 1588899 137281625114304 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:48:17,666 log 1588899 137281625114304 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:48:18,016 log 1588899 137281046312640 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:48:18,028 log 1588899 137281625114304 Not Found: /api/orders/54/
+WARNING 2026-02-10 10:48:18,255 log 1588899 137281625114304 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:48:18,271 log 1588899 137281046312640 Not Found: /api/orders/53/
+WARNING 2026-02-10 10:48:18,483 log 1588899 137281046312640 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:48:18,501 log 1588899 137281046312640 Not Found: /api/orders/52/
+WARNING 2026-02-10 10:48:18,672 log 1588899 137281046312640 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:48:18,694 log 1588899 137281046312640 Not Found: /api/orders/51/
+WARNING 2026-02-10 10:48:18,872 log 1588899 137281046312640 Not Found: /api/orders/41/
+WARNING 2026-02-10 10:48:18,912 log 1588899 137281046312640 Not Found: /api/orders/50/
+WARNING 2026-02-10 10:48:19,155 log 1588899 137281046312640 Not Found: /api/orders/49/
+WARNING 2026-02-10 10:48:19,372 log 1588899 137281046312640 Not Found: /api/orders/48/
+WARNING 2026-02-10 10:48:19,573 log 1588899 137281046312640 Not Found: /api/orders/47/
+WARNING 2026-02-10 10:48:19,771 log 1588899 137281046312640 Not Found: /api/orders/46/
+WARNING 2026-02-10 10:48:19,994 log 1588899 137281046312640 Not Found: /api/orders/45/
+WARNING 2026-02-10 10:48:20,197 log 1588899 137281046312640 Not Found: /api/orders/44/
+WARNING 2026-02-10 10:48:20,415 log 1588899 137281046312640 Not Found: /api/orders/43/
+WARNING 2026-02-10 10:48:20,635 log 1588899 137281046312640 Not Found: /api/orders/42/
+WARNING 2026-02-10 10:48:20,834 log 1588899 137281046312640 Not Found: /api/orders/41/
+INFO 2026-02-10 10:50:52,513 views 1588899 137281599936192 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 10:50:53,228 payment_service 1588899 137281599936192 FapshiPaymentService initialized:
+INFO 2026-02-10 10:50:53,228 payment_service 1588899 137281599936192   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:50:53,228 payment_service 1588899 137281599936192   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:50:53,228 payment_service 1588899 137281599936192   API Key set: Yes
+INFO 2026-02-10 10:50:53,228 payment_service 1588899 137281599936192 Initiating payment link request:
+INFO 2026-02-10 10:50:53,228 payment_service 1588899 137281599936192   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 10:50:53,229 payment_service 1588899 137281599936192   Payload: {
+  "amount": 32000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "6cc3fed5-10cd-4c95-abda-7bacf136a927",
+  "message": "Payment for checkout 6cc3fed5-10cd-4c95-abda-7bacf136a927",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 10:50:53,229 payment_service 1588899 137281599936192   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 10:50:54,278 payment_service 1588899 137281599936192 Response status code: 200
+INFO 2026-02-10 10:50:54,278 payment_service 1588899 137281599936192 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-GmBI8TEV2q8El21Q9UvbHh6YjyI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'ce8becb8f1bea5298bb9b683072c7eaa;o=1', 'date': 'Tue, 10 Feb 2026 10:50:54 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 10:50:54,279 payment_service 1588899 137281599936192 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b0d8e581a2298272a9f78",
+  "transId": "GkRJfU9jxj",
+  "dateInitiated": "2026-02-10T10:50:54.040Z"
+}
+INFO 2026-02-10 10:50:54,284 views 1588899 137281599936192 Payment initiated for optimized checkout 6cc3fed5-10cd-4c95-abda-7bacf136a927
+INFO 2026-02-10 10:51:07,024 payment_service 1588899 137281599936192 FapshiPaymentService initialized:
+INFO 2026-02-10 10:51:07,024 payment_service 1588899 137281599936192   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 10:51:07,024 payment_service 1588899 137281599936192   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 10:51:07,024 payment_service 1588899 137281599936192   API Key set: Yes
+INFO 2026-02-10 10:51:07,025 views 1588899 137281599936192 Processing webhook for transaction: GkRJfU9jxj
+INFO 2026-02-10 10:51:08,770 payment_service 1588899 137281599936192 No order exists for payment 72 yet
+INFO 2026-02-10 10:59:07,353 autoreload 1588899 137281979199616 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 10:59:08,606 autoreload 1595178 134873556934784 Watching for file changes with StatReloader
+INFO 2026-02-10 11:00:15,695 autoreload 1595178 134873556934784 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:00:16,681 autoreload 1595343 128144539185280 Watching for file changes with StatReloader
+INFO 2026-02-10 11:00:33,339 autoreload 1595343 128144539185280 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:00:34,238 autoreload 1595408 133846593060992 Watching for file changes with StatReloader
+INFO 2026-02-10 11:01:23,195 autoreload 1595408 133846593060992 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:01:24,076 autoreload 1595529 135934681460864 Watching for file changes with StatReloader
+INFO 2026-02-10 11:01:36,608 autoreload 1595529 135934681460864 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:01:37,482 autoreload 1595585 128805473820800 Watching for file changes with StatReloader
+INFO 2026-02-10 11:01:46,984 autoreload 1595585 128805473820800 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:01:47,880 autoreload 1595636 137230373122176 Watching for file changes with StatReloader
+INFO 2026-02-10 11:02:49,844 autoreload 1595636 137230373122176 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:02:50,723 autoreload 1595787 136839124557952 Watching for file changes with StatReloader
+INFO 2026-02-10 11:04:08,732 autoreload 1595787 136839124557952 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:04:09,636 autoreload 1596118 126626947412096 Watching for file changes with StatReloader
+INFO 2026-02-10 11:04:20,098 autoreload 1596118 126626947412096 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:04:20,893 autoreload 1596179 131570598715520 Watching for file changes with StatReloader
+INFO 2026-02-10 11:07:03,740 autoreload 1596179 131570598715520 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:07:04,739 autoreload 1596757 131825659179136 Watching for file changes with StatReloader
+INFO 2026-02-10 11:08:13,573 autoreload 1596979 130889473478784 Watching for file changes with StatReloader
+INFO 2026-02-10 11:08:36,347 autoreload 1596979 130889473478784 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:08:37,081 autoreload 1597055 130460013883520 Watching for file changes with StatReloader
+INFO 2026-02-10 11:08:46,872 autoreload 1597055 130460013883520 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:08:47,710 autoreload 1597108 124784538984576 Watching for file changes with StatReloader
+INFO 2026-02-10 11:10:04,499 views 1597108 124784360810176 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:10:05,478 views 1597108 124784360810176 Created OrderItem for product Android Smartphone (128GB), quantity 1
+INFO 2026-02-10 11:10:05,807 views 1597108 124784360810176 Created OrderItem for product Wireless Bluetooth Headphones, quantity 1
+INFO 2026-02-10 11:10:05,994 views 1597108 124784360810176 Created pending order 55 with 2 items
+INFO 2026-02-10 11:10:06,165 payment_service 1597108 124784360810176 FapshiPaymentService initialized:
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176   API Key set: Yes
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176 Initiating payment link request:
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176   Payload: {
+  "amount": 220000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "55",
+  "message": "Payment for order 55",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:10:06,166 payment_service 1597108 124784360810176   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:10:07,417 payment_service 1597108 124784360810176 Response status code: 200
+INFO 2026-02-10 11:10:07,417 payment_service 1597108 124784360810176 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-27r7pfMvINEr730Yab16u4la2rU"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '361b4bb0e79571fababe92d248918e85;o=1', 'date': 'Tue, 10 Feb 2026 11:10:07 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:10:07,418 payment_service 1597108 124784360810176 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b120f1dff9792ed98da45",
+  "transId": "0gTQ8zA4yy",
+  "dateInitiated": "2026-02-10T11:10:07.170Z"
+}
+INFO 2026-02-10 11:11:08,121 views 1597108 124784360810176 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:11:09,264 views 1597108 124784360810176 Created OrderItem for product Android Smartphone (128GB), quantity 1
+INFO 2026-02-10 11:11:09,596 views 1597108 124784360810176 Created OrderItem for product Wireless Bluetooth Headphones, quantity 1
+INFO 2026-02-10 11:11:09,762 views 1597108 124784360810176 Created pending order 56 with 2 items
+INFO 2026-02-10 11:11:09,935 payment_service 1597108 124784360810176 FapshiPaymentService initialized:
+INFO 2026-02-10 11:11:09,935 payment_service 1597108 124784360810176   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:11:09,935 payment_service 1597108 124784360810176   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:11:09,935 payment_service 1597108 124784360810176   API Key set: Yes
+INFO 2026-02-10 11:11:09,936 payment_service 1597108 124784360810176 Initiating payment link request:
+INFO 2026-02-10 11:11:09,936 payment_service 1597108 124784360810176   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:11:09,936 payment_service 1597108 124784360810176   Payload: {
+  "amount": 220000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "56",
+  "message": "Payment for order 56",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:11:09,936 payment_service 1597108 124784360810176   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:11:11,004 payment_service 1597108 124784360810176 Response status code: 200
+INFO 2026-02-10 11:11:11,004 payment_service 1597108 124784360810176 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-Sw3zbti7zDoIFA9jvkLogfD4ABs"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '937173aa69c66e27405c07b339207613;o=1', 'date': 'Tue, 10 Feb 2026 11:11:10 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:11:11,005 payment_service 1597108 124784360810176 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b124e1dff9792ed98da47",
+  "transId": "MhWAWMdnNw",
+  "dateInitiated": "2026-02-10T11:11:10.760Z"
+}
+INFO 2026-02-10 11:11:35,342 payment_service 1597108 124784360810176 FapshiPaymentService initialized:
+INFO 2026-02-10 11:11:35,343 payment_service 1597108 124784360810176   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:11:35,343 payment_service 1597108 124784360810176   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:11:35,343 payment_service 1597108 124784360810176   API Key set: Yes
+INFO 2026-02-10 11:11:35,343 views 1597108 124784360810176 Processing webhook for transaction: MhWAWMdnNw
+INFO 2026-02-10 11:13:15,032 views 1597108 124784352417472 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:13:16,080 views 1597108 124784352417472 Created OrderItem for product Smart Watch Series X, quantity 1
+INFO 2026-02-10 11:13:16,423 views 1597108 124784352417472 Created OrderItem for product Android Smartphone (128GB), quantity 1
+INFO 2026-02-10 11:13:16,596 views 1597108 124784352417472 Created pending order 57 with 2 items
+INFO 2026-02-10 11:13:16,767 payment_service 1597108 124784352417472 FapshiPaymentService initialized:
+INFO 2026-02-10 11:13:16,767 payment_service 1597108 124784352417472   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:13:16,767 payment_service 1597108 124784352417472   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:13:16,767 payment_service 1597108 124784352417472   API Key set: Yes
+INFO 2026-02-10 11:13:16,767 payment_service 1597108 124784352417472 Initiating payment link request:
+INFO 2026-02-10 11:13:16,768 payment_service 1597108 124784352417472   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:13:16,768 payment_service 1597108 124784352417472   Payload: {
+  "amount": 78900,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "57",
+  "message": "Payment for order 57",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:13:16,768 payment_service 1597108 124784352417472   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:13:29,017 payment_service 1597108 124784352417472 Response status code: 200
+INFO 2026-02-10 11:13:29,018 payment_service 1597108 124784352417472 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-W90OCs0fxfY+fFbkFlpCi8t697o"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '79531539e5ab0e419e1cc78b563330ce;o=1', 'date': 'Tue, 10 Feb 2026 11:13:28 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:13:29,018 payment_service 1597108 124784352417472 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b12d81dff9792ed98da4f",
+  "transId": "1RQha6vhm1",
+  "dateInitiated": "2026-02-10T11:13:28.773Z"
+}
+INFO 2026-02-10 11:15:27,025 views 1597108 124784369202880 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:15:28,024 views 1597108 124784369202880 Created OrderItem for product Smart Watch Series X, quantity 1
+INFO 2026-02-10 11:15:28,386 views 1597108 124784369202880 Created OrderItem for product Android Smartphone (128GB), quantity 1
+INFO 2026-02-10 11:15:28,556 views 1597108 124784369202880 Created pending order 58 with 2 items
+INFO 2026-02-10 11:15:28,727 payment_service 1597108 124784369202880 FapshiPaymentService initialized:
+INFO 2026-02-10 11:15:28,728 payment_service 1597108 124784369202880   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:15:28,728 payment_service 1597108 124784369202880   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:15:28,728 payment_service 1597108 124784369202880   API Key set: Yes
+INFO 2026-02-10 11:15:28,729 payment_service 1597108 124784369202880 Initiating payment link request:
+INFO 2026-02-10 11:15:28,729 payment_service 1597108 124784369202880   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:15:28,730 payment_service 1597108 124784369202880   Payload: {
+  "amount": 78900,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "58",
+  "message": "Payment for order 58",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:15:28,730 payment_service 1597108 124784369202880   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:15:29,189 payment_service 1597108 124784369202880 Response status code: 200
+INFO 2026-02-10 11:15:29,189 payment_service 1597108 124784369202880 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-pPNcxB/9/FFRMbyEdtBHoYK0rwA"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '5cb0e3e60c5a9ce5f52bed0cd6b297d1;o=1', 'date': 'Tue, 10 Feb 2026 11:15:29 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:15:29,190 payment_service 1597108 124784369202880 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b13501dff9792ed98da53",
+  "transId": "RvHrEbi2Kt",
+  "dateInitiated": "2026-02-10T11:15:28.932Z"
+}
+INFO 2026-02-10 11:15:44,488 payment_service 1597108 124784369202880 FapshiPaymentService initialized:
+INFO 2026-02-10 11:15:44,489 payment_service 1597108 124784369202880   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:15:44,489 payment_service 1597108 124784369202880   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:15:44,489 payment_service 1597108 124784369202880   API Key set: Yes
+INFO 2026-02-10 11:15:44,489 views 1597108 124784369202880 Processing webhook for transaction: RvHrEbi2Kt
+INFO 2026-02-10 11:15:46,976 views 1597108 124784369202880 Found existing order 58 for payment 76
+INFO 2026-02-10 11:15:47,169 views 1597108 124784369202880 Updated order 58 status to processing
+INFO 2026-02-10 11:15:47,367 views 1597108 124784369202880 Payment 76 marked as paid for order 58
+INFO 2026-02-10 11:18:36,162 views 1597108 124784360810176 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:18:37,328 views 1597108 124784360810176 Created OrderItem for product Smart Watch Series X, quantity 2
+INFO 2026-02-10 11:18:37,671 views 1597108 124784360810176 Created OrderItem for product Android Smartphone (128GB), quantity 1
+INFO 2026-02-10 11:18:37,999 views 1597108 124784360810176 Created OrderItem for product Wireless Bluetooth Headphones, quantity 1
+INFO 2026-02-10 11:18:38,192 views 1597108 124784360810176 Created pending order 59 with 3 items
+INFO 2026-02-10 11:18:38,360 payment_service 1597108 124784360810176 FapshiPaymentService initialized:
+INFO 2026-02-10 11:18:38,361 payment_service 1597108 124784360810176   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:18:38,361 payment_service 1597108 124784360810176   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:18:38,361 payment_service 1597108 124784360810176   API Key set: Yes
+INFO 2026-02-10 11:18:38,361 payment_service 1597108 124784360810176 Initiating payment link request:
+INFO 2026-02-10 11:18:38,361 payment_service 1597108 124784360810176   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:18:38,362 payment_service 1597108 124784360810176   Payload: {
+  "amount": 267800,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "59",
+  "message": "Payment for order 59",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:18:38,362 payment_service 1597108 124784360810176   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:18:39,396 payment_service 1597108 124784360810176 Response status code: 200
+INFO 2026-02-10 11:18:39,396 payment_service 1597108 124784360810176 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-PNTWlDvaeB7/rak1CDxuQQRFefM"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'd919c677b6351246378053e97000c079;o=1', 'date': 'Tue, 10 Feb 2026 11:18:39 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:18:39,397 payment_service 1597108 124784360810176 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b140f1dff9792ed98da5f",
+  "transId": "ikQHeDLXnH",
+  "dateInitiated": "2026-02-10T11:18:39.156Z"
+}
+INFO 2026-02-10 11:19:11,809 payment_service 1597108 124784360810176 FapshiPaymentService initialized:
+INFO 2026-02-10 11:19:11,810 payment_service 1597108 124784360810176   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:19:11,810 payment_service 1597108 124784360810176   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:19:11,811 payment_service 1597108 124784360810176   API Key set: Yes
+INFO 2026-02-10 11:19:11,811 views 1597108 124784360810176 Processing webhook for transaction: ikQHeDLXnH
+INFO 2026-02-10 11:19:14,720 views 1597108 124784360810176 Found existing order 59 for payment 77
+INFO 2026-02-10 11:19:14,881 views 1597108 124784360810176 Updated order 59 status to processing
+INFO 2026-02-10 11:19:15,044 views 1597108 124784360810176 Payment 77 marked as paid for order 59
+INFO 2026-02-10 11:21:43,686 views 1597108 124784369202880 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:21:44,702 views 1597108 124784369202880 Created OrderItem for product Learn Python the Easy Way, quantity 1
+INFO 2026-02-10 11:21:45,029 views 1597108 124784369202880 Created OrderItem for product Electric Toothbrush, quantity 1
+INFO 2026-02-10 11:21:45,194 views 1597108 124784369202880 Created pending order 60 with 2 items
+INFO 2026-02-10 11:21:45,377 payment_service 1597108 124784369202880 FapshiPaymentService initialized:
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880   API Key set: Yes
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880 Initiating payment link request:
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880   Payload: {
+  "amount": 44000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "60",
+  "message": "Payment for order 60",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:21:45,378 payment_service 1597108 124784369202880   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:21:46,438 payment_service 1597108 124784369202880 Response status code: 200
+INFO 2026-02-10 11:21:46,440 payment_service 1597108 124784369202880 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-yn8tX7uoCEkgolErroJBrEARbQg"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '2b9709e420389457b394739969c8bfa8;o=1', 'date': 'Tue, 10 Feb 2026 11:21:46 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:21:46,441 payment_service 1597108 124784369202880 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b14ca1dff9792ed98da69",
+  "transId": "PGcI4qJy7T",
+  "dateInitiated": "2026-02-10T11:21:46.183Z"
+}
+INFO 2026-02-10 11:22:01,937 payment_service 1597108 124784369202880 FapshiPaymentService initialized:
+INFO 2026-02-10 11:22:01,942 payment_service 1597108 124784369202880   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:22:01,944 payment_service 1597108 124784369202880   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:22:01,944 payment_service 1597108 124784369202880   API Key set: Yes
+INFO 2026-02-10 11:22:01,944 views 1597108 124784369202880 Processing webhook for transaction: PGcI4qJy7T
+INFO 2026-02-10 11:29:19,468 views 1597108 124784335632064 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:29:20,482 views 1597108 124784335632064 Created OrderItem for product Android Smartphone (128GB), quantity 1
+INFO 2026-02-10 11:29:20,835 views 1597108 124784335632064 Created OrderItem for product Smart Watch Series X, quantity 1
+INFO 2026-02-10 11:29:21,000 views 1597108 124784335632064 Created pending order 61 with 2 items
+INFO 2026-02-10 11:29:21,166 payment_service 1597108 124784335632064 FapshiPaymentService initialized:
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064   API Key set: Yes
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064 Initiating payment link request:
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064   Payload: {
+  "amount": 78900,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "61",
+  "message": "Payment for order 61",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:29:21,167 payment_service 1597108 124784335632064   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:29:22,368 payment_service 1597108 124784335632064 Response status code: 200
+INFO 2026-02-10 11:29:22,368 payment_service 1597108 124784335632064 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-aVevbGUX+kCIkSET3KYHrcNjqgI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'c4e13ce49aa720a0adbea4014bf8045a;o=1', 'date': 'Tue, 10 Feb 2026 11:29:22 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:29:22,369 payment_service 1597108 124784335632064 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b16921dff9792ed98da72",
+  "transId": "FcjfNPGwIZ",
+  "dateInitiated": "2026-02-10T11:29:22.127Z"
+}
+INFO 2026-02-10 11:29:38,998 payment_service 1597108 124784335632064 FapshiPaymentService initialized:
+INFO 2026-02-10 11:29:38,999 payment_service 1597108 124784335632064   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:29:38,999 payment_service 1597108 124784335632064   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:29:38,999 payment_service 1597108 124784335632064   API Key set: Yes
+INFO 2026-02-10 11:29:38,999 views 1597108 124784335632064 Processing webhook for transaction: FcjfNPGwIZ
+INFO 2026-02-10 11:29:42,548 views 1597108 124784335632064 Found existing order 61 for payment 79
+INFO 2026-02-10 11:29:42,733 views 1597108 124784335632064 Updated order 61 status to processing
+INFO 2026-02-10 11:29:42,923 views 1597108 124784335632064 Payment 79 marked as paid for order 61
+INFO 2026-02-10 11:31:09,381 views 1597108 124784335632064 Optimized checkout initiated by user buyertwo@gmail.com
+INFO 2026-02-10 11:31:10,477 views 1597108 124784335632064 Created OrderItem for product Microwave Oven, quantity 1
+INFO 2026-02-10 11:31:10,898 views 1597108 124784335632064 Created OrderItem for product Face Moisturizing Cream, quantity 1
+INFO 2026-02-10 11:31:11,101 views 1597108 124784335632064 Created pending order 62 with 2 items
+INFO 2026-02-10 11:31:11,291 payment_service 1597108 124784335632064 FapshiPaymentService initialized:
+INFO 2026-02-10 11:31:11,291 payment_service 1597108 124784335632064   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 11:31:11,292 payment_service 1597108 124784335632064   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 11:31:11,292 payment_service 1597108 124784335632064   API Key set: Yes
+INFO 2026-02-10 11:31:11,292 payment_service 1597108 124784335632064 Initiating payment link request:
+INFO 2026-02-10 11:31:11,292 payment_service 1597108 124784335632064   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-10 11:31:11,292 payment_service 1597108 124784335632064   Payload: {
+  "amount": 96000,
+  "email": "buyertwo@gmail.com",
+  "userId": "64",
+  "externalId": "62",
+  "message": "Payment for order 62",
+  "phone": "+237651185719"
+}
+INFO 2026-02-10 11:31:11,292 payment_service 1597108 124784335632064   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 11:31:12,339 payment_service 1597108 124784335632064 Response status code: 200
+INFO 2026-02-10 11:31:12,340 payment_service 1597108 124784335632064 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-UUI/T/2l3qBlGltmLcZSaZ5H22I"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'ca1e4155f8e9068d93cbce2a40642d24', 'date': 'Tue, 10 Feb 2026 11:31:12 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 11:31:12,341 payment_service 1597108 124784335632064 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/698b17001dff9792ed98da7f",
+  "transId": "TnGCfDT61W",
+  "dateInitiated": "2026-02-10T11:31:12.098Z"
+}
+INFO 2026-02-10 11:32:50,493 autoreload 1597108 124784538984576 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:32:51,916 autoreload 1602365 135960593449088 Watching for file changes with StatReloader

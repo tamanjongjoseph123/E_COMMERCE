@@ -1505,9 +1505,11 @@ All buyer endpoints require buyer role authentication.
 
 ---
 
-### 35. My Orders
+### 35. My Orders (Enhanced)
 **Endpoint:** `GET /api/orders/`  
 **Authentication:** Buyer required
+
+**Description:** View buyer's orders with complete order items, product details, and seller information. Now includes full order items that were previously missing.
 
 **Response (Success - 200):**
 ```json
@@ -1517,32 +1519,54 @@ All buyer endpoints require buyer role authentication.
   "data": [
     {
       "id": 1,
-      "buyer": {...},
+      "total_amount": "119999.98",
+      "status": "delivered",
+      "payment_status": "paid",
+      "delivery_address": "123 Main St, Apt 4B",
+      "delivery_phone": "+1234567890",
+      "delivery_city": "New York",
+      "delivery_state": "NY",
+      "delivery_postal_code": "10001",
+      "delivery_notes": "Please call before delivering",
+      "items_count": 2,
       "items": [
         {
           "id": 1,
-          "product": {...},
-          "seller": {...},
+          "product": {
+            "id": 1,
+            "name": "Laptop",
+            "description": "High-performance laptop with 16GB RAM",
+            "price": "59999.99",
+            "image_url": "http://localhost:8000/media/products/laptop.jpg"
+          },
+          "seller": {
+            "id": 2,
+            "name": "Jane Seller",
+            "email": "jane@example.com"
+          },
           "quantity": 2,
           "price": "59999.99",
           "subtotal": "119999.98"
         }
       ],
-      "total_amount": "119999.98",
-      "status": "delivered",
-      "delivery_address": "123 Main St, Apt 4B",
-      "delivery_city": "New York",
-      "delivery_state": "NY",
-      "delivery_postal_code": "10001",
-      "delivery_phone": "+1234567890",
-      "delivery_notes": "Please call before delivering",
-      "delivered_at": "2024-01-18T14:30:00Z",
       "created_at": "2024-01-01T00:00:00Z",
       "updated_at": "2024-01-18T14:30:00Z"
     }
   ]
 }
 ```
+
+**Features:**
+- ✅ **Order Items Included**: Each order now contains complete item details
+- ✅ **Product Details**: Full product information with images
+- ✅ **Seller Information**: Seller details for each item
+- ✅ **Item Count**: Total number of items in order
+- ✅ **Delivery Information**: Complete delivery details
+- ✅ **Status Tracking**: Order and payment status
+
+**Previous Issues Fixed:**
+- ❌ **Before**: Orders showed empty `items: []` array
+- ✅ **Now**: Orders include complete item details with product and seller information
 
 ---
 

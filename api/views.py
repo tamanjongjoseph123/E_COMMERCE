@@ -572,6 +572,253 @@ class CartViewSet(viewsets.ModelViewSet):
 
 @api_view(['POST'])
 @permission_classes([IsBuyer])
+def bulk_cart_operations(request):
+    """Handle multiple cart operations in one call"""
+    try:
+        operations = request.data.get('operations', [])
+        results = []
+        
+        cart, _ = Cart.objects.get_or_create(user=request.user)
+        
+        for operation in operations:
+            op_type = operation.get('type')  # 'add', 'update', 'remove'
+            product_id = operation.get('product_id')
+            quantity = operation.get('quantity', 1)
+            
+            try:
+                product = Product.objects.get(id=product_id, is_active=True)
+                
+                if op_type == 'add':
+                    cart_item, created = CartItem.objects.get_or_create(
+                        cart=cart,
+                        product=product,
+                        defaults={'quantity': quantity}
+                    )
+                    
+                    if not created:
+                        new_quantity = cart_item.quantity + quantity
+                        if new_quantity > product.stock:
+                            results.append({
+                                'type': op_type,
+                                'product_id': product_id,
+                                'success': False,
+                                'message': f'Insufficient stock. Available: {product.stock}'
+                            })
+                            continue
+                        
+                        cart_item.quantity = new_quantity
+                        cart_item.save()
+                    
+                    results.append({
+                        'type': op_type,
+                        'product_id': product_id,
+                        'success': True,
+                        'message': 'Item added to cart',
+                        'quantity': cart_item.quantity if not created else quantity
+                    })
+                
+                elif op_type == 'update':
+                    cart_item = CartItem.objects.get(cart=cart, product=product)
+                    
+                    if quantity > product.stock:
+                        results.append({
+                            'type': op_type,
+                            'product_id': product_id,
+                            'success': False,
+                            'message': f'Insufficient stock. Available: {product.stock}'
+                        })
+                        continue
+                    
+                    cart_item.quantity = quantity
+                    cart_item.save()
+                    
+                    results.append({
+                        'type': op_type,
+                        'product_id': product_id,
+                        'success': True,
+                        'message': 'Cart item updated',
+                        'quantity': quantity
+                    })
+                
+                elif op_type == 'remove':
+                    CartItem.objects.filter(cart=cart, product=product).delete()
+                    results.append({
+                        'type': op_type,
+                        'product_id': product_id,
+                        'success': True,
+                        'message': 'Item removed from cart'
+                    })
+                
+                else:
+                    results.append({
+                        'type': op_type,
+                        'product_id': product_id,
+                        'success': False,
+                        'message': 'Invalid operation type'
+                    })
+            
+            except Product.DoesNotExist:
+                results.append({
+                    'type': op_type,
+                    'product_id': product_id,
+                    'success': False,
+                    'message': 'Product not found'
+                })
+            except CartItem.DoesNotExist:
+                results.append({
+                    'type': op_type,
+                    'product_id': product_id,
+                    'success': False,
+                    'message': 'Cart item not found'
+                })
+        
+        return Response({
+            'success': True,
+            'message': 'Bulk cart operations completed',
+            'data': {
+                'results': results,
+                'cart_summary': CartSerializer(cart, context={'request': request}).data
+            }
+        })
+    
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Bulk cart operations failed',
+            'error': str(e)
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsBuyer])
+def optimized_checkout(request):
+    """Optimized checkout - creates pending order immediately, then initiates payment"""
+    logger.info(f"Optimized checkout initiated by user {request.user.email}")
+    
+    try:
+        cart_items_data = request.data.get('cart_items', [])
+        delivery_data = request.data.get('delivery_info', {})
+        
+        if not cart_items_data:
+            return Response({'success': False, 'message': 'No items provided for checkout'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validate required delivery fields
+        required_fields = ['delivery_address', 'delivery_phone']
+        for field in required_fields:
+            if not delivery_data.get(field):
+                return Response({'success': False, 'message': f'{field.replace("_", " ").title()} is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validate items and calculate total
+        total_amount = 0
+        validated_items = []
+        for item_data in cart_items_data:
+            product = Product.objects.get(id=item_data['product_id'], is_active=True)
+            quantity = int(item_data['quantity'])
+            
+            if product.stock < quantity:
+                return Response({'success': False, 'message': f'Insufficient stock for {product.name}. Available: {product.stock}'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            subtotal = product.price * quantity
+            total_amount += subtotal
+            validated_items.append({
+                'product': product, 
+                'quantity': quantity, 
+                'price': product.price, 
+                'subtotal': subtotal
+            })
+        
+        # Check minimum amount
+        min_amount = 100
+        if total_amount < min_amount:
+            return Response({'success': False, 'message': f'Order amount is below minimum required for payment. Minimum amount is {min_amount} XAF.'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Create pending order immediately with all data
+        with db_transaction.atomic():
+            order = Order.objects.create(
+                buyer=request.user,
+                total_amount=total_amount,
+                status='pending_payment',  # New status for orders awaiting payment
+                payment_status='pending',
+                delivery_address=delivery_data.get('delivery_address'),
+                delivery_phone=delivery_data.get('delivery_phone'),
+                delivery_city=delivery_data.get('delivery_city', ''),
+                delivery_state=delivery_data.get('delivery_state', ''),
+                delivery_postal_code=delivery_data.get('delivery_postal_code', ''),
+                delivery_notes=delivery_data.get('delivery_notes', '')
+            )
+            
+            # Create OrderItems immediately
+            for item in validated_items:
+                OrderItem.objects.create(
+                    order=order,
+                    product=item['product'],
+                    seller=item['product'].seller,
+                    quantity=item['quantity'],
+                    price=item['price'],
+                    subtotal=item['subtotal']
+                )
+                logger.info(f"Created OrderItem for product {item['product'].name}, quantity {item['quantity']}")
+            
+            logger.info(f"Created pending order {order.id} with {order.items.count()} items")
+        
+        # Initiate payment linked to order
+        payment_service = FapshiPaymentService()
+        result = payment_service.initiate_payment_link(
+            amount=int(total_amount),
+            email=request.user.email,
+            user_id=str(request.user.id),
+            external_id=str(order.id),  # Use order ID as external_id
+            message=f'Payment for order {order.id}',
+            phone=delivery_data.get('delivery_phone')
+        )
+        
+        if result.get('link'):
+            # Create payment record linked to order
+            payment = Payment.objects.create(
+                trans_id=result.get('transId'),
+                status='created',
+                amount=total_amount,
+                email=request.user.email,
+                payment_link=result.get('link'),
+                external_id=str(order.id),
+                message=result.get('message'),
+                date_initiated=result.get('dateInitiated'),
+                order=order  # Link payment to order immediately
+            )
+            
+            return Response({
+                'success': True,
+                'message': 'Order created and payment initiated successfully',
+                'data': {
+                    'order_id': order.id,  # Real order ID now
+                    'checkout_id': str(order.id),
+                    'total_amount': str(total_amount),
+                    'payment_link': result.get('link'),
+                    'trans_id': result.get('transId'),
+                    'items_count': len(validated_items),
+                    'status': 'pending_payment'
+                }
+            }, status=status.HTTP_201_CREATED)
+        else:
+            # If payment fails, delete the pending order
+            order.delete()
+            return Response({
+                'success': False,
+                'message': result.get('message', 'Payment initiation failed'),
+                'error': result.get('error', 'Unknown error')
+            }, status=status.HTTP_400_BAD_REQUEST)
+    
+    except Exception as e:
+        logger.error(f"Optimized checkout failed: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'Checkout failed',
+            'error': str(e)
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsBuyer])
 def checkout(request):
     """Process checkout - initiate payment first, create order after payment"""
     logger.info(f"Checkout initiated by user {request.user.email}")
@@ -760,7 +1007,32 @@ def test_webhook(request):
             payment.date_confirmed = timezone.now()
             payment.save()
             
+            # Create OrderItems from cart if available
+            try:
+                cart = Cart.objects.get(user=user)
+                cart_items = cart.items.all()
+                
+                # Create OrderItems from cart items
+                for cart_item in cart_items:
+                    OrderItem.objects.create(
+                        order=order,
+                        product=cart_item.product,
+                        seller=cart_item.product.seller,
+                        quantity=cart_item.quantity,
+                        price=cart_item.product.price,
+                        subtotal=cart_item.subtotal
+                    )
+                    logger.info(f"TEST: Created OrderItem for product {cart_item.product.name}, quantity {cart_item.quantity}")
+                
+                # Clear cart items
+                cart.items.all().delete()
+                logger.info(f"TEST: Cart cleared for user {user.email}")
+                
+            except Cart.DoesNotExist:
+                logger.warning(f"TEST: No cart found for user {user.email}")
+            
             logger.info(f"TEST: Order {order.id} created successfully from payment {payment.id}")
+            logger.info(f"TEST: Created {order.items.count()} order items for order {order.id}")
         
         return Response({
             'success': True,
@@ -1042,15 +1314,36 @@ def seller_orders(request):
 @api_view(['GET'])
 @permission_classes([IsBuyer])
 def my_orders(request):
-    # Pure database query - no API calls
+    """Get buyer's orders with order items included"""
     orders = Order.objects.filter(
         buyer=request.user,
-        payment_status='paid'  # Only show successful payments
-    ).order_by('-created_at')
+        payment_status='paid'  # Only show paid orders in buyer dashboard
+    ).prefetch_related('items__product', 'items__seller').order_by('-created_at')
     
-    # Simple response without serializer
+    # Include order items in response
     orders_data = []
     for order in orders:
+        order_items = []
+        for item in order.items.all():
+            order_items.append({
+                'id': item.id,
+                'product': {
+                    'id': item.product.id,
+                    'name': item.product.name,
+                    'description': item.product.description,
+                    'price': str(item.product.price),
+                    'image_url': item.product.image.url if item.product.image else None
+                },
+                'seller': {
+                    'id': item.seller.id,
+                    'name': item.seller.name,
+                    'email': item.seller.email
+                },
+                'quantity': item.quantity,
+                'price': str(item.price),
+                'subtotal': str(item.subtotal)
+            })
+        
         orders_data.append({
             'id': order.id,
             'total_amount': str(order.total_amount),
@@ -1058,6 +1351,12 @@ def my_orders(request):
             'payment_status': order.payment_status,
             'delivery_address': order.delivery_address,
             'delivery_phone': order.delivery_phone,
+            'delivery_city': order.delivery_city,
+            'delivery_state': order.delivery_state,
+            'delivery_postal_code': order.delivery_postal_code,
+            'delivery_notes': order.delivery_notes,
+            'items': order_items,
+            'items_count': order.items.count(),
             'created_at': order.created_at.isoformat(),
             'updated_at': order.updated_at.isoformat()
         })
@@ -1172,14 +1471,17 @@ def payment_webhook(request):
         for transaction_data in webhook_data:
             trans_id = transaction_data.get('transId')
             if not trans_id:
+                logger.warning(f"No transId in webhook data: {transaction_data}")
                 continue
+            
+            logger.info(f"Processing webhook for transaction: {trans_id}")
             
             # Update payment status
             result = payment_service.update_payment_status(trans_id)
             results.append(result)
             
             # If payment is successful, create order and process completion
-            if result.get('success') and result.get('new_status') == 'SUCCESSFUL':
+            if result.get('success') and result.get('new_status') == 'successful':
                 try:
                     payment = Payment.objects.get(trans_id=trans_id)
                     checkout_id = payment.external_id
@@ -1191,52 +1493,89 @@ def payment_webhook(request):
                     # Get user from payment email
                     try:
                         user = User.objects.get(email=payment.email)
+                        
+                        # Check if payment already has an order (should exist with new flow)
+                        if payment.order:
+                            order = payment.order
+                            logger.info(f"Found existing order {order.id} for payment {payment.id}")
+                            
+                            # Update order status from pending_payment to processing
+                            if order.status == 'pending_payment':
+                                order.status = 'processing'
+                                order.payment_status = 'paid'
+                                order.save()
+                                logger.info(f"Updated order {order.id} status to processing")
+                            else:
+                                logger.info(f"Order {order.id} already has status {order.status}")
+                            
+                            # Update payment status
+                            payment.status = 'paid'
+                            if 'dateConfirmed' in result:
+                                payment.date_confirmed = datetime.fromisoformat(result['dateConfirmed'].replace('Z', '+00:00'))
+                            payment.save()
+                            
+                            logger.info(f"Payment {payment.id} marked as paid for order {order.id}")
+                        
+                        else:
+                            # Fallback for old orders without order link
+                            logger.warning(f"Payment {payment.id} has no order - creating new order (legacy flow)")
+                            checkout_id = payment.external_id
+                            
+                            with db_transaction.atomic():
+                                order = Order.objects.create(
+                                    buyer=user,
+                                    total_amount=payment.amount,
+                                    status='processing',
+                                    payment_status='paid',
+                                    delivery_address='Payment completed - Contact support for delivery details',
+                                    delivery_phone='Payment completed',
+                                    delivery_city='',
+                                    delivery_state='',
+                                    delivery_postal_code='',
+                                    delivery_notes=f'Order created from payment {payment.id}. Checkout ID: {checkout_id}'
+                                )
+                                
+                                # Link payment to order
+                                payment.order = order
+                                payment.status = 'paid'
+                                if 'dateConfirmed' in result:
+                                    payment.date_confirmed = datetime.fromisoformat(result['dateConfirmed'].replace('Z', '+00:00'))
+                                payment.save()
+                                
+                                # Try to create OrderItems from cart (legacy flow)
+                                try:
+                                    cart = Cart.objects.get(user=user)
+                                    cart_items = cart.items.all()
+                                    
+                                    for cart_item in cart_items:
+                                        OrderItem.objects.create(
+                                            order=order,
+                                            product=cart_item.product,
+                                            seller=cart_item.product.seller,
+                                            quantity=cart_item.quantity,
+                                            price=cart_item.product.price,
+                                            subtotal=cart_item.subtotal
+                                        )
+                                        logger.info(f"Created OrderItem for product {cart_item.product.name}, quantity {cart_item.quantity}")
+                                    
+                                    cart.items.all().delete()
+                                    logger.info(f"Cart cleared for user {user.email}")
+                                except Cart.DoesNotExist:
+                                    logger.warning(f"No cart found for user {user.email}")
+                                
+                                logger.info(f"Created fallback order {order.id} for payment {payment.id}")
+                    
                     except User.DoesNotExist:
-                        logger.error(f"User not found for payment email: {payment.email}")
+                        logger.error(f"User with email {payment.email} not found for payment {payment.id}")
                         continue
-                    
-                    # Since webhook doesn't have session access, we need to store checkout data differently
-                    # For now, let's create a simplified order with basic info
-                    # In production, you should store cart items in database or cache
-                    
-                    with db_transaction.atomic():
-                        # Create order with basic info from payment
-                        order = Order.objects.create(
-                            buyer=user,
-                            total_amount=payment.amount,
-                            status='pending',  # Regular pending status
-                            payment_status='paid',
-                            delivery_address='Payment completed - Contact support for delivery details',
-                            delivery_phone='Payment completed',
-                            delivery_city='',
-                            delivery_state='',
-                            delivery_postal_code='',
-                            delivery_notes=f'Order created from payment {payment.id}. Checkout ID: {checkout_id}'
-                        )
-                        
-                        # Link payment to order
-                        payment.order = order
-                        payment.status = 'paid'  # Set to 'paid' to match orders filter
-                        payment.save()
-                        
-                        # Clear user's cart after successful payment
-                        try:
-                            cart = Cart.objects.get(user=user)
-                            cart.items.all().delete()
-                            logger.info(f"Cart cleared for user {user.email} after successful payment")
-                        except Cart.DoesNotExist:
-                            logger.warning(f"No cart found for user {user.email} to clear")
-                        
-                        # Create a simple order item as placeholder
-                        # In production, you should retrieve actual cart items from database
-                        logger.info(f"Order {order.id} created successfully from payment {payment.id}")
-                        logger.info(f"Order created for user {user.email} with amount {payment.amount}")
                 
-                except (Payment.DoesNotExist, User.DoesNotExist) as e:
-                    logger.error(f"Error processing successful payment: {str(e)}")
+                except Payment.DoesNotExist:
+                    logger.error(f"Payment {trans_id} not found")
                     continue
                 except Exception as e:
                     logger.error(f"Unexpected error processing payment: {str(e)}")
+                    import traceback
+                    logger.error(f"Traceback: {traceback.format_exc()}")
                     continue
         
         return Response({
@@ -1246,6 +1585,9 @@ def payment_webhook(request):
         })
     
     except Exception as e:
+        logger.error(f"Webhook error: {str(e)}")
+        import traceback
+        logger.error(f"Traceback: {traceback.format_exc()}")
         return Response({
             'success': False,
             'message': 'Webhook processing failed',
@@ -1570,12 +1912,29 @@ def check_payment_status_manual(request):
                 # Clear user's cart after successful payment
                 try:
                     cart = Cart.objects.get(user=user)
+                    cart_items = cart.items.all()
+                    
+                    # Create OrderItems from cart items
+                    for cart_item in cart_items:
+                        OrderItem.objects.create(
+                            order=order,
+                            product=cart_item.product,
+                            seller=cart_item.product.seller,
+                            quantity=cart_item.quantity,
+                            price=cart_item.product.price,
+                            subtotal=cart_item.subtotal
+                        )
+                        logger.info(f"MANUAL CHECK: Created OrderItem for product {cart_item.product.name}, quantity {cart_item.quantity}")
+                    
+                    # Clear cart items
                     cart.items.all().delete()
-                    logger.info(f"Cart cleared for user {user.email} after successful payment")
+                    logger.info(f"MANUAL CHECK: Cart cleared for user {user.email} after successful payment")
+                    
                 except Cart.DoesNotExist:
-                    logger.warning(f"No cart found for user {user.email} to clear")
+                    logger.warning(f"MANUAL CHECK: No cart found for user {user.email} to clear")
                 
                 logger.info(f"MANUAL CHECK: Order {order.id} created successfully from payment {payment.id}")
+                logger.info(f"MANUAL CHECK: Created {order.items.count()} order items for order {order.id}")
             
             return Response({
                 'success': True,

@@ -27,6 +27,8 @@ urlpatterns = [
     
     # Buyer endpoints
     path('products/all/', views.list_all_products, name='list-all-products'),
+    path('cart/bulk-operations/', views.bulk_cart_operations, name='bulk-cart-operations'),
+    path('cart/optimized-checkout/', views.optimized_checkout, name='optimized-checkout'),
     path('cart/checkout/', views.checkout, name='checkout'),
     path('cart/summary/', views.CartViewSet.as_view({'get': 'cart_summary'}), name='cart-summary'),
     path('orders/', views.my_orders, name='my-orders'),
