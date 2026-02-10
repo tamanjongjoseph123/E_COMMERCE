@@ -9,7 +9,6 @@ router.register(r'admin/users', views.UserManagementViewSet, basename='user-mana
 router.register(r'admin/withdrawals', views.WithdrawalRequestViewSet, basename='withdrawal-request')
 router.register(r'seller/products', views.SellerProductViewSet, basename='seller-product')
 router.register(r'products', views.ProductViewSet, basename='product')
-router.register(r'cart/items', views.CartViewSet, basename='cart-item')
 
 urlpatterns = [
     # Authentication

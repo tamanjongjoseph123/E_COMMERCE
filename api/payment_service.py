@@ -16,9 +16,9 @@ class FapshiPaymentService:
     """
     
     def __init__(self):
-        self.api_key = os.environ.get('FAPSHI_API_KEY', 'your-api-key')
-        self.api_user = os.environ.get('FAPSHI_API_USER', 'your-api-user')
-        self.base_url = os.environ.get('FAPSHI_BASE_URL', 'https://sandbox.fapshi.com')
+        self.api_key = os.environ.get('FAPSHI_API_KEY')
+        self.api_user = os.environ.get('FAPSHI_API_USER')
+        self.base_url = os.environ.get('FAPSHI_BASE_URL')
         self.headers = {
             'Content-Type': 'application/json',
             'apikey': self.api_key,
