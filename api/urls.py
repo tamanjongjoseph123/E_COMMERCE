@@ -30,7 +30,21 @@ urlpatterns = [
     path('cart/checkout/', views.checkout, name='checkout'),
     path('cart/summary/', views.CartViewSet.as_view({'get': 'cart_summary'}), name='cart-summary'),
     path('orders/', views.my_orders, name='my-orders'),
+    path('buyer/orders/', views.my_orders, name='buyer-orders'),  # Add buyer-specific URL
     path('orders/<int:order_id>/delivered/', views.mark_order_delivered, name='mark-order-delivered'),
+    path('payments/check-pending/', views.check_pending_payments, name='check-pending-payments'),
+    
+    # Payment endpoints
+    path('debug/payment/', views.debug_payment_service, name='debug-payment-service'),
+    path('debug/transaction/', views.debug_payment_transaction, name='debug-payment-transaction'),
+    path('test/webhook/', views.test_webhook, name='test-webhook'),
+    path('payments/check-status/', views.check_payment_status_manual, name='check-payment-status-manual'),
+    path('orders/<int:order_id>/pay/', views.initiate_payment, name='initiate-payment'),
+    path('orders/<int:order_id>/payment/status/', views.check_payment_status, name='check-payment-status'),
+    path('orders/<int:order_id>/payment/retry/', views.retry_payment, name='retry-payment'),
+    path('payments/webhook/', views.payment_webhook, name='payment-webhook'),
+    path('payments/my/', views.my_payments, name='my-payments'),
+    path('admin/payments/', views.admin_payments, name='admin-payments'),
     
     # Profile endpoints (Buyer and Seller)
     path('profile/', views.profile, name='profile'),

@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import (
     User, Seller, Category, Product, Cart, CartItem, 
-    Order, OrderItem, Wallet, Transaction, Report
+    Order, OrderItem, Wallet, Transaction, Report, Payment
 )
 
 
@@ -217,28 +217,41 @@ class CartSerializer(serializers.ModelSerializer):
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
-    product = ProductSerializer(read_only=True)
-    seller = UserSerializer(read_only=True)
+    product_name = serializers.CharField(source='product.name', read_only=True)
+    product_image = serializers.ImageField(source='product.image', read_only=True)
+    seller_name = serializers.CharField(source='seller.name', read_only=True)
     
     class Meta:
         model = OrderItem
-        fields = ['id', 'product', 'seller', 'quantity', 'price', 'subtotal']
+        fields = ['id', 'product_name', 'product_image', 'seller_name', 'quantity', 'price', 'subtotal']
         read_only_fields = ['id']
 
 
 class OrderSerializer(serializers.ModelSerializer):
-    buyer = UserSerializer(read_only=True)
-    items = OrderItemSerializer(many=True, read_only=True)
+    buyer_name = serializers.CharField(source='buyer.name', read_only=True)
+    buyer_email = serializers.CharField(source='buyer.email', read_only=True)
+    items_count = serializers.SerializerMethodField()
+    payment_id = serializers.SerializerMethodField()
     
     class Meta:
         model = Order
         fields = [
-            'id', 'buyer', 'items', 'total_amount', 'status', 
+            'id', 'buyer_name', 'buyer_email', 'items_count', 'total_amount', 'status', 'payment_status',
             'delivery_address', 'delivery_city', 'delivery_state', 
             'delivery_postal_code', 'delivery_phone', 'delivery_notes',
-            'delivered_at', 'created_at', 'updated_at'
+            'delivered_at', 'created_at', 'updated_at', 'payment_id'
         ]
-        read_only_fields = ['id', 'delivered_at', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'delivered_at', 'created_at', 'updated_at', 'payment_id']
+    
+    def get_payment_id(self, obj):
+        try:
+            return obj.payment.id if hasattr(obj, 'payment') and obj.payment else None
+        except Payment.DoesNotExist:
+            return None
+    
+    def get_items_count(self, obj):
+        # Count items without loading them all
+        return obj.items.count() if hasattr(obj, 'items') else 0
 
 
 class TransactionSerializer(serializers.ModelSerializer):
@@ -258,6 +271,30 @@ class WalletSerializer(serializers.ModelSerializer):
         model = Wallet
         fields = ['id', 'seller', 'balance', 'transactions', 'created_at', 'updated_at']
         read_only_fields = ['id', 'balance', 'created_at', 'updated_at']
+
+
+class PaymentSerializer(serializers.ModelSerializer):
+    order_id = serializers.IntegerField(read_only=True)
+    
+    class Meta:
+        model = Payment
+        fields = [
+            'id', 'order_id', 'trans_id', 'payment_type', 'status', 'amount',
+            'phone', 'email', 'payment_link', 'external_id', 'message',
+            'date_initiated', 'date_confirmed', 'created_at', 'updated_at'
+        ]
+        read_only_fields = [
+            'id', 'trans_id', 'payment_link', 'date_initiated', 
+            'date_confirmed', 'created_at', 'updated_at'
+        ]
+
+
+class PaymentInitiateSerializer(serializers.Serializer):
+    payment_type = serializers.ChoiceField(choices=['initiate_pay'], default='initiate_pay')
+    
+    def validate(self, attrs):
+        # No validation needed since we only support payment links
+        return attrs
 
 
 class ReportSerializer(serializers.ModelSerializer):

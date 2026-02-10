@@ -116,6 +116,7 @@ class CartItem(models.Model):
 
 class Order(models.Model):
     STATUS_CHOICES = [
+        ('pending_payment', 'Pending Payment'),
         ('pending', 'Pending'),
         ('processing', 'Processing'),
         ('shipped', 'Shipped'),
@@ -123,9 +124,17 @@ class Order(models.Model):
         ('cancelled', 'Cancelled'),
     ]
     
+    PAYMENT_STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('paid', 'Paid'),
+        ('failed', 'Failed'),
+        ('refunded', 'Refunded'),
+    ]
+    
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders', limit_choices_to={'role': 'buyer'})
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='pending')
     delivery_address = models.TextField()
     delivery_city = models.CharField(max_length=100, blank=True, null=True)
     delivery_state = models.CharField(max_length=100, blank=True, null=True)
@@ -177,6 +186,44 @@ class Transaction(models.Model):
     
     def __str__(self):
         return f"{self.transaction_type} of ${self.amount} - {self.wallet.seller.email}"
+
+
+class Payment(models.Model):
+    PAYMENT_STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('created', 'Created'),
+        ('successful', 'Successful'),
+        ('failed', 'Failed'),
+        ('expired', 'Expired'),
+    ]
+    
+    PAYMENT_TYPE_CHOICES = [
+        ('initiate_pay', 'Payment Link'),
+    ]
+    
+    order = models.OneToOneField(Order, on_delete=models.CASCADE, related_name='payment', null=True, blank=True)
+    trans_id = models.CharField(max_length=255, unique=True, blank=True, null=True)
+    payment_type = models.CharField(max_length=20, choices=PAYMENT_TYPE_CHOICES, default='initiate_pay')
+    status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='pending')
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    payment_link = models.URLField(blank=True, null=True)
+    external_id = models.CharField(max_length=255, blank=True, null=True)
+    message = models.TextField(blank=True, null=True)
+    date_initiated = models.DateTimeField(null=True, blank=True)
+    date_confirmed = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        if self.order:
+            return f"Payment for Order #{self.order.id} - {self.status}"
+        else:
+            return f"Payment #{self.id} - {self.status} (No order yet)"
 
 
 class Report(models.Model):

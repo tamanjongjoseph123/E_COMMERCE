@@ -6,17 +6,32 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.db.models import Q, Sum
 from django.db import transaction as db_transaction
 from decimal import Decimal
+import logging
+import os
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import get_user_model
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from django.http import JsonResponse, HttpResponse
+from django.db import transaction as db_transaction
+from django.utils import timezone
 
 from .models import (
     User, Seller, Category, Product, Cart, CartItem,
-    Order, OrderItem, Wallet, Transaction, Report
+    Order, OrderItem, Wallet, Transaction, Report, Payment
 )
 from .serializers import (
     UserSerializer, RegisterSerializer, LoginSerializer, SellerSerializer,
     CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer,
     OrderSerializer, WalletSerializer, TransactionSerializer, ProfileSerializer,
-    ReportSerializer
+    ReportSerializer, PaymentSerializer, PaymentInitiateSerializer
 )
+from .payment_service import FapshiPaymentService
+from .debug_views import debug_payment_transaction, check_pending_payments
+
+# Set up logging
+logger = logging.getLogger(__name__)
 
 
 class IsAdmin(permissions.BasePermission):
@@ -558,96 +573,357 @@ class CartViewSet(viewsets.ModelViewSet):
 @api_view(['POST'])
 @permission_classes([IsBuyer])
 def checkout(request):
-    cart, _ = Cart.objects.get_or_create(user=request.user)
-    cart_items = CartItem.objects.filter(cart=cart)
-    
-    if not cart_items.exists():
-        return Response({
-            'success': False,
-            'message': 'Cart is empty'
-        }, status=status.HTTP_400_BAD_REQUEST)
-    
-    # Validate stock availability
-    for item in cart_items:
-        if item.quantity > item.product.stock:
-            return Response({
-                'success': False,
-                'message': f'Insufficient stock for {item.product.name}. Available: {item.product.stock}'
-            }, status=status.HTTP_400_BAD_REQUEST)
+    """Process checkout - initiate payment first, create order after payment"""
+    logger.info(f"Checkout initiated by user {request.user.email}")
     
     try:
-        with db_transaction.atomic():
-            # Get delivery information from request
-            delivery_data = request.data
-            required_fields = ['delivery_address']
+        # Get user's cart
+        cart = Cart.objects.get(user=request.user)
+        cart_items = cart.items.all()
+        
+        if not cart_items:
+            return Response({
+                'success': False,
+                'message': 'Your cart is empty'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validate delivery information
+        delivery_data = request.data.get('delivery_info', {})
+        logger.info(f"Received delivery data: {delivery_data}")
+        logger.info(f"Full request data: {request.data}")
+        
+        # Fallback: check if delivery info is sent directly in request body
+        if not delivery_data:
+            # Check if delivery fields are directly in request data
+            direct_fields = ['delivery_address', 'delivery_phone', 'delivery_city', 'delivery_state', 'delivery_postal_code', 'delivery_notes']
+            if any(field in request.data for field in direct_fields):
+                delivery_data = {field: request.data.get(field) for field in direct_fields if field in request.data}
+                logger.info(f"Using direct delivery data: {delivery_data}")
+        
+        required_fields = ['delivery_address', 'delivery_phone']
+        
+        for field in required_fields:
+            if not delivery_data.get(field):
+                logger.error(f"Missing field: {field}")
+                return Response({
+                    'success': False,
+                    'message': f'{field.replace("_", " ").title()} is required',
+                    'debug': {
+                        'received_data': delivery_data,
+                        'missing_field': field,
+                        'full_request_data': request.data
+                    }
+                }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Calculate total amount
+        total_amount = cart.total_amount
+        
+        # Check minimum amount requirement (100 XAF)
+        min_amount = 100
+        if total_amount < min_amount:
+            logger.error(f"Cart total {total_amount} is below minimum {min_amount} XAF")
+            return Response({
+                'success': False,
+                'message': f'Order amount is below minimum required for payment. Minimum amount is {min_amount} XAF.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Store checkout data in session for later use after payment
+        checkout_data = {
+            'delivery_info': delivery_data,
+            'total_amount': str(total_amount),
+            'cart_items': []
+        }
+        
+        # Store cart items data in session
+        for cart_item in cart_items:
+            checkout_data['cart_items'].append({
+                'product_id': cart_item.product.id,
+                'seller_id': cart_item.product.seller.id,
+                'quantity': cart_item.quantity,
+                'price': str(cart_item.product.price),
+                'subtotal': str(cart_item.subtotal)
+            })
+        
+        # Generate a unique checkout ID
+        import uuid
+        checkout_id = str(uuid.uuid4())
+        request.session[f'checkout_{checkout_id}'] = checkout_data
+        
+        # Create a temporary payment record without order
+        payment_service = FapshiPaymentService()
+        
+        # Initiate payment
+        result = payment_service.initiate_payment_link(
+            amount=int(total_amount),
+            email=request.user.email,
+            user_id=str(request.user.id),
+            external_id=checkout_id,
+            message=f'Payment for checkout {checkout_id}',
+            phone=delivery_data.get('delivery_phone')
+        )
+        
+        if result.get('link'):  # Check if payment link was generated
+            logger.info(f"Payment initiated for checkout {checkout_id}")
             
-            # Validate required delivery fields
-            for field in required_fields:
-                if not delivery_data.get(field):
-                    return Response({
-                        'success': False,
-                        'message': f'{field.replace("_", " ").title()} is required'
-                    }, status=status.HTTP_400_BAD_REQUEST)
-            
-            # Create order with delivery information
-            order = Order.objects.create(
-                buyer=request.user,
-                total_amount=cart.total_amount,
+            # Create payment record
+            payment = Payment.objects.create(
+                trans_id=result.get('transId'),
+                payment_type='initiate_pay',
                 status='pending',
-                delivery_address=delivery_data.get('delivery_address'),
-                delivery_city=delivery_data.get('delivery_city', ''),
-                delivery_state=delivery_data.get('delivery_state', ''),
-                delivery_postal_code=delivery_data.get('delivery_postal_code', ''),
-                delivery_phone=delivery_data.get('delivery_phone', ''),
-                delivery_notes=delivery_data.get('delivery_notes', '')
+                amount=total_amount,
+                email=request.user.email,
+                payment_link=result.get('link'),
+                external_id=checkout_id,
+                message=result.get('message'),
+                date_initiated=result.get('dateInitiated')
             )
             
-            # Create order items and update wallets
-            for cart_item in cart_items:
-                # Create order item
-                order_item = OrderItem.objects.create(
-                    order=order,
-                    product=cart_item.product,
-                    seller=cart_item.product.seller,
-                    quantity=cart_item.quantity,
-                    price=cart_item.product.price,
-                    subtotal=cart_item.subtotal
-                )
-                
-                # Update product stock
-                cart_item.product.stock -= cart_item.quantity
-                cart_item.product.save()
-                
-                # Update seller wallet
-                wallet, _ = Wallet.objects.get_or_create(seller=cart_item.product.seller)
-                wallet.balance += cart_item.subtotal
-                wallet.save()
-                
-                # Create transaction
-                Transaction.objects.create(
-                    wallet=wallet,
-                    order_item=order_item,
-                    amount=cart_item.subtotal,
-                    transaction_type='sale',
-                    description=f'Sale of {cart_item.product.name}'
-                )
-            
-            # Clear cart
-            cart_items.delete()
-            
-            order_serializer = OrderSerializer(order, context={'request': request})
             return Response({
                 'success': True,
-                'message': 'Order placed successfully',
-                'data': order_serializer.data
+                'message': 'Payment initiated successfully',
+                'data': {
+                    'order_id': f'pending_{checkout_id}',  # Temporary ID for frontend compatibility
+                    'checkout_id': checkout_id,
+                    'total_amount': str(total_amount),
+                    'payment_link': result.get('link'),
+                    'trans_id': result.get('transId'),
+                    'payment_id': payment.id,
+                    'next_step': 'Complete payment using the provided link',
+                    'note': 'Order will be created after successful payment'
+                }
             }, status=status.HTTP_201_CREATED)
+        else:
+            # Clean up session data
+            if f'checkout_{checkout_id}' in request.session:
+                del request.session[f'checkout_{checkout_id}']
+            
+            logger.error(f"Payment initiation failed for checkout {checkout_id}: {result}")
+            return Response({
+                'success': False,
+                'message': result.get('message', 'Payment initiation failed'),
+                'error': result.get('error'),
+                'debug_info': result
+            }, status=status.HTTP_400_BAD_REQUEST)
     
+    except Cart.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Cart not found'
+        }, status=status.HTTP_404_NOT_FOUND)
     except Exception as e:
+        logger.error(f"Checkout failed: {str(e)}")
         return Response({
             'success': False,
             'message': 'Checkout failed',
             'error': str(e)
         }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def test_webhook(request):
+    """Test endpoint to simulate webhook payment success"""
+    try:
+        # Get the most recent pending payment
+        payment = Payment.objects.filter(status='pending').first()
+        
+        if not payment:
+            return Response({
+                'success': False,
+                'message': 'No pending payments found. Please complete a checkout first.'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        logger.info(f"Testing webhook for payment {payment.id}")
+        
+        # Create order directly (same logic that works in shell)
+        user = User.objects.get(email=payment.email)
+        checkout_id = payment.external_id
+        
+        with db_transaction.atomic():
+            order = Order.objects.create(
+                buyer=user,
+                total_amount=payment.amount,
+                status='pending',
+                payment_status='paid',
+                delivery_address='Test order from webhook',
+                delivery_phone='Test phone',
+                delivery_city='',
+                delivery_state='',
+                delivery_postal_code='',
+                delivery_notes=f'Test order from payment {payment.id}. Checkout ID: {checkout_id}'
+            )
+            
+            # Link payment to order
+            payment.order = order
+            payment.status = 'paid'  # Set to 'paid' to match orders filter
+            from django.utils import timezone
+            payment.date_confirmed = timezone.now()
+            payment.save()
+            
+            logger.info(f"TEST: Order {order.id} created successfully from payment {payment.id}")
+        
+        return Response({
+            'success': True,
+            'message': 'Test webhook processed successfully',
+            'order_id': order.id,
+            'payment_id': payment.id,
+            'order_details': {
+                'id': order.id,
+                'total_amount': str(order.total_amount),
+                'status': order.status,
+                'payment_status': order.payment_status
+            }
+        })
+    
+    except Exception as e:
+        logger.error(f"Test webhook failed: {str(e)}")
+        import traceback
+        logger.error(f"Traceback: {traceback.format_exc()}")
+        return Response({
+            'success': False,
+            'message': 'Test webhook failed',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def debug_payment_service(request):
+    """Debug endpoint to test payment service configuration"""
+    try:
+        payment_service = FapshiPaymentService()
+        
+        debug_info = {
+            'service_initialized': True,
+            'base_url': payment_service.base_url,
+            'api_user': payment_service.api_user,
+            'api_key_set': payment_service.api_key != 'your-api-key',
+            'headers_set': bool(payment_service.headers),
+            'environment_variables': {
+                'FAPSHI_API_KEY': bool(os.environ.get('FAPSHI_API_KEY')),
+                'FAPSHI_API_USER': os.environ.get('FAPSHI_API_USER'),
+                'FAPSHI_BASE_URL': os.environ.get('FAPSHI_BASE_URL'),
+                'PAYMENT_REDIRECT_URL': os.environ.get('PAYMENT_REDIRECT_URL'),
+            }
+        }
+        
+        logger.info(f"Payment service debug info: {debug_info}")
+        
+        return Response({
+            'success': True,
+            'message': 'Payment service debug information',
+            'data': debug_info
+        })
+        
+    except Exception as e:
+        logger.error(f"Debug endpoint error: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'Debug endpoint failed',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['POST'])
+@permission_classes([IsBuyer])
+def initiate_payment(request, order_id):
+    """Initiate payment for an order"""
+    logger.info(f"Payment initiation requested for order {order_id} by user {request.user.email}")
+    
+    try:
+        order = Order.objects.get(id=order_id, buyer=request.user)
+        logger.info(f"Order found: {order.id}, total amount: {order.total_amount}")
+        
+        # Check if payment already exists
+        if hasattr(order, 'payment'):
+            logger.warning(f"Payment already exists for order {order_id}")
+            payment = order.payment
+            return Response({
+                'success': False,
+                'message': 'Payment already initiated for this order',
+                'data': {
+                    'payment_id': payment.id,
+                    'payment_status': payment.status,
+                    'payment_link': payment.payment_link,
+                    'trans_id': payment.trans_id,
+                    'suggestion': 'Use the retry endpoint if payment failed or expired'
+                }
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Check if order is in correct status
+        if order.payment_status != 'pending':
+            logger.error(f"Order {order_id} has invalid payment status: {order.payment_status}")
+            return Response({
+                'success': False,
+                'message': f'Cannot initiate payment. Order payment status: {order.payment_status}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Check minimum amount requirement (100 XAF)
+        min_amount = 100
+        if order.total_amount < min_amount:
+            logger.error(f"Order {order_id} amount {order.total_amount} is below minimum {min_amount} XAF")
+            return Response({
+                'success': False,
+                'message': f'Order amount is below minimum required for payment. Minimum amount is {min_amount} XAF.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validate payment data
+        serializer = PaymentInitiateSerializer(data=request.data)
+        if not serializer.is_valid():
+            logger.error(f"Payment data validation failed: {serializer.errors}")
+            return Response({
+                'success': False,
+                'message': 'Invalid payment data',
+                'errors': serializer.errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        payment_data = serializer.validated_data
+        logger.info(f"Payment data validated: {payment_data}")
+        
+        payment_service = FapshiPaymentService()
+        
+        # Create payment and initiate transaction
+        result = payment_service.create_payment_for_order(
+            order=order,
+            payment_type=payment_data['payment_type']
+        )
+        
+        logger.info(f"Payment creation result: {result}")
+        
+        if result['success']:
+            payment_serializer = PaymentSerializer(order.payment, context={'request': request})
+            logger.info(f"Payment initiated successfully for order {order_id}")
+            return Response({
+                'success': True,
+                'message': 'Payment initiated successfully',
+                'data': {
+                    'payment': payment_serializer.data,
+                    'payment_link': result.get('payment_link'),
+                    'trans_id': result.get('trans_id')
+                }
+            })
+        else:
+            logger.error(f"Payment initiation failed for order {order_id}: {result}")
+            return Response({
+                'success': False,
+                'message': result.get('message', 'Payment initiation failed'),
+                'error': result.get('error')
+            }, status=status.HTTP_400_BAD_REQUEST)
+    
+    except Order.DoesNotExist:
+        logger.error(f"Order {order_id} not found for user {request.user.email}")
+        return Response({
+            'success': False,
+            'message': 'Order not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        logger.error(f"Unexpected error in payment initiation: {str(e)}")
+        logger.error(f"Exception type: {type(e).__name__}")
+        return Response({
+            'success': False,
+            'message': 'Payment initiation failed',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(['PATCH'])
@@ -766,12 +1042,30 @@ def seller_orders(request):
 @api_view(['GET'])
 @permission_classes([IsBuyer])
 def my_orders(request):
-    orders = Order.objects.filter(buyer=request.user).order_by('-created_at')
-    serializer = OrderSerializer(orders, many=True, context={'request': request})
+    # Pure database query - no API calls
+    orders = Order.objects.filter(
+        buyer=request.user,
+        payment_status='paid'  # Only show successful payments
+    ).order_by('-created_at')
+    
+    # Simple response without serializer
+    orders_data = []
+    for order in orders:
+        orders_data.append({
+            'id': order.id,
+            'total_amount': str(order.total_amount),
+            'status': order.status,
+            'payment_status': order.payment_status,
+            'delivery_address': order.delivery_address,
+            'delivery_phone': order.delivery_phone,
+            'created_at': order.created_at.isoformat(),
+            'updated_at': order.updated_at.isoformat()
+        })
+    
     return Response({
         'success': True,
         'message': 'Orders retrieved successfully',
-        'data': serializer.data
+        'data': orders_data
     })
 
 
@@ -862,6 +1156,275 @@ def change_password(request):
 
 
 @api_view(['POST'])
+@permission_classes([AllowAny])
+def payment_webhook(request):
+    """Webhook endpoint for Fapshi payment status updates"""
+    try:
+        # Get transaction data from webhook
+        webhook_data = request.data
+        
+        if not isinstance(webhook_data, list):
+            webhook_data = [webhook_data]
+        
+        payment_service = FapshiPaymentService()
+        results = []
+        
+        for transaction_data in webhook_data:
+            trans_id = transaction_data.get('transId')
+            if not trans_id:
+                continue
+            
+            # Update payment status
+            result = payment_service.update_payment_status(trans_id)
+            results.append(result)
+            
+            # If payment is successful, create order and process completion
+            if result.get('success') and result.get('new_status') == 'SUCCESSFUL':
+                try:
+                    payment = Payment.objects.get(trans_id=trans_id)
+                    checkout_id = payment.external_id
+                    
+                    if not checkout_id:
+                        logger.error(f"Payment {payment.id} has no checkout_id")
+                        continue
+                    
+                    # Get user from payment email
+                    try:
+                        user = User.objects.get(email=payment.email)
+                    except User.DoesNotExist:
+                        logger.error(f"User not found for payment email: {payment.email}")
+                        continue
+                    
+                    # Since webhook doesn't have session access, we need to store checkout data differently
+                    # For now, let's create a simplified order with basic info
+                    # In production, you should store cart items in database or cache
+                    
+                    with db_transaction.atomic():
+                        # Create order with basic info from payment
+                        order = Order.objects.create(
+                            buyer=user,
+                            total_amount=payment.amount,
+                            status='pending',  # Regular pending status
+                            payment_status='paid',
+                            delivery_address='Payment completed - Contact support for delivery details',
+                            delivery_phone='Payment completed',
+                            delivery_city='',
+                            delivery_state='',
+                            delivery_postal_code='',
+                            delivery_notes=f'Order created from payment {payment.id}. Checkout ID: {checkout_id}'
+                        )
+                        
+                        # Link payment to order
+                        payment.order = order
+                        payment.status = 'paid'  # Set to 'paid' to match orders filter
+                        payment.save()
+                        
+                        # Clear user's cart after successful payment
+                        try:
+                            cart = Cart.objects.get(user=user)
+                            cart.items.all().delete()
+                            logger.info(f"Cart cleared for user {user.email} after successful payment")
+                        except Cart.DoesNotExist:
+                            logger.warning(f"No cart found for user {user.email} to clear")
+                        
+                        # Create a simple order item as placeholder
+                        # In production, you should retrieve actual cart items from database
+                        logger.info(f"Order {order.id} created successfully from payment {payment.id}")
+                        logger.info(f"Order created for user {user.email} with amount {payment.amount}")
+                
+                except (Payment.DoesNotExist, User.DoesNotExist) as e:
+                    logger.error(f"Error processing successful payment: {str(e)}")
+                    continue
+                except Exception as e:
+                    logger.error(f"Unexpected error processing payment: {str(e)}")
+                    continue
+        
+        return Response({
+            'success': True,
+            'message': 'Webhook processed successfully',
+            'results': results
+        })
+    
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Webhook processing failed',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['GET'])
+@permission_classes([IsBuyer])
+def check_payment_status(request, order_id):
+    """Check payment status for an order"""
+    try:
+        order = Order.objects.get(id=order_id, buyer=request.user)
+        
+        if not hasattr(order, 'payment'):
+            return Response({
+                'success': False,
+                'message': 'No payment found for this order'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        payment = order.payment
+        payment_service = FapshiPaymentService()
+        
+        # Update payment status from Fapshi
+        if payment.trans_id:
+            result = payment_service.update_payment_status(payment.trans_id)
+            payment.refresh_from_db()
+        
+        payment_serializer = PaymentSerializer(payment, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Payment status retrieved successfully',
+            'data': payment_serializer.data
+        })
+    
+    except Order.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Order not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Failed to check payment status',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['POST'])
+@permission_classes([IsBuyer])
+def retry_payment(request, order_id):
+    """Retry payment for a failed order"""
+    try:
+        order = Order.objects.get(id=order_id, buyer=request.user)
+        
+        if not hasattr(order, 'payment'):
+            return Response({
+                'success': False,
+                'message': 'No payment found for this order'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        payment = order.payment
+        
+        # Check if payment can be retried
+        if payment.status not in ['failed', 'expired']:
+            return Response({
+                'success': False,
+                'message': f'Cannot retry payment. Current status: {payment.status}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Validate payment data
+        serializer = PaymentInitiateSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response({
+                'success': False,
+                'message': 'Invalid payment data',
+                'errors': serializer.errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        payment_data = serializer.validated_data
+        payment_service = FapshiPaymentService()
+        
+        # Reset payment status
+        payment.status = 'pending'
+        payment.trans_id = None
+        payment.payment_link = None
+        payment.date_initiated = None
+        payment.date_confirmed = None
+        payment.save()
+        
+        # Retry payment
+        result = payment_service.create_payment_for_order(
+            order=order,
+            payment_type=payment_data['payment_type']
+        )
+        
+        if result['success']:
+            payment_serializer = PaymentSerializer(order.payment, context={'request': request})
+            return Response({
+                'success': True,
+                'message': 'Payment retry initiated successfully',
+                'data': {
+                    'payment': payment_serializer.data,
+                    'payment_link': result.get('payment_link'),
+                    'trans_id': result.get('trans_id')
+                }
+            })
+        else:
+            return Response({
+                'success': False,
+                'message': result.get('message', 'Payment retry failed'),
+                'error': result.get('error')
+            }, status=status.HTTP_400_BAD_REQUEST)
+    
+    except Order.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Order not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Payment retry failed',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def my_payments(request):
+    """Get all payments for the current user"""
+    try:
+        if request.user.is_buyer:
+            payments = Payment.objects.filter(order__buyer=request.user).order_by('-created_at')
+        elif request.user.is_seller:
+            # Get payments for orders containing seller's products
+            payments = Payment.objects.filter(
+                order__items__seller=request.user
+            ).distinct().order_by('-created_at')
+        else:
+            payments = Payment.objects.none()
+        
+        serializer = PaymentSerializer(payments, many=True, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'Payments retrieved successfully',
+            'data': serializer.data
+        })
+    
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Failed to retrieve payments',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['GET'])
+@permission_classes([IsAdmin])
+def admin_payments(request):
+    """Get all payments (admin only)"""
+    try:
+        payments = Payment.objects.all().order_by('-created_at')
+        serializer = PaymentSerializer(payments, many=True, context={'request': request})
+        return Response({
+            'success': True,
+            'message': 'All payments retrieved successfully',
+            'data': serializer.data
+        })
+    
+    except Exception as e:
+        return Response({
+            'success': False,
+            'message': 'Failed to retrieve payments',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_report(request):
     """Create a new report against a seller"""
@@ -945,3 +1508,98 @@ def manage_reports(request, report_id=None):
                 'message': 'Reports retrieved successfully',
                 'data': serializer.data
             })
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def check_payment_status_manual(request):
+    """Manually check payment status and create order if successful"""
+    try:
+        trans_id = request.data.get('trans_id')
+        
+        if not trans_id:
+            return Response({
+                'success': False,
+                'message': 'Transaction ID is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Get payment
+        payment = Payment.objects.get(trans_id=trans_id)
+        
+        # Check if payment already has an order
+        if payment.order:
+            return Response({
+                'success': True,
+                'message': 'Order already exists for this payment',
+                'order_id': payment.order.id,
+                'payment_status': payment.status
+            })
+        
+        # Check payment status with Fapshi
+        payment_service = FapshiPaymentService()
+        
+        # Use check_payment_status instead of update_payment_status to avoid model issues
+        status_result = payment_service.check_payment_status(trans_id)
+        
+        if 'error' not in status_result and status_result.get('status', '').upper() == 'SUCCESSFUL':
+            # Create order (same logic as webhook)
+            user = User.objects.get(email=payment.email)
+            checkout_id = payment.external_id
+            
+            with db_transaction.atomic():
+                order = Order.objects.create(
+                    buyer=user,
+                    total_amount=payment.amount,
+                    status='pending',
+                    payment_status='paid',
+                    delivery_address='Payment completed - Contact support for delivery details',
+                    delivery_phone='Payment completed',
+                    delivery_city='',
+                    delivery_state='',
+                    delivery_postal_code='',
+                    delivery_notes=f'Order created from payment {payment.id}. Checkout ID: {checkout_id}'
+                )
+                
+                # Link payment to order
+                payment.order = order
+                payment.status = 'paid'
+                from django.utils import timezone
+                payment.date_confirmed = timezone.now()
+                payment.save()
+                
+                # Clear user's cart after successful payment
+                try:
+                    cart = Cart.objects.get(user=user)
+                    cart.items.all().delete()
+                    logger.info(f"Cart cleared for user {user.email} after successful payment")
+                except Cart.DoesNotExist:
+                    logger.warning(f"No cart found for user {user.email} to clear")
+                
+                logger.info(f"MANUAL CHECK: Order {order.id} created successfully from payment {payment.id}")
+            
+            return Response({
+                'success': True,
+                'message': 'Payment status checked and order created',
+                'order_id': order.id,
+                'payment_status': 'paid'
+            })
+        else:
+            return Response({
+                'success': False,
+                'message': 'Payment not yet successful',
+                'current_status': status_result.get('status', 'unknown'),
+                'result': status_result
+            })
+    
+    except Payment.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Payment not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        logger.error(f"Manual payment status check failed: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'Manual payment status check failed',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
