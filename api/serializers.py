@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import (
     User, Seller, Category, Product, Cart, CartItem, 
-    Order, OrderItem, Wallet, Transaction, Report, Payment
+    Order, OrderItem, Wallet, Transaction, Report, Payment, WithdrawalRequest
 )
 
 
@@ -250,8 +250,10 @@ class OrderSerializer(serializers.ModelSerializer):
             return None
     
     def get_items_count(self, obj):
-        # Count items without loading them all
-        return obj.items.count() if hasattr(obj, 'items') else 0
+        # Use the prefetched items if available, otherwise count efficiently
+        if hasattr(obj, '_prefetched_objects_cache') and 'items' in obj._prefetched_objects_cache:
+            return len(obj._prefetched_objects_cache['items'])
+        return obj.items.count()
 
 
 class TransactionSerializer(serializers.ModelSerializer):
@@ -295,6 +297,33 @@ class PaymentInitiateSerializer(serializers.Serializer):
     def validate(self, attrs):
         # No validation needed since we only support payment links
         return attrs
+
+
+class WithdrawalRequestSerializer(serializers.ModelSerializer):
+    seller = UserSerializer(read_only=True)
+    processed_by = UserSerializer(read_only=True)
+    payout_phone = serializers.CharField(read_only=True)
+    
+    class Meta:
+        model = WithdrawalRequest
+        fields = [
+            'id', 'seller', 'amount', 'status', 'admin_notes', 
+            'processed_at', 'processed_by', 'created_at', 'updated_at', 'payout_phone'
+        ]
+        read_only_fields = ['id', 'seller', 'processed_at', 'processed_by', 'created_at', 'updated_at', 'payout_phone']
+    
+    def validate_amount(self, value):
+        """Validate that the withdrawal amount doesn't exceed wallet balance"""
+        seller = self.context['request'].user
+        try:
+            wallet = Wallet.objects.get(seller=seller)
+            if value > wallet.balance:
+                raise serializers.ValidationError(
+                    f"Insufficient balance. Available: ${wallet.balance}"
+                )
+        except Wallet.DoesNotExist:
+            raise serializers.ValidationError("Wallet not found.")
+        return value
 
 
 class ReportSerializer(serializers.ModelSerializer):

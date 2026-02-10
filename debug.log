@@ -4278,3 +4278,614 @@ INFO 2026-02-10 11:31:12,341 payment_service 1597108 124784335632064 Response da
 }
 INFO 2026-02-10 11:32:50,493 autoreload 1597108 124784538984576 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
 INFO 2026-02-10 11:32:51,916 autoreload 1602365 135960593449088 Watching for file changes with StatReloader
+INFO 2026-02-10 11:39:54,829 autoreload 1603681 127304924074112 Watching for file changes with StatReloader
+WARNING 2026-02-10 11:41:05,502 log 1603681 127304829236928 Forbidden: /api/cart/items/
+WARNING 2026-02-10 11:42:41,708 log 1603681 127304811402944 Forbidden: /api/cart/items/
+INFO 2026-02-10 11:44:21,864 autoreload 1603681 127304924074112 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:44:22,732 autoreload 1604776 136856284471424 Watching for file changes with StatReloader
+INFO 2026-02-10 11:44:28,469 autoreload 1604776 136856284471424 /home/joseph/apps/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-10 11:44:29,274 autoreload 1604808 129740387803264 Watching for file changes with StatReloader
+WARNING 2026-02-10 11:44:51,613 log 1604808 129740224591552 Forbidden: /api/cart/items/
+WARNING 2026-02-10 11:46:40,955 log 1604808 129740207806144 Forbidden: /api/cart/items/
+WARNING 2026-02-10 11:47:13,340 log 1604808 129740207806144 Forbidden: /api/cart/items/
+INFO 2026-02-10 11:49:13,179 autoreload 1604808 129740387803264 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:49:14,180 autoreload 1605830 123239209422976 Watching for file changes with StatReloader
+INFO 2026-02-10 11:49:21,928 autoreload 1605830 123239209422976 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:49:22,779 autoreload 1605895 136970833457280 Watching for file changes with StatReloader
+INFO 2026-02-10 11:49:41,833 autoreload 1605895 136970833457280 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:49:42,646 autoreload 1605982 128385034338432 Watching for file changes with StatReloader
+INFO 2026-02-10 11:51:19,483 autoreload 1605982 128385034338432 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:51:20,412 autoreload 1606404 129203897315456 Watching for file changes with StatReloader
+INFO 2026-02-10 11:51:29,178 autoreload 1606404 129203897315456 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:51:30,016 autoreload 1606458 130139157299328 Watching for file changes with StatReloader
+WARNING 2026-02-10 11:52:59,887 log 1606458 130139063056064 Forbidden: /api/cart/items/
+INFO 2026-02-10 11:54:12,820 autoreload 1606458 130139157299328 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:54:13,668 autoreload 1607008 136693590769792 Watching for file changes with StatReloader
+INFO 2026-02-10 11:56:14,500 autoreload 1607008 136693590769792 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:56:15,488 autoreload 1607413 124561148330112 Watching for file changes with StatReloader
+INFO 2026-02-10 11:57:17,857 views 1607653 137695620604032 Seller seller@gmail.com: Total orders=6, Page=1, Per page=20, Orders in page=6
+INFO 2026-02-10 11:57:18,880 views 1607653 137695620604032 Response orders count: 6
+INFO 2026-02-10 11:57:18,881 views 1607653 137695620604032 First order ID: 61
+INFO 2026-02-10 11:57:28,861 autoreload 1607413 124561148330112 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 11:57:29,678 autoreload 1607706 134139178381440 Watching for file changes with StatReloader
+WARNING 2026-02-10 12:01:10,849 log 1607706 134138992514752 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:02:00,880 log 1607706 134138992514752 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:02:31,536 log 1607706 134139009300160 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:03:54,091 log 1607706 134139009300160 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:05:43,162 log 1607706 134138992514752 Forbidden: /api/cart/items/
+INFO 2026-02-10 12:14:22,762 autoreload 1607706 134139178381440 /home/joseph/apps/E_COMMERCE/api/urls.py changed, reloading.
+INFO 2026-02-10 12:14:23,757 autoreload 1610466 131466793062528 Watching for file changes with StatReloader
+INFO 2026-02-10 12:14:42,533 autoreload 1610466 131466793062528 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:14:43,271 autoreload 1610539 134983867592832 Watching for file changes with StatReloader
+ERROR 2026-02-10 12:15:15,760 views 1610635 126059445907584 Error fetching seller order items: name 'OrderItemSerializer' is not defined
+INFO 2026-02-10 12:15:31,038 autoreload 1610539 134983867592832 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:15:31,888 autoreload 1610710 126615641739392 Watching for file changes with StatReloader
+ERROR 2026-02-10 12:15:46,647 views 1610768 125917394780288 Error fetching seller order items: Cannot find 'images' on Product object, 'product__images' is an invalid parameter to prefetch_related()
+INFO 2026-02-10 12:16:09,385 autoreload 1610710 126615641739392 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:16:10,249 autoreload 1610854 130326648950912 Watching for file changes with StatReloader
+WARNING 2026-02-10 12:23:09,271 log 1610854 130326479234752 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:28:27,670 log 1610854 130326479234752 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:29:30,519 log 1610854 130326453008064 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:30:28,630 log 1610854 130326444615360 Forbidden: /api/cart/items/
+INFO 2026-02-10 12:34:17,126 autoreload 1610854 130326648950912 /home/joseph/apps/E_COMMERCE/api/models.py changed, reloading.
+INFO 2026-02-10 12:34:18,259 autoreload 1613992 127276581228672 Watching for file changes with StatReloader
+INFO 2026-02-10 12:34:22,981 autoreload 1613992 127276581228672 /home/joseph/apps/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-10 12:34:23,805 autoreload 1614034 130073634746496 Watching for file changes with StatReloader
+INFO 2026-02-10 12:34:29,480 autoreload 1614034 130073634746496 /home/joseph/apps/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-10 12:34:30,276 autoreload 1614067 127144638615680 Watching for file changes with StatReloader
+INFO 2026-02-10 12:34:34,954 autoreload 1614067 127144638615680 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:34:35,810 autoreload 1614102 139173086392448 Watching for file changes with StatReloader
+INFO 2026-02-10 12:34:39,459 autoreload 1614102 139173086392448 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:34:40,349 autoreload 1614127 138934968098944 Watching for file changes with StatReloader
+INFO 2026-02-10 12:35:27,218 autoreload 1614127 138934968098944 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:35:28,093 autoreload 1614268 124026391715968 Watching for file changes with StatReloader
+INFO 2026-02-10 12:35:35,872 autoreload 1614268 124026391715968 /home/joseph/apps/E_COMMERCE/api/urls.py changed, reloading.
+INFO 2026-02-10 12:35:36,756 autoreload 1614321 123613379379328 Watching for file changes with StatReloader
+INFO 2026-02-10 12:35:40,414 autoreload 1614321 123613379379328 /home/joseph/apps/E_COMMERCE/api/urls.py changed, reloading.
+INFO 2026-02-10 12:35:41,249 autoreload 1614346 126252744355968 Watching for file changes with StatReloader
+WARNING 2026-02-10 12:40:20,185 log 1614346 126252568536768 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:40:35,224 log 1614346 126252543358656 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:46:05,256 log 1614346 126252560144064 Bad Request: /api/seller/withdrawals/request/
+WARNING 2026-02-10 12:46:21,617 log 1614346 126252560144064 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:49:03,042 log 1614346 126252543358656 Forbidden: /api/cart/items/
+WARNING 2026-02-10 12:53:08,778 log 1614346 126252560144064 Forbidden: /api/cart/items/
+INFO 2026-02-10 12:59:09,750 autoreload 1614346 126252744355968 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 12:59:10,809 autoreload 1618202 127334331388032 Watching for file changes with StatReloader
+INFO 2026-02-10 12:59:21,648 autoreload 1618202 127334331388032 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 12:59:22,499 autoreload 1618261 127456492556416 Watching for file changes with StatReloader
+INFO 2026-02-10 12:59:35,363 autoreload 1618261 127456492556416 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 12:59:36,239 autoreload 1618316 126269979463808 Watching for file changes with StatReloader
+INFO 2026-02-10 13:02:09,049 autoreload 1618316 126269979463808 /home/joseph/apps/E_COMMERCE/api/models.py changed, reloading.
+INFO 2026-02-10 13:02:09,897 autoreload 1618674 135368603660416 Watching for file changes with StatReloader
+INFO 2026-02-10 13:03:22,330 autoreload 1618674 135368603660416 /home/joseph/apps/E_COMMERCE/api/models.py changed, reloading.
+INFO 2026-02-10 13:03:23,410 autoreload 1618860 128826816704640 Watching for file changes with StatReloader
+INFO 2026-02-10 13:04:37,943 autoreload 1618860 128826816704640 /home/joseph/apps/E_COMMERCE/api/models.py changed, reloading.
+INFO 2026-02-10 13:04:38,938 autoreload 1619043 125783460618368 Watching for file changes with StatReloader
+INFO 2026-02-10 13:04:52,843 autoreload 1619043 125783460618368 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 13:04:53,777 autoreload 1619102 138726453256320 Watching for file changes with StatReloader
+INFO 2026-02-10 13:05:08,782 autoreload 1619102 138726453256320 /home/joseph/apps/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-10 13:05:09,760 autoreload 1619174 130272122990720 Watching for file changes with StatReloader
+INFO 2026-02-10 13:05:21,628 autoreload 1619174 130272122990720 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 13:05:22,415 autoreload 1619231 135836682227840 Watching for file changes with StatReloader
+INFO 2026-02-10 13:06:04,924 autoreload 1619231 135836682227840 /home/joseph/apps/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-10 13:06:05,956 autoreload 1619341 128992699523200 Watching for file changes with StatReloader
+ERROR 2026-02-10 13:08:29,606 views 1619341 128992605632192 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:08:29,610 log 1619341 128992605632192 Internal Server Error: /api/seller/withdrawals/history/
+WARNING 2026-02-10 13:09:33,209 log 1619341 128992588846784 Forbidden: /api/cart/items/
+ERROR 2026-02-10 13:09:33,327 views 1619341 128992605632192 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:09:33,335 log 1619341 128992605632192 Internal Server Error: /api/seller/withdrawals/history/
+ERROR 2026-02-10 13:09:34,845 views 1619341 128992580454080 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:09:34,846 log 1619341 128992580454080 Internal Server Error: /api/seller/withdrawals/history/
+ERROR 2026-02-10 13:12:34,706 views 1619341 128992605632192 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:12:34,708 log 1619341 128992605632192 Internal Server Error: /api/seller/withdrawals/history/
+ERROR 2026-02-10 13:12:36,253 views 1619341 128992597239488 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:12:36,254 log 1619341 128992597239488 Internal Server Error: /api/seller/withdrawals/history/
+ERROR 2026-02-10 13:13:07,080 views 1619341 128992580454080 Create withdrawal request failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+WARNING 2026-02-10 13:13:07,082 log 1619341 128992580454080 Bad Request: /api/seller/withdrawals/request/
+WARNING 2026-02-10 13:15:54,746 log 1619341 128992580454080 Bad Request: /api/seller/withdrawals/request/
+WARNING 2026-02-10 13:16:04,663 log 1619341 128992588846784 Forbidden: /api/cart/items/
+ERROR 2026-02-10 13:16:04,765 views 1619341 128992580454080 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:16:04,767 log 1619341 128992580454080 Internal Server Error: /api/seller/withdrawals/history/
+ERROR 2026-02-10 13:16:06,923 views 1619341 128992597239488 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:16:06,924 log 1619341 128992597239488 Internal Server Error: /api/seller/withdrawals/history/
+WARNING 2026-02-10 13:16:49,686 log 1619341 128992605632192 Bad Request: /api/seller/withdrawals/request/
+ERROR 2026-02-10 13:18:33,521 views 1619341 128992597239488 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:18:33,525 log 1619341 128992597239488 Internal Server Error: /api/seller/withdrawals/history/
+ERROR 2026-02-10 13:19:28,513 views 1619341 128992605632192 Get withdrawal history failed: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:19:28,514 log 1619341 128992605632192 Internal Server Error: /api/seller/withdrawals/history/
+WARNING 2026-02-10 13:19:42,173 log 1619341 128992605632192 Bad Request: /api/seller/withdrawals/request/
+WARNING 2026-02-10 13:19:51,563 log 1619341 128992605632192 Unauthorized: /api/seller/withdrawals/history/
+WARNING 2026-02-10 13:20:00,097 log 1619341 128992204015296 Forbidden: /api/cart/items/
+ERROR 2026-02-10 13:20:00,858 log 1619341 128992212408000 Internal Server Error: /api/admin/withdrawals/
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/api/views.py", line 2191, in list
+    'withdrawal_requests': serializer.data,
+                           ^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 357, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/utils/serializer_helpers.py", line 169, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/fields.py", line 367, in bind
+    assert self.source != field_name, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:20:03,437 log 1619341 128992212408000 Internal Server Error: /api/admin/withdrawals/
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/api/views.py", line 2191, in list
+    'withdrawal_requests': serializer.data,
+                           ^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 357, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/utils/serializer_helpers.py", line 169, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/fields.py", line 367, in bind
+    assert self.source != field_name, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:20:07,997 log 1619341 128992597239488 Internal Server Error: /api/admin/withdrawals/
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/api/views.py", line 2191, in list
+    'withdrawal_requests': serializer.data,
+                           ^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 357, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/utils/serializer_helpers.py", line 169, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/fields.py", line 367, in bind
+    assert self.source != field_name, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2026-02-10 13:20:10,338 log 1619341 128992597239488 Internal Server Error: /api/admin/withdrawals/
+Traceback (most recent call last):
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/api/views.py", line 2191, in list
+    'withdrawal_requests': serializer.data,
+                           ^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/serializers.py", line 357, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/utils/serializer_helpers.py", line 169, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "/home/joseph/apps/E_COMMERCE/myenv/lib/python3.12/site-packages/rest_framework/fields.py", line 367, in bind
+    assert self.source != field_name, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: It is redundant to specify `source='payout_phone'` on field 'CharField' in serializer 'WithdrawalRequestSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+INFO 2026-02-10 13:20:48,175 autoreload 1619341 128992699523200 /home/joseph/apps/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-10 13:20:49,973 autoreload 1621908 124635488080000 Watching for file changes with StatReloader
+INFO 2026-02-10 13:21:19,619 payment_service 1621908 124635303630528 FapshiPaymentService initialized:
+INFO 2026-02-10 13:21:19,619 payment_service 1621908 124635303630528   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:21:19,619 payment_service 1621908 124635303630528   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:21:19,619 payment_service 1621908 124635303630528   API Key set: Yes
+INFO 2026-02-10 13:21:19,619 payment_service 1621908 124635303630528 Processing payout for withdrawal request 2
+INFO 2026-02-10 13:21:19,620 payment_service 1621908 124635303630528 Withdrawal amount: 4534.00
+INFO 2026-02-10 13:21:19,620 payment_service 1621908 124635303630528 Seller: seller@gmail.com
+INFO 2026-02-10 13:21:19,620 payment_service 1621908 124635303630528 Initiating payout request:
+INFO 2026-02-10 13:21:19,620 payment_service 1621908 124635303630528   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 13:21:19,620 payment_service 1621908 124635303630528   Payload: {
+  "amount": 4534,
+  "phone": "+237651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-10 13:21:19,620 payment_service 1621908 124635303630528   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 13:21:57,553 payment_service 1621908 124635303630528 Payout response status code: 400
+INFO 2026-02-10 13:21:57,554 payment_service 1621908 124635303630528 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"38-YfFgvQGUz4ArP7Rpk0Nz/k7w2tA"', 'x-cloud-trace-context': '075024668eb939932f90b9a328b28243;o=1', 'date': 'Tue, 10 Feb 2026 13:21:57 GMT', 'server': 'Google Frontend', 'Content-Length': '56'}
+ERROR 2026-02-10 13:21:57,554 payment_service 1621908 124635303630528 Payout HTTP Error: 400
+ERROR 2026-02-10 13:21:57,554 payment_service 1621908 124635303630528 Payout response body: {"message":"Phone number must be a valid MTN or Orange"}
+INFO 2026-02-10 13:21:57,556 payment_service 1621908 124635303630528 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400'}
+ERROR 2026-02-10 13:21:57,557 payment_service 1621908 124635303630528 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400'}
+ERROR 2026-02-10 13:21:57,723 log 1621908 124635303630528 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-10 13:22:43,996 autoreload 1621908 124635488080000 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 13:22:44,916 autoreload 1622293 130099924037760 Watching for file changes with StatReloader
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448 FapshiPaymentService initialized:
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448   API Key set: Yes
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448 Processing payout for withdrawal request 2
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448 Withdrawal amount: 4534.00
+INFO 2026-02-10 13:23:07,074 payment_service 1622293 130099829536448 Seller: seller@gmail.com
+INFO 2026-02-10 13:23:07,075 payment_service 1622293 130099829536448 Original phone: +237651185719, Formatted phone: 237651185719
+INFO 2026-02-10 13:23:07,075 payment_service 1622293 130099829536448 Initiating payout request:
+INFO 2026-02-10 13:23:07,075 payment_service 1622293 130099829536448   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 13:23:07,075 payment_service 1622293 130099829536448   Payload: {
+  "amount": 4534,
+  "phone": "237651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-10 13:23:07,075 payment_service 1622293 130099829536448   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 13:23:07,398 payment_service 1622293 130099829536448 Payout response status code: 400
+INFO 2026-02-10 13:23:07,399 payment_service 1622293 130099829536448 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"38-YfFgvQGUz4ArP7Rpk0Nz/k7w2tA"', 'x-cloud-trace-context': '507db147598bd89768aa07afa51c3ee7;o=1', 'date': 'Tue, 10 Feb 2026 13:23:07 GMT', 'server': 'Google Frontend', 'Content-Length': '56'}
+ERROR 2026-02-10 13:23:07,399 payment_service 1622293 130099829536448 Payout HTTP Error: 400
+ERROR 2026-02-10 13:23:07,399 payment_service 1622293 130099829536448 Payout response body: {"message":"Phone number must be a valid MTN or Orange"}
+INFO 2026-02-10 13:23:07,401 payment_service 1622293 130099829536448 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400'}
+ERROR 2026-02-10 13:23:07,401 payment_service 1622293 130099829536448 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400'}
+ERROR 2026-02-10 13:23:07,571 log 1622293 130099829536448 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-10 13:23:37,044 autoreload 1622293 130099924037760 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 13:23:38,039 autoreload 1622477 125615284547712 Watching for file changes with StatReloader
+INFO 2026-02-10 13:23:48,948 autoreload 1622477 125615284547712 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 13:23:49,829 autoreload 1622534 140450221301888 Watching for file changes with StatReloader
+INFO 2026-02-10 13:24:05,981 payment_service 1622534 140450060039872 FapshiPaymentService initialized:
+INFO 2026-02-10 13:24:05,981 payment_service 1622534 140450060039872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872   API Key set: Yes
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 Processing payout for withdrawal request 2
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 Withdrawal amount: 4534.00
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 Seller: seller@gmail.com
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 Original phone input: '+237651185719'
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 After removing non-digits: '237651185719'
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 Already in correct format: 237651185719
+INFO 2026-02-10 13:24:05,982 payment_service 1622534 140450060039872 Original phone: +237651185719, Formatted phone: 237651185719
+INFO 2026-02-10 13:24:05,983 payment_service 1622534 140450060039872 Initiating payout request:
+INFO 2026-02-10 13:24:05,983 payment_service 1622534 140450060039872   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 13:24:06,003 payment_service 1622534 140450060039872   Payload: {
+  "amount": 4534,
+  "phone": "237651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-10 13:24:06,006 payment_service 1622534 140450060039872   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 13:24:06,009 payment_service 1622534 140450060039872   Phone number being sent: '237651185719'
+INFO 2026-02-10 13:24:06,009 payment_service 1622534 140450060039872   Phone number length: 12
+INFO 2026-02-10 13:24:06,009 payment_service 1622534 140450060039872   Phone number starts with 2376/2377: True
+INFO 2026-02-10 13:24:06,942 payment_service 1622534 140450060039872 Payout response status code: 400
+INFO 2026-02-10 13:24:06,942 payment_service 1622534 140450060039872 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"38-YfFgvQGUz4ArP7Rpk0Nz/k7w2tA"', 'x-cloud-trace-context': 'da8d444e1f760c0eb344e4c13291a636;o=1', 'date': 'Tue, 10 Feb 2026 13:24:06 GMT', 'server': 'Google Frontend', 'Content-Length': '56'}
+ERROR 2026-02-10 13:24:06,942 payment_service 1622534 140450060039872 Payout HTTP Error: 400
+ERROR 2026-02-10 13:24:06,942 payment_service 1622534 140450060039872 Payout response body: {"message":"Phone number must be a valid MTN or Orange"}
+INFO 2026-02-10 13:24:06,945 payment_service 1622534 140450060039872 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Phone number must be a valid MTN or Orange"}'}
+ERROR 2026-02-10 13:24:06,946 payment_service 1622534 140450060039872 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Phone number must be a valid MTN or Orange"}'}
+ERROR 2026-02-10 13:24:07,117 log 1622534 140450060039872 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-10 13:24:35,797 autoreload 1622534 140450221301888 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 13:24:36,676 autoreload 1622695 129760134217856 Watching for file changes with StatReloader
+INFO 2026-02-10 13:25:27,591 autoreload 1622695 129760134217856 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-10 13:25:28,442 autoreload 1622823 134069008855168 Watching for file changes with StatReloader
+INFO 2026-02-10 13:25:40,758 payment_service 1622823 134068914091712 FapshiPaymentService initialized:
+INFO 2026-02-10 13:25:40,758 payment_service 1622823 134068914091712   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:25:40,758 payment_service 1622823 134068914091712   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:25:40,758 payment_service 1622823 134068914091712   API Key set: Yes
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Processing payout for withdrawal request 2
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Withdrawal amount: 4534.00
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Seller: seller@gmail.com
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Original phone input: '+237651185719'
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 After removing non-digits: '237651185719'
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Removed country code, now: '651185719'
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Valid MTN prefix: 651
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Final formatted phone: 651185719
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712 Initiating payout request:
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712   Payload: {
+  "amount": 4534,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712   Phone number being sent: '651185719'
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712   Phone number length: 9
+INFO 2026-02-10 13:25:40,759 payment_service 1622823 134068914091712   Phone number starts with 2376/2377: False
+INFO 2026-02-10 13:25:41,956 payment_service 1622823 134068914091712 Payout response status code: 200
+INFO 2026-02-10 13:25:41,956 payment_service 1622823 134068914091712 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"58-omvbvv5/etQo7AwqS4yXuYMo5sA"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '9d9aa476eb33a73654823bc2406eea12;o=1', 'date': 'Tue, 10 Feb 2026 13:25:41 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 13:25:41,956 payment_service 1622823 134068914091712 Payout response data: {
+  "message": "Accepted",
+  "transId": "k1txBiwxQ4",
+  "dateInitiated": "2026-02-10T13:25:41.701Z"
+}
+INFO 2026-02-10 13:25:41,960 payment_service 1622823 134068914091712 Payout initiation result: {'message': 'Accepted', 'transId': 'k1txBiwxQ4', 'dateInitiated': '2026-02-10T13:25:41.701Z'}
+INFO 2026-02-10 13:25:41,961 payment_service 1622823 134068914091712 Payout initiated successfully
+INFO 2026-02-10 13:25:45,177 payment_service 1622823 134068914091712 FapshiPaymentService initialized:
+INFO 2026-02-10 13:25:45,178 payment_service 1622823 134068914091712   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:25:45,179 payment_service 1622823 134068914091712   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:25:45,179 payment_service 1622823 134068914091712   API Key set: Yes
+INFO 2026-02-10 13:25:45,179 views 1622823 134068914091712 Processing webhook for transaction: k1txBiwxQ4
+WARNING 2026-02-10 13:26:17,239 log 1622823 134068904650432 Forbidden: /api/cart/items/
+WARNING 2026-02-10 13:26:29,801 log 1622823 134068670817984 Forbidden: /api/cart/items/
+WARNING 2026-02-10 13:57:39,563 log 1622823 134068679210688 Bad Request: /api/seller/withdrawals/request/
+WARNING 2026-02-10 13:58:02,874 log 1622823 134068914091712 Forbidden: /api/cart/items/
+INFO 2026-02-10 13:59:14,660 payment_service 1622823 134068645639872 FapshiPaymentService initialized:
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872   API Key set: Yes
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Processing payout for withdrawal request 3
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Withdrawal amount: 100.00
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Seller: seller@gmail.com
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Original phone input: '+237651185719'
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 After removing non-digits: '237651185719'
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Removed country code, now: '651185719'
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Valid MTN prefix: 651
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Final formatted phone: 651185719
+INFO 2026-02-10 13:59:14,661 payment_service 1622823 134068645639872 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872 Initiating payout request:
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872   Payload: {
+  "amount": 100,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_3",
+  "message": "Withdrawal payment for request #3"
+}
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872   Phone number being sent: '651185719'
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872   Phone number length: 9
+INFO 2026-02-10 13:59:14,662 payment_service 1622823 134068645639872   Phone number starts with 2376/2377: False
+INFO 2026-02-10 13:59:15,856 payment_service 1622823 134068645639872 Payout response status code: 200
+INFO 2026-02-10 13:59:15,856 payment_service 1622823 134068645639872 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"58-dRT+NvoiVkM06b/Xn9gWRzOhtKc"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '200b2abed201064f3f8e40b0b762a1fe;o=1', 'date': 'Tue, 10 Feb 2026 13:59:15 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 13:59:15,856 payment_service 1622823 134068645639872 Payout response data: {
+  "message": "Accepted",
+  "transId": "wpHCT5TZ7w",
+  "dateInitiated": "2026-02-10T13:59:15.611Z"
+}
+INFO 2026-02-10 13:59:15,858 payment_service 1622823 134068645639872 Payout initiation result: {'message': 'Accepted', 'transId': 'wpHCT5TZ7w', 'dateInitiated': '2026-02-10T13:59:15.611Z'}
+INFO 2026-02-10 13:59:15,859 payment_service 1622823 134068645639872 Payout initiated successfully
+INFO 2026-02-10 13:59:17,128 payment_service 1622823 134068896257728 FapshiPaymentService initialized:
+INFO 2026-02-10 13:59:17,128 payment_service 1622823 134068896257728   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 13:59:17,128 payment_service 1622823 134068896257728   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 13:59:17,128 payment_service 1622823 134068896257728   API Key set: Yes
+INFO 2026-02-10 13:59:17,128 views 1622823 134068896257728 Processing webhook for transaction: wpHCT5TZ7w
+WARNING 2026-02-10 14:00:13,474 log 1622823 134068645639872 Forbidden: /api/cart/items/
+WARNING 2026-02-10 14:01:32,916 log 1622823 134068896257728 Forbidden: /api/cart/items/
+INFO 2026-02-10 14:01:52,160 payment_service 1622823 134068679210688 FapshiPaymentService initialized:
+INFO 2026-02-10 14:01:52,161 payment_service 1622823 134068679210688   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 14:01:52,161 payment_service 1622823 134068679210688   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 14:01:52,161 payment_service 1622823 134068679210688   API Key set: Yes
+INFO 2026-02-10 14:01:52,161 payment_service 1622823 134068679210688 Processing payout for withdrawal request 4
+INFO 2026-02-10 14:01:52,161 payment_service 1622823 134068679210688 Withdrawal amount: 400000.00
+INFO 2026-02-10 14:01:52,161 payment_service 1622823 134068679210688 Seller: seller@gmail.com
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 Original phone input: '+237651185719'
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 After removing non-digits: '237651185719'
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 Removed country code, now: '651185719'
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 Valid MTN prefix: 651
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 Final formatted phone: 651185719
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-10 14:01:52,162 payment_service 1622823 134068679210688 Initiating payout request:
+INFO 2026-02-10 14:01:52,163 payment_service 1622823 134068679210688   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 14:01:52,163 payment_service 1622823 134068679210688   Payload: {
+  "amount": 400000,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_4",
+  "message": "Withdrawal payment for request #4"
+}
+INFO 2026-02-10 14:01:52,164 payment_service 1622823 134068679210688   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 14:01:52,164 payment_service 1622823 134068679210688   Phone number being sent: '651185719'
+INFO 2026-02-10 14:01:52,164 payment_service 1622823 134068679210688   Phone number length: 9
+INFO 2026-02-10 14:01:52,164 payment_service 1622823 134068679210688   Phone number starts with 2376/2377: False
+INFO 2026-02-10 14:01:53,207 payment_service 1622823 134068679210688 Payout response status code: 200
+INFO 2026-02-10 14:01:53,207 payment_service 1622823 134068679210688 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"58-ezZrThP46mvewexANcQLmP3HqS0"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '57addfc238b406075d8ee65fbdbe244f;o=1', 'date': 'Tue, 10 Feb 2026 14:01:53 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 14:01:53,208 payment_service 1622823 134068679210688 Payout response data: {
+  "message": "Accepted",
+  "transId": "8I2YEAEbHp",
+  "dateInitiated": "2026-02-10T14:01:52.967Z"
+}
+INFO 2026-02-10 14:01:53,210 payment_service 1622823 134068679210688 Payout initiation result: {'message': 'Accepted', 'transId': '8I2YEAEbHp', 'dateInitiated': '2026-02-10T14:01:52.967Z'}
+INFO 2026-02-10 14:01:53,211 payment_service 1622823 134068679210688 Payout initiated successfully
+INFO 2026-02-10 14:01:56,069 payment_service 1622823 134068914091712 FapshiPaymentService initialized:
+INFO 2026-02-10 14:01:56,070 payment_service 1622823 134068914091712   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 14:01:56,070 payment_service 1622823 134068914091712   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 14:01:56,070 payment_service 1622823 134068914091712   API Key set: Yes
+INFO 2026-02-10 14:01:56,070 views 1622823 134068914091712 Processing webhook for transaction: 8I2YEAEbHp
+WARNING 2026-02-10 14:02:55,402 log 1622823 134068914091712 Forbidden: /api/cart/items/
+WARNING 2026-02-10 14:04:33,993 log 1622823 134068904650432 Forbidden: /api/cart/items/
+INFO 2026-02-10 14:05:21,345 payment_service 1622823 134068645639872 FapshiPaymentService initialized:
+INFO 2026-02-10 14:05:21,346 payment_service 1622823 134068645639872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 14:05:21,346 payment_service 1622823 134068645639872   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 14:05:21,346 payment_service 1622823 134068645639872   API Key set: Yes
+INFO 2026-02-10 14:05:21,346 payment_service 1622823 134068645639872 Processing payout for withdrawal request 5
+INFO 2026-02-10 14:05:21,349 payment_service 1622823 134068645639872 Withdrawal amount: 80000.00
+INFO 2026-02-10 14:05:21,349 payment_service 1622823 134068645639872 Seller: seller@gmail.com
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 Original phone input: '+237651185719'
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 After removing non-digits: '237651185719'
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 Removed country code, now: '651185719'
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 Valid MTN prefix: 651
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 Final formatted phone: 651185719
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872 Initiating payout request:
+INFO 2026-02-10 14:05:21,350 payment_service 1622823 134068645639872   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-10 14:05:21,351 payment_service 1622823 134068645639872   Payload: {
+  "amount": 80000,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "45",
+  "externalId": "withdrawal_5",
+  "message": "Withdrawal payment for request #5"
+}
+INFO 2026-02-10 14:05:21,353 payment_service 1622823 134068645639872   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-10 14:05:21,353 payment_service 1622823 134068645639872   Phone number being sent: '651185719'
+INFO 2026-02-10 14:05:21,353 payment_service 1622823 134068645639872   Phone number length: 9
+INFO 2026-02-10 14:05:21,353 payment_service 1622823 134068645639872   Phone number starts with 2376/2377: False
+INFO 2026-02-10 14:05:22,399 payment_service 1622823 134068645639872 Payout response status code: 200
+INFO 2026-02-10 14:05:22,399 payment_service 1622823 134068645639872 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"58-uF2vf8Rb9S50C6YOCa7LrqIPuqM"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'a35b816b4f2229c1306e3194e144919e;o=1', 'date': 'Tue, 10 Feb 2026 14:05:22 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-10 14:05:22,400 payment_service 1622823 134068645639872 Payout response data: {
+  "message": "Accepted",
+  "transId": "KpJg39b5dM",
+  "dateInitiated": "2026-02-10T14:05:22.159Z"
+}
+INFO 2026-02-10 14:05:22,401 payment_service 1622823 134068645639872 Payout initiation result: {'message': 'Accepted', 'transId': 'KpJg39b5dM', 'dateInitiated': '2026-02-10T14:05:22.159Z'}
+INFO 2026-02-10 14:05:22,402 payment_service 1622823 134068645639872 Payout initiated successfully
+INFO 2026-02-10 14:05:28,945 payment_service 1622823 134068645639872 FapshiPaymentService initialized:
+INFO 2026-02-10 14:05:28,946 payment_service 1622823 134068645639872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-10 14:05:28,946 payment_service 1622823 134068645639872   API User: 25917560-52cc-49f2-9f4e-59661b816b12
+INFO 2026-02-10 14:05:28,946 payment_service 1622823 134068645639872   API Key set: Yes
+INFO 2026-02-10 14:05:28,946 views 1622823 134068645639872 Processing webhook for transaction: KpJg39b5dM

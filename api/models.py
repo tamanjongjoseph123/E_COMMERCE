@@ -226,6 +226,35 @@ class Payment(models.Model):
             return f"Payment #{self.id} - {self.status} (No order yet)"
 
 
+class WithdrawalRequest(models.Model):
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('approved', 'Approved'),
+        ('rejected', 'Rejected'),
+        ('processed', 'Processed'),
+    ]
+    
+    seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='withdrawal_requests', limit_choices_to={'role': 'seller'})
+    amount = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(Decimal('0.01'))])
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    admin_notes = models.TextField(blank=True, null=True)
+    processed_at = models.DateTimeField(null=True, blank=True)
+    processed_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='processed_withdrawals', limit_choices_to={'role': 'admin'})
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        return f"Withdrawal request of ${self.amount} by {self.seller.email} - {self.status}"
+    
+    @property
+    def payout_phone(self):
+        """Get the phone number from seller's profile for payout"""
+        return self.seller.phone_number
+
+
 class Report(models.Model):
     REPORT_TYPE_CHOICES = [
         ('fraud', 'Fraud'),

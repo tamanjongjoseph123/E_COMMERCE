@@ -4,7 +4,7 @@ import os
 import logging
 from datetime import datetime
 from django.conf import settings
-from .models import Payment, Order
+from .models import Payment, Order, WithdrawalRequest, Wallet, Transaction
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -304,3 +304,191 @@ class FapshiPaymentService:
                 "message": result.get('message', 'Failed to update payment status'),
                 "error": result.get('error')
             }
+    
+    def initiate_payout(self, amount, phone, name, email, user_id, external_id=None, message=None):
+        """
+        Initiate a payout to a user's mobile money account
+        """
+        url = f"{self.base_url}/payout"
+        
+        payload = {
+            "amount": int(amount),
+            "phone": phone,
+            "medium": "mobile money",
+            "name": name,
+            "email": email,
+            "userId": str(user_id),
+            "externalId": external_id or f"withdrawal_{user_id}_{datetime.now().timestamp()}",
+            "message": message or f"Withdrawal payment for {external_id}"
+        }
+        
+        # Debug: Log payout request
+        logger.info(f"Initiating payout request:")
+        logger.info(f"  URL: {url}")
+        logger.info(f"  Payload: {json.dumps(payload, indent=2)}")
+        logger.info(f"  Headers: {self.headers}")
+        logger.info(f"  Phone number being sent: '{phone}'")
+        logger.info(f"  Phone number length: {len(phone)}")
+        logger.info(f"  Phone number starts with 2376/2377: {phone.startswith(('2376', '2377'))}")
+        
+        try:
+            response = requests.post(url, headers=self.headers, json=payload)
+            logger.info(f"Payout response status code: {response.status_code}")
+            logger.info(f"Payout response headers: {dict(response.headers)}")
+            
+            if response.status_code != 200:
+                logger.error(f"Payout HTTP Error: {response.status_code}")
+                logger.error(f"Payout response body: {response.text}")
+                return {
+                    "error": f"HTTP {response.status_code}",
+                    "message": f"Payout HTTP error occurred: {response.status_code}",
+                    "response_body": response.text
+                }
+            
+            response.raise_for_status()
+            result = response.json()
+            logger.info(f"Payout response data: {json.dumps(result, indent=2)}")
+            return result
+            
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Payout request exception occurred: {str(e)}")
+            logger.error(f"Payout exception type: {type(e).__name__}")
+            return {
+                "error": str(e),
+                "message": "Failed to initiate payout"
+            }
+    
+    def process_withdrawal_payout(self, withdrawal_request):
+        """
+        Process a withdrawal request using Fapshi payout API
+        """
+        logger.info(f"Processing payout for withdrawal request {withdrawal_request.id}")
+        logger.info(f"Withdrawal amount: {withdrawal_request.amount}")
+        logger.info(f"Seller: {withdrawal_request.seller.email}")
+        
+        seller = withdrawal_request.seller
+        
+        # Get seller's phone number from profile
+        phone = seller.phone_number
+        
+        if not phone:
+            logger.error(f"No phone number found for seller {seller.email}")
+            return {
+                "success": False,
+                "message": "No phone number found in seller profile. Please update profile.",
+                "withdrawal_id": withdrawal_request.id
+            }
+        
+        # Validate and format phone number for Fapshi
+        formatted_phone = self.format_phone_number_for_fapshi(phone)
+        if not formatted_phone:
+            logger.error(f"Invalid phone number format: {phone}")
+            return {
+                "success": False,
+                "message": f"Invalid phone number format: {phone}. Must be a valid Cameroon MTN or Orange number (e.g., 2376xxxxxxx or 2377xxxxxxx)",
+                "withdrawal_id": withdrawal_request.id
+            }
+        
+        logger.info(f"Original phone: {phone}, Formatted phone: {formatted_phone}")
+        
+        # Create external ID for tracking
+        external_id = f"withdrawal_{withdrawal_request.id}"
+        
+        # Initiate payout
+        result = self.initiate_payout(
+            amount=withdrawal_request.amount,
+            phone=formatted_phone,
+            name=seller.full_name or seller.name,
+            email=seller.email,
+            user_id=seller.id,
+            external_id=external_id,
+            message=f"Withdrawal payment for request #{withdrawal_request.id}"
+        )
+        
+        logger.info(f"Payout initiation result: {result}")
+        
+        if 'error' not in result:
+            # Payout initiated successfully
+            logger.info("Payout initiated successfully")
+            
+            # Update withdrawal request with payout details
+            withdrawal_request.admin_notes = f"Payout initiated via Fapshi to {formatted_phone}. Trans ID: {result.get('transId')}"
+            withdrawal_request.status = 'processed'
+            withdrawal_request.processed_at = datetime.now()
+            withdrawal_request.save()
+            
+            # Create transaction record
+            wallet = Wallet.objects.get(seller=seller)
+            Transaction.objects.create(
+                wallet=wallet,
+                amount=withdrawal_request.amount,
+                transaction_type='withdrawal',
+                description=f'Withdrawal processed via Fapshi to {formatted_phone} - Request #{withdrawal_request.id}'
+            )
+            
+            # Deduct from wallet
+            wallet.balance -= withdrawal_request.amount
+            wallet.save()
+            
+            return {
+                "success": True,
+                "message": f"Withdrawal processed successfully via Fapshi to {formatted_phone}",
+                "trans_id": result.get('transId'),
+                "date_initiated": result.get('dateInitiated'),
+                "withdrawal_id": withdrawal_request.id,
+                "payout_phone": formatted_phone
+            }
+        else:
+            # Payout failed
+            logger.error(f"Payout initiation failed: {result}")
+            withdrawal_request.admin_notes = f"Payout failed to {formatted_phone}: {result.get('message', 'Unknown error')}"
+            withdrawal_request.save()
+            
+            return {
+                "success": False,
+                "message": result.get('message', 'Failed to process payout'),
+                "error": result.get('error'),
+                "withdrawal_id": withdrawal_request.id,
+                "payout_phone": formatted_phone
+            }
+    
+    def format_phone_number_for_fapshi(self, phone):
+        """
+        Format phone number for Fapshi API
+        Fapshi expects Cameroon numbers in format: 6xxxxxxx or 7xxxxxxx (9 digits only)
+        Valid prefixes:
+        - MTN: 650, 651, 652, 653, 654, 655, 656, 657, 658, 659
+        - Orange: 690, 691, 692, 693, 694, 695, 696, 697, 698, 699
+        """
+        if not phone:
+            return None
+        
+        logger.info(f"Original phone input: '{phone}'")
+        
+        # Remove all non-digit characters
+        phone_digits = ''.join(filter(str.isdigit, str(phone)))
+        logger.info(f"After removing non-digits: '{phone_digits}'")
+        
+        # Define valid MTN and Orange prefixes
+        mtn_prefixes = ['650', '651', '652', '653', '654', '655', '656', '657', '658', '659']
+        orange_prefixes = ['690', '691', '692', '693', '694', '695', '696', '697', '698', '699']
+        
+        # Remove country code if present (237)
+        if phone_digits.startswith('237') and len(phone_digits) == 12:
+            phone_digits = phone_digits[3:]  # Remove 237
+            logger.info(f"Removed country code, now: '{phone_digits}'")
+        
+        # Check if we have exactly 9 digits
+        if len(phone_digits) == 9:
+            prefix = phone_digits[:3]
+            if prefix in mtn_prefixes or prefix in orange_prefixes:
+                formatted = phone_digits  # Just return the 9 digits
+                logger.info(f"Valid {('MTN' if prefix in mtn_prefixes else 'Orange')} prefix: {prefix}")
+                logger.info(f"Final formatted phone: {formatted}")
+                return formatted
+            else:
+                logger.error(f"Invalid prefix: {prefix}. Valid MTN: {mtn_prefixes}, Valid Orange: {orange_prefixes}")
+                return None
+        else:
+            logger.error(f"Phone number must be exactly 9 digits after removing country code. Got: {len(phone_digits)} digits")
+            return None

@@ -19,13 +19,14 @@ from django.utils import timezone
 
 from .models import (
     User, Seller, Category, Product, Cart, CartItem,
-    Order, OrderItem, Wallet, Transaction, Report, Payment
+    Order, OrderItem, Wallet, Transaction, Report, Payment, WithdrawalRequest
 )
 from .serializers import (
     UserSerializer, RegisterSerializer, LoginSerializer, SellerSerializer,
     CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer,
-    OrderSerializer, WalletSerializer, TransactionSerializer, ProfileSerializer,
-    ReportSerializer, PaymentSerializer, PaymentInitiateSerializer
+    OrderSerializer, OrderItemSerializer, WalletSerializer, TransactionSerializer, 
+    ProfileSerializer, ReportSerializer, PaymentSerializer, PaymentInitiateSerializer,
+    WithdrawalRequestSerializer
 )
 from .payment_service import FapshiPaymentService
 from .debug_views import debug_payment_transaction, check_pending_payments
@@ -1296,19 +1297,114 @@ def update_order_status(request, order_id):
 @permission_classes([IsSeller])
 def seller_orders(request):
     """View all orders that contain seller's products"""
-    # Get all order items that belong to this seller
-    seller_order_items = OrderItem.objects.filter(seller=request.user).select_related('order').order_by('-order__created_at')
+    # Get all order items that belong to this seller with optimized queries
+    seller_order_items = OrderItem.objects.filter(
+        seller=request.user
+    ).select_related(
+        'order__buyer'
+    ).prefetch_related(
+        'order__items'
+    ).order_by('-order__created_at')
     
     # Group by order to avoid duplicates
     order_ids = seller_order_items.values_list('order_id', flat=True).distinct()
-    orders = Order.objects.filter(id__in=order_ids).order_by('-created_at')
     
-    serializer = OrderSerializer(orders, many=True, context={'request': request})
+    # Add pagination
+    page = int(request.GET.get('page', 1))
+    per_page = int(request.GET.get('per_page', 20))
+    
+    orders = Order.objects.filter(
+        id__in=order_ids,
+        payment_status='paid'  # Only show paid orders for sellers
+    ).select_related(
+        'buyer'
+    ).prefetch_related(
+        'items__product'
+    ).order_by('-created_at')
+    
+    # Manual pagination
+    total_count = orders.count()
+    start = (page - 1) * per_page
+    end = start + per_page
+    orders_page = orders[start:end]
+    
+    serializer = OrderSerializer(orders_page, many=True, context={'request': request})
     return Response({
         'success': True,
         'message': 'Seller orders retrieved successfully',
-        'data': serializer.data
+        'data': {
+            'orders': serializer.data,
+            'pagination': {
+                'current_page': page,
+                'per_page': per_page,
+                'total_count': total_count,
+                'total_pages': (total_count + per_page - 1) // per_page
+            }
+        }
     })
+
+
+@api_view(['GET'])
+@permission_classes([IsSeller])
+def seller_order_items(request, order_id):
+    """Get specific order items that belong to this seller for a given order"""
+    try:
+        # Get the order and verify it contains items from this seller
+        order = Order.objects.get(id=order_id)
+        
+        # Get only the order items that belong to this seller
+        seller_items = OrderItem.objects.filter(
+            order=order,
+            seller=request.user
+        ).select_related('product')
+        
+        if not seller_items.exists():
+            return Response({
+                'success': False,
+                'message': 'No items found for this seller in this order'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        # Serialize the order items
+        serializer = OrderItemSerializer(seller_items, many=True, context={'request': request})
+        
+        # Get order details for context
+        order_data = {
+            'id': order.id,
+            'buyer_name': order.buyer.name,
+            'buyer_email': order.buyer.email,
+            'status': order.status,
+            'payment_status': order.payment_status,
+            'total_amount': str(order.total_amount),
+            'delivery_address': order.delivery_address,
+            'delivery_city': order.delivery_city,
+            'delivery_state': order.delivery_state,
+            'delivery_phone': order.delivery_phone,
+            'created_at': order.created_at,
+            'updated_at': order.updated_at
+        }
+        
+        return Response({
+            'success': True,
+            'message': 'Seller order items retrieved successfully',
+            'data': {
+                'order': order_data,
+                'items': serializer.data,
+                'items_count': seller_items.count(),
+                'seller_total': str(sum(item.subtotal for item in seller_items))
+            }
+        })
+        
+    except Order.DoesNotExist:
+        return Response({
+            'success': False,
+            'message': 'Order not found'
+        }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        logger.error(f"Error fetching seller order items: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'An error occurred while fetching order items'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(['GET'])
@@ -1962,3 +2058,285 @@ def check_payment_status_manual(request):
             'message': 'Manual payment status check failed',
             'error': str(e)
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Withdrawal Views
+@api_view(['POST'])
+@permission_classes([IsSeller])
+def create_withdrawal_request(request):
+    """Create a new withdrawal request"""
+    try:
+        amount = Decimal(request.data.get('amount'))
+        
+        if amount <= 0:
+            return Response({
+                'success': False,
+                'message': 'Amount must be greater than 0'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Get seller's wallet
+        try:
+            wallet = Wallet.objects.get(seller=request.user)
+        except Wallet.DoesNotExist:
+            return Response({
+                'success': False,
+                'message': 'Wallet not found'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        # Check sufficient balance
+        if amount > wallet.balance:
+            return Response({
+                'success': False,
+                'message': f'Insufficient balance. Available: ${wallet.balance}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Check for pending withdrawal requests
+        pending_requests = WithdrawalRequest.objects.filter(
+            seller=request.user,
+            status='pending'
+        ).exists()
+        
+        if pending_requests:
+            return Response({
+                'success': False,
+                'message': 'You already have a pending withdrawal request'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Get seller's phone number for display
+        seller_phone = request.user.phone_number
+        
+        # Create withdrawal request
+        withdrawal_request = WithdrawalRequest.objects.create(
+            seller=request.user,
+            amount=amount,
+            status='pending'
+        )
+        
+        serializer = WithdrawalRequestSerializer(withdrawal_request, context={'request': request})
+        
+        return Response({
+            'success': True,
+            'message': f'Withdrawal request created successfully. You will receive the money at: {seller_phone or "No phone number in profile"}. If you want to change it, please update your profile.',
+            'data': {
+                **serializer.data,
+                'payout_phone': seller_phone,
+                'phone_message': f'Money will be sent to: {seller_phone or "No phone number in profile"}. Update your profile to change the phone number.'
+            }
+        }, status=status.HTTP_201_CREATED)
+        
+    except Exception as e:
+        logger.error(f"Create withdrawal request failed: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'Failed to create withdrawal request',
+            'error': str(e)
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([IsSeller])
+def seller_withdrawal_history(request):
+    """Get seller's withdrawal request history"""
+    try:
+        withdrawal_requests = WithdrawalRequest.objects.filter(
+            seller=request.user
+        ).order_by('-created_at')
+        
+        serializer = WithdrawalRequestSerializer(withdrawal_requests, many=True, context={'request': request})
+        
+        return Response({
+            'success': True,
+            'message': 'Withdrawal history retrieved successfully',
+            'data': serializer.data
+        })
+        
+    except Exception as e:
+        logger.error(f"Get withdrawal history failed: {str(e)}")
+        return Response({
+            'success': False,
+            'message': 'Failed to retrieve withdrawal history',
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+# Admin Withdrawal Management Views
+class WithdrawalRequestViewSet(viewsets.ModelViewSet):
+    queryset = WithdrawalRequest.objects.all()
+    serializer_class = WithdrawalRequestSerializer
+    permission_classes = [IsAdmin]
+    
+    def get_queryset(self):
+        status_filter = self.request.query_params.get('status', None)
+        queryset = WithdrawalRequest.objects.all().select_related('seller', 'processed_by')
+        
+        if status_filter:
+            queryset = queryset.filter(status=status_filter)
+        
+        return queryset.order_by('-created_at')
+    
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        
+        # Calculate statistics
+        total_pending = queryset.filter(status='pending').count()
+        total_approved = queryset.filter(status='approved').count()
+        total_rejected = queryset.filter(status='rejected').count()
+        total_processed = queryset.filter(status='processed').count()
+        
+        return Response({
+            'success': True,
+            'message': 'Withdrawal requests retrieved successfully',
+            'data': {
+                'withdrawal_requests': serializer.data,
+                'statistics': {
+                    'total_pending': total_pending,
+                    'total_approved': total_approved,
+                    'total_rejected': total_rejected,
+                    'total_processed': total_processed
+                }
+            }
+        })
+    
+    @action(detail=True, methods=['post'])
+    def approve(self, request, pk=None):
+        """Approve a withdrawal request and process the withdrawal via Fapshi payout"""
+        try:
+            withdrawal_request = self.get_object()
+            
+            if withdrawal_request.status != 'pending':
+                return Response({
+                    'success': False,
+                    'message': f'Cannot approve withdrawal request with status: {withdrawal_request.status}'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Get seller's wallet
+            wallet = Wallet.objects.get(seller=withdrawal_request.seller)
+            
+            # Check if still has sufficient balance
+            if withdrawal_request.amount > wallet.balance:
+                return Response({
+                    'success': False,
+                    'message': f'Insufficient balance. Available: ${wallet.balance}'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Process withdrawal using Fapshi payout service
+            payment_service = FapshiPaymentService()
+            payout_result = payment_service.process_withdrawal_payout(withdrawal_request)
+            
+            if payout_result.get('success'):
+                # Update withdrawal request with admin info
+                withdrawal_request.processed_by = request.user
+                withdrawal_request.save()
+                
+                serializer = self.get_serializer(withdrawal_request)
+                
+                return Response({
+                    'success': True,
+                    'message': 'Withdrawal request approved and processed successfully via Fapshi',
+                    'data': {
+                        **serializer.data,
+                        'payout_trans_id': payout_result.get('trans_id'),
+                        'payout_date_initiated': payout_result.get('date_initiated'),
+                        'payout_phone_used': payout_result.get('payout_phone')
+                    }
+                })
+            else:
+                # Payout failed, don't approve the request
+                return Response({
+                    'success': False,
+                    'message': f'Withdrawal approval failed: {payout_result.get("message")}',
+                    'error': payout_result.get('error'),
+                    'withdrawal_id': payout_result.get('withdrawal_id')
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            
+        except Wallet.DoesNotExist:
+            return Response({
+                'success': False,
+                'message': 'Seller wallet not found'
+            }, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            logger.error(f"Approve withdrawal request failed: {str(e)}")
+            return Response({
+                'success': False,
+                'message': 'Failed to approve withdrawal request',
+                'error': str(e)
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+    @action(detail=True, methods=['post'])
+    def reject(self, request, pk=None):
+        """Reject a withdrawal request"""
+        withdrawal_request = self.get_object()
+        
+        if withdrawal_request.status != 'pending':
+            return Response({
+                'success': False,
+                'message': f'Cannot reject withdrawal request with status: {withdrawal_request.status}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        admin_notes = request.data.get('admin_notes', '')
+        
+        withdrawal_request.status = 'rejected'
+        withdrawal_request.admin_notes = admin_notes
+        withdrawal_request.processed_by = request.user
+        withdrawal_request.processed_at = timezone.now()
+        withdrawal_request.save()
+        
+        serializer = self.get_serializer(withdrawal_request)
+        
+        return Response({
+            'success': True,
+            'message': 'Withdrawal request rejected successfully',
+            'data': serializer.data
+        })
+    
+    @action(detail=True, methods=['post'])
+    def mark_processed(self, request, pk=None):
+        """Mark an approved withdrawal request as processed (for manual processing)"""
+        withdrawal_request = self.get_object()
+        
+        if withdrawal_request.status != 'approved':
+            return Response({
+                'success': False,
+                'message': f'Cannot mark as processed. Current status: {withdrawal_request.status}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        admin_notes = request.data.get('admin_notes', '')
+        
+        with db_transaction.atomic():
+            # Get seller's wallet
+            wallet = Wallet.objects.get(seller=withdrawal_request.seller)
+            
+            # Check if still has sufficient balance
+            if withdrawal_request.amount > wallet.balance:
+                return Response({
+                    'success': False,
+                    'message': f'Insufficient balance. Available: ${wallet.balance}'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            # Deduct from wallet
+            wallet.balance -= withdrawal_request.amount
+            wallet.save()
+            
+            # Create transaction record
+            Transaction.objects.create(
+                wallet=wallet,
+                amount=withdrawal_request.amount,
+                transaction_type='withdrawal',
+                description=f'Withdrawal processed - Request #{withdrawal_request.id}'
+            )
+            
+            # Update withdrawal request
+            withdrawal_request.status = 'processed'
+            withdrawal_request.admin_notes = admin_notes
+            withdrawal_request.processed_by = request.user
+            withdrawal_request.processed_at = timezone.now()
+            withdrawal_request.save()
+        
+        serializer = self.get_serializer(withdrawal_request)
+        
+        return Response({
+            'success': True,
+            'message': 'Withdrawal request marked as processed successfully',
+            'data': serializer.data
+        })

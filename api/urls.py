@@ -6,6 +6,7 @@ router = DefaultRouter()
 router.register(r'admin/sellers', views.SellerApprovalViewSet, basename='seller-approval')
 router.register(r'admin/categories', views.CategoryViewSet, basename='category')
 router.register(r'admin/users', views.UserManagementViewSet, basename='user-management')
+router.register(r'admin/withdrawals', views.WithdrawalRequestViewSet, basename='withdrawal-request')
 router.register(r'seller/products', views.SellerProductViewSet, basename='seller-product')
 router.register(r'products', views.ProductViewSet, basename='product')
 router.register(r'cart/items', views.CartViewSet, basename='cart-item')
@@ -23,7 +24,10 @@ urlpatterns = [
     path('seller/wallet/', views.seller_wallet, name='seller-wallet'),
     path('seller/categories/', views.seller_categories, name='seller-categories'),
     path('seller/orders/', views.seller_orders, name='seller-orders'),
+    path('seller/orders/<int:order_id>/items/', views.seller_order_items, name='seller-order-items'),
     path('seller/orders/<int:order_id>/status/', views.update_order_status, name='update-order-status'),
+    path('seller/withdrawals/request/', views.create_withdrawal_request, name='create-withdrawal-request'),
+    path('seller/withdrawals/history/', views.seller_withdrawal_history, name='seller-withdrawal-history'),
     
     # Buyer endpoints
     path('products/all/', views.list_all_products, name='list-all-products'),

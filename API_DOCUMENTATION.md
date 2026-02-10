@@ -1609,6 +1609,543 @@ All endpoints follow a consistent error response format:
 
 ---
 
+## Withdrawal Management Endpoints
+
+### 32. Create Withdrawal Request (Seller)
+**Endpoint:** `POST /api/seller/withdrawals/request/`  
+**Authentication:** Seller required
+
+**Description:** Create a new withdrawal request to withdraw funds from the seller's wallet. The request will be pending until approved by an admin. Shows the phone number from the seller's profile where the money will be sent.
+
+**Request Body:**
+```json
+{
+  "amount": "500.00"
+}
+```
+
+**Response (Success - 201):**
+```json
+{
+  "success": true,
+  "message": "Withdrawal request created successfully. You will receive the money at: +237123456789. If you want to change it, please update your profile.",
+  "data": {
+    "id": 1,
+    "seller": {
+      "id": 2,
+      "email": "seller@example.com",
+      "name": "Jane",
+      "full_name": "Jane Seller",
+      "role": "seller"
+    },
+    "amount": "500.00",
+    "status": "pending",
+    "admin_notes": null,
+    "processed_at": null,
+    "processed_by": null,
+    "created_at": "2024-01-20T10:30:00Z",
+    "updated_at": "2024-01-20T10:30:00Z",
+    "payout_phone": "+237123456789",
+    "phone_message": "Money will be sent to: +237123456789. Update your profile to change the phone number."
+  }
+}
+```
+
+**Response (Success - 201) - No Phone Number:**
+```json
+{
+  "success": true,
+  "message": "Withdrawal request created successfully. You will receive the money at: No phone number in profile. If you want to change it, please update your profile.",
+  "data": {
+    "id": 1,
+    "seller": {...},
+    "amount": "500.00",
+    "status": "pending",
+    "payout_phone": null,
+    "phone_message": "Money will be sent to: No phone number in profile. Update your profile to change the phone number."
+  }
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Insufficient balance. Available: $300.00"
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "You already have a pending withdrawal request"
+}
+```
+
+**Validation Rules:**
+- Amount must be greater than 0
+- Seller must have sufficient wallet balance
+- Cannot create multiple pending requests
+- Amount cannot exceed current wallet balance
+- Phone number is taken from seller's profile
+- If no phone number exists, seller is notified to update profile
+
+**Phone Number Information:**
+- The system displays the phone number from the seller's profile
+- Sellers can update their phone number via the profile update endpoint
+- No phone number means the payout will fail until profile is updated
+- Admin can see the phone number in withdrawal details
+
+---
+
+### 33. View Withdrawal History (Seller)
+**Endpoint:** `GET /api/seller/withdrawals/history/`  
+**Authentication:** Seller required
+
+**Description:** View all withdrawal requests made by the current seller, including their status and processing details.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Withdrawal history retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "seller": {
+        "id": 2,
+        "email": "seller@example.com",
+        "name": "Jane",
+        "full_name": "Jane Seller",
+        "role": "seller"
+      },
+      "amount": "500.00",
+      "status": "processed",
+      "admin_notes": "Approved and processed successfully",
+      "processed_at": "2024-01-20T14:30:00Z",
+      "processed_by": {
+        "id": 1,
+        "email": "admin@example.com",
+        "name": "Admin",
+        "full_name": "Admin User",
+        "role": "admin"
+      },
+      "created_at": "2024-01-20T10:30:00Z",
+      "updated_at": "2024-01-20T14:30:00Z"
+    },
+    {
+      "id": 2,
+      "seller": {
+        "id": 2,
+        "email": "seller@example.com",
+        "name": "Jane",
+        "full_name": "Jane Seller",
+        "role": "seller"
+      },
+      "amount": "200.00",
+      "status": "rejected",
+      "admin_notes": "Insufficient documentation provided",
+      "processed_at": "2024-01-19T16:45:00Z",
+      "processed_by": {
+        "id": 1,
+        "email": "admin@example.com",
+        "name": "Admin",
+        "full_name": "Admin User",
+        "role": "admin"
+      },
+      "created_at": "2024-01-19T09:15:00Z",
+      "updated_at": "2024-01-19T16:45:00Z"
+    }
+  ]
+}
+```
+
+**Withdrawal Status Values:**
+- `pending` - Waiting for admin approval
+- `approved` - Approved but not yet processed
+- `rejected` - Rejected by admin
+- `processed` - Withdrawal completed and funds deducted
+
+---
+
+### 34. View All Withdrawal Requests (Admin)
+**Endpoint:** `GET /api/admin/withdrawals/`  
+**Authentication:** Admin required
+
+**Description:** View all withdrawal requests from all sellers with optional filtering by status. Includes statistics for dashboard purposes.
+
+**Query Parameters:**
+- `status` (optional): Filter by withdrawal status
+  - `pending` - Requests awaiting approval
+  - `approved` - Approved requests
+  - `rejected` - Rejected requests
+  - `processed` - Completed withdrawals
+
+**Example:** `GET /api/admin/withdrawals/?status=pending`
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Withdrawal requests retrieved successfully",
+  "data": {
+    "withdrawal_requests": [
+      {
+        "id": 3,
+        "seller": {
+          "id": 3,
+          "email": "seller2@example.com",
+          "name": "Mike",
+          "full_name": "Mike Seller",
+          "role": "seller"
+        },
+        "amount": "1000.00",
+        "status": "pending",
+        "admin_notes": null,
+        "processed_at": null,
+        "processed_by": null,
+        "created_at": "2024-01-20T11:00:00Z",
+        "updated_at": "2024-01-20T11:00:00Z"
+      }
+    ],
+    "statistics": {
+      "total_pending": 3,
+      "total_approved": 5,
+      "total_rejected": 2,
+      "total_processed": 15
+    }
+  }
+}
+```
+
+**Statistics Breakdown:**
+- `total_pending` - Number of requests awaiting approval
+- `total_approved` - Number of approved requests (may include unprocessed)
+- `total_rejected` - Number of rejected requests
+- `total_processed` - Number of completed withdrawals
+
+---
+
+### 35. Approve Withdrawal Request (Admin)
+**Endpoint:** `POST /api/admin/withdrawals/{id}/approve/`  
+**Authentication:** Admin required
+
+**Description:** Approve a pending withdrawal request and automatically process it via Fapshi payout API to send funds to the seller's mobile money account.
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Withdrawal request approved and processed successfully via Fapshi",
+  "data": {
+    "id": 3,
+    "seller": {
+      "id": 3,
+      "email": "seller2@example.com",
+      "name": "Mike",
+      "full_name": "Mike Seller",
+      "role": "seller"
+    },
+    "amount": "1000.00",
+    "status": "processed",
+    "admin_notes": "Payout initiated via Fapshi. Trans ID: FAPSHI123456",
+    "processed_at": "2024-01-20T14:15:00Z",
+    "processed_by": {
+      "id": 1,
+      "email": "admin@example.com",
+      "name": "Admin",
+      "full_name": "Admin User",
+      "role": "admin"
+    },
+    "created_at": "2024-01-20T11:00:00Z",
+    "updated_at": "2024-01-20T14:15:00Z",
+    "payout_trans_id": "FAPSHI123456",
+    "payout_date_initiated": "2024-01-20"
+  }
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Cannot approve withdrawal request with status: rejected"
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Insufficient balance. Available: $800.00"
+}
+```
+
+**Response (Error - 500):**
+```json
+{
+  "success": false,
+  "message": "Withdrawal approval failed: Payout failed - Insufficient funds in Fapshi account",
+  "error": "HTTP 400",
+  "withdrawal_id": 3
+}
+```
+
+**Processing Details:**
+- Validates that the seller still has sufficient wallet balance
+- Calls Fapshi payout API to send funds to seller's mobile money
+- Uses seller's phone number from profile (or default if not provided)
+- Automatically deducts amount from seller's wallet on successful payout
+- Creates a transaction record for the withdrawal
+- Updates withdrawal request status to 'processed'
+- Records Fapshi transaction ID and initiation date
+- Records which admin processed the request and when
+- If payout fails, withdrawal request remains pending and no funds are deducted
+
+**Fapshi Payout Integration:**
+- Uses Fapshi's `/payout` endpoint for mobile money transfers
+- Supports Cameroon mobile money providers (MTN, Orange, etc.)
+- Transaction ID is stored for tracking and reconciliation
+- Automatic retry logic can be implemented if needed
+
+---
+
+### 36. Reject Withdrawal Request (Admin)
+**Endpoint:** `POST /api/admin/withdrawals/{id}/reject/`  
+**Authentication:** Admin required
+
+**Description:** Reject a pending withdrawal request with optional admin notes explaining the reason.
+
+**Request Body:**
+```json
+{
+  "admin_notes": "Insufficient documentation provided. Please upload bank statement for verification."
+}
+```
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Withdrawal request rejected successfully",
+  "data": {
+    "id": 4,
+    "seller": {
+      "id": 4,
+      "email": "seller3@example.com",
+      "name": "Sarah",
+      "full_name": "Sarah Seller",
+      "role": "seller"
+    },
+    "amount": "300.00",
+    "status": "rejected",
+    "admin_notes": "Insufficient documentation provided. Please upload bank statement for verification.",
+    "processed_at": "2024-01-20T13:30:00Z",
+    "processed_by": {
+      "id": 1,
+      "email": "admin@example.com",
+      "name": "Admin",
+      "full_name": "Admin User",
+      "role": "admin"
+    },
+    "created_at": "2024-01-20T08:45:00Z",
+    "updated_at": "2024-01-20T13:30:00Z"
+  }
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Cannot reject withdrawal request with status: processed"
+}
+```
+
+**Notes:**
+- Admin notes are optional but recommended for transparency
+- Rejected requests do not affect the seller's wallet balance
+- Seller can create a new withdrawal request after rejection
+
+---
+
+### 37. Mark Withdrawal as Processed (Admin)
+**Endpoint:** `POST /api/admin/withdrawals/{id}/mark_processed/`  
+**Authentication:** Admin required
+
+**Description:** Manually mark an approved withdrawal request as processed. Use this for manual processing scenarios where the approve endpoint wasn't used.
+
+**Request Body:**
+```json
+{
+  "admin_notes": "Processed via bank transfer - Transaction ID: BT202401200001"
+}
+```
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Withdrawal request marked as processed successfully",
+  "data": {
+    "id": 5,
+    "seller": {
+      "id": 5,
+      "email": "seller4@example.com",
+      "name": "Tom",
+      "full_name": "Tom Seller",
+      "role": "seller"
+    },
+    "amount": "750.00",
+    "status": "processed",
+    "admin_notes": "Processed via bank transfer - Transaction ID: BT202401200001",
+    "processed_at": "2024-01-20T15:45:00Z",
+    "processed_by": {
+      "id": 1,
+      "email": "admin@example.com",
+      "name": "Admin",
+      "full_name": "Admin User",
+      "role": "admin"
+    },
+    "created_at": "2024-01-19T16:20:00Z",
+    "updated_at": "2024-01-20T15:45:00Z"
+  }
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Cannot mark as processed. Current status: pending"
+}
+```
+
+**Use Cases:**
+- Manual bank transfers after approval
+- External payment processing systems
+- Record-keeping for offline withdrawals
+- Correcting processing errors
+
+---
+
+## Withdrawal Workflow Examples
+
+### Complete Withdrawal Process:
+
+#### 1. Seller Creates Withdrawal Request
+```bash
+POST /api/seller/withdrawals/request/
+Authorization: Bearer <seller_token>
+{
+  "amount": "500.00"
+}
+```
+
+#### 2. Admin Reviews Pending Requests
+```bash
+GET /api/admin/withdrawals/?status=pending
+Authorization: Bearer <admin_token>
+```
+
+#### 3. Admin Approves and Processes
+```bash
+POST /api/admin/withdrawals/3/approve/
+Authorization: Bearer <admin_token>
+```
+
+#### 4. Seller Views Updated History
+```bash
+GET /api/seller/withdrawals/history/
+Authorization: Bearer <seller_token>
+```
+
+### Alternative Manual Processing:
+
+#### 1. Admin Approves (Optional Step)
+```bash
+POST /api/admin/withdrawals/3/approve/
+Authorization: Bearer <admin_token>
+```
+
+#### 2. Admin Marks as Processed with Notes
+```bash
+POST /api/admin/withdrawals/3/mark_processed/
+Authorization: Bearer <admin_token>
+{
+  "admin_notes": "Processed via bank transfer - Ref: BANK123456"
+}
+```
+
+---
+
+## Withdrawal Security Features
+
+### Balance Validation
+- All withdrawal operations validate current wallet balance
+- Prevents negative balances and overdrafts
+- Real-time balance checking during processing
+
+### Atomic Transactions
+- Database transactions ensure data consistency
+- All-or-nothing processing prevents partial states
+- Rollback capability if any step fails
+
+### Audit Trail
+- Complete tracking of who processed each withdrawal
+- Timestamps for all status changes
+- Admin notes for transparency and documentation
+
+### Status Management
+- Clear status progression: pending → approved → processed
+- Prevents duplicate processing
+- Allows rejection with reasons
+
+---
+
+## Common Withdrawal Scenarios
+
+### Successful Withdrawal
+1. Seller has $1000 in wallet
+2. Creates $500 withdrawal request (status: pending)
+3. Admin approves request via API
+4. System calls Fapshi payout API
+5. Fapshi sends $500 to seller's mobile money
+6. System deducts $500 from wallet
+7. Transaction record created with Fapshi transaction ID
+8. Status updated to 'processed'
+
+### Payout Failure
+1. Seller has $1000 in wallet
+2. Creates $500 withdrawal request (status: pending)
+3. Admin approves request via API
+4. System calls Fapshi payout API
+5. Fapshi payout fails (insufficient funds, invalid phone, etc.)
+6. Withdrawal request remains pending
+7. Admin notes updated with failure reason
+8. No funds deducted from seller wallet
+
+### Insufficient Balance
+1. Seller has $200 in wallet
+2. Tries to create $500 withdrawal request
+3. System rejects request immediately
+4. Error message: "Insufficient balance. Available: $200.00"
+
+### Multiple Pending Requests
+1. Seller creates $300 withdrawal request (pending)
+2. Tries to create another $200 withdrawal request
+3. System rejects second request
+4. Error message: "You already have a pending withdrawal request"
+
+### Rejection with Reason
+1. Admin reviews pending withdrawal
+2. Rejects due to missing documentation
+3. Adds admin notes explaining reason
+4. Seller can create new request after resolving issues
+
+---
+
 ## Notes
 
 1. **File Uploads:** Use `multipart/form-data` for endpoints that accept file uploads (register as seller, create product).
@@ -1625,6 +2162,8 @@ All endpoints follow a consistent error response format:
 5. **Stock Management:** Product stock is automatically reduced when an order is placed.
 
 6. **Pagination:** List endpoints support pagination with `?page=1` query parameter (20 items per page by default).
+
+7. **Withdrawal Security:** All withdrawal operations require admin approval and include comprehensive validation and audit trails.
 
 ---
 
@@ -1648,4 +2187,11 @@ All endpoints follow a consistent error response format:
 7. View cart: `GET /api/cart/summary/`
 8. Checkout: `POST /api/cart/checkout/`
 9. View orders: `GET /api/orders/`
+
+### Seller Withdrawal Process:
+1. Seller earns sales and wallet balance increases
+2. Create withdrawal request: `POST /api/seller/withdrawals/request/`
+3. Admin reviews pending requests: `GET /api/admin/withdrawals/?status=pending`
+4. Admin approves and processes: `POST /api/admin/withdrawals/{id}/approve/`
+5. Seller views withdrawal history: `GET /api/seller/withdrawals/history/`
 
