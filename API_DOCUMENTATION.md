@@ -636,7 +636,84 @@ image: <file>
 
 ---
 
-### 23. View My Profile
+### 23. Update Order Status (Seller Only)
+**Endpoint:** `PATCH /api/seller/orders/{order_id}/status/`  
+**Authentication:** Seller required
+
+**Description:** Update the status of items belonging to the authenticated seller within an order. Each seller can only update the status of their own items in an order, not the entire order. When all items in an order are marked as delivered, the overall order status will be automatically updated to "delivered".
+
+**Request Body:**
+```json
+{
+  "status": "pending" | "processing" | "shipped" | "delivered"
+}
+```
+
+**Response (Success - 200):**
+```json
+{
+  "success": true,
+  "message": "Your items status updated to processing successfully",
+  "data": {
+    "items": [
+      {
+        "id": 1,
+        "product_name": "Laptop",
+        "product_image": "/media/products/laptop.jpg",
+        "seller_name": "Jane Seller",
+        "quantity": 1,
+        "price": "59999.99",
+        "subtotal": "59999.99",
+        "status": "processing",
+        "delivered_at": null
+      }
+    ],
+    "updated_count": 1,
+    "order_status": "shipped",
+    "order_progress": {
+      "total_items": 2,
+      "pending": 0,
+      "processing": 1,
+      "shipped": 0,
+      "delivered": 1,
+      "delivered_text": "1/2 items delivered"
+    }
+  }
+}
+```
+
+**Response (Error - 403):**
+```json
+{
+  "success": false,
+  "message": "You can only update status for orders that contain your products"
+}
+```
+
+**Response (Error - 400):**
+```json
+{
+  "success": false,
+  "message": "Invalid status. Must be one of: pending, processing, shipped, delivered"
+}
+```
+
+**Important Notes:**
+- Each seller can only update the status of their own items within an order
+- The endpoint only affects the seller's items, not other sellers' items in the same order
+- **Order status is intelligently calculated based on ALL item statuses:**
+  - All items delivered → Order status = "delivered"
+  - Some items shipped/delivered → Order status = "shipped"
+  - Some items processing (none shipped/delivered) → Order status = "processing"
+  - All items pending → Order status = "pending"
+- Order status never downgrades from higher states (delivered → shipped → processing → pending)
+- The response includes detailed progress tracking for all items in the order
+- Individual item statuses are tracked separately from the overall order status
+- The `order_progress` object provides complete visibility into each status category
+
+---
+
+### 24. View My Profile
 **Endpoint:** `GET /api/profile/`  
 **Authentication:** Buyer or Seller required
 

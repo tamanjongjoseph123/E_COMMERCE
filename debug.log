@@ -5336,3 +5336,1657 @@ INFO 2026-02-10 16:09:27,707 autoreload 1649470 132402741796992 /home/joseph/app
 INFO 2026-02-10 16:09:28,590 autoreload 1649496 136661287567488 Watching for file changes with StatReloader
 INFO 2026-02-10 16:09:29,858 autoreload 1649496 136661287567488 /home/joseph/apps/E_COMMERCE/api/payment_service.py changed, reloading.
 INFO 2026-02-10 16:09:30,680 autoreload 1649506 128776126378112 Watching for file changes with StatReloader
+WARNING 2026-02-12 16:10:26,992 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:10:36,161 log 16218 133948287045760 Unauthorized: /api/
+WARNING 2026-02-12 16:11:25,968 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:14:11,451 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:16:37,840 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:34,823 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:34,824 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:35,059 log 16216 133948287045760 Not Found: /setup/
+WARNING 2026-02-12 16:17:35,093 log 16218 133948287045760 Not Found: /_internal/api/setup.php
+WARNING 2026-02-12 16:17:35,127 log 16217 133948287045760 Not Found: /_internal/api/setup.php
+WARNING 2026-02-12 16:17:35,272 log 16216 133948287045760 Not Found: /api/user/
+WARNING 2026-02-12 16:17:35,317 log 16218 133948287045760 Not Found: /setup/
+WARNING 2026-02-12 16:17:35,351 log 16217 133948287045760 Not Found: /_internal/api/setup.php
+WARNING 2026-02-12 16:17:35,384 log 16216 133948287045760 Not Found: /_internal/api/setup.php
+WARNING 2026-02-12 16:17:35,615 log 16218 133948287045760 Not Found: /api/user/
+WARNING 2026-02-12 16:17:35,840 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:39,174 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:46,462 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:49,919 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:53,414 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:17:53,924 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:18:17,795 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:18:29,517 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:19:12,406 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:19:29,960 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:19:29,961 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:19:56,720 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:19:59,424 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:20:12,104 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:20:25,140 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:20:41,056 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:20:42,510 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:20:43,566 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:21:17,981 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:21:18,261 log 16218 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:21:54,610 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:23:34,504 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:23:36,256 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:00,419 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:00,579 log 16218 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:25:06,190 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:25:06,880 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:25:33,196 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:33,983 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:25:45,866 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:46,512 log 16218 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:25:51,826 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:51,984 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:52,475 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:25:52,656 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:26:35,689 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:35,851 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:26:38,447 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:38,564 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:26:42,564 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:43,628 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:43,737 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:26:46,942 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:47,303 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:26:53,698 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:54,745 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:26:54,992 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:27:05,659 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:27:05,836 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:29:39,776 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:41,704 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:42,573 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:42,831 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:43,229 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:43,961 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:44,402 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:45,262 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:45,507 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:29:45,921 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:31:14,405 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:31:14,492 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:31:14,579 log 16217 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-12 16:32:00,085 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:32:00,291 log 16218 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:37:45,186 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:37:45,275 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:37:45,364 log 16217 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-12 16:38:20,484 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:38:20,759 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 16:46:33,266 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:47:58,950 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:49:12,703 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 16:51:33,481 log 16217 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 16:51:33,984 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:54:56,762 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 16:54:56,763 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 16:55:20,863 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 17:00:04,645 log 16216 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 17:00:07,894 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:02:25,253 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:15:00,988 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:15:16,191 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:16:03,865 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:26:11,012 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 17:26:11,013 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 17:30:37,608 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:34:16,873 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 17:55:12,055 log 16217 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 17:55:12,162 log 16218 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 17:55:12,263 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:55:18,401 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 17:56:36,664 log 16218 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 17:56:36,763 log 16217 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 17:56:36,862 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 17:56:51,409 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:56:51,453 log 16218 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-12 17:56:51,509 log 16216 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-12 17:56:51,555 log 16217 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-12 17:58:41,310 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 17:58:43,614 log 16218 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-12 17:58:43,658 log 16216 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-12 17:58:43,703 log 16217 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-12 18:13:49,677 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:15:25,822 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:15:36,274 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:15:36,772 log 16216 133948287045760 Not Found: /
+ERROR 2026-02-12 18:17:41,436 log 16216 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+ERROR 2026-02-12 18:17:44,019 log 16218 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-12 18:23:54,414 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:54,416 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:54,838 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:54,841 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:55,549 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:55,549 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:56,001 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:55,996 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:56,709 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:56,709 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:57,136 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:57,137 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:57,841 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:57,841 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:58,266 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:58,268 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:58,968 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:58,973 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:59,393 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:23:59,396 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:29:50,260 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:29:50,379 log 16217 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 18:29:54,351 log 16218 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 18:35:02,054 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:35:22,257 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:36:42,520 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:36:42,608 log 16216 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 18:36:42,696 log 16217 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-12 18:37:39,827 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:37:40,077 log 16218 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 18:44:36,910 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:37,342 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:38,035 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:38,448 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:39,139 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:39,556 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:40,249 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:40,662 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:41,602 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:42,022 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:42,722 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:43,141 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:43,831 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:44,247 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:44,939 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:45,360 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:46,059 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:46,484 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:47,183 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 18:44:47,617 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 19:23:18,371 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 19:23:18,497 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 19:23:18,616 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 19:23:18,747 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 19:26:07,107 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 19:26:07,594 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 19:26:08,061 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 19:28:53,224 log 16218 133948287045760 Not Found: /
+WARNING 2026-02-12 19:28:53,651 log 16216 133948287045760 Not Found: /
+WARNING 2026-02-12 19:28:54,105 log 16217 133948287045760 Not Found: /
+WARNING 2026-02-12 19:30:57,858 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-12 19:30:58,563 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-12 19:30:59,301 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 19:41:20,015 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 19:41:20,448 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-12 19:41:20,916 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 19:43:59,649 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-12 20:15:08,654 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-12 20:15:08,927 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-12 20:16:00,412 log 62888 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-12 20:16:00,669 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 20:35:46,884 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 20:35:46,928 log 62890 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-12 20:35:46,970 log 62889 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-12 20:35:47,033 log 62888 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-12 20:39:49,692 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-12 20:39:49,782 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 20:39:49,871 log 62889 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-12 20:40:47,534 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 20:40:47,832 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-12 20:56:22,070 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-12 20:56:22,076 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-12 21:47:02,013 log 62890 133948287045760 Not Found: /
+ERROR 2026-02-13 00:28:23,030 log 62889 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-13 00:29:43,849 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 00:49:08,630 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 00:49:08,851 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 00:49:08,951 log 62890 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-13 00:50:05,899 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 00:50:06,173 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 01:09:49,312 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 01:09:49,368 log 62888 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-13 01:09:49,410 log 62890 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-13 01:09:49,454 log 62889 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-13 01:31:10,909 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 01:31:12,484 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 02:55:33,572 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 03:14:12,240 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 03:14:12,641 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 03:15:12,462 log 62890 133948287045760 Not Found: /.git/config
+WARNING 2026-02-13 03:20:21,843 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 03:20:22,024 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 03:20:27,654 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 03:20:28,360 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 03:23:29,796 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 03:26:29,083 log 62890 133948287045760 Not Found: /.git/config
+WARNING 2026-02-13 04:00:26,265 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 04:00:35,914 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 04:00:45,933 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 04:20:37,551 log 62890 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-13 04:20:37,805 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 04:49:30,841 log 62888 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-13 04:49:31,118 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 04:49:32,666 log 62889 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-13 04:49:32,969 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 04:49:38,998 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 04:49:39,044 log 62888 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-13 04:49:39,092 log 62890 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-13 04:49:39,143 log 62888 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-13 04:53:15,193 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 05:00:14,476 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 05:00:14,521 log 62888 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-13 05:00:14,567 log 62889 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-13 05:00:14,614 log 62890 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-13 05:02:20,642 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 05:02:20,731 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 05:02:20,825 log 62889 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-13 05:03:17,200 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 05:03:17,434 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 05:20:26,413 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 05:20:26,663 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 05:20:27,430 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 05:26:26,276 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 05:26:26,364 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 05:26:26,451 log 62889 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-13 05:27:24,854 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 05:27:25,116 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 05:31:29,821 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 06:20:25,942 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 06:55:47,082 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 07:00:56,886 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 07:03:23,848 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 07:03:25,703 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 07:03:27,347 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 07:33:09,005 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 07:39:55,477 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 07:46:07,413 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 07:46:10,737 log 62890 133948287045760 Not Found: /
+ERROR 2026-02-13 08:02:46,798 log 62888 133948287045760 Invalid HTTP_HOST header: '187.77.98.152:443'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152:443'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-13 08:16:24,036 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 08:18:20,196 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 08:32:53,711 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 08:50:28,812 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 08:53:21,485 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 09:01:35,361 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 09:19:36,500 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 09:33:27,240 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 09:33:28,360 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 09:33:28,524 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 09:33:29,784 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 09:42:28,630 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 10:13:08,921 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 10:19:32,439 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 10:20:28,176 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 10:22:22,685 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 10:34:44,490 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 10:37:00,217 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 10:37:00,307 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 10:37:00,397 log 62889 133948287045760 Not Found: /favicon.png
+WARNING 2026-02-13 10:37:59,563 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 10:37:59,806 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 10:45:21,206 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 11:28:16,881 log 62889 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-13 11:28:17,292 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 11:41:48,223 log 62890 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-13 11:41:49,168 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 12:59:11,900 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 12:59:32,333 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 13:00:12,877 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 13:00:53,420 log 62889 133948287045760 Not Found: /
+ERROR 2026-02-13 13:09:48,885 log 62888 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+ERROR 2026-02-13 13:10:25,519 log 62889 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-13 13:30:03,982 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 14:02:04,330 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 14:02:04,853 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 14:22:24,427 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 14:22:24,653 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 14:31:50,624 log 62888 133948287045760 Not Found: /
+ERROR 2026-02-13 14:34:21,384 log 62888 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+ERROR 2026-02-13 14:34:39,271 log 62889 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-13 15:17:40,771 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 15:17:40,851 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 16:30:50,835 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 16:49:14,171 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 16:49:14,356 log 62890 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-13 16:49:14,412 log 62888 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-13 16:49:14,454 log 62889 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-13 16:56:16,287 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 16:56:16,329 log 62888 133948287045760 Not Found: /js/twint_ch.js
+WARNING 2026-02-13 16:56:16,379 log 62889 133948287045760 Not Found: /js/lkk_ch.js
+WARNING 2026-02-13 16:56:16,424 log 62890 133948287045760 Not Found: /css/support_parent.css
+WARNING 2026-02-13 17:12:32,765 log 62890 133948287045760 Not Found: /_ignition/execute-solution
+ERROR 2026-02-13 17:57:11,841 log 62890 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+ERROR 2026-02-13 17:57:18,689 log 62889 133948287045760 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-13 18:22:29,543 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 18:45:39,051 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 18:45:39,891 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 18:53:08,223 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 18:57:31,089 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 19:00:54,353 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 19:00:55,094 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 19:06:41,554 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 19:08:01,048 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 19:08:01,314 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 19:17:48,064 log 62889 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-13 19:17:48,499 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 19:37:04,282 log 62889 133948287045760 Not Found: /_ignition/execute-solution
+WARNING 2026-02-13 19:57:31,650 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 20:07:22,567 log 62889 133948287045760 Not Found: /.git/config
+WARNING 2026-02-13 20:42:06,657 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 20:58:16,855 log 62889 133948287045760 Not Found: /.git/config
+WARNING 2026-02-13 21:34:09,514 log 62888 133948287045760 Not Found: /.git/HEAD
+WARNING 2026-02-13 21:39:39,811 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 21:39:40,163 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 22:03:31,428 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 22:28:39,999 log 62888 133948287045760 Not Found: /
+ERROR 2026-02-13 22:37:09,104 log 62890 133948287045760 Invalid HTTP_HOST header: '187.77.98.152:443'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152:443'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-13 22:52:52,974 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 22:58:44,082 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-13 23:06:07,250 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 23:33:26,234 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 23:39:19,145 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-13 23:41:15,749 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-13 23:43:18,661 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-13 23:49:57,652 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-14 00:44:02,262 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 01:00:29,850 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 01:37:49,394 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 01:55:04,256 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 01:55:10,425 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-14 01:59:53,975 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 03:17:18,569 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 03:42:13,391 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 04:10:29,027 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 04:10:29,611 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-14 04:10:30,988 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 04:10:31,159 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 04:10:31,454 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 04:55:41,973 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 04:56:23,175 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 04:57:45,705 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 04:57:53,742 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 04:58:33,906 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 04:58:33,909 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 04:59:01,125 log 62890 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-14 05:01:44,165 log 62889 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-14 06:08:17,293 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 06:09:59,548 log 62888 133948287045760 Not Found: /
+ERROR 2026-02-14 06:33:41,925 log 62890 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+WARNING 2026-02-14 06:47:25,104 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 06:47:26,695 log 62890 133948287045760 Not Found: /
+ERROR 2026-02-14 06:58:35,274 log 62888 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+WARNING 2026-02-14 07:15:23,244 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 07:15:26,070 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 08:12:16,293 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 08:17:57,867 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 08:18:02,588 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 08:18:02,895 log 62888 133948287045760 Not Found: /favicon.ico
+WARNING 2026-02-14 08:18:20,439 log 62889 133948287045760 Not Found: /robots.txt
+WARNING 2026-02-14 08:28:58,122 log 62889 133948287045760 Not Found: /
+ERROR 2026-02-14 08:36:43,490 log 62888 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 08:36:44,469 log 62890 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 08:36:48,672 log 62888 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+WARNING 2026-02-14 08:51:17,241 log 62890 133948287045760 Not Found: /
+ERROR 2026-02-14 08:52:58,989 log 62889 133948287045760 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "api_user" does not exist
+LINE 1: ...r"."address", "api_user"."store_description" FROM "api_user"...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/contrib/admin/sites.py", line 450, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/generic/base.py", line 145, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/generic/edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/forms/forms.py", line 338, in full_clean
+    self._clean_form()
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/forms/forms.py", line 354, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/contrib/auth/forms.py", line 349, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/contrib/auth/backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/contrib/auth/base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/models/query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/models/query.py", line 372, in __len__
+    self._fetch_all()
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/models/query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/models/query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "api_user" does not exist
+LINE 1: ...r"."address", "api_user"."store_description" FROM "api_user"...
+                                                             ^
+
+WARNING 2026-02-14 08:53:54,234 log 62889 133948287045760 Not Found: //api/products/all/
+WARNING 2026-02-14 08:53:54,241 log 62889 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 08:53:57,230 log 62888 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 08:53:58,367 log 62889 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 08:53:59,065 log 62888 133948287045760 Not Found: //api/products/all/
+WARNING 2026-02-14 08:54:00,410 log 62890 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 08:54:01,730 log 62889 133948287045760 Not Found: //api/products/all/
+WARNING 2026-02-14 08:54:01,731 log 62888 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 09:02:57,612 log 62888 133948287045760 Not Found: /main.js
+WARNING 2026-02-14 09:03:01,599 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 09:06:41,228 log 62888 133948287045760 Not Found: /
+WARNING 2026-02-14 09:06:49,478 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 09:06:51,935 log 62888 133948287045760 Not Found: /
+ERROR 2026-02-14 09:09:06,866 log 62889 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 09:09:07,145 log 62890 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 09:09:07,244 log 62889 133948287045760 Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'infinitymarket01.com'. You may need to add 'infinitymarket01.com' to ALLOWED_HOSTS.
+WARNING 2026-02-14 09:23:35,653 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 09:38:26,246 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 09:38:26,965 log 62889 133948287045760 Not Found: /
+INFO 2026-02-14 09:43:09,224 autoreload 99840 130517760172160 Watching for file changes with StatReloader
+WARNING 2026-02-14 09:43:37,125 log 62888 133948287045760 Forbidden (CSRF token from POST incorrect.): /admin/login/
+WARNING 2026-02-14 09:43:43,448 log 62888 133948287045760 Not Found: //api/products/all/
+WARNING 2026-02-14 09:43:43,449 log 62890 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 09:43:48,515 log 62889 133948287045760 Not Found: //api/admin/categories/
+WARNING 2026-02-14 09:43:57,397 log 62889 133948287045760 Not Found: //api/auth/login/
+WARNING 2026-02-14 09:44:41,606 log 62888 133948287045760 Not Found: //api/auth/login/
+WARNING 2026-02-14 09:44:47,709 log 62889 133948287045760 Not Found: //api/auth/login/
+WARNING 2026-02-14 09:44:48,205 log 62888 133948287045760 Not Found: //api/auth/login/
+WARNING 2026-02-14 09:45:29,996 log 62890 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 09:45:50,236 log 62888 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 09:46:02,266 log 62889 133948287045760 Not Found: /
+WARNING 2026-02-14 09:48:12,455 log 62890 133948287045760 Not Found: //api/auth/register/
+INFO 2026-02-14 09:49:49,400 autoreload 99840 130517760172160 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 09:49:50,320 autoreload 101315 137919676878976 Watching for file changes with StatReloader
+INFO 2026-02-14 09:50:36,905 autoreload 101537 136700490895488 Watching for file changes with StatReloader
+WARNING 2026-02-14 09:55:18,880 log 62889 133948287045760 Not Found: //api/auth/register/
+INFO 2026-02-14 09:55:42,043 autoreload 101315 137919676878976 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 09:55:42,627 autoreload 102679 131609843318912 Watching for file changes with StatReloader
+INFO 2026-02-14 09:56:10,844 autoreload 102679 131609843318912 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 09:56:11,899 autoreload 102852 140368512487552 Watching for file changes with StatReloader
+WARNING 2026-02-14 09:56:29,940 log 62890 133948287045760 Not Found: /
+WARNING 2026-02-14 09:56:42,791 log 62888 133948287045760 Unauthorized: /api/
+INFO 2026-02-14 09:57:12,099 autoreload 103307 130994880921728 Watching for file changes with StatReloader
+WARNING 2026-02-14 09:57:51,115 log 62889 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 09:58:29,225 log 62888 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 09:59:57,496 log 62889 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 10:00:10,880 log 62890 133948287045760 Method Not Allowed: /api/auth/register/
+WARNING 2026-02-14 10:00:42,226 log 62890 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 10:00:48,816 log 62888 133948287045760 Method Not Allowed: /api/auth/register/
+WARNING 2026-02-14 10:09:37,301 log 62888 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 10:10:09,353 log 62888 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 10:11:43,962 log 62889 133948287045760 Not Found: //api/auth/register/
+WARNING 2026-02-14 10:12:03,063 log 62889 133948287045760 Bad Request: /api/auth/register/
+INFO 2026-02-14 10:21:32,238 autoreload 109301 134673538855040 Watching for file changes with StatReloader
+INFO 2026-02-14 10:27:36,930 autoreload 110860 124912919007360 Watching for file changes with StatReloader
+INFO 2026-02-14 10:27:57,109 autoreload 111029 138522515091584 Watching for file changes with StatReloader
+WARNING 2026-02-14 10:28:15,931 log 111029 138522416641728 Not Found: /
+WARNING 2026-02-14 10:38:15,471 log 113824 133559489794176 Not Found: /
+WARNING 2026-02-14 10:38:23,712 log 113822 133559489794176 Unauthorized: /api/
+WARNING 2026-02-14 10:44:49,862 log 113822 133559489794176 Not Found: /
+INFO 2026-02-14 10:44:59,606 autoreload 111029 138522515091584 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 10:45:00,154 autoreload 115999 131825337876608 Watching for file changes with StatReloader
+INFO 2026-02-14 10:45:15,120 autoreload 115999 131825337876608 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 10:45:15,783 autoreload 116138 134780345856128 Watching for file changes with StatReloader
+INFO 2026-02-14 10:45:22,286 autoreload 116138 134780345856128 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 10:45:23,016 autoreload 116224 139140634607744 Watching for file changes with StatReloader
+WARNING 2026-02-14 10:52:50,114 log 116224 139140535416512 Not Found: /
+WARNING 2026-02-14 10:58:11,544 log 116224 139140535416512 Not Found: /
+WARNING 2026-02-14 10:59:07,321 log 116224 139140527023808 Unauthorized: /api/admin/sellers/
+WARNING 2026-02-14 10:59:07,321 log 116224 139140535416512 Unauthorized: /api/admin/wallets/
+WARNING 2026-02-14 10:59:07,343 log 116224 139140535416512 Unauthorized: /api/admin/reports/
+WARNING 2026-02-14 10:59:11,589 log 116224 139140535416512 Unauthorized: /api/admin/wallets/
+WARNING 2026-02-14 10:59:11,592 log 116224 139140535416512 Unauthorized: /api/admin/sellers/
+WARNING 2026-02-14 10:59:11,604 log 116224 139140535416512 Unauthorized: /api/admin/reports/
+INFO 2026-02-14 11:00:41,684 autoreload 120643 125470024659072 Watching for file changes with StatReloader
+WARNING 2026-02-14 11:07:34,714 log 120643 125469929240256 Not Found: /.git/config
+WARNING 2026-02-14 11:14:28,339 log 120643 125469929240256 Unauthorized: /api/admin/categories/
+WARNING 2026-02-14 11:16:35,981 base 120643 125469915608768 Session data corrupted
+WARNING 2026-02-14 11:16:36,195 base 120643 125469915608768 Session data corrupted
+WARNING 2026-02-14 11:16:40,823 log 120643 125469915608768 Forbidden (Origin checking failed - https://infinitemarket.cloud does not match any trusted origins.): /admin/login/
+WARNING 2026-02-14 11:16:55,079 base 120643 125469915608768 Session data corrupted
+WARNING 2026-02-14 11:16:55,303 base 120643 125469915608768 Session data corrupted
+WARNING 2026-02-14 11:17:02,589 log 120643 125469915608768 Forbidden (Origin checking failed - https://infinitemarket.cloud does not match any trusted origins.): /admin/login/
+INFO 2026-02-14 11:17:36,198 autoreload 120643 125470024659072 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 11:17:37,044 autoreload 125167 135808141795456 Watching for file changes with StatReloader
+INFO 2026-02-14 11:18:00,178 autoreload 125354 139592107843712 Watching for file changes with StatReloader
+WARNING 2026-02-14 11:18:08,844 base 125354 139591940044480 Session data corrupted
+INFO 2026-02-14 11:21:54,270 autoreload 125354 139592107843712 /home/infinitemarket/applications/E_COMMERCE/e_commerce/settings.py changed, reloading.
+INFO 2026-02-14 11:21:54,780 autoreload 126583 123757528649856 Watching for file changes with StatReloader
+WARNING 2026-02-14 11:29:40,981 log 126583 123757430568640 Bad Request: /api/auth/register/
+WARNING 2026-02-14 11:30:06,575 log 126583 123757430568640 Bad Request: /api/auth/login/
+INFO 2026-02-14 11:34:32,369 views 126583 123757284812480 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 11:34:32,378 views 126583 123757284812480 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 11:34:32,380 views 126583 123757284812480 Created OrderItem for product tv, quantity 1
+INFO 2026-02-14 11:34:32,381 views 126583 123757284812480 Created pending order 1 with 2 items
+INFO 2026-02-14 11:34:32,383 payment_service 126583 123757284812480 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 11:34:32,383 payment_service 126583 123757284812480   Base URL: https://live.fapshi.com
+INFO 2026-02-14 11:34:32,383 payment_service 126583 123757284812480   API Key set: Yes
+INFO 2026-02-14 11:34:32,384 payment_service 126583 123757284812480   API User set: Yes
+INFO 2026-02-14 11:34:32,385 payment_service 126583 123757284812480 Initiating payment link request:
+INFO 2026-02-14 11:34:32,385 payment_service 126583 123757284812480   URL: https://live.fapshi.com/initiate-pay
+INFO 2026-02-14 11:34:32,385 payment_service 126583 123757284812480   Payload: {
+  "amount": 100,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "1",
+  "message": "Payment for order 1",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 11:34:32,385 payment_service 126583 123757284812480   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_356e328bf417fdd4aa5c982501639768', 'apiuser': 'd0e62704-147c-4407-845b-63a66fb47475'}
+INFO 2026-02-14 11:34:33,431 payment_service 126583 123757284812480 Response status code: 200
+INFO 2026-02-14 11:34:33,431 payment_service 126583 123757284812480 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '6', 'etag': 'W/"a6-uslia7isSt9xdKQmjzG6dGFhOaA"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'dcce3d998f6b18b253150399e42d990c', 'date': 'Sat, 14 Feb 2026 11:34:33 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 11:34:33,432 payment_service 126583 123757284812480 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/payment/69905dc9d2773d240ec15b50",
+  "transId": "2pqrfqbw",
+  "dateInitiated": "2026-02-14T11:34:33.333Z"
+}
+INFO 2026-02-14 11:35:10,064 payment_service 126583 123757284812480 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 11:35:10,065 payment_service 126583 123757284812480   Base URL: https://live.fapshi.com
+INFO 2026-02-14 11:35:10,065 payment_service 126583 123757284812480   API Key set: Yes
+INFO 2026-02-14 11:35:10,065 payment_service 126583 123757284812480   API User set: Yes
+INFO 2026-02-14 11:35:10,065 views 126583 123757284812480 Processing webhook for transaction: 2pqrfqbw
+INFO 2026-02-14 11:35:10,721 views 126583 123757284812480 Found existing order 1 for payment 1
+INFO 2026-02-14 11:35:10,723 views 126583 123757284812480 Updated order 1 status to processing
+INFO 2026-02-14 11:35:10,724 views 126583 123757284812480 Payment 1 marked as paid for order 1
+INFO 2026-02-14 11:39:41,508 autoreload 126583 123757528649856 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 11:39:42,200 autoreload 132113 129614221279360 Watching for file changes with StatReloader
+INFO 2026-02-14 11:39:47,870 autoreload 132113 129614221279360 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 11:39:48,529 autoreload 132189 139168549572736 Watching for file changes with StatReloader
+INFO 2026-02-14 11:39:59,403 autoreload 132189 139168549572736 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 11:40:00,120 autoreload 132274 126075264532608 Watching for file changes with StatReloader
+INFO 2026-02-14 11:40:19,069 autoreload 132274 126075264532608 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 11:40:19,599 autoreload 132426 134749060849792 Watching for file changes with StatReloader
+INFO 2026-02-14 11:47:07,426 autoreload 134406 135369718042752 Watching for file changes with StatReloader
+WARNING 2026-02-14 11:47:51,182 log 134406 135369610749632 Unauthorized: /api/cart/optimized-checkout/
+INFO 2026-02-14 11:48:14,820 views 134406 135369619142336 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 11:48:14,825 views 134406 135369619142336 Created OrderItem for product computer, quantity 2
+INFO 2026-02-14 11:48:14,826 views 134406 135369619142336 Created OrderItem for product tv, quantity 1
+INFO 2026-02-14 11:48:14,828 views 134406 135369619142336 Created pending order 2 with 2 items
+INFO 2026-02-14 11:48:14,829 payment_service 134406 135369619142336 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336   Base URL: https://live.fapshi.com
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336   API Key set: Yes
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336   API User set: Yes
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336 Initiating payment link request:
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336   URL: https://live.fapshi.com/initiate-pay
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "2",
+  "message": "Payment for order 2",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 11:48:14,830 payment_service 134406 135369619142336   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 11:48:15,071 payment_service 134406 135369619142336 Response status code: 400
+INFO 2026-02-14 11:48:15,073 payment_service 134406 135369619142336 Response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '4', 'etag': 'W/"27-rGkxnKot5uTkbxuvKeN3dSg5oHU"', 'x-cloud-trace-context': '1c88e69113bde8a50be2f44d8f1b2d46;o=1', 'date': 'Sat, 14 Feb 2026 11:48:15 GMT', 'server': 'Google Frontend', 'Content-Length': '39'}
+ERROR 2026-02-14 11:48:15,073 payment_service 134406 135369619142336 HTTP Error: 400
+ERROR 2026-02-14 11:48:15,073 payment_service 134406 135369619142336 Response body: {"message":"Invalid apiuser or apikey"}
+WARNING 2026-02-14 11:48:15,089 log 134406 135369619142336 Bad Request: /api/cart/optimized-checkout/
+INFO 2026-02-14 11:50:53,929 autoreload 135630 123313685348480 Watching for file changes with StatReloader
+INFO 2026-02-14 11:51:14,275 views 135630 123313587222208 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 11:51:14,281 views 135630 123313587222208 Created OrderItem for product computer, quantity 2
+INFO 2026-02-14 11:51:14,282 views 135630 123313587222208 Created OrderItem for product tv, quantity 1
+INFO 2026-02-14 11:51:14,284 views 135630 123313587222208 Created pending order 3 with 2 items
+INFO 2026-02-14 11:51:14,286 payment_service 135630 123313587222208 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 11:51:14,286 payment_service 135630 123313587222208   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 11:51:14,286 payment_service 135630 123313587222208   API Key set: Yes
+INFO 2026-02-14 11:51:14,286 payment_service 135630 123313587222208   API User set: Yes
+INFO 2026-02-14 11:51:14,287 payment_service 135630 123313587222208 Initiating payment link request:
+INFO 2026-02-14 11:51:14,287 payment_service 135630 123313587222208   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 11:51:14,287 payment_service 135630 123313587222208   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "3",
+  "message": "Payment for order 3",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 11:51:14,287 payment_service 135630 123313587222208   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 11:51:15,505 payment_service 135630 123313587222208 Response status code: 200
+INFO 2026-02-14 11:51:15,506 payment_service 135630 123313587222208 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-9kIu08AbeYMdDrZ7qa2nT+CC44s"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '718c2b10612d9cf1b9f9f66dce255159;o=1', 'date': 'Sat, 14 Feb 2026 11:51:15 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 11:51:15,507 payment_service 135630 123313587222208 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/699061b36e4f032fda6951a8",
+  "transId": "f2ypHJpr5W",
+  "dateInitiated": "2026-02-14T11:51:15.240Z"
+}
+WARNING 2026-02-14 11:51:26,235 log 135630 123313587222208 Not Found: /
+INFO 2026-02-14 11:52:06,943 views 135630 123313587222208 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 11:52:06,947 views 135630 123313587222208 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 11:52:06,949 views 135630 123313587222208 Created OrderItem for product tv, quantity 1
+INFO 2026-02-14 11:52:06,951 views 135630 123313587222208 Created pending order 4 with 2 items
+INFO 2026-02-14 11:52:06,952 payment_service 135630 123313587222208 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 11:52:06,953 payment_service 135630 123313587222208   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 11:52:06,953 payment_service 135630 123313587222208   API Key set: Yes
+INFO 2026-02-14 11:52:06,953 payment_service 135630 123313587222208   API User set: Yes
+INFO 2026-02-14 11:52:06,953 payment_service 135630 123313587222208 Initiating payment link request:
+INFO 2026-02-14 11:52:06,953 payment_service 135630 123313587222208   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 11:52:06,953 payment_service 135630 123313587222208   Payload: {
+  "amount": 100,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "4",
+  "message": "Payment for order 4",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 11:52:06,954 payment_service 135630 123313587222208   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 11:52:07,934 payment_service 135630 123313587222208 Response status code: 200
+INFO 2026-02-14 11:52:07,934 payment_service 135630 123313587222208 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-Rr52qg6IyL4dn8QmpkDC41Gx1ho"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '99823d9590f3cc10cee95b464df46ec3;o=1', 'date': 'Sat, 14 Feb 2026 11:52:07 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 11:52:07,934 payment_service 135630 123313587222208 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/699061e76e4f032fda6951b0",
+  "transId": "hSPJ59wmTe",
+  "dateInitiated": "2026-02-14T11:52:07.702Z"
+}
+WARNING 2026-02-14 11:52:18,418 log 135630 123313587222208 Not Found: /
+WARNING 2026-02-14 11:53:47,243 log 135630 123313573590720 Unauthorized: /api/cart/optimized-checkout/
+INFO 2026-02-14 11:54:14,912 views 135630 123313573590720 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 11:54:14,916 views 135630 123313573590720 Created OrderItem for product tv, quantity 3
+INFO 2026-02-14 11:54:14,917 views 135630 123313573590720 Created pending order 5 with 1 items
+INFO 2026-02-14 11:54:14,919 payment_service 135630 123313573590720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 11:54:14,919 payment_service 135630 123313573590720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 11:54:14,919 payment_service 135630 123313573590720   API Key set: Yes
+INFO 2026-02-14 11:54:14,919 payment_service 135630 123313573590720   API User set: Yes
+INFO 2026-02-14 11:54:14,919 payment_service 135630 123313573590720 Initiating payment link request:
+INFO 2026-02-14 11:54:14,919 payment_service 135630 123313573590720   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 11:54:14,920 payment_service 135630 123313573590720   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "5",
+  "message": "Payment for order 5",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 11:54:14,920 payment_service 135630 123313573590720   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 11:54:15,333 payment_service 135630 123313573590720 Response status code: 200
+INFO 2026-02-14 11:54:15,334 payment_service 135630 123313573590720 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-jCvmmTQy6Y9EIWYGVVyPJ7LWWOI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '692c2b4a4539424f328ef91b8e39669d;o=1', 'date': 'Sat, 14 Feb 2026 11:54:15 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 11:54:15,334 payment_service 135630 123313573590720 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/699062676e4f032fda6951b8",
+  "transId": "J79UbM8n4q",
+  "dateInitiated": "2026-02-14T11:54:15.085Z"
+}
+WARNING 2026-02-14 11:54:26,555 log 135630 123313573590720 Not Found: /
+INFO 2026-02-14 12:00:35,668 views 135630 123313573590720 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 12:00:35,673 views 135630 123313573590720 Created OrderItem for product tv, quantity 3
+INFO 2026-02-14 12:00:35,675 views 135630 123313573590720 Created pending order 6 with 1 items
+INFO 2026-02-14 12:00:35,677 payment_service 135630 123313573590720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 12:00:35,677 payment_service 135630 123313573590720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 12:00:35,677 payment_service 135630 123313573590720   API Key set: Yes
+INFO 2026-02-14 12:00:35,678 payment_service 135630 123313573590720   API User set: Yes
+INFO 2026-02-14 12:00:35,678 payment_service 135630 123313573590720 Initiating payment link request:
+INFO 2026-02-14 12:00:35,678 payment_service 135630 123313573590720   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 12:00:35,678 payment_service 135630 123313573590720   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "6",
+  "message": "Payment for order 6",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 12:00:35,679 payment_service 135630 123313573590720   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 12:00:36,821 payment_service 135630 123313573590720 Response status code: 200
+INFO 2026-02-14 12:00:36,821 payment_service 135630 123313573590720 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-Qo5GjfOQEIItLa0q8quR9KJ9bMA"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '61cfa50d4579a83b1f9a03885e89c6b7;o=1', 'date': 'Sat, 14 Feb 2026 12:00:36 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 12:00:36,822 payment_service 135630 123313573590720 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/699063e46e4f032fda6951c5",
+  "transId": "yXJF6FwHJh",
+  "dateInitiated": "2026-02-14T12:00:36.588Z"
+}
+INFO 2026-02-14 12:00:48,258 payment_service 135630 123313573590720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 12:00:48,258 payment_service 135630 123313573590720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 12:00:48,258 payment_service 135630 123313573590720   API Key set: Yes
+INFO 2026-02-14 12:00:48,259 payment_service 135630 123313573590720   API User set: Yes
+INFO 2026-02-14 12:00:48,259 views 135630 123313573590720 Processing webhook for transaction: yXJF6FwHJh
+INFO 2026-02-14 12:00:49,264 views 135630 123313573590720 Found existing order 6 for payment 5
+INFO 2026-02-14 12:00:49,266 views 135630 123313573590720 Updated order 6 status to processing
+INFO 2026-02-14 12:00:49,270 views 135630 123313573590720 Payment 5 marked as paid for order 6
+INFO 2026-02-14 12:04:30,263 autoreload 135630 123313685348480 /home/infinitemarket/applications/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-14 12:04:30,992 autoreload 139709 135013543166080 Watching for file changes with StatReloader
+INFO 2026-02-14 12:04:40,490 autoreload 139709 135013543166080 /home/infinitemarket/applications/E_COMMERCE/api/payment_service.py changed, reloading.
+INFO 2026-02-14 12:04:41,195 autoreload 139805 124203867324544 Watching for file changes with StatReloader
+INFO 2026-02-14 12:04:48,625 autoreload 139805 124203867324544 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 12:04:49,101 autoreload 139895 129299596116096 Watching for file changes with StatReloader
+INFO 2026-02-14 12:04:55,653 autoreload 139895 129299596116096 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 12:04:56,728 autoreload 139958 131117962109056 Watching for file changes with StatReloader
+INFO 2026-02-14 12:05:36,831 payment_service 140279 140423128617088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 12:05:36,831 payment_service 140279 140423128617088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 12:05:36,831 payment_service 140279 140423128617088   API Key set: Yes
+INFO 2026-02-14 12:05:36,831 payment_service 140279 140423128617088   API User set: Yes
+INFO 2026-02-14 12:05:59,337 payment_service 140443 133512228225152 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 12:05:59,337 payment_service 140443 133512228225152   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 12:05:59,337 payment_service 140443 133512228225152   API Key set: Yes
+INFO 2026-02-14 12:05:59,337 payment_service 140443 133512228225152   API User set: Yes
+INFO 2026-02-14 12:05:59,356 payment_service 140443 133512228225152 Updating seller wallets for order 1
+INFO 2026-02-14 12:05:59,359 payment_service 140443 133512228225152 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 12:05:59,366 payment_service 140443 133512228225152 Updated wallet for seller seller@gmail.com: 0.00 -> 50.00
+INFO 2026-02-14 12:05:59,367 payment_service 140443 133512228225152 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 12:05:59,370 payment_service 140443 133512228225152 Updated wallet for seller seller@gmail.com: 50.00 -> 100.00
+INFO 2026-02-14 12:05:59,371 payment_service 140443 133512228225152 Updating seller wallets for order 6
+INFO 2026-02-14 12:05:59,372 payment_service 140443 133512228225152 Processing wallet update for seller seller@gmail.com, amount: 150.00
+INFO 2026-02-14 12:05:59,375 payment_service 140443 133512228225152 Updated wallet for seller seller@gmail.com: 100.00 -> 250.00
+WARNING 2026-02-14 12:07:54,328 log 139958 131117634025152 Not Found: /
+WARNING 2026-02-14 12:07:54,617 log 139958 131117634025152 Not Found: /favicon.ico
+WARNING 2026-02-14 12:08:07,680 log 139958 131117634025152 Not Found: /
+WARNING 2026-02-14 12:13:12,800 log 139958 131117617239744 Not Found: /
+INFO 2026-02-14 12:14:03,033 views 139958 131117634025152 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 12:14:03,040 views 139958 131117634025152 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 12:14:03,042 views 139958 131117634025152 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 12:14:03,043 views 139958 131117634025152 Created pending order 7 with 2 items
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152   API Key set: Yes
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152   API User set: Yes
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152 Initiating payment link request:
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "7",
+  "message": "Payment for order 7",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 12:14:03,045 payment_service 139958 131117634025152   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 12:14:04,213 payment_service 139958 131117634025152 Response status code: 200
+INFO 2026-02-14 12:14:04,214 payment_service 139958 131117634025152 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-6UEBFf4O5P8/Qcs/jYuIJndYS80"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '754f8b97734d0d353f1db0e819e7a156;o=1', 'date': 'Sat, 14 Feb 2026 12:14:04 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 12:14:04,214 payment_service 139958 131117634025152 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990670b6e4f032fda6951d1",
+  "transId": "5i1PKnTBdK",
+  "dateInitiated": "2026-02-14T12:14:03.976Z"
+}
+INFO 2026-02-14 12:14:14,868 payment_service 139958 131117634025152 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 12:14:14,868 payment_service 139958 131117634025152   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 12:14:14,869 payment_service 139958 131117634025152   API Key set: Yes
+INFO 2026-02-14 12:14:14,869 payment_service 139958 131117634025152   API User set: Yes
+INFO 2026-02-14 12:14:14,869 views 139958 131117634025152 Processing webhook for transaction: 5i1PKnTBdK
+INFO 2026-02-14 12:14:15,858 payment_service 139958 131117634025152 Updating seller wallets for order 7
+INFO 2026-02-14 12:14:15,861 payment_service 139958 131117634025152 Processing wallet update for seller sellertwo@gmail.com, amount: 100.00
+INFO 2026-02-14 12:14:15,865 payment_service 139958 131117634025152 Updated wallet for seller sellertwo@gmail.com: 0.00 -> 100.00
+INFO 2026-02-14 12:14:15,866 payment_service 139958 131117634025152 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 12:14:15,869 payment_service 139958 131117634025152 Updated wallet for seller seller@gmail.com: 250.00 -> 300.00
+INFO 2026-02-14 12:14:15,875 views 139958 131117634025152 Found existing order 7 for payment 6
+INFO 2026-02-14 12:14:15,877 views 139958 131117634025152 Updated order 7 status to processing
+INFO 2026-02-14 12:14:15,880 views 139958 131117634025152 Payment 6 marked as paid for order 7
+INFO 2026-02-14 12:20:26,731 autoreload 139958 131117962109056 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 12:20:27,233 autoreload 144724 127643169861760 Watching for file changes with StatReloader
+WARNING 2026-02-14 12:25:19,898 log 144724 127642988705472 Not Found: /index.php
+ERROR 2026-02-14 12:25:20,150 log 144724 127642988705472 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/admin/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-14 12:25:20,879 log 144724 127642988705472 Internal Server Error: /api
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/api/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+INFO 2026-02-14 12:25:27,061 autoreload 144724 127643169861760 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 12:25:27,918 autoreload 146355 131320313290880 Watching for file changes with StatReloader
+INFO 2026-02-14 12:25:32,586 autoreload 146355 131320313290880 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 12:25:33,429 autoreload 146412 124549341548672 Watching for file changes with StatReloader
+INFO 2026-02-14 12:25:38,902 autoreload 146412 124549341548672 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 12:25:39,368 autoreload 146474 133563993276544 Watching for file changes with StatReloader
+INFO 2026-02-14 12:28:29,527 autoreload 146474 133563993276544 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 12:28:30,377 autoreload 147277 131655989514368 Watching for file changes with StatReloader
+INFO 2026-02-14 12:28:51,270 autoreload 147277 131655989514368 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 12:28:52,061 autoreload 147442 127395955875968 Watching for file changes with StatReloader
+INFO 2026-02-14 12:29:55,958 autoreload 147442 127395955875968 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 12:29:56,456 autoreload 147864 126203048198272 Watching for file changes with StatReloader
+WARNING 2026-02-14 12:31:17,782 log 147864 126202949924544 Not Found: /
+WARNING 2026-02-14 12:31:21,540 log 147864 126202949924544 Not Found: /favicon.ico
+INFO 2026-02-14 12:36:49,720 autoreload 147864 126203048198272 /home/infinitemarket/applications/E_COMMERCE/api/models.py changed, reloading.
+INFO 2026-02-14 12:36:50,844 autoreload 149671 139743938834560 Watching for file changes with StatReloader
+INFO 2026-02-14 12:37:19,453 autoreload 149671 139743938834560 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 12:37:20,148 autoreload 149957 130549700423808 Watching for file changes with StatReloader
+INFO 2026-02-14 12:37:28,780 autoreload 149957 130549700423808 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 12:37:30,125 autoreload 150048 124153090838656 Watching for file changes with StatReloader
+WARNING 2026-02-14 12:40:25,673 log 150048 124152993281728 Not Found: /
+INFO 2026-02-14 13:02:47,803 autoreload 157377 139288054759552 Watching for file changes with StatReloader
+INFO 2026-02-14 13:03:15,066 autoreload 157568 133357345316992 Watching for file changes with StatReloader
+WARNING 2026-02-14 13:03:24,998 log 157568 133357238216384 Unauthorized: /api/products/all/
+WARNING 2026-02-14 13:03:25,029 log 157568 133357238216384 Unauthorized: /api/admin/categories/
+WARNING 2026-02-14 13:03:25,198 log 157568 133357238216384 Unauthorized: /api/products/all/
+WARNING 2026-02-14 13:03:25,258 log 157568 133357238216384 Unauthorized: /api/admin/categories/
+WARNING 2026-02-14 13:04:05,934 log 157568 133357238216384 Bad Request: /api/auth/login/
+INFO 2026-02-14 13:23:34,999 views 157568 133357246609088 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 13:23:35,003 views 157568 133357246609088 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 13:23:35,005 views 157568 133357246609088 Created pending order 8 with 1 items
+INFO 2026-02-14 13:23:35,007 payment_service 157568 133357246609088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 13:23:35,007 payment_service 157568 133357246609088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 13:23:35,007 payment_service 157568 133357246609088   API Key set: Yes
+INFO 2026-02-14 13:23:35,007 payment_service 157568 133357246609088   API User set: Yes
+INFO 2026-02-14 13:23:35,007 payment_service 157568 133357246609088 Initiating payment link request:
+INFO 2026-02-14 13:23:35,007 payment_service 157568 133357246609088   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 13:23:35,008 payment_service 157568 133357246609088   Payload: {
+  "amount": 200,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "8",
+  "message": "Payment for order 8",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 13:23:35,008 payment_service 157568 133357246609088   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 13:23:36,239 payment_service 157568 133357246609088 Response status code: 200
+INFO 2026-02-14 13:23:36,239 payment_service 157568 133357246609088 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-LaTr/B7mxDm4OoOEZDn7o7s3Nkk"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '42b5aab5b2816f35ca410e9931d26c0f;o=1', 'date': 'Sat, 14 Feb 2026 13:23:36 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 13:23:36,239 payment_service 157568 133357246609088 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/69907757d043705b2e337af4",
+  "transId": "clRykZwVLg",
+  "dateInitiated": "2026-02-14T13:23:35.993Z"
+}
+INFO 2026-02-14 13:23:48,312 payment_service 157568 133357246609088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 13:23:48,313 payment_service 157568 133357246609088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 13:23:48,313 payment_service 157568 133357246609088   API Key set: Yes
+INFO 2026-02-14 13:23:48,313 payment_service 157568 133357246609088   API User set: Yes
+INFO 2026-02-14 13:23:48,313 views 157568 133357246609088 Processing webhook for transaction: clRykZwVLg
+INFO 2026-02-14 13:24:16,842 views 157568 133357246609088 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 13:24:16,846 views 157568 133357246609088 Created OrderItem for product Chair, quantity 3
+INFO 2026-02-14 13:24:16,848 views 157568 133357246609088 Created pending order 9 with 1 items
+INFO 2026-02-14 13:24:16,850 payment_service 157568 133357246609088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 13:24:16,850 payment_service 157568 133357246609088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 13:24:16,851 payment_service 157568 133357246609088   API Key set: Yes
+INFO 2026-02-14 13:24:16,851 payment_service 157568 133357246609088   API User set: Yes
+INFO 2026-02-14 13:24:16,851 payment_service 157568 133357246609088 Initiating payment link request:
+INFO 2026-02-14 13:24:16,851 payment_service 157568 133357246609088   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 13:24:16,852 payment_service 157568 133357246609088   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "9",
+  "message": "Payment for order 9",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 13:24:16,852 payment_service 157568 133357246609088   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 13:24:17,840 payment_service 157568 133357246609088 Response status code: 200
+INFO 2026-02-14 13:24:17,840 payment_service 157568 133357246609088 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-s/PYwZD/azKmtxIQ9QGw+R7maiQ"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'd9a55e1c76b6145a00aa1bb89aafdaa2;o=1', 'date': 'Sat, 14 Feb 2026 13:24:17 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 13:24:17,842 payment_service 157568 133357246609088 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/69907781d043705b2e337afc",
+  "transId": "GBDhbQeJr8",
+  "dateInitiated": "2026-02-14T13:24:17.605Z"
+}
+INFO 2026-02-14 13:24:27,311 payment_service 157568 133357246609088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 13:24:27,312 payment_service 157568 133357246609088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 13:24:27,312 payment_service 157568 133357246609088   API Key set: Yes
+INFO 2026-02-14 13:24:27,312 payment_service 157568 133357246609088   API User set: Yes
+INFO 2026-02-14 13:24:27,312 views 157568 133357246609088 Processing webhook for transaction: GBDhbQeJr8
+INFO 2026-02-14 13:24:28,305 payment_service 157568 133357246609088 Updating seller wallets for order 9
+INFO 2026-02-14 13:24:28,307 payment_service 157568 133357246609088 Processing wallet update for seller sellertwo@gmail.com, amount: 300.00
+INFO 2026-02-14 13:24:28,311 payment_service 157568 133357246609088 Updated wallet for seller sellertwo@gmail.com: 100.00 -> 400.00
+INFO 2026-02-14 13:24:28,319 views 157568 133357246609088 Found existing order 9 for payment 8
+INFO 2026-02-14 13:24:28,322 views 157568 133357246609088 Updated order 9 status to processing
+INFO 2026-02-14 13:24:28,324 views 157568 133357246609088 Payment 8 marked as paid for order 9
+ERROR 2026-02-14 13:36:04,124 log 157568 133357246609088 Invalid HTTP_HOST header: '187.77.98.152:443'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152:443'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-14 13:37:29,334 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 13:37:31,439 log 157568 133357246609088 Not Found: /favicon.ico
+WARNING 2026-02-14 13:56:24,122 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 13:56:26,015 log 157568 133357246609088 Not Found: /
+INFO 2026-02-14 14:09:12,355 views 157568 133357246609088 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 14:09:12,361 views 157568 133357246609088 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 14:09:12,363 views 157568 133357246609088 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 14:09:12,365 views 157568 133357246609088 Created pending order 10 with 2 items
+INFO 2026-02-14 14:09:12,367 payment_service 157568 133357246609088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 14:09:12,367 payment_service 157568 133357246609088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 14:09:12,367 payment_service 157568 133357246609088   API Key set: Yes
+INFO 2026-02-14 14:09:12,367 payment_service 157568 133357246609088   API User set: Yes
+INFO 2026-02-14 14:09:12,367 payment_service 157568 133357246609088 Initiating payment link request:
+INFO 2026-02-14 14:09:12,367 payment_service 157568 133357246609088   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 14:09:12,368 payment_service 157568 133357246609088   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "10",
+  "message": "Payment for order 10",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 14:09:12,368 payment_service 157568 133357246609088   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 14:09:13,540 payment_service 157568 133357246609088 Response status code: 200
+INFO 2026-02-14 14:09:13,541 payment_service 157568 133357246609088 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-O24VBDNfOxfjNX0tlAQP9Imw+FI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '2be57911e89424b549aa9df6ac71a086;o=1', 'date': 'Sat, 14 Feb 2026 14:09:13 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 14:09:13,541 payment_service 157568 133357246609088 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/69908209ba182e215b19f4d6",
+  "transId": "hPleaasMuN",
+  "dateInitiated": "2026-02-14T14:09:13.296Z"
+}
+INFO 2026-02-14 14:09:31,728 payment_service 157568 133357246609088 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 14:09:31,729 payment_service 157568 133357246609088   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 14:09:31,729 payment_service 157568 133357246609088   API Key set: Yes
+INFO 2026-02-14 14:09:31,729 payment_service 157568 133357246609088   API User set: Yes
+INFO 2026-02-14 14:09:31,729 views 157568 133357246609088 Processing webhook for transaction: hPleaasMuN
+INFO 2026-02-14 14:09:32,723 payment_service 157568 133357246609088 Updating seller wallets for order 10
+INFO 2026-02-14 14:09:32,725 payment_service 157568 133357246609088 Processing wallet update for seller sellertwo@gmail.com, amount: 100.00
+INFO 2026-02-14 14:09:32,728 payment_service 157568 133357246609088 Updated wallet for seller sellertwo@gmail.com: 400.00 -> 500.00
+INFO 2026-02-14 14:09:32,732 payment_service 157568 133357246609088 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 14:09:32,735 payment_service 157568 133357246609088 Updated wallet for seller seller@gmail.com: 300.00 -> 350.00
+INFO 2026-02-14 14:09:32,744 views 157568 133357246609088 Found existing order 10 for payment 9
+INFO 2026-02-14 14:09:32,746 views 157568 133357246609088 Updated order 10 status to processing
+INFO 2026-02-14 14:09:32,748 views 157568 133357246609088 Payment 9 marked as paid for order 10
+WARNING 2026-02-14 14:09:50,548 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:10:03,564 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:10:58,665 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:11:10,745 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:11:11,077 log 157568 133357246609088 Not Found: /favicon.ico
+WARNING 2026-02-14 14:11:17,626 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:11:36,626 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:11:38,039 log 157568 133357246609088 Not Found: /
+WARNING 2026-02-14 14:11:47,602 log 157568 133357246609088 Not Found: /favicon.ico
+INFO 2026-02-14 14:20:43,195 autoreload 157568 133357345316992 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 14:20:44,478 autoreload 176905 127678067720320 Watching for file changes with StatReloader
+INFO 2026-02-14 14:20:50,490 autoreload 176905 127678067720320 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 14:20:51,960 autoreload 176999 139017424318592 Watching for file changes with StatReloader
+INFO 2026-02-14 14:39:42,510 views 176999 139017312007872 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 14:39:42,517 views 176999 139017312007872 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 14:39:42,519 views 176999 139017312007872 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 14:39:42,520 views 176999 139017312007872 Created pending order 11 with 2 items
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872   API Key set: Yes
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872   API User set: Yes
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872 Initiating payment link request:
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 14:39:42,522 payment_service 176999 139017312007872   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "11",
+  "message": "Payment for order 11",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 14:39:42,523 payment_service 176999 139017312007872   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 14:39:46,675 payment_service 176999 139017312007872 Response status code: 200
+INFO 2026-02-14 14:39:46,676 payment_service 176999 139017312007872 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-HVToN0zbOjGh/Wr+GItoU4zwtEI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '91fb9c2bccf0ec6631aa76aee014e774;o=1', 'date': 'Sat, 14 Feb 2026 14:39:46 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 14:39:46,676 payment_service 176999 139017312007872 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/69908932dc379cfea38b3cdb",
+  "transId": "8diX8zBfyp",
+  "dateInitiated": "2026-02-14T14:39:46.425Z"
+}
+INFO 2026-02-14 14:39:58,124 payment_service 176999 139017312007872 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 14:39:58,124 payment_service 176999 139017312007872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 14:39:58,124 payment_service 176999 139017312007872   API Key set: Yes
+INFO 2026-02-14 14:39:58,124 payment_service 176999 139017312007872   API User set: Yes
+INFO 2026-02-14 14:39:58,124 views 176999 139017312007872 Processing webhook for transaction: 8diX8zBfyp
+INFO 2026-02-14 14:40:39,709 views 176999 139017312007872 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 14:40:39,714 views 176999 139017312007872 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 14:40:39,716 views 176999 139017312007872 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 14:40:39,717 views 176999 139017312007872 Created pending order 12 with 2 items
+INFO 2026-02-14 14:40:39,719 payment_service 176999 139017312007872 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 14:40:39,719 payment_service 176999 139017312007872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 14:40:39,719 payment_service 176999 139017312007872   API Key set: Yes
+INFO 2026-02-14 14:40:39,720 payment_service 176999 139017312007872   API User set: Yes
+INFO 2026-02-14 14:40:39,720 payment_service 176999 139017312007872 Initiating payment link request:
+INFO 2026-02-14 14:40:39,720 payment_service 176999 139017312007872   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 14:40:39,720 payment_service 176999 139017312007872   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "12",
+  "message": "Payment for order 12",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 14:40:39,720 payment_service 176999 139017312007872   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 14:40:40,123 payment_service 176999 139017312007872 Response status code: 200
+INFO 2026-02-14 14:40:40,124 payment_service 176999 139017312007872 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-fyqda41eABu4bsDcEXhh7OwQx3Q"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'f15bba5fe882b0bcf9e8e592a2c23107;o=1', 'date': 'Sat, 14 Feb 2026 14:40:40 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 14:40:40,124 payment_service 176999 139017312007872 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/69908967dc379cfea38b3ce5",
+  "transId": "dBGHXAVFpa",
+  "dateInitiated": "2026-02-14T14:40:39.888Z"
+}
+INFO 2026-02-14 14:40:50,581 payment_service 176999 139017312007872 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 14:40:50,581 payment_service 176999 139017312007872   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 14:40:50,581 payment_service 176999 139017312007872   API Key set: Yes
+INFO 2026-02-14 14:40:50,581 payment_service 176999 139017312007872   API User set: Yes
+INFO 2026-02-14 14:40:50,582 views 176999 139017312007872 Processing webhook for transaction: dBGHXAVFpa
+INFO 2026-02-14 14:40:51,586 payment_service 176999 139017312007872 Updating seller wallets for order 12
+INFO 2026-02-14 14:40:51,593 payment_service 176999 139017312007872 Processing wallet update for seller sellertwo@gmail.com, amount: 100.00
+INFO 2026-02-14 14:40:51,602 payment_service 176999 139017312007872 Updated wallet for seller sellertwo@gmail.com: 500.00 -> 600.00
+INFO 2026-02-14 14:40:51,603 payment_service 176999 139017312007872 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 14:40:51,608 payment_service 176999 139017312007872 Updated wallet for seller seller@gmail.com: 350.00 -> 400.00
+INFO 2026-02-14 14:40:51,616 views 176999 139017312007872 Found existing order 12 for payment 11
+INFO 2026-02-14 14:40:51,617 views 176999 139017312007872 Updated order 12 status to processing
+INFO 2026-02-14 14:40:51,621 views 176999 139017312007872 Payment 11 marked as paid for order 12
+WARNING 2026-02-14 14:41:48,009 log 176999 139017312007872 Forbidden: /api/seller/orders/
+WARNING 2026-02-14 14:41:48,191 log 176999 139017312007872 Forbidden: /api/seller/orders/
+WARNING 2026-02-14 14:42:29,911 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:30,121 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:35,529 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:35,712 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:38,326 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:38,510 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:41,834 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:42,013 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:44,232 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:44,410 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:50,761 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:42:50,953 log 176999 139017325639360 Forbidden: /api/orders/
+WARNING 2026-02-14 14:44:11,491 log 176999 139017312007872 Forbidden: /api/seller/orders/12/items/
+WARNING 2026-02-14 14:44:17,922 log 176999 139017312007872 Forbidden: /api/seller/orders/12/items/
+WARNING 2026-02-14 14:44:21,018 log 176999 139017312007872 Forbidden: /api/seller/products/
+WARNING 2026-02-14 14:44:21,212 log 176999 139017325639360 Forbidden: /api/seller/products/
+WARNING 2026-02-14 14:44:24,271 log 176999 139017325639360 Forbidden: /api/seller/orders/
+WARNING 2026-02-14 14:44:24,460 log 176999 139017325639360 Forbidden: /api/seller/orders/
+WARNING 2026-02-14 14:45:03,759 log 176999 139017312007872 Forbidden: /api/seller/products/
+WARNING 2026-02-14 14:45:03,979 log 176999 139017325639360 Forbidden: /api/seller/products/
+INFO 2026-02-14 14:48:40,968 autoreload 176999 139017424318592 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 14:48:41,727 autoreload 185196 135530605154432 Watching for file changes with StatReloader
+WARNING 2026-02-14 14:48:47,835 log 185196 135530438194880 Not Found: /
+WARNING 2026-02-14 14:48:50,155 log 185196 135530438194880 Not Found: /favicon.ico
+INFO 2026-02-14 14:49:14,026 autoreload 185196 135530605154432 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 14:49:14,597 autoreload 185433 139460251656320 Watching for file changes with StatReloader
+INFO 2026-02-14 14:49:22,166 autoreload 185433 139460251656320 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 14:49:22,704 autoreload 185521 131421968085120 Watching for file changes with StatReloader
+ERROR 2026-02-14 14:56:17,051 log 185521 131421868914368 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+ERROR 2026-02-14 14:59:36,701 log 185521 131421868914368 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+WARNING 2026-02-14 15:04:30,391 log 185521 131421868914368 Not Found: /
+WARNING 2026-02-14 15:04:30,682 log 185521 131421868914368 Not Found: /index.php
+ERROR 2026-02-14 15:04:30,985 log 185521 131421868914368 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/admin/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-14 15:04:31,863 log 185521 131421868914368 Internal Server Error: /api
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/api/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2026-02-14 15:06:08,148 log 185521 131421868914368 Not Found: /
+WARNING 2026-02-14 15:06:09,453 log 185521 131421868914368 Not Found: /
+WARNING 2026-02-14 15:06:11,685 log 185521 131421868914368 Not Found: /
+WARNING 2026-02-14 15:06:13,125 log 185521 131421868914368 Not Found: /
+ERROR 2026-02-14 15:07:52,147 log 185521 131421855282880 Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 15:07:55,849 log 185521 131421855282880 Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 15:08:43,123 log 185521 131421855282880 Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+ERROR 2026-02-14 15:08:43,414 log 185521 131421855282880 Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+WARNING 2026-02-14 15:09:02,460 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:09:03,091 log 185521 131421855282880 Not Found: /favicon.ico
+WARNING 2026-02-14 15:10:05,871 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:10:06,497 log 185521 131421855282880 Not Found: /favicon.ico
+WARNING 2026-02-14 15:11:43,284 log 185521 131421855282880 Unauthorized: /api/auth/login/
+WARNING 2026-02-14 15:12:40,385 log 185521 131421855282880 Not Found: /api/buyer/orders/12/
+WARNING 2026-02-14 15:12:52,413 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:12:53,524 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:15:46,072 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:15:46,274 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:15:46,780 log 185521 131421855282880 Not Found: /
+WARNING 2026-02-14 15:18:12,475 log 185521 131421855282880 Not Found: /api/orders/ 
+WARNING 2026-02-14 15:19:43,545 log 185521 131421855282880 Not Found: /api/orders/ 
+WARNING 2026-02-14 15:21:53,888 log 185521 131421855282880 Not Found: /api/buyer/orders/ 
+INFO 2026-02-14 15:33:11,962 autoreload 185521 131421968085120 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 15:33:12,862 autoreload 195811 126985512505472 Watching for file changes with StatReloader
+WARNING 2026-02-14 15:33:42,587 log 195811 126985338615488 Unauthorized: /api/buyer/orders/
+WARNING 2026-02-14 15:33:58,222 log 195811 126985338615488 Not Found: /.git/config
+INFO 2026-02-14 15:40:55,891 autoreload 195811 126985512505472 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 15:40:56,325 autoreload 197778 134855930945664 Watching for file changes with StatReloader
+INFO 2026-02-14 16:10:56,376 autoreload 197778 134855930945664 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 16:10:57,476 autoreload 204103 127188399272064 Watching for file changes with StatReloader
+INFO 2026-02-14 16:12:57,383 views 204103 127188300986048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 12
+INFO 2026-02-14 16:12:57,387 views 204103 127188300986048 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+INFO 2026-02-14 16:13:18,424 views 204103 127188074493632 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 12
+INFO 2026-02-14 16:13:18,428 views 204103 127188074493632 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+INFO 2026-02-14 16:13:40,403 views 204103 127188300986048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 12
+INFO 2026-02-14 16:13:40,406 views 204103 127188300986048 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+INFO 2026-02-14 16:14:50,699 autoreload 204103 127188399272064 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 16:14:51,532 autoreload 205531 138116737896576 Watching for file changes with StatReloader
+INFO 2026-02-14 16:16:26,624 views 205531 138116638701248 SELLER ITEM UPDATE: User seller@gmail.com updated 0 items to processing in order 12
+INFO 2026-02-14 16:16:26,629 views 205531 138116638701248 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+INFO 2026-02-14 16:16:36,208 views 205531 138116638701248 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to pending in order 10
+INFO 2026-02-14 16:16:36,212 views 205531 138116638701248 ORDER STATUS UPDATE: Order 10 - shipped -> pending
+INFO 2026-02-14 16:16:36,212 views 205531 138116638701248 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 0, 'delivered': 1}
+INFO 2026-02-14 16:16:36,215 views 205531 138116638701248 ORDER STATUS UPDATED: Order 10 now has status pending
+INFO 2026-02-14 16:16:45,162 views 205531 138116638701248 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 10
+INFO 2026-02-14 16:16:45,166 views 205531 138116638701248 ORDER STATUS UPDATE: Order 10 - pending -> delivered
+INFO 2026-02-14 16:16:45,166 views 205531 138116638701248 ORDER STATUS REASON: Item counts - {'pending': 0, 'processing': 0, 'shipped': 0, 'delivered': 2}
+INFO 2026-02-14 16:16:45,168 views 205531 138116638701248 ORDER STATUS UPDATED: Order 10 now has status delivered
+INFO 2026-02-14 16:17:00,173 views 205531 138116638701248 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 12
+INFO 2026-02-14 16:17:00,177 views 205531 138116638701248 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+INFO 2026-02-14 16:18:24,753 autoreload 205531 138116737896576 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 16:18:26,521 autoreload 206640 126039629934720 Watching for file changes with StatReloader
+INFO 2026-02-14 16:19:37,066 views 206640 126039531452096 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 12
+INFO 2026-02-14 16:19:37,070 views 206640 126039531452096 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+INFO 2026-02-14 16:19:46,492 views 206640 126039531452096 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 12
+INFO 2026-02-14 16:19:46,496 views 206640 126039531452096 ORDER STATUS UNCHANGED: Order 12 remains pending (no change needed)
+ERROR 2026-02-14 16:20:55,720 log 206640 126039531452096 Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+INFO 2026-02-14 16:22:47,982 autoreload 206640 126039629934720 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 16:22:48,923 autoreload 208079 134772357230720 Watching for file changes with StatReloader
+INFO 2026-02-14 16:23:09,648 autoreload 208079 134772357230720 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 16:23:10,255 autoreload 208202 124110908895360 Watching for file changes with StatReloader
+WARNING 2026-02-14 16:28:03,028 log 208202 124110811166400 Not Found: /.git/config
+INFO 2026-02-14 16:37:02,569 views 208202 124110730426048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to processing in order 12
+INFO 2026-02-14 16:37:02,573 views 208202 124110730426048 ORDER STATUS UPDATE: Order 12 - pending -> processing
+INFO 2026-02-14 16:37:02,573 views 208202 124110730426048 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 1, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 16:37:02,575 views 208202 124110730426048 ORDER STATUS UPDATED: Order 12 now has status processing
+INFO 2026-02-14 16:37:07,269 views 208202 124110730426048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 12
+INFO 2026-02-14 16:37:07,273 views 208202 124110730426048 ORDER STATUS UPDATE: Order 12 - processing -> pending
+INFO 2026-02-14 16:37:07,273 views 208202 124110730426048 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 0, 'delivered': 1}
+INFO 2026-02-14 16:37:07,275 views 208202 124110730426048 ORDER STATUS UPDATED: Order 12 now has status pending
+INFO 2026-02-14 16:37:26,639 views 208202 124110722033344 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to processing in order 10
+INFO 2026-02-14 16:37:26,642 views 208202 124110722033344 ORDER STATUS UNCHANGED: Order 10 remains delivered (no change needed)
+INFO 2026-02-14 16:37:38,938 views 208202 124110722033344 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to processing in order 7
+INFO 2026-02-14 16:37:38,942 views 208202 124110722033344 ORDER STATUS UNCHANGED: Order 7 remains delivered (no change needed)
+WARNING 2026-02-14 16:40:05,793 log 208202 124110722033344 Unauthorized: /api/cart/optimized-checkout/
+INFO 2026-02-14 16:40:34,894 views 208202 124110722033344 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 16:40:34,902 views 208202 124110722033344 Created OrderItem for product computer, quantity 2
+INFO 2026-02-14 16:40:34,904 views 208202 124110722033344 Created pending order 13 with 1 items
+INFO 2026-02-14 16:40:34,906 payment_service 208202 124110722033344 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:40:34,906 payment_service 208202 124110722033344   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:40:34,906 payment_service 208202 124110722033344   API Key set: Yes
+INFO 2026-02-14 16:40:34,906 payment_service 208202 124110722033344   API User set: Yes
+INFO 2026-02-14 16:40:34,907 payment_service 208202 124110722033344 Initiating payment link request:
+INFO 2026-02-14 16:40:34,907 payment_service 208202 124110722033344   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 16:40:34,907 payment_service 208202 124110722033344   Payload: {
+  "amount": 100,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "13",
+  "message": "Payment for order 13",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 16:40:34,907 payment_service 208202 124110722033344   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 16:40:36,085 payment_service 208202 124110722033344 Response status code: 200
+INFO 2026-02-14 16:40:36,086 payment_service 208202 124110722033344 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-sOxoAZL/9McEu0uubL8OXYH6VrQ"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'f51f931b758ce556ecd3bf2d99767c97;o=1', 'date': 'Sat, 14 Feb 2026 16:40:35 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 16:40:36,087 payment_service 208202 124110722033344 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990a58310013c61fb99aced",
+  "transId": "PVI54yga6T",
+  "dateInitiated": "2026-02-14T16:40:35.845Z"
+}
+INFO 2026-02-14 16:40:47,349 payment_service 208202 124110722033344 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:40:47,349 payment_service 208202 124110722033344   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:40:47,350 payment_service 208202 124110722033344   API Key set: Yes
+INFO 2026-02-14 16:40:47,350 payment_service 208202 124110722033344   API User set: Yes
+INFO 2026-02-14 16:40:47,350 views 208202 124110722033344 Processing webhook for transaction: PVI54yga6T
+INFO 2026-02-14 16:40:48,346 payment_service 208202 124110722033344 Updating seller wallets for order 13
+INFO 2026-02-14 16:40:48,351 payment_service 208202 124110722033344 Processing wallet update for seller seller@gmail.com, amount: 100.00
+INFO 2026-02-14 16:40:48,388 payment_service 208202 124110722033344 Updated wallet for seller seller@gmail.com: 400.00 -> 500.00
+INFO 2026-02-14 16:40:48,395 views 208202 124110722033344 Found existing order 13 for payment 12
+INFO 2026-02-14 16:40:48,397 views 208202 124110722033344 Updated order 13 status to processing
+INFO 2026-02-14 16:40:48,398 views 208202 124110722033344 Payment 12 marked as paid for order 13
+WARNING 2026-02-14 16:41:20,624 log 208202 124110722033344 Not Found: /_ignition/execute-solution
+WARNING 2026-02-14 16:41:33,242 log 208202 124110722033344 Not Found: /
+WARNING 2026-02-14 16:41:33,287 log 208202 124110722033344 Not Found: /css/support_parent.css
+WARNING 2026-02-14 16:41:33,332 log 208202 124110722033344 Not Found: /js/twint_ch.js
+WARNING 2026-02-14 16:41:33,380 log 208202 124110722033344 Not Found: /js/lkk_ch.js
+INFO 2026-02-14 16:42:18,588 views 208202 124110811166400 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 13
+INFO 2026-02-14 16:42:18,592 views 208202 124110811166400 ORDER STATUS UPDATE: Order 13 - processing -> delivered
+INFO 2026-02-14 16:42:18,593 views 208202 124110811166400 ORDER STATUS REASON: Item counts - {'pending': 0, 'processing': 0, 'shipped': 0, 'delivered': 1}
+INFO 2026-02-14 16:42:18,594 views 208202 124110811166400 ORDER STATUS UPDATED: Order 13 now has status delivered
+INFO 2026-02-14 16:42:31,904 views 208202 124110811166400 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 13
+INFO 2026-02-14 16:42:31,909 views 208202 124110811166400 ORDER STATUS UPDATE: Order 13 - delivered -> shipped
+INFO 2026-02-14 16:42:31,909 views 208202 124110811166400 ORDER STATUS REASON: Item counts - {'pending': 0, 'processing': 0, 'shipped': 1, 'delivered': 0}
+INFO 2026-02-14 16:42:31,911 views 208202 124110811166400 ORDER STATUS UPDATED: Order 13 now has status shipped

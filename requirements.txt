@@ -19,3 +19,5 @@ gunicorn>=21.2.0
 # Utilities
 setuptools>=65.0.0
 python-dotenv>=1.0.0
+
+requests

@@ -223,7 +223,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = OrderItem
-        fields = ['id', 'product_name', 'product_image', 'seller_name', 'quantity', 'price', 'subtotal']
+        fields = ['id', 'product_name', 'product_image', 'seller_name', 'quantity', 'price', 'subtotal', 'status', 'delivered_at']
         read_only_fields = ['id']
 
 
@@ -254,6 +254,61 @@ class OrderSerializer(serializers.ModelSerializer):
         if hasattr(obj, '_prefetched_objects_cache') and 'items' in obj._prefetched_objects_cache:
             return len(obj._prefetched_objects_cache['items'])
         return obj.items.count()
+
+
+class SellerOrderSerializer(serializers.ModelSerializer):
+    """Custom serializer for seller orders that shows only seller's item totals"""
+    buyer_name = serializers.CharField(source='buyer.name', read_only=True)
+    buyer_email = serializers.CharField(source='buyer.email', read_only=True)
+    items_count = serializers.SerializerMethodField()
+    payment_id = serializers.SerializerMethodField()
+    total_amount = serializers.SerializerMethodField()  # Seller's total only
+    full_order_total = serializers.ReadOnlyField(source='total_amount')  # Full order total
+    
+    class Meta:
+        model = Order
+        fields = [
+            'id', 'buyer_name', 'buyer_email', 'items_count', 'total_amount', 'full_order_total', 
+            'status', 'payment_status', 'delivery_address', 'delivery_city', 'delivery_state', 
+            'delivery_postal_code', 'delivery_phone', 'delivery_notes',
+            'delivered_at', 'created_at', 'updated_at', 'payment_id'
+        ]
+        read_only_fields = ['id', 'delivered_at', 'created_at', 'updated_at', 'payment_id']
+    
+    def get_payment_id(self, obj):
+        try:
+            return obj.payment.id if hasattr(obj, 'payment') and obj.payment else None
+        except Payment.DoesNotExist:
+            return None
+    
+    def get_items_count(self, obj):
+        # Count only this seller's items
+        request = self.context.get('request')
+        if request and hasattr(request, 'user') and request.user.is_seller:
+            if hasattr(obj, '_prefetched_objects_cache') and 'items' in obj._prefetched_objects_cache:
+                seller_items = [item for item in obj._prefetched_objects_cache['items'] if item.seller == request.user]
+                return len(seller_items)
+            else:
+                return obj.items.filter(seller=request.user).count()
+        return obj.items.count()
+    
+    def get_total_amount(self, obj):
+        # Calculate only this seller's items total (this replaces seller_total_amount)
+        from decimal import Decimal
+        from django.db.models import Sum
+        
+        request = self.context.get('request')
+        if request and hasattr(request, 'user') and request.user.is_seller:
+            if hasattr(obj, '_prefetched_objects_cache') and 'items' in obj._prefetched_objects_cache:
+                seller_items = [item for item in obj._prefetched_objects_cache['items'] if item.seller == request.user]
+                if seller_items:
+                    return sum(Decimal(str(item.subtotal)) for item in seller_items if item.subtotal)
+                else:
+                    return Decimal('0.00')
+            else:
+                seller_total = obj.items.filter(seller=request.user).aggregate(total=Sum('subtotal'))['total']
+                return Decimal(str(seller_total)) if seller_total is not None else Decimal('0.00')
+        return Decimal(str(obj.total_amount)) if obj.total_amount is not None else Decimal('0.00')
 
 
 class TransactionSerializer(serializers.ModelSerializer):

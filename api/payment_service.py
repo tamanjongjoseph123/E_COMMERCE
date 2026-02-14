@@ -13,12 +13,30 @@ logger = logging.getLogger(__name__)
 class FapshiPaymentService:
     """
     Service class for integrating with Fapshi payment gateway API
+    Supports separate credentials for payments (incoming) and payouts (withdrawals)
     """
     
-    def __init__(self):
-        self.api_key = os.environ.get('FAPSHI_API_KEY')
-        self.api_user = os.environ.get('FAPSHI_API_USER')
-        self.base_url = os.environ.get('FAPSHI_BASE_URL')
+    def __init__(self, service_type='payment'):
+        """
+        Initialize the service with specific credentials based on service type
+        
+        Args:
+            service_type (str): 'payment' for receiving payments, 'payout' for sending withdrawals
+        """
+        self.service_type = service_type
+        
+        if service_type == 'payment':
+            # Credentials for receiving payments from customers
+            self.api_key = getattr(settings, 'FAPSHI_PAYMENT_API_KEY', None)
+            self.api_user = getattr(settings, 'FAPSHI_PAYMENT_API_USER', None)
+        elif service_type == 'payout':
+            # Credentials for sending payments to sellers (withdrawals)
+            self.api_key = getattr(settings, 'FAPSHI_PAYOUT_API_KEY', None)
+            self.api_user = getattr(settings, 'FAPSHI_PAYOUT_API_USER', None)
+        else:
+            raise ValueError("service_type must be either 'payment' or 'payout'")
+        
+        self.base_url = os.environ.get('FAPSHI_BASE_URL', 'https://live.fapshi.com')
         self.headers = {
             'Content-Type': 'application/json',
             'apikey': self.api_key,
@@ -26,10 +44,20 @@ class FapshiPaymentService:
         }
         
         # Debug: Log initialization
-        logger.info(f"FapshiPaymentService initialized:")
+        logger.info(f"FapshiPaymentService initialized for {service_type}:")
         logger.info(f"  Base URL: {self.base_url}")
-        logger.info(f"  API User: {self.api_user}")
-        logger.info(f"  API Key set: {'Yes' if self.api_key != 'your-api-key' else 'No'}")
+        logger.info(f"  API Key set: {'Yes' if self.api_key else 'No'}")
+        logger.info(f"  API User set: {'Yes' if self.api_user else 'No'}")
+    
+    @classmethod
+    def get_payment_service(cls):
+        """Get service instance for receiving payments"""
+        return cls(service_type='payment')
+    
+    @classmethod
+    def get_payout_service(cls):
+        """Get service instance for sending payouts/withdrawals"""
+        return cls(service_type='payout')
     
     def initiate_direct_pay(self, amount, phone, name, email, user_id, external_id=None, message=None):
         """
@@ -282,6 +310,10 @@ class FapshiPaymentService:
                         # Only update order status to processing if it was pending
                         if order.status == 'pending':
                             order.status = 'processing'
+                        
+                        # Update seller wallets for successful payments
+                        self._update_seller_wallets(order)
+                        
                     elif payment.status in ['failed', 'expired']:
                         order.payment_status = 'failed'
                     
@@ -492,3 +524,48 @@ class FapshiPaymentService:
         else:
             logger.error(f"Phone number must be exactly 9 digits after removing country code. Got: {len(phone_digits)} digits")
             return None
+    
+    def _update_seller_wallets(self, order):
+        """
+        Update seller wallets when an order is successfully paid
+        """
+        from django.db import transaction as db_transaction
+        
+        logger.info(f"Updating seller wallets for order {order.id}")
+        
+        try:
+            with db_transaction.atomic():
+                for order_item in order.items.all():
+                    seller = order_item.seller
+                    amount = order_item.subtotal
+                    
+                    logger.info(f"Processing wallet update for seller {seller.email}, amount: {amount}")
+                    
+                    # Get or create wallet for seller
+                    wallet, created = Wallet.objects.get_or_create(
+                        seller=seller,
+                        defaults={'balance': 0}
+                    )
+                    
+                    if created:
+                        logger.info(f"Created new wallet for seller {seller.email}")
+                    
+                    # Update wallet balance
+                    old_balance = wallet.balance
+                    wallet.balance += amount
+                    wallet.save()
+                    
+                    # Create transaction record
+                    Transaction.objects.create(
+                        wallet=wallet,
+                        order_item=order_item,
+                        amount=amount,
+                        transaction_type='sale',
+                        description=f'Sale from order #{order.id} - {order_item.product.name}'
+                    )
+                    
+                    logger.info(f"Updated wallet for seller {seller.email}: {old_balance} -> {wallet.balance}")
+                    
+        except Exception as e:
+            logger.error(f"Error updating seller wallets for order {order.id}: {str(e)}")
+            raise

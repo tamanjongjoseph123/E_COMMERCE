@@ -1,4 +1,4 @@
-#!/home/joseph/apps/E_COMMERCE/myenv/bin/python3
+#!/home/infinitemarket/applications/E_COMMERCE/myenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

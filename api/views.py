@@ -24,7 +24,7 @@ from .models import (
 from .serializers import (
     UserSerializer, RegisterSerializer, LoginSerializer, SellerSerializer,
     CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer,
-    OrderSerializer, OrderItemSerializer, WalletSerializer, TransactionSerializer, 
+    OrderSerializer, OrderItemSerializer, SellerOrderSerializer, WalletSerializer, TransactionSerializer, 
     ProfileSerializer, ReportSerializer, PaymentSerializer, PaymentInitiateSerializer,
     WithdrawalRequestSerializer
 )
@@ -763,7 +763,7 @@ def optimized_checkout(request):
             logger.info(f"Created pending order {order.id} with {order.items.count()} items")
         
         # Initiate payment linked to order
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         result = payment_service.initiate_payment_link(
             amount=int(total_amount),
             email=request.user.email,
@@ -898,7 +898,7 @@ def checkout(request):
         request.session[f'checkout_{checkout_id}'] = checkout_data
         
         # Create a temporary payment record without order
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         
         # Initiate payment
         result = payment_service.initiate_payment_link(
@@ -1034,6 +1034,11 @@ def test_webhook(request):
             
             logger.info(f"TEST: Order {order.id} created successfully from payment {payment.id}")
             logger.info(f"TEST: Created {order.items.count()} order items for order {order.id}")
+            
+            # Update seller wallets for successful payment
+            payment_service = FapshiPaymentService.get_payment_service()
+            payment_service._update_seller_wallets(order)
+            logger.info(f"TEST: Updated seller wallets for order {order.id}")
         
         return Response({
             'success': True,
@@ -1064,17 +1069,20 @@ def test_webhook(request):
 def debug_payment_service(request):
     """Debug endpoint to test payment service configuration"""
     try:
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         
         debug_info = {
             'service_initialized': True,
+            'service_type': payment_service.service_type,
             'base_url': payment_service.base_url,
-            'api_user': payment_service.api_user,
-            'api_key_set': payment_service.api_key != 'your-api-key',
+            'api_key_set': bool(payment_service.api_key),
+            'api_user_set': bool(payment_service.api_user),
             'headers_set': bool(payment_service.headers),
             'environment_variables': {
-                'FAPSHI_API_KEY': bool(os.environ.get('FAPSHI_API_KEY')),
-                'FAPSHI_API_USER': os.environ.get('FAPSHI_API_USER'),
+                'FAPSHI_PAYMENT_API_KEY': bool(os.environ.get('FAPSHI_PAYMENT_API_KEY')),
+                'FAPSHI_PAYMENT_API_USER': bool(os.environ.get('FAPSHI_PAYMENT_API_USER')),
+                'FAPSHI_PAYOUT_API_KEY': bool(os.environ.get('FAPSHI_PAYOUT_API_KEY')),
+                'FAPSHI_PAYOUT_API_USER': bool(os.environ.get('FAPSHI_PAYOUT_API_USER')),
                 'FAPSHI_BASE_URL': os.environ.get('FAPSHI_BASE_URL'),
                 'PAYMENT_REDIRECT_URL': os.environ.get('PAYMENT_REDIRECT_URL'),
             }
@@ -1153,7 +1161,7 @@ def initiate_payment(request, order_id):
         payment_data = serializer.validated_data
         logger.info(f"Payment data validated: {payment_data}")
         
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         
         # Create payment and initiate transaction
         result = payment_service.create_payment_for_order(
@@ -1244,13 +1252,13 @@ def mark_order_delivered(request, order_id):
 @api_view(['PATCH'])
 @permission_classes([IsSeller])
 def update_order_status(request, order_id):
-    """Update order status (seller only)"""
+    """Update order status for seller's items only"""
     try:
         order = Order.objects.get(id=order_id)
         
         # Check if this seller has items in this order
-        has_items = order.items.filter(seller=request.user).exists()
-        if not has_items:
+        seller_items = order.items.filter(seller=request.user)
+        if not seller_items.exists():
             return Response({
                 'success': False,
                 'message': 'You can only update status for orders that contain your products'
@@ -1272,18 +1280,89 @@ def update_order_status(request, order_id):
                 'message': f'Invalid status. Must be one of: {", ".join(valid_statuses)}'
             }, status=status.HTTP_400_BAD_REQUEST)
         
-        # Update order status
-        order.status = new_status
+        # Update only the seller's items status
+        from django.utils import timezone
+        update_data = {'status': new_status}
         if new_status == 'delivered':
-            from django.utils import timezone
-            order.delivered_at = timezone.now()
-        order.save()
+            update_data['delivered_at'] = timezone.now()
         
-        serializer = OrderSerializer(order, context={'request': request})
+        # Allow sellers to update their own items (remove the delivered protection)
+        updated_count = seller_items.update(**update_data)
+        logger.info(f'SELLER ITEM UPDATE: User {request.user.email} updated {updated_count} items to {new_status} in order {order.id}')
+        
+        # Intelligently update overall order status based on ALL item statuses
+        all_items = order.items.all()
+        all_items_count = all_items.count()
+        
+        # Count items by status
+        status_counts = {}
+        for status_choice in ['pending', 'processing', 'shipped', 'delivered']:
+            status_counts[status_choice] = all_items.filter(status=status_choice).count()
+        
+        # Get current order status before update
+        old_order_status = order.status
+        
+        # Determine overall order status based on item statuses
+        new_order_status = None
+        if status_counts['delivered'] == all_items_count:
+            # All items delivered
+            new_order_status = 'delivered'
+        elif status_counts['pending'] == 0 and (status_counts['shipped'] > 0 or status_counts['processing'] > 0):
+            # NO pending items, but some are shipped or processing
+            if status_counts['delivered'] == 0 and status_counts['shipped'] > 0:
+                # All items are shipped (no delivered, no pending)
+                new_order_status = 'shipped'
+            elif status_counts['delivered'] > 0 and status_counts['shipped'] > 0:
+                # Mix of shipped and delivered (no pending)
+                new_order_status = 'shipped'
+            elif status_counts['processing'] > 0 and status_counts['delivered'] == 0 and status_counts['shipped'] == 0:
+                # All items are processing (no pending, no shipped, no delivered)
+                new_order_status = 'processing'
+        elif status_counts['pending'] > 0:
+            # There are pending items - order cannot be shipped or delivered
+            # Force order status to processing if there are pending items
+            if order.status in ['shipped', 'delivered']:
+                # Downgrade from shipped/delivered because there are pending items
+                new_order_status = 'processing' if status_counts['processing'] > 0 else 'pending'
+            else:
+                new_order_status = 'processing' if status_counts['processing'] > 0 else 'pending'
+        else:
+            # All items are pending
+            if order.status not in ['shipped', 'delivered']:  # Don't downgrade from shipped/delivered
+                new_order_status = 'pending'
+        
+        # Only update order status if it actually needs to change
+        if new_order_status and new_order_status != old_order_status:
+            logger.info(f'ORDER STATUS UPDATE: Order {order.id} - {old_order_status} -> {new_order_status}')
+            logger.info(f'ORDER STATUS REASON: Item counts - {status_counts}')
+            order.status = new_order_status
+            if new_order_status == 'delivered':
+                order.delivered_at = timezone.now()
+            order.save()
+            logger.info(f'ORDER STATUS UPDATED: Order {order.id} now has status {order.status}')
+        else:
+            logger.info(f'ORDER STATUS UNCHANGED: Order {order.id} remains {order.status} (no change needed)')
+        
+        # Return updated seller items
+        updated_items = order.items.filter(seller=request.user)
+        serializer = OrderItemSerializer(updated_items, many=True, context={'request': request})
+        
         return Response({
             'success': True,
-            'message': f'Order status updated to {new_status} successfully',
-            'data': serializer.data
+            'message': f'Your items status updated to {new_status} successfully',
+            'data': {
+                'items': serializer.data,
+                'updated_count': updated_count,
+                'order_status': order.status,
+                'order_progress': {
+                    'total_items': all_items_count,
+                    'pending': status_counts['pending'],
+                    'processing': status_counts['processing'],
+                    'shipped': status_counts['shipped'],
+                    'delivered': status_counts['delivered'],
+                    'delivered_text': f'{status_counts["delivered"]}/{all_items_count} items delivered'
+                }
+            }
         })
         
     except Order.DoesNotExist:
@@ -1328,7 +1407,7 @@ def seller_orders(request):
     end = start + per_page
     orders_page = orders[start:end]
     
-    serializer = OrderSerializer(orders_page, many=True, context={'request': request})
+    serializer = SellerOrderSerializer(orders_page, many=True, context={'request': request})
     return Response({
         'success': True,
         'message': 'Seller orders retrieved successfully',
@@ -1367,6 +1446,9 @@ def seller_order_items(request, order_id):
         # Serialize the order items
         serializer = OrderItemSerializer(seller_items, many=True, context={'request': request})
         
+        # Calculate seller's total amount (only their items)
+        seller_total = seller_items.aggregate(total=Sum('subtotal'))['total'] or Decimal('0.00')
+        
         # Get order details for context
         order_data = {
             'id': order.id,
@@ -1374,7 +1456,8 @@ def seller_order_items(request, order_id):
             'buyer_email': order.buyer.email,
             'status': order.status,
             'payment_status': order.payment_status,
-            'total_amount': str(order.total_amount),
+            'total_amount': str(seller_total),  # Only seller's items total
+            'full_order_total': str(order.total_amount),  # Full order total for reference
             'delivery_address': order.delivery_address,
             'delivery_city': order.delivery_city,
             'delivery_state': order.delivery_state,
@@ -1437,7 +1520,9 @@ def my_orders(request):
                 },
                 'quantity': item.quantity,
                 'price': str(item.price),
-                'subtotal': str(item.subtotal)
+                'subtotal': str(item.subtotal),
+                'status': item.status,
+                'delivered_at': item.delivered_at.isoformat() if item.delivered_at else None
             })
         
         orders_data.append({
@@ -1561,7 +1646,7 @@ def payment_webhook(request):
         if not isinstance(webhook_data, list):
             webhook_data = [webhook_data]
         
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         results = []
         
         for transaction_data in webhook_data:
@@ -1705,7 +1790,7 @@ def check_payment_status(request, order_id):
             }, status=status.HTTP_404_NOT_FOUND)
         
         payment = order.payment
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         
         # Update payment status from Fapshi
         if payment.trans_id:
@@ -1764,7 +1849,7 @@ def retry_payment(request, order_id):
             }, status=status.HTTP_400_BAD_REQUEST)
         
         payment_data = serializer.validated_data
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         
         # Reset payment status
         payment.status = 'pending'
@@ -1974,7 +2059,7 @@ def check_payment_status_manual(request):
             })
         
         # Check payment status with Fapshi
-        payment_service = FapshiPaymentService()
+        payment_service = FapshiPaymentService.get_payment_service()
         
         # Use check_payment_status instead of update_payment_status to avoid model issues
         status_result = payment_service.check_payment_status(trans_id)
@@ -2031,6 +2116,10 @@ def check_payment_status_manual(request):
                 
                 logger.info(f"MANUAL CHECK: Order {order.id} created successfully from payment {payment.id}")
                 logger.info(f"MANUAL CHECK: Created {order.items.count()} order items for order {order.id}")
+                
+                # Update seller wallets for successful payment
+                payment_service._update_seller_wallets(order)
+                logger.info(f"MANUAL CHECK: Updated seller wallets for order {order.id}")
             
             return Response({
                 'success': True,
@@ -2221,7 +2310,7 @@ class WithdrawalRequestViewSet(viewsets.ModelViewSet):
                 }, status=status.HTTP_400_BAD_REQUEST)
             
             # Process withdrawal using Fapshi payout service
-            payment_service = FapshiPaymentService()
+            payment_service = FapshiPaymentService.get_payout_service()
             payout_result = payment_service.process_withdrawal_payout(withdrawal_request)
             
             if payout_result.get('success'):
