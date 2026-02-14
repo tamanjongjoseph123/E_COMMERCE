@@ -6990,3 +6990,1219 @@ INFO 2026-02-14 16:42:31,904 views 208202 124110811166400 SELLER ITEM UPDATE: Us
 INFO 2026-02-14 16:42:31,909 views 208202 124110811166400 ORDER STATUS UPDATE: Order 13 - delivered -> shipped
 INFO 2026-02-14 16:42:31,909 views 208202 124110811166400 ORDER STATUS REASON: Item counts - {'pending': 0, 'processing': 0, 'shipped': 1, 'delivered': 0}
 INFO 2026-02-14 16:42:31,911 views 208202 124110811166400 ORDER STATUS UPDATED: Order 13 now has status shipped
+INFO 2026-02-14 16:44:35,518 autoreload 213950 130447336820864 Watching for file changes with StatReloader
+WARNING 2026-02-14 16:46:25,753 log 213950 130447238493888 Not Found: /
+WARNING 2026-02-14 16:47:31,731 log 213950 130447238493888 Not Found: /
+WARNING 2026-02-14 16:47:35,058 log 213950 130447238493888 Not Found: /favicon.ico
+INFO 2026-02-14 16:48:41,041 views 213950 130447238493888 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 16:48:41,047 views 213950 130447238493888 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 16:48:41,049 views 213950 130447238493888 Created OrderItem for product computer, quantity 2
+INFO 2026-02-14 16:48:41,051 views 213950 130447238493888 Created pending order 14 with 2 items
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888   API Key set: Yes
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888   API User set: Yes
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888 Initiating payment link request:
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "14",
+  "message": "Payment for order 14",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 16:48:41,053 payment_service 213950 130447238493888   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 16:48:42,260 payment_service 213950 130447238493888 Response status code: 200
+INFO 2026-02-14 16:48:42,261 payment_service 213950 130447238493888 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-94EX6pF4LYz2NeIneb1QFSPrWiA"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '0d6d70b8b5baad9657d16eca90322c87;o=1', 'date': 'Sat, 14 Feb 2026 16:48:42 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 16:48:42,261 payment_service 213950 130447238493888 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990a76a10013c61fb99acf8",
+  "transId": "u3QCTyweg2",
+  "dateInitiated": "2026-02-14T16:48:42.009Z"
+}
+INFO 2026-02-14 16:48:54,223 payment_service 213950 130447238493888 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:48:54,223 payment_service 213950 130447238493888   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:48:54,223 payment_service 213950 130447238493888   API Key set: Yes
+INFO 2026-02-14 16:48:54,223 payment_service 213950 130447238493888   API User set: Yes
+INFO 2026-02-14 16:48:54,223 views 213950 130447238493888 Processing webhook for transaction: u3QCTyweg2
+INFO 2026-02-14 16:49:57,185 views 213950 130447149364928 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 16:49:57,190 views 213950 130447149364928 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 16:49:57,192 views 213950 130447149364928 Created OrderItem for product computer, quantity 2
+INFO 2026-02-14 16:49:57,193 views 213950 130447149364928 Created pending order 15 with 2 items
+INFO 2026-02-14 16:49:57,195 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:49:57,195 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:49:57,195 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:49:57,195 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:49:57,196 payment_service 213950 130447149364928 Initiating payment link request:
+INFO 2026-02-14 16:49:57,196 payment_service 213950 130447149364928   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 16:49:57,196 payment_service 213950 130447149364928   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "15",
+  "message": "Payment for order 15",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 16:49:57,196 payment_service 213950 130447149364928   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 16:49:58,170 payment_service 213950 130447149364928 Response status code: 200
+INFO 2026-02-14 16:49:58,170 payment_service 213950 130447149364928 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-KTg1/pA46w3LWB0EDyTehfi/Epc"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '0666011ba9e3fc8ae7daa68ad4bc9d7b;o=1', 'date': 'Sat, 14 Feb 2026 16:49:58 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 16:49:58,170 payment_service 213950 130447149364928 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990a7b510013c61fb99ad00",
+  "transId": "wjZiUuYymF",
+  "dateInitiated": "2026-02-14T16:49:57.938Z"
+}
+INFO 2026-02-14 16:50:08,115 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:50:08,116 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:50:08,116 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:50:08,116 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:50:08,116 views 213950 130447149364928 Processing webhook for transaction: wjZiUuYymF
+ERROR 2026-02-14 16:50:15,115 log 213950 130447149364928 Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.infinitymarket01.com'. You may need to add 'www.infinitymarket01.com' to ALLOWED_HOSTS.
+INFO 2026-02-14 16:50:38,183 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:50:38,184 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:50:38,184 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:50:38,184 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:50:38,184 views 213950 130447149364928 Processing webhook for transaction: wjZiUuYymF
+INFO 2026-02-14 16:50:48,573 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:50:48,573 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:50:48,573 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:50:48,573 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:50:48,573 views 213950 130447149364928 Processing webhook for transaction: wjZiUuYymF
+WARNING 2026-02-14 16:53:40,786 log 213950 130447149364928 Not Found: /
+WARNING 2026-02-14 16:53:40,876 log 213950 130447149364928 Not Found: /favicon.ico
+WARNING 2026-02-14 16:53:40,965 log 213950 130447149364928 Not Found: /favicon.png
+WARNING 2026-02-14 16:54:39,670 log 213950 130447149364928 Not Found: /
+WARNING 2026-02-14 16:54:39,927 log 213950 130447149364928 Not Found: /favicon.ico
+INFO 2026-02-14 16:57:30,791 views 213950 130447149364928 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 16:57:30,798 views 213950 130447149364928 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 16:57:30,801 views 213950 130447149364928 Created OrderItem for product computer, quantity 2
+INFO 2026-02-14 16:57:30,802 views 213950 130447149364928 Created pending order 16 with 2 items
+INFO 2026-02-14 16:57:30,804 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:57:30,804 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:57:30,804 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:57:30,804 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:57:30,805 payment_service 213950 130447149364928 Initiating payment link request:
+INFO 2026-02-14 16:57:30,805 payment_service 213950 130447149364928   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 16:57:30,805 payment_service 213950 130447149364928   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "16",
+  "message": "Payment for order 16",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 16:57:30,806 payment_service 213950 130447149364928   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 16:57:31,397 payment_service 213950 130447149364928 Response status code: 200
+INFO 2026-02-14 16:57:31,398 payment_service 213950 130447149364928 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-WxD+EGW9Zoic9reKk8zwPL1jclw"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '27a52b43eb61f46cc1589407b2938e92;o=1', 'date': 'Sat, 14 Feb 2026 16:57:31 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 16:57:31,398 payment_service 213950 130447149364928 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990a97b10013c61fb99ad16",
+  "transId": "qItGkNjiXV",
+  "dateInitiated": "2026-02-14T16:57:31.147Z"
+}
+INFO 2026-02-14 16:57:43,524 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:57:43,524 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:57:43,525 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:57:43,525 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:57:43,525 views 213950 130447149364928 Processing webhook for transaction: qItGkNjiXV
+INFO 2026-02-14 16:58:27,242 views 213950 130447149364928 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 16:58:27,248 views 213950 130447149364928 Created OrderItem for product Chair, quantity 6
+INFO 2026-02-14 16:58:27,250 views 213950 130447149364928 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 16:58:27,252 views 213950 130447149364928 Created pending order 17 with 2 items
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928 Initiating payment link request:
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 16:58:27,254 payment_service 213950 130447149364928   Payload: {
+  "amount": 650,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "17",
+  "message": "Payment for order 17",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 16:58:27,255 payment_service 213950 130447149364928   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 16:58:27,661 payment_service 213950 130447149364928 Response status code: 200
+INFO 2026-02-14 16:58:27,662 payment_service 213950 130447149364928 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-MkQ0s740fH2ckG0Dv2w4bC4IRVE"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '3d79d8ae36bd7e58cb76e1305339b25e;o=1', 'date': 'Sat, 14 Feb 2026 16:58:27 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 16:58:27,662 payment_service 213950 130447149364928 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990a9b310013c61fb99ad1e",
+  "transId": "bmxt7MdkXf",
+  "dateInitiated": "2026-02-14T16:58:27.426Z"
+}
+INFO 2026-02-14 16:58:36,722 payment_service 213950 130447149364928 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 16:58:36,722 payment_service 213950 130447149364928   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 16:58:36,722 payment_service 213950 130447149364928   API Key set: Yes
+INFO 2026-02-14 16:58:36,722 payment_service 213950 130447149364928   API User set: Yes
+INFO 2026-02-14 16:58:36,722 views 213950 130447149364928 Processing webhook for transaction: bmxt7MdkXf
+INFO 2026-02-14 16:58:37,131 payment_service 213950 130447149364928 Updating seller wallets for order 17
+INFO 2026-02-14 16:58:37,134 payment_service 213950 130447149364928 Processing wallet update for seller sellertwo@gmail.com, amount: 600.00
+INFO 2026-02-14 16:58:37,139 payment_service 213950 130447149364928 Updated wallet for seller sellertwo@gmail.com: 600.00 -> 1200.00
+INFO 2026-02-14 16:58:37,140 payment_service 213950 130447149364928 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 16:58:37,143 payment_service 213950 130447149364928 Updated wallet for seller seller@gmail.com: 500.00 -> 550.00
+INFO 2026-02-14 16:58:37,147 views 213950 130447149364928 Found existing order 17 for payment 16
+INFO 2026-02-14 16:58:37,149 views 213950 130447149364928 Updated order 17 status to processing
+INFO 2026-02-14 16:58:37,150 views 213950 130447149364928 Payment 16 marked as paid for order 17
+INFO 2026-02-14 17:07:57,264 views 213950 130447149364928 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:07:57,268 views 213950 130447149364928 ORDER STATUS UPDATE: Order 17 - processing -> pending
+INFO 2026-02-14 17:07:57,269 views 213950 130447149364928 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 0, 'delivered': 1}
+INFO 2026-02-14 17:07:57,270 views 213950 130447149364928 ORDER STATUS UPDATED: Order 17 now has status pending
+INFO 2026-02-14 17:08:12,351 views 213950 130447238493888 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 17
+INFO 2026-02-14 17:08:12,355 views 213950 130447238493888 ORDER STATUS UNCHANGED: Order 17 remains pending (no change needed)
+INFO 2026-02-14 17:08:27,804 views 213950 130447149364928 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to processing in order 17
+INFO 2026-02-14 17:08:27,807 views 213950 130447149364928 ORDER STATUS UPDATE: Order 17 - pending -> processing
+INFO 2026-02-14 17:08:27,808 views 213950 130447149364928 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 1, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 17:08:27,809 views 213950 130447149364928 ORDER STATUS UPDATED: Order 17 now has status processing
+INFO 2026-02-14 17:08:35,118 views 213950 130447238493888 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to pending in order 17
+INFO 2026-02-14 17:08:35,122 views 213950 130447238493888 ORDER STATUS UPDATE: Order 17 - processing -> pending
+INFO 2026-02-14 17:08:35,122 views 213950 130447238493888 ORDER STATUS REASON: Item counts - {'pending': 2, 'processing': 0, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 17:08:35,124 views 213950 130447238493888 ORDER STATUS UPDATED: Order 17 now has status pending
+INFO 2026-02-14 17:08:41,073 views 213950 130447238493888 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to processing in order 17
+INFO 2026-02-14 17:08:41,077 views 213950 130447238493888 ORDER STATUS UPDATE: Order 17 - pending -> processing
+INFO 2026-02-14 17:08:41,078 views 213950 130447238493888 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 1, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 17:08:41,080 views 213950 130447238493888 ORDER STATUS UPDATED: Order 17 now has status processing
+INFO 2026-02-14 17:08:54,494 views 213950 130447149364928 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to pending in order 17
+INFO 2026-02-14 17:08:54,498 views 213950 130447149364928 ORDER STATUS UPDATE: Order 17 - processing -> pending
+INFO 2026-02-14 17:08:54,498 views 213950 130447149364928 ORDER STATUS REASON: Item counts - {'pending': 2, 'processing': 0, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 17:08:54,499 views 213950 130447149364928 ORDER STATUS UPDATED: Order 17 now has status pending
+INFO 2026-02-14 17:09:02,422 views 213950 130447149364928 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:09:02,429 views 213950 130447149364928 ORDER STATUS UNCHANGED: Order 17 remains pending (no change needed)
+INFO 2026-02-14 17:09:26,293 views 213950 130447149364928 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 17
+INFO 2026-02-14 17:09:26,297 views 213950 130447149364928 ORDER STATUS UNCHANGED: Order 17 remains pending (no change needed)
+INFO 2026-02-14 17:10:45,143 autoreload 213950 130447336820864 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 17:10:46,056 autoreload 221556 131963614290048 Watching for file changes with StatReloader
+INFO 2026-02-14 17:11:32,281 autoreload 221556 131963614290048 /home/infinitemarket/applications/E_COMMERCE/api/views.py changed, reloading.
+INFO 2026-02-14 17:11:33,173 autoreload 221805 128591001104512 Watching for file changes with StatReloader
+INFO 2026-02-14 17:12:44,053 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:12:44,058 views 221805 128590902458048 ORDER STATUS UPDATE: Order 17 - pending -> shipped
+INFO 2026-02-14 17:12:44,058 views 221805 128590902458048 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 0, 'delivered': 1}
+INFO 2026-02-14 17:12:44,061 views 221805 128590902458048 ORDER STATUS UPDATED: Order 17 now has status shipped
+INFO 2026-02-14 17:12:57,895 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:12:57,898 views 221805 128590902458048 ORDER STATUS UNCHANGED: Order 17 remains shipped (no change needed)
+INFO 2026-02-14 17:13:06,733 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:13:06,737 views 221805 128590902458048 ORDER STATUS UNCHANGED: Order 17 remains shipped (no change needed)
+INFO 2026-02-14 17:13:11,723 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 17
+INFO 2026-02-14 17:13:11,733 views 221805 128590902458048 ORDER STATUS UNCHANGED: Order 17 remains shipped (no change needed)
+INFO 2026-02-14 17:13:14,477 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:13:14,481 views 221805 128590902458048 ORDER STATUS UNCHANGED: Order 17 remains shipped (no change needed)
+INFO 2026-02-14 17:15:34,034 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to pending in order 17
+INFO 2026-02-14 17:15:34,037 views 221805 128590902458048 ORDER STATUS UPDATE: Order 17 - shipped -> pending
+INFO 2026-02-14 17:15:34,038 views 221805 128590902458048 ORDER STATUS REASON: Item counts - {'pending': 2, 'processing': 0, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 17:15:34,039 views 221805 128590902458048 ORDER STATUS UPDATED: Order 17 now has status pending
+INFO 2026-02-14 17:15:41,753 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to processing in order 17
+INFO 2026-02-14 17:15:41,758 views 221805 128590902458048 ORDER STATUS UPDATE: Order 17 - pending -> processing
+INFO 2026-02-14 17:15:41,758 views 221805 128590902458048 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 1, 'shipped': 0, 'delivered': 0}
+INFO 2026-02-14 17:15:41,760 views 221805 128590902458048 ORDER STATUS UPDATED: Order 17 now has status processing
+INFO 2026-02-14 17:16:03,488 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 17
+INFO 2026-02-14 17:16:03,492 views 221805 128590902458048 ORDER STATUS UPDATE: Order 17 - processing -> shipped
+INFO 2026-02-14 17:16:03,492 views 221805 128590902458048 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 1, 'delivered': 0}
+INFO 2026-02-14 17:16:03,494 views 221805 128590902458048 ORDER STATUS UPDATED: Order 17 now has status shipped
+INFO 2026-02-14 17:16:12,558 views 221805 128590902458048 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:16:12,563 views 221805 128590902458048 ORDER STATUS UNCHANGED: Order 17 remains shipped (no change needed)
+WARNING 2026-02-14 17:16:40,637 log 221805 128590902458048 Not Found: /
+WARNING 2026-02-14 17:16:40,836 log 221805 128590902458048 Not Found: /index.php
+ERROR 2026-02-14 17:16:41,048 log 221805 128590902458048 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/admin/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-14 17:16:41,650 log 221805 128590902458048 Internal Server Error: /api
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/api/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2026-02-14 17:17:12,473 log 221805 128590902458048 Not Found: /
+WARNING 2026-02-14 17:17:12,673 log 221805 128590902458048 Not Found: /index.php
+ERROR 2026-02-14 17:17:12,884 log 221805 128590902458048 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/admin/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-14 17:17:13,510 log 221805 128590902458048 Internal Server Error: /api
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/api/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2026-02-14 17:18:00,026 log 221805 128590887777984 Not Found: /
+INFO 2026-02-14 17:18:29,057 views 221805 128590887777984 SELLER ITEM UPDATE: User sellertwo@gmail.com updated 1 items to delivered in order 17
+INFO 2026-02-14 17:18:29,062 views 221805 128590887777984 ORDER STATUS UPDATE: Order 17 - shipped -> delivered
+INFO 2026-02-14 17:18:29,062 views 221805 128590887777984 ORDER STATUS REASON: Item counts - {'pending': 0, 'processing': 0, 'shipped': 0, 'delivered': 2}
+INFO 2026-02-14 17:18:29,064 views 221805 128590887777984 ORDER STATUS UPDATED: Order 17 now has status delivered
+WARNING 2026-02-14 17:20:06,997 log 221805 128590887777984 Not Found: /
+WARNING 2026-02-14 17:21:06,379 log 221805 128590887777984 Not Found: /
+INFO 2026-02-14 17:21:34,596 autoreload 221805 128591001104512 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 17:21:35,722 autoreload 224925 138968232714368 Watching for file changes with StatReloader
+INFO 2026-02-14 17:24:19,411 autoreload 224925 138968232714368 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 17:24:20,502 autoreload 225538 123681339195520 Watching for file changes with StatReloader
+INFO 2026-02-14 17:24:25,894 autoreload 225538 123681339195520 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 17:24:26,797 autoreload 225632 135480325939328 Watching for file changes with StatReloader
+INFO 2026-02-14 17:24:42,452 autoreload 225632 135480325939328 /home/infinitemarket/applications/E_COMMERCE/api/serializers.py changed, reloading.
+INFO 2026-02-14 17:24:42,899 autoreload 225731 130079153696896 Watching for file changes with StatReloader
+INFO 2026-02-14 17:25:15,454 views 225731 130078985942720 SELLER ITEM UPDATE: User sellertwo@gmail.com updated 1 items to processing in order 17
+INFO 2026-02-14 17:25:15,458 views 225731 130078985942720 ORDER STATUS UNCHANGED: Order 17 remains delivered (no change needed)
+WARNING 2026-02-14 17:33:04,264 log 225731 130078973359808 Not Found: /
+WARNING 2026-02-14 17:33:04,767 log 225731 130078973359808 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:04,782 log 225731 130078973359808 Not Found: /favicon.ico
+WARNING 2026-02-14 17:33:04,787 log 225731 130078973359808 Not Found: /sitemap.xml
+WARNING 2026-02-14 17:33:30,545 log 225731 130078973359808 Not Found: /
+WARNING 2026-02-14 17:33:30,895 log 225731 130078985942720 Not Found: /favicon.ico
+WARNING 2026-02-14 17:33:30,899 log 225731 130078973359808 Not Found: /sitemap.xml
+WARNING 2026-02-14 17:33:30,901 log 225731 130078964967104 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:30,973 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 17:33:31,488 log 225731 130078964967104 Not Found: /favicon.ico
+WARNING 2026-02-14 17:33:31,502 log 225731 130078964967104 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:31,504 log 225731 130078973359808 Not Found: /sitemap.xml
+WARNING 2026-02-14 17:33:31,655 log 225731 130078973359808 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:31,661 log 225731 130078964967104 Not Found: /sitemap.xml
+WARNING 2026-02-14 17:33:31,673 log 225731 130078964967104 Not Found: /favicon.ico
+WARNING 2026-02-14 17:33:32,200 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 17:33:32,710 log 225731 130078964967104 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:32,716 log 225731 130078973359808 Not Found: /favicon.ico
+WARNING 2026-02-14 17:33:32,724 log 225731 130078985942720 Not Found: /sitemap.xml
+WARNING 2026-02-14 17:33:33,085 log 225731 130078985942720 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:36,503 log 225731 130078985942720 Not Found: /
+WARNING 2026-02-14 17:33:43,748 log 225731 130078985942720 Not Found: /
+WARNING 2026-02-14 17:33:44,083 log 225731 130078985942720 Not Found: /robots.txt
+WARNING 2026-02-14 17:33:44,086 log 225731 130078973359808 Not Found: /sitemap.xml
+WARNING 2026-02-14 17:33:44,089 log 225731 130078964967104 Not Found: /favicon.ico
+WARNING 2026-02-14 17:42:45,830 log 225731 130078964967104 Not Found: /robots.txt
+WARNING 2026-02-14 17:43:39,992 log 225731 130078964967104 Not Found: /robots.txt
+WARNING 2026-02-14 17:44:02,551 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 17:44:31,730 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 17:59:47,537 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:00:16,442 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:06:26,327 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:15:06,982 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:15:39,191 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:19:49,957 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:19:50,461 log 225731 130078964967104 Not Found: /favicon.ico
+WARNING 2026-02-14 18:20:04,071 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:20:09,291 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:20:50,211 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:23:42,294 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:30:28,694 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:30:58,901 log 225731 130078964967104 Not Found: /
+INFO 2026-02-14 18:37:47,111 views 225731 130078985942720 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to shipped in order 17
+INFO 2026-02-14 18:37:47,115 views 225731 130078985942720 ORDER STATUS UPDATE: Order 17 - delivered -> shipped
+INFO 2026-02-14 18:37:47,116 views 225731 130078985942720 ORDER STATUS REASON: Item counts - {'pending': 0, 'processing': 1, 'shipped': 1, 'delivered': 0}
+INFO 2026-02-14 18:37:47,119 views 225731 130078985942720 ORDER STATUS UPDATED: Order 17 now has status shipped
+INFO 2026-02-14 18:39:30,328 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 18:39:30,338 views 225731 130078964967104 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 18:39:30,340 views 225731 130078964967104 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 18:39:30,341 views 225731 130078964967104 Created pending order 18 with 2 items
+INFO 2026-02-14 18:39:30,344 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:39:30,344 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:39:30,345 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:39:30,345 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:39:30,345 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 18:39:30,345 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 18:39:30,346 payment_service 225731 130078964967104   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "18",
+  "message": "Payment for order 18",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 18:39:30,346 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 18:39:31,543 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 18:39:31,543 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-22hZFQ+RNL1X7igDQ4K5MtxN0uQ"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '8a00c93a61b66df6c8420da3dd8d418b;o=1', 'date': 'Sat, 14 Feb 2026 18:39:31 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 18:39:31,543 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c16310013c61fb99aef4",
+  "transId": "ixDxJJdcw8",
+  "dateInitiated": "2026-02-14T18:39:31.308Z"
+}
+INFO 2026-02-14 18:39:50,702 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:39:50,703 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:39:50,703 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:39:50,703 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:39:50,703 views 225731 130078964967104 Processing webhook for transaction: ixDxJJdcw8
+INFO 2026-02-14 18:39:51,723 payment_service 225731 130078964967104 Updating seller wallets for order 18
+INFO 2026-02-14 18:39:51,730 payment_service 225731 130078964967104 Processing wallet update for seller sellertwo@gmail.com, amount: 100.00
+INFO 2026-02-14 18:39:51,743 payment_service 225731 130078964967104 Updated wallet for seller sellertwo@gmail.com: 1200.00 -> 1300.00
+INFO 2026-02-14 18:39:51,746 payment_service 225731 130078964967104 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 18:39:51,754 payment_service 225731 130078964967104 Updated wallet for seller seller@gmail.com: 550.00 -> 600.00
+INFO 2026-02-14 18:39:51,761 views 225731 130078964967104 Found existing order 18 for payment 17
+INFO 2026-02-14 18:39:51,762 views 225731 130078964967104 Updated order 18 status to processing
+INFO 2026-02-14 18:39:51,763 views 225731 130078964967104 Payment 17 marked as paid for order 18
+INFO 2026-02-14 18:42:04,803 views 225731 130078985942720 SELLER ITEM UPDATE: User sellertwo@gmail.com updated 1 items to shipped in order 18
+INFO 2026-02-14 18:42:04,808 views 225731 130078985942720 ORDER STATUS UPDATE: Order 18 - processing -> shipped
+INFO 2026-02-14 18:42:04,808 views 225731 130078985942720 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 1, 'delivered': 0}
+INFO 2026-02-14 18:42:04,811 views 225731 130078985942720 ORDER STATUS UPDATED: Order 18 now has status shipped
+INFO 2026-02-14 18:42:39,723 views 225731 130078985942720 SELLER ITEM UPDATE: User seller@gmail.com updated 1 items to delivered in order 18
+INFO 2026-02-14 18:42:39,727 views 225731 130078985942720 ORDER STATUS UNCHANGED: Order 18 remains shipped (no change needed)
+INFO 2026-02-14 18:44:28,243 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 18:44:28,250 views 225731 130078964967104 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 18:44:28,252 views 225731 130078964967104 Created OrderItem for product tv, quantity 1
+INFO 2026-02-14 18:44:28,253 views 225731 130078964967104 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 18:44:28,254 views 225731 130078964967104 Created pending order 19 with 3 items
+INFO 2026-02-14 18:44:28,256 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:44:28,256 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:44:28,256 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:44:28,256 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:44:28,256 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 18:44:28,257 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 18:44:28,257 payment_service 225731 130078964967104   Payload: {
+  "amount": 200,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "19",
+  "message": "Payment for order 19",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 18:44:28,257 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 18:44:29,232 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 18:44:29,233 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-ok4Y09n/f0s4Ek5cXcYbnC7Z0e8"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'a2f3bf70e0f35de59d3da9cb66c2df57;o=1', 'date': 'Sat, 14 Feb 2026 18:44:29 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 18:44:29,233 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c28c10013c61fb99af08",
+  "transId": "4rBnrXC5Pt",
+  "dateInitiated": "2026-02-14T18:44:28.998Z"
+}
+INFO 2026-02-14 18:44:38,165 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:44:38,166 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:44:38,166 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:44:38,166 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:44:38,166 views 225731 130078964967104 Processing webhook for transaction: 4rBnrXC5Pt
+INFO 2026-02-14 18:44:39,315 payment_service 225731 130078964967104 Updating seller wallets for order 19
+INFO 2026-02-14 18:44:39,319 payment_service 225731 130078964967104 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 18:44:39,324 payment_service 225731 130078964967104 Updated wallet for seller seller@gmail.com: 600.00 -> 650.00
+INFO 2026-02-14 18:44:39,325 payment_service 225731 130078964967104 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 18:44:39,328 payment_service 225731 130078964967104 Updated wallet for seller seller@gmail.com: 650.00 -> 700.00
+INFO 2026-02-14 18:44:39,329 payment_service 225731 130078964967104 Processing wallet update for seller sellertwo@gmail.com, amount: 100.00
+INFO 2026-02-14 18:44:39,332 payment_service 225731 130078964967104 Updated wallet for seller sellertwo@gmail.com: 1300.00 -> 1400.00
+INFO 2026-02-14 18:44:39,337 views 225731 130078964967104 Found existing order 19 for payment 18
+INFO 2026-02-14 18:44:39,338 views 225731 130078964967104 Updated order 19 status to processing
+INFO 2026-02-14 18:44:39,340 views 225731 130078964967104 Payment 18 marked as paid for order 19
+WARNING 2026-02-14 18:45:31,761 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 18:46:03,587 log 225731 130078964967104 Not Found: /
+INFO 2026-02-14 18:48:48,665 views 225731 130078964967104 SELLER ITEM UPDATE: User seller@gmail.com updated 2 items to delivered in order 19
+INFO 2026-02-14 18:48:48,670 views 225731 130078964967104 ORDER STATUS UPDATE: Order 19 - processing -> shipped
+INFO 2026-02-14 18:48:48,671 views 225731 130078964967104 ORDER STATUS REASON: Item counts - {'pending': 1, 'processing': 0, 'shipped': 0, 'delivered': 2}
+INFO 2026-02-14 18:48:48,673 views 225731 130078964967104 ORDER STATUS UPDATED: Order 19 now has status shipped
+INFO 2026-02-14 18:49:32,440 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 18:49:32,445 views 225731 130078964967104 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 18:49:32,446 views 225731 130078964967104 Created pending order 20 with 1 items
+INFO 2026-02-14 18:49:32,448 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:49:32,448 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:49:32,448 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:49:32,449 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:49:32,449 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 18:49:32,449 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 18:49:32,449 payment_service 225731 130078964967104   Payload: {
+  "amount": 200,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "20",
+  "message": "Payment for order 20",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 18:49:32,449 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 18:49:32,852 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 18:49:32,853 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-9VrK5oGVZ4dYJW+ZEUAUFBwdvUg"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'e95c536fecfdd731911f2c3a9406aca3;o=1', 'date': 'Sat, 14 Feb 2026 18:49:32 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 18:49:32,853 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c3bc10013c61fb99af11",
+  "transId": "w0JalwiNye",
+  "dateInitiated": "2026-02-14T18:49:32.611Z"
+}
+INFO 2026-02-14 18:49:44,591 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:49:44,591 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:49:44,591 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:49:44,591 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:49:44,591 views 225731 130078964967104 Processing webhook for transaction: w0JalwiNye
+INFO 2026-02-14 18:49:45,632 payment_service 225731 130078964967104 Updating seller wallets for order 20
+INFO 2026-02-14 18:49:45,636 payment_service 225731 130078964967104 Processing wallet update for seller sellertwo@gmail.com, amount: 200.00
+INFO 2026-02-14 18:49:45,641 payment_service 225731 130078964967104 Updated wallet for seller sellertwo@gmail.com: 1400.00 -> 1600.00
+INFO 2026-02-14 18:49:45,646 views 225731 130078964967104 Found existing order 20 for payment 19
+INFO 2026-02-14 18:49:45,647 views 225731 130078964967104 Updated order 20 status to processing
+INFO 2026-02-14 18:49:45,649 views 225731 130078964967104 Payment 19 marked as paid for order 20
+INFO 2026-02-14 18:51:59,213 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 18:51:59,219 views 225731 130078964967104 Created OrderItem for product Chair, quantity 3
+INFO 2026-02-14 18:51:59,221 views 225731 130078964967104 Created pending order 21 with 1 items
+INFO 2026-02-14 18:51:59,223 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:51:59,223 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:51:59,224 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:51:59,224 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:51:59,224 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 18:51:59,224 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 18:51:59,224 payment_service 225731 130078964967104   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "21",
+  "message": "Payment for order 21",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 18:51:59,225 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 18:51:59,627 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 18:51:59,627 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-s9NE3IqUCWIa1LJ5NaQl99Hj8U8"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '16bf68933fa7b125428d3e0e6858cc02;o=1', 'date': 'Sat, 14 Feb 2026 18:51:59 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 18:51:59,627 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c44f10013c61fb99af1a",
+  "transId": "xI5j8AYTst",
+  "dateInitiated": "2026-02-14T18:51:59.391Z"
+}
+INFO 2026-02-14 18:52:09,042 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:52:09,042 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:52:09,043 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:52:09,043 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:52:09,043 views 225731 130078964967104 Processing webhook for transaction: xI5j8AYTst
+INFO 2026-02-14 18:52:09,463 payment_service 225731 130078964967104 Updating seller wallets for order 21
+INFO 2026-02-14 18:52:09,466 payment_service 225731 130078964967104 Processing wallet update for seller sellertwo@gmail.com, amount: 300.00
+INFO 2026-02-14 18:52:09,469 payment_service 225731 130078964967104 Updated wallet for seller sellertwo@gmail.com: 1600.00 -> 1900.00
+INFO 2026-02-14 18:52:09,474 views 225731 130078964967104 Found existing order 21 for payment 20
+INFO 2026-02-14 18:52:09,474 views 225731 130078964967104 Updated order 21 status to processing
+INFO 2026-02-14 18:52:09,476 views 225731 130078964967104 Payment 20 marked as paid for order 21
+INFO 2026-02-14 18:54:23,701 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 18:54:23,705 views 225731 130078964967104 Created OrderItem for product Chair, quantity 3
+INFO 2026-02-14 18:54:23,706 views 225731 130078964967104 Created pending order 22 with 1 items
+INFO 2026-02-14 18:54:23,708 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:54:23,708 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:54:23,708 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:54:23,708 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:54:23,708 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 18:54:23,708 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 18:54:23,709 payment_service 225731 130078964967104   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "22",
+  "message": "Payment for order 22",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 18:54:23,709 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 18:54:24,112 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 18:54:24,112 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-9cNbGjOjs5k/kcp3r/I+g59aIlQ"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '5df3687e0b17d2c0f0ad57dfe1e05494;o=1', 'date': 'Sat, 14 Feb 2026 18:54:24 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 18:54:24,112 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c4df10013c61fb99af23",
+  "transId": "NCeXWTb0Yd",
+  "dateInitiated": "2026-02-14T18:54:23.875Z"
+}
+INFO 2026-02-14 18:54:32,292 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:54:32,292 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:54:32,292 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:54:32,292 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:54:32,292 views 225731 130078964967104 Processing webhook for transaction: NCeXWTb0Yd
+INFO 2026-02-14 18:54:32,709 payment_service 225731 130078964967104 Updating seller wallets for order 22
+INFO 2026-02-14 18:54:32,711 payment_service 225731 130078964967104 Processing wallet update for seller sellertwo@gmail.com, amount: 300.00
+INFO 2026-02-14 18:54:32,715 payment_service 225731 130078964967104 Updated wallet for seller sellertwo@gmail.com: 1900.00 -> 2200.00
+INFO 2026-02-14 18:54:32,719 views 225731 130078964967104 Found existing order 22 for payment 21
+INFO 2026-02-14 18:54:32,720 views 225731 130078964967104 Updated order 22 status to processing
+INFO 2026-02-14 18:54:32,721 views 225731 130078964967104 Payment 21 marked as paid for order 22
+INFO 2026-02-14 18:57:51,710 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 18:57:51,715 views 225731 130078964967104 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 18:57:51,716 views 225731 130078964967104 Created pending order 23 with 1 items
+INFO 2026-02-14 18:57:51,718 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:57:51,718 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:57:51,718 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:57:51,718 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:57:51,719 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 18:57:51,719 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 18:57:51,719 payment_service 225731 130078964967104   Payload: {
+  "amount": 200,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "23",
+  "message": "Payment for order 23",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 18:57:51,719 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 18:57:52,757 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 18:57:52,757 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-knsObTLDsDzRcWNTWUXprsfccLw"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'c65108c5502eb5ce6fa324b0dc5cb7dd;o=1', 'date': 'Sat, 14 Feb 2026 18:57:52 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 18:57:52,757 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c5b010013c61fb99af31",
+  "transId": "MdLQdQPnlP",
+  "dateInitiated": "2026-02-14T18:57:52.521Z"
+}
+INFO 2026-02-14 18:58:01,351 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 18:58:01,351 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 18:58:01,351 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 18:58:01,351 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 18:58:01,351 views 225731 130078964967104 Processing webhook for transaction: MdLQdQPnlP
+INFO 2026-02-14 18:58:02,407 payment_service 225731 130078964967104 Updating seller wallets for order 23
+INFO 2026-02-14 18:58:02,410 payment_service 225731 130078964967104 Processing wallet update for seller sellertwo@gmail.com, amount: 200.00
+INFO 2026-02-14 18:58:02,416 payment_service 225731 130078964967104 Updated wallet for seller sellertwo@gmail.com: 2200.00 -> 2400.00
+INFO 2026-02-14 18:58:02,420 views 225731 130078964967104 Found existing order 23 for payment 22
+INFO 2026-02-14 18:58:02,422 views 225731 130078964967104 Updated order 23 status to processing
+INFO 2026-02-14 18:58:02,424 views 225731 130078964967104 Payment 22 marked as paid for order 23
+WARNING 2026-02-14 19:00:47,327 log 225731 130078964967104 Not Found: /
+WARNING 2026-02-14 19:01:15,479 log 225731 130078964967104 Not Found: /
+INFO 2026-02-14 19:02:08,246 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 19:02:08,251 views 225731 130078964967104 Created OrderItem for product Chair, quantity 2
+INFO 2026-02-14 19:02:08,252 views 225731 130078964967104 Created pending order 24 with 1 items
+INFO 2026-02-14 19:02:08,254 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:02:08,254 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:02:08,254 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 19:02:08,254 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 19:02:08,254 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 19:02:08,255 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 19:02:08,255 payment_service 225731 130078964967104   Payload: {
+  "amount": 200,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "24",
+  "message": "Payment for order 24",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 19:02:08,255 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 19:02:09,244 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 19:02:09,244 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-SGuMuw3kZg/Bu2X5djJffwSRGiI"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'cace01f237d6efad040b1dda5d74c341;o=1', 'date': 'Sat, 14 Feb 2026 19:02:09 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 19:02:09,244 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c6b010013c61fb99af3a",
+  "transId": "Ap7bXsVx4L",
+  "dateInitiated": "2026-02-14T19:02:08.997Z"
+}
+INFO 2026-02-14 19:02:21,405 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:02:21,405 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:02:21,405 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 19:02:21,405 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 19:02:21,405 views 225731 130078964967104 Processing webhook for transaction: Ap7bXsVx4L
+INFO 2026-02-14 19:02:45,270 views 225731 130078985942720 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 19:02:45,275 views 225731 130078985942720 Created OrderItem for product Chair, quantity 1
+INFO 2026-02-14 19:02:45,277 views 225731 130078985942720 Created OrderItem for product tv, quantity 1
+INFO 2026-02-14 19:02:45,279 views 225731 130078985942720 Created pending order 25 with 2 items
+INFO 2026-02-14 19:02:45,280 payment_service 225731 130078985942720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:02:45,280 payment_service 225731 130078985942720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:02:45,280 payment_service 225731 130078985942720   API Key set: Yes
+INFO 2026-02-14 19:02:45,281 payment_service 225731 130078985942720   API User set: Yes
+INFO 2026-02-14 19:02:45,281 payment_service 225731 130078985942720 Initiating payment link request:
+INFO 2026-02-14 19:02:45,281 payment_service 225731 130078985942720   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 19:02:45,281 payment_service 225731 130078985942720   Payload: {
+  "amount": 150,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "25",
+  "message": "Payment for order 25",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 19:02:45,281 payment_service 225731 130078985942720   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 19:02:45,704 payment_service 225731 130078985942720 Response status code: 200
+INFO 2026-02-14 19:02:45,704 payment_service 225731 130078985942720 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-f9fgw6WC1zH1n9zvUZC1IEtSoV4"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '04beb8943612cd34d25fcde3c3de9391;o=1', 'date': 'Sat, 14 Feb 2026 19:02:45 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 19:02:45,704 payment_service 225731 130078985942720 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c6d510013c61fb99af42",
+  "transId": "Yrs9qMReZA",
+  "dateInitiated": "2026-02-14T19:02:45.469Z"
+}
+INFO 2026-02-14 19:02:55,622 payment_service 225731 130078985942720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:02:55,622 payment_service 225731 130078985942720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:02:55,622 payment_service 225731 130078985942720   API Key set: Yes
+INFO 2026-02-14 19:02:55,622 payment_service 225731 130078985942720   API User set: Yes
+INFO 2026-02-14 19:02:55,622 views 225731 130078985942720 Processing webhook for transaction: Yrs9qMReZA
+INFO 2026-02-14 19:02:56,699 payment_service 225731 130078985942720 Updating seller wallets for order 25
+INFO 2026-02-14 19:02:56,702 payment_service 225731 130078985942720 Processing wallet update for seller sellertwo@gmail.com, amount: 100.00
+INFO 2026-02-14 19:02:56,706 payment_service 225731 130078985942720 Updated wallet for seller sellertwo@gmail.com: 2400.00 -> 2500.00
+INFO 2026-02-14 19:02:56,707 payment_service 225731 130078985942720 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 19:02:56,709 payment_service 225731 130078985942720 Updated wallet for seller seller@gmail.com: 700.00 -> 750.00
+INFO 2026-02-14 19:02:56,714 views 225731 130078985942720 Found existing order 25 for payment 24
+INFO 2026-02-14 19:02:56,715 views 225731 130078985942720 Updated order 25 status to processing
+INFO 2026-02-14 19:02:56,716 views 225731 130078985942720 Payment 24 marked as paid for order 25
+INFO 2026-02-14 19:03:37,078 views 225731 130078985942720 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 19:03:37,086 views 225731 130078985942720 Created OrderItem for product Chair, quantity 3
+INFO 2026-02-14 19:03:37,090 views 225731 130078985942720 Created pending order 26 with 1 items
+INFO 2026-02-14 19:03:37,093 payment_service 225731 130078985942720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:03:37,093 payment_service 225731 130078985942720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:03:37,093 payment_service 225731 130078985942720   API Key set: Yes
+INFO 2026-02-14 19:03:37,094 payment_service 225731 130078985942720   API User set: Yes
+INFO 2026-02-14 19:03:37,094 payment_service 225731 130078985942720 Initiating payment link request:
+INFO 2026-02-14 19:03:37,094 payment_service 225731 130078985942720   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 19:03:37,094 payment_service 225731 130078985942720   Payload: {
+  "amount": 300,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "26",
+  "message": "Payment for order 26",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 19:03:37,095 payment_service 225731 130078985942720   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 19:03:38,091 payment_service 225731 130078985942720 Response status code: 200
+INFO 2026-02-14 19:03:38,093 payment_service 225731 130078985942720 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-O5NskkxcmLpA0TT3mXJ/v3byEJg"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '7f5d2dba151549f74daac5ddd5d4d8e9;o=1', 'date': 'Sat, 14 Feb 2026 19:03:37 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 19:03:38,093 payment_service 225731 130078985942720 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c70910013c61fb99af4b",
+  "transId": "FpJIeAVywN",
+  "dateInitiated": "2026-02-14T19:03:37.859Z"
+}
+INFO 2026-02-14 19:03:47,645 payment_service 225731 130078985942720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:03:47,646 payment_service 225731 130078985942720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:03:47,646 payment_service 225731 130078985942720   API Key set: Yes
+INFO 2026-02-14 19:03:47,647 payment_service 225731 130078985942720   API User set: Yes
+INFO 2026-02-14 19:03:47,648 views 225731 130078985942720 Processing webhook for transaction: FpJIeAVywN
+INFO 2026-02-14 19:04:16,008 views 225731 130078985942720 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 19:04:16,014 views 225731 130078985942720 Created OrderItem for product tv, quantity 2
+INFO 2026-02-14 19:04:16,015 views 225731 130078985942720 Created pending order 27 with 1 items
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720   API Key set: Yes
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720   API User set: Yes
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720 Initiating payment link request:
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 19:04:16,018 payment_service 225731 130078985942720   Payload: {
+  "amount": 100,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "27",
+  "message": "Payment for order 27",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 19:04:16,019 payment_service 225731 130078985942720   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 19:04:16,441 payment_service 225731 130078985942720 Response status code: 200
+INFO 2026-02-14 19:04:16,441 payment_service 225731 130078985942720 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-U9ApFK70kQ5TZS+Tb9AOgodhq7Y"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '577baca50f23d569ff1f5895c4350bb9;o=1', 'date': 'Sat, 14 Feb 2026 19:04:16 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 19:04:16,441 payment_service 225731 130078985942720 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c73010013c61fb99af54",
+  "transId": "3IxHyFdZxU",
+  "dateInitiated": "2026-02-14T19:04:16.193Z"
+}
+INFO 2026-02-14 19:05:18,157 views 225731 130078964967104 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 19:05:18,163 views 225731 130078964967104 Created OrderItem for product tv, quantity 2
+INFO 2026-02-14 19:05:18,166 views 225731 130078964967104 Created pending order 28 with 1 items
+INFO 2026-02-14 19:05:18,167 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:05:18,168 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:05:18,168 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 19:05:18,168 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 19:05:18,168 payment_service 225731 130078964967104 Initiating payment link request:
+INFO 2026-02-14 19:05:18,168 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/initiate-pay
+INFO 2026-02-14 19:05:18,168 payment_service 225731 130078964967104   Payload: {
+  "amount": 100,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "28",
+  "message": "Payment for order 28",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 19:05:18,169 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 19:05:19,149 payment_service 225731 130078964967104 Response status code: 200
+INFO 2026-02-14 19:05:19,149 payment_service 225731 130078964967104 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"ad-XIuRk4WoQCQaAPePFLy2THa8QTU"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'e3147329e45652400dacee8dc1176de5;o=1', 'date': 'Sat, 14 Feb 2026 19:05:19 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 19:05:19,150 payment_service 225731 130078964967104 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/test/payment/6990c76e10013c61fb99af56",
+  "transId": "CzmpLphUVH",
+  "dateInitiated": "2026-02-14T19:05:18.913Z"
+}
+INFO 2026-02-14 19:06:01,562 payment_service 225731 130078964967104 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:06:01,562 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:06:01,562 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 19:06:01,562 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 19:06:01,562 views 225731 130078964967104 Processing webhook for transaction: CzmpLphUVH
+INFO 2026-02-14 19:06:02,559 payment_service 225731 130078964967104 Updating seller wallets for order 28
+INFO 2026-02-14 19:06:02,562 payment_service 225731 130078964967104 Processing wallet update for seller seller@gmail.com, amount: 100.00
+INFO 2026-02-14 19:06:02,570 payment_service 225731 130078964967104 Updated wallet for seller seller@gmail.com: 750.00 -> 850.00
+INFO 2026-02-14 19:06:02,583 views 225731 130078964967104 Found existing order 28 for payment 27
+INFO 2026-02-14 19:06:02,586 views 225731 130078964967104 Updated order 28 status to processing
+INFO 2026-02-14 19:06:02,587 views 225731 130078964967104 Payment 27 marked as paid for order 28
+WARNING 2026-02-14 19:08:54,367 log 225731 130078964967104 Bad Request: /api/auth/login/
+INFO 2026-02-14 19:11:54,670 payment_service 225731 130078964967104 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:11:54,670 payment_service 225731 130078964967104   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:11:54,670 payment_service 225731 130078964967104   API Key set: Yes
+INFO 2026-02-14 19:11:54,670 payment_service 225731 130078964967104   API User set: Yes
+INFO 2026-02-14 19:11:54,671 payment_service 225731 130078964967104 Processing payout for withdrawal request 1
+INFO 2026-02-14 19:11:54,671 payment_service 225731 130078964967104 Withdrawal amount: 2000.00
+INFO 2026-02-14 19:11:54,671 payment_service 225731 130078964967104 Seller: sellertwo@gmail.com
+INFO 2026-02-14 19:11:54,671 payment_service 225731 130078964967104 Original phone input: '+237651185719'
+INFO 2026-02-14 19:11:54,671 payment_service 225731 130078964967104 After removing non-digits: '237651185719'
+INFO 2026-02-14 19:11:54,671 payment_service 225731 130078964967104 Removed country code, now: '651185719'
+INFO 2026-02-14 19:11:54,672 payment_service 225731 130078964967104 Valid MTN prefix: 651
+INFO 2026-02-14 19:11:54,672 payment_service 225731 130078964967104 Final formatted phone: 651185719
+INFO 2026-02-14 19:11:54,672 payment_service 225731 130078964967104 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:11:54,672 payment_service 225731 130078964967104 Initiating payout request:
+INFO 2026-02-14 19:11:54,672 payment_service 225731 130078964967104   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-14 19:11:54,672 payment_service 225731 130078964967104   Payload: {
+  "amount": 2000,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "Sellertwo",
+  "email": "sellertwo@gmail.com",
+  "userId": "5",
+  "externalId": "withdrawal_1",
+  "message": "Withdrawal payment for request #1"
+}
+INFO 2026-02-14 19:11:54,673 payment_service 225731 130078964967104   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 19:11:54,673 payment_service 225731 130078964967104   Phone number being sent: '651185719'
+INFO 2026-02-14 19:11:54,673 payment_service 225731 130078964967104   Phone number length: 9
+INFO 2026-02-14 19:11:54,673 payment_service 225731 130078964967104   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:11:55,570 payment_service 225731 130078964967104 Payout response status code: 400
+INFO 2026-02-14 19:11:55,570 payment_service 225731 130078964967104 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"27-rGkxnKot5uTkbxuvKeN3dSg5oHU"', 'x-cloud-trace-context': 'edfa006effc475959d1ea39947e47304;o=1', 'date': 'Sat, 14 Feb 2026 19:11:55 GMT', 'server': 'Google Frontend', 'Content-Length': '39'}
+ERROR 2026-02-14 19:11:55,571 payment_service 225731 130078964967104 Payout HTTP Error: 400
+ERROR 2026-02-14 19:11:55,571 payment_service 225731 130078964967104 Payout response body: {"message":"Invalid apiuser or apikey"}
+INFO 2026-02-14 19:11:55,573 payment_service 225731 130078964967104 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Invalid apiuser or apikey"}'}
+ERROR 2026-02-14 19:11:55,573 payment_service 225731 130078964967104 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Invalid apiuser or apikey"}'}
+ERROR 2026-02-14 19:11:55,576 log 225731 130078964967104 Internal Server Error: /api/admin/withdrawals/1/approve/
+WARNING 2026-02-14 19:16:24,078 log 225731 130078953428672 Not Found: /
+INFO 2026-02-14 19:16:51,468 payment_service 225731 130078953428672 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   API Key set: Yes
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   API User set: Yes
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Processing payout for withdrawal request 1
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Withdrawal amount: 2000.00
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Seller: sellertwo@gmail.com
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Original phone input: '+237651185719'
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 After removing non-digits: '237651185719'
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Removed country code, now: '651185719'
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Valid MTN prefix: 651
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Final formatted phone: 651185719
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672 Initiating payout request:
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   Payload: {
+  "amount": 2000,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "Sellertwo",
+  "email": "sellertwo@gmail.com",
+  "userId": "5",
+  "externalId": "withdrawal_1",
+  "message": "Withdrawal payment for request #1"
+}
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   Phone number being sent: '651185719'
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   Phone number length: 9
+INFO 2026-02-14 19:16:51,469 payment_service 225731 130078953428672   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:16:51,761 payment_service 225731 130078953428672 Payout response status code: 400
+INFO 2026-02-14 19:16:51,761 payment_service 225731 130078953428672 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"27-rGkxnKot5uTkbxuvKeN3dSg5oHU"', 'x-cloud-trace-context': '840f6557d619cba5229920d6574a03dc;o=1', 'date': 'Sat, 14 Feb 2026 19:16:51 GMT', 'server': 'Google Frontend', 'Content-Length': '39'}
+ERROR 2026-02-14 19:16:51,761 payment_service 225731 130078953428672 Payout HTTP Error: 400
+ERROR 2026-02-14 19:16:51,762 payment_service 225731 130078953428672 Payout response body: {"message":"Invalid apiuser or apikey"}
+INFO 2026-02-14 19:16:51,763 payment_service 225731 130078953428672 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Invalid apiuser or apikey"}'}
+ERROR 2026-02-14 19:16:51,763 payment_service 225731 130078953428672 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Invalid apiuser or apikey"}'}
+ERROR 2026-02-14 19:16:51,766 log 225731 130078953428672 Internal Server Error: /api/admin/withdrawals/1/approve/
+WARNING 2026-02-14 19:17:09,447 log 225731 130078953428672 Not Found: /
+INFO 2026-02-14 19:17:20,340 autoreload 255462 135440565227648 Watching for file changes with StatReloader
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   API Key set: Yes
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   API User set: Yes
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Processing payout for withdrawal request 1
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Withdrawal amount: 2000.00
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Seller: sellertwo@gmail.com
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Original phone input: '+237651185719'
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 After removing non-digits: '237651185719'
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Removed country code, now: '651185719'
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Valid MTN prefix: 651
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Final formatted phone: 651185719
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Original phone: +237651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776 Initiating payout request:
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   URL: https://sandbox.fapshi.com/payout
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   Payload: {
+  "amount": 2000,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "Sellertwo",
+  "email": "sellertwo@gmail.com",
+  "userId": "5",
+  "externalId": "withdrawal_1",
+  "message": "Withdrawal payment for request #1"
+}
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_TEST_a0fcb2cb788bad459442', 'apiuser': '25917560-52cc-49f2-9f4e-59661b816b12'}
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   Phone number being sent: '651185719'
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   Phone number length: 9
+INFO 2026-02-14 19:17:41,180 payment_service 255462 135440466179776   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:17:42,384 payment_service 255462 135440466179776 Payout response status code: 200
+INFO 2026-02-14 19:17:42,384 payment_service 255462 135440466179776 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiUser, apiKey', 'etag': 'W/"58-xYVrYAold9CZesVN9PbMiST0Rqc"', 'content-encoding': 'gzip', 'x-cloud-trace-context': '862b8397164fe4c5fb65beecfb41c5b0;o=1', 'date': 'Sat, 14 Feb 2026 19:17:42 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 19:17:42,385 payment_service 255462 135440466179776 Payout response data: {
+  "message": "Accepted",
+  "transId": "3pgd2KsB9Q",
+  "dateInitiated": "2026-02-14T19:17:42.145Z"
+}
+INFO 2026-02-14 19:17:42,386 payment_service 255462 135440466179776 Payout initiation result: {'message': 'Accepted', 'transId': '3pgd2KsB9Q', 'dateInitiated': '2026-02-14T19:17:42.145Z'}
+INFO 2026-02-14 19:17:42,387 payment_service 255462 135440466179776 Payout initiated successfully
+INFO 2026-02-14 19:17:48,092 payment_service 255462 135440466179776 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 19:17:48,092 payment_service 255462 135440466179776   Base URL: https://sandbox.fapshi.com
+INFO 2026-02-14 19:17:48,092 payment_service 255462 135440466179776   API Key set: Yes
+INFO 2026-02-14 19:17:48,092 payment_service 255462 135440466179776   API User set: Yes
+INFO 2026-02-14 19:17:48,093 views 255462 135440466179776 Processing webhook for transaction: 3pgd2KsB9Q
+WARNING 2026-02-14 19:24:43,623 log 255462 135440466179776 Not Found: /.git/config
+INFO 2026-02-14 19:34:24,087 autoreload 259789 123327399514240 Watching for file changes with StatReloader
+INFO 2026-02-14 19:36:40,982 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:36:40,982 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 Original phone input: '673749868'
+INFO 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 After removing non-digits: '673749868'
+ERROR 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 Invalid prefix: 673. Valid MTN: ['650', '651', '652', '653', '654', '655', '656', '657', '658', '659'], Valid Orange: ['690', '691', '692', '693', '694', '695', '696', '697', '698', '699']
+ERROR 2026-02-14 19:36:40,983 payment_service 259789 123327200876224 Invalid phone number format: 673749868
+ERROR 2026-02-14 19:36:40,983 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 Original phone input: '673749868'
+INFO 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 After removing non-digits: '673749868'
+ERROR 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 Invalid prefix: 673. Valid MTN: ['650', '651', '652', '653', '654', '655', '656', '657', '658', '659'], Valid Orange: ['690', '691', '692', '693', '694', '695', '696', '697', '698', '699']
+ERROR 2026-02-14 19:36:47,869 payment_service 259789 123327200876224 Invalid phone number format: 673749868
+ERROR 2026-02-14 19:36:47,869 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:36:54,399 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:36:54,399 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:36:54,399 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:36:54,400 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:36:54,400 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:36:54,400 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:36:54,400 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:36:54,400 payment_service 259789 123327200876224 Original phone input: '673749868'
+INFO 2026-02-14 19:36:54,401 payment_service 259789 123327200876224 After removing non-digits: '673749868'
+ERROR 2026-02-14 19:36:54,401 payment_service 259789 123327200876224 Invalid prefix: 673. Valid MTN: ['650', '651', '652', '653', '654', '655', '656', '657', '658', '659'], Valid Orange: ['690', '691', '692', '693', '694', '695', '696', '697', '698', '699']
+ERROR 2026-02-14 19:36:54,401 payment_service 259789 123327200876224 Invalid phone number format: 673749868
+ERROR 2026-02-14 19:36:54,402 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:37:06,038 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:37:06,038 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:37:06,038 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:37:06,039 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 Original phone input: '673749868'
+INFO 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 After removing non-digits: '673749868'
+ERROR 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 Invalid prefix: 673. Valid MTN: ['650', '651', '652', '653', '654', '655', '656', '657', '658', '659'], Valid Orange: ['690', '691', '692', '693', '694', '695', '696', '697', '698', '699']
+ERROR 2026-02-14 19:37:06,039 payment_service 259789 123327200876224 Invalid phone number format: 673749868
+ERROR 2026-02-14 19:37:06,040 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:37:36,068 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:37:36,068 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 Original phone input: '673749868'
+INFO 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 After removing non-digits: '673749868'
+ERROR 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 Invalid prefix: 673. Valid MTN: ['650', '651', '652', '653', '654', '655', '656', '657', '658', '659'], Valid Orange: ['690', '691', '692', '693', '694', '695', '696', '697', '698', '699']
+ERROR 2026-02-14 19:37:36,069 payment_service 259789 123327200876224 Invalid phone number format: 673749868
+ERROR 2026-02-14 19:37:36,069 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:39:09,698 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:39:09,698 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:39:09,698 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Original phone input: '651185719'
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 After removing non-digits: '651185719'
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Valid MTN prefix: 651
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Final formatted phone: 651185719
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Original phone: 651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224 Initiating payout request:
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   URL: https://live.fapshi.com/payout
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   Payload: {
+  "amount": 100,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "3",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   Phone number being sent: '651185719'
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   Phone number length: 9
+INFO 2026-02-14 19:39:09,699 payment_service 259789 123327200876224   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:39:10,291 payment_service 259789 123327200876224 Payout response status code: 400
+INFO 2026-02-14 19:39:10,293 payment_service 259789 123327200876224 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '2', 'etag': 'W/"20-gszukOUwM7qBWVjvz4Jk+Na2P+c"', 'x-cloud-trace-context': '0fe81ff2bc714d715789a031d7811c5b;o=1', 'date': 'Sat, 14 Feb 2026 19:39:10 GMT', 'server': 'Google Frontend', 'Content-Length': '32'}
+ERROR 2026-02-14 19:39:10,294 payment_service 259789 123327200876224 Payout HTTP Error: 400
+ERROR 2026-02-14 19:39:10,294 payment_service 259789 123327200876224 Payout response body: {"message":"Insufficient funds"}
+INFO 2026-02-14 19:39:10,296 payment_service 259789 123327200876224 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:39:10,297 payment_service 259789 123327200876224 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:39:10,303 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:39:32,770 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Original phone input: '651185719'
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 After removing non-digits: '651185719'
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Valid MTN prefix: 651
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Final formatted phone: 651185719
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Original phone: 651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224 Initiating payout request:
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   URL: https://live.fapshi.com/payout
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   Payload: {
+  "amount": 100,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "3",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   Phone number being sent: '651185719'
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   Phone number length: 9
+INFO 2026-02-14 19:39:32,771 payment_service 259789 123327200876224   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:39:33,305 payment_service 259789 123327200876224 Payout response status code: 400
+INFO 2026-02-14 19:39:33,306 payment_service 259789 123327200876224 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '9', 'etag': 'W/"20-gszukOUwM7qBWVjvz4Jk+Na2P+c"', 'x-cloud-trace-context': 'f92ddbbcaa4e433ced09d04262be8757;o=1', 'date': 'Sat, 14 Feb 2026 19:39:33 GMT', 'server': 'Google Frontend', 'Content-Length': '32'}
+ERROR 2026-02-14 19:39:33,306 payment_service 259789 123327200876224 Payout HTTP Error: 400
+ERROR 2026-02-14 19:39:33,306 payment_service 259789 123327200876224 Payout response body: {"message":"Insufficient funds"}
+INFO 2026-02-14 19:39:33,307 payment_service 259789 123327200876224 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:39:33,308 payment_service 259789 123327200876224 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:39:33,311 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Original phone input: '651185719'
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 After removing non-digits: '651185719'
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Valid MTN prefix: 651
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Final formatted phone: 651185719
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Original phone: 651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224 Initiating payout request:
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224   URL: https://live.fapshi.com/payout
+INFO 2026-02-14 19:41:45,157 payment_service 259789 123327200876224   Payload: {
+  "amount": 100,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "3",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-14 19:41:45,158 payment_service 259789 123327200876224   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 19:41:45,158 payment_service 259789 123327200876224   Phone number being sent: '651185719'
+INFO 2026-02-14 19:41:45,158 payment_service 259789 123327200876224   Phone number length: 9
+INFO 2026-02-14 19:41:45,158 payment_service 259789 123327200876224   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:41:45,708 payment_service 259789 123327200876224 Payout response status code: 400
+INFO 2026-02-14 19:41:45,709 payment_service 259789 123327200876224 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '6', 'etag': 'W/"20-gszukOUwM7qBWVjvz4Jk+Na2P+c"', 'x-cloud-trace-context': '734414dda8a89c07758b7d5b1c42192d;o=1', 'date': 'Sat, 14 Feb 2026 19:41:45 GMT', 'server': 'Google Frontend', 'Content-Length': '32'}
+ERROR 2026-02-14 19:41:45,709 payment_service 259789 123327200876224 Payout HTTP Error: 400
+ERROR 2026-02-14 19:41:45,709 payment_service 259789 123327200876224 Payout response body: {"message":"Insufficient funds"}
+INFO 2026-02-14 19:41:45,710 payment_service 259789 123327200876224 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:41:45,711 payment_service 259789 123327200876224 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:41:45,714 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+INFO 2026-02-14 19:41:53,176 payment_service 259789 123327200876224 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 19:41:53,176 payment_service 259789 123327200876224   Base URL: https://live.fapshi.com
+INFO 2026-02-14 19:41:53,176 payment_service 259789 123327200876224   API Key set: Yes
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224   API User set: Yes
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Processing payout for withdrawal request 2
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Withdrawal amount: 100.00
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Seller: seller@gmail.com
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Original phone input: '651185719'
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 After removing non-digits: '651185719'
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Valid MTN prefix: 651
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Final formatted phone: 651185719
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Original phone: 651185719, Formatted phone: 651185719
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224 Initiating payout request:
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224   URL: https://live.fapshi.com/payout
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224   Payload: {
+  "amount": 100,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "3",
+  "externalId": "withdrawal_2",
+  "message": "Withdrawal payment for request #2"
+}
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 19:41:53,177 payment_service 259789 123327200876224   Phone number being sent: '651185719'
+INFO 2026-02-14 19:41:53,178 payment_service 259789 123327200876224   Phone number length: 9
+INFO 2026-02-14 19:41:53,178 payment_service 259789 123327200876224   Phone number starts with 2376/2377: False
+INFO 2026-02-14 19:41:53,693 payment_service 259789 123327200876224 Payout response status code: 400
+INFO 2026-02-14 19:41:53,694 payment_service 259789 123327200876224 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '8', 'etag': 'W/"20-gszukOUwM7qBWVjvz4Jk+Na2P+c"', 'x-cloud-trace-context': 'faf10e0b37feca4e1f912a299e859de8', 'date': 'Sat, 14 Feb 2026 19:41:53 GMT', 'server': 'Google Frontend', 'Content-Length': '32'}
+ERROR 2026-02-14 19:41:53,694 payment_service 259789 123327200876224 Payout HTTP Error: 400
+ERROR 2026-02-14 19:41:53,694 payment_service 259789 123327200876224 Payout response body: {"message":"Insufficient funds"}
+INFO 2026-02-14 19:41:53,696 payment_service 259789 123327200876224 Payout initiation result: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:41:53,697 payment_service 259789 123327200876224 Payout initiation failed: {'error': 'HTTP 400', 'message': 'Payout HTTP error occurred: 400', 'response_body': '{"message":"Insufficient funds"}'}
+ERROR 2026-02-14 19:41:53,700 log 259789 123327200876224 Internal Server Error: /api/admin/withdrawals/2/approve/
+ERROR 2026-02-14 19:53:09,107 log 259789 123327200876224 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+ERROR 2026-02-14 19:53:10,000 log 259789 123327200876224 Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 308, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/http/request.py", line 205, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '187.77.98.152'. You may need to add '187.77.98.152' to ALLOWED_HOSTS.
+INFO 2026-02-14 20:05:27,885 autoreload 267533 137461655081088 Watching for file changes with StatReloader
+INFO 2026-02-14 20:10:51,275 views 267533 137461548181184 Optimized checkout initiated by user tamanjongjoseph8@gmail.com
+INFO 2026-02-14 20:10:51,281 views 267533 137461548181184 Created OrderItem for product Chair, quantity 4
+INFO 2026-02-14 20:10:51,284 views 267533 137461548181184 Created OrderItem for product computer, quantity 1
+INFO 2026-02-14 20:10:51,285 views 267533 137461548181184 Created pending order 29 with 2 items
+INFO 2026-02-14 20:10:51,287 payment_service 267533 137461548181184 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 20:10:51,287 payment_service 267533 137461548181184   Base URL: https://live.fapshi.com
+INFO 2026-02-14 20:10:51,287 payment_service 267533 137461548181184   API Key set: Yes
+INFO 2026-02-14 20:10:51,288 payment_service 267533 137461548181184   API User set: Yes
+INFO 2026-02-14 20:10:51,288 payment_service 267533 137461548181184 Initiating payment link request:
+INFO 2026-02-14 20:10:51,288 payment_service 267533 137461548181184   URL: https://live.fapshi.com/initiate-pay
+INFO 2026-02-14 20:10:51,289 payment_service 267533 137461548181184   Payload: {
+  "amount": 450,
+  "email": "tamanjongjoseph8@gmail.com",
+  "userId": "2",
+  "externalId": "29",
+  "message": "Payment for order 29",
+  "phone": "+237651185719"
+}
+INFO 2026-02-14 20:10:51,289 payment_service 267533 137461548181184   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_356e328bf417fdd4aa5c982501639768', 'apiuser': 'd0e62704-147c-4407-845b-63a66fb47475'}
+INFO 2026-02-14 20:10:52,035 payment_service 267533 137461548181184 Response status code: 200
+INFO 2026-02-14 20:10:52,036 payment_service 267533 137461548181184 Response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '1', 'etag': 'W/"a6-UK9uyfskWcZqnRakDHmIztPyAxQ"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'ee489dc0fe70f8b13ba4cc88529f8e97;o=1', 'date': 'Sat, 14 Feb 2026 20:10:51 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 20:10:52,037 payment_service 267533 137461548181184 Response data: {
+  "message": "Request successful",
+  "link": "https://checkout.fapshi.com/payment/6990d6cbd2773d240ec16382",
+  "transId": "fcCwtxtY",
+  "dateInitiated": "2026-02-14T20:10:51.923Z"
+}
+INFO 2026-02-14 20:11:19,004 payment_service 267533 137461548181184 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 20:11:19,004 payment_service 267533 137461548181184   Base URL: https://live.fapshi.com
+INFO 2026-02-14 20:11:19,004 payment_service 267533 137461548181184   API Key set: Yes
+INFO 2026-02-14 20:11:19,004 payment_service 267533 137461548181184   API User set: Yes
+INFO 2026-02-14 20:11:19,004 views 267533 137461548181184 Processing webhook for transaction: fcCwtxtY
+INFO 2026-02-14 20:11:19,582 payment_service 267533 137461548181184 Updating seller wallets for order 29
+INFO 2026-02-14 20:11:19,585 payment_service 267533 137461548181184 Processing wallet update for seller sellertwo@gmail.com, amount: 400.00
+INFO 2026-02-14 20:11:19,588 payment_service 267533 137461548181184 Updated wallet for seller sellertwo@gmail.com: 500.00 -> 900.00
+INFO 2026-02-14 20:11:19,590 payment_service 267533 137461548181184 Processing wallet update for seller seller@gmail.com, amount: 50.00
+INFO 2026-02-14 20:11:19,593 payment_service 267533 137461548181184 Updated wallet for seller seller@gmail.com: 850.00 -> 900.00
+INFO 2026-02-14 20:11:19,597 views 267533 137461548181184 Found existing order 29 for payment 28
+INFO 2026-02-14 20:11:19,598 views 267533 137461548181184 Updated order 29 status to processing
+INFO 2026-02-14 20:11:19,599 views 267533 137461548181184 Payment 28 marked as paid for order 29
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 FapshiPaymentService initialized for payout:
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888   Base URL: https://live.fapshi.com
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888   API Key set: Yes
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888   API User set: Yes
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Processing payout for withdrawal request 3
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Withdrawal amount: 500.00
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Seller: seller@gmail.com
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Original phone input: '651185719'
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 After removing non-digits: '651185719'
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Valid MTN prefix: 651
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Final formatted phone: 651185719
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Original phone: 651185719, Formatted phone: 651185719
+INFO 2026-02-14 20:18:35,654 payment_service 267533 137461556573888 Initiating payout request:
+INFO 2026-02-14 20:18:35,655 payment_service 267533 137461556573888   URL: https://live.fapshi.com/payout
+INFO 2026-02-14 20:18:35,655 payment_service 267533 137461556573888   Payload: {
+  "amount": 500,
+  "phone": "651185719",
+  "medium": "mobile money",
+  "name": "seller",
+  "email": "seller@gmail.com",
+  "userId": "3",
+  "externalId": "withdrawal_3",
+  "message": "Withdrawal payment for request #3"
+}
+INFO 2026-02-14 20:18:35,655 payment_service 267533 137461556573888   Headers: {'Content-Type': 'application/json', 'apikey': 'FAK_4d7ee6d5fd639053666918241c856fc5', 'apiuser': 'f2bc3b23-f166-4b86-a69f-1f0d60bd8455'}
+INFO 2026-02-14 20:18:35,655 payment_service 267533 137461556573888   Phone number being sent: '651185719'
+INFO 2026-02-14 20:18:35,655 payment_service 267533 137461556573888   Phone number length: 9
+INFO 2026-02-14 20:18:35,655 payment_service 267533 137461556573888   Phone number starts with 2376/2377: False
+INFO 2026-02-14 20:18:36,408 payment_service 267533 137461556573888 Payout response status code: 200
+INFO 2026-02-14 20:18:36,408 payment_service 267533 137461556573888 Payout response headers: {'content-type': 'application/json; charset=utf-8', 'vary': 'Accept-Encoding', 'access-control-allow-origin': '*', 'content-security-policy': "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests", 'cross-origin-opener-policy': 'same-origin', 'cross-origin-resource-policy': 'same-origin', 'origin-agent-cluster': '?1', 'referrer-policy': 'no-referrer', 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-permitted-cross-domain-policies': 'none', 'x-xss-protection': '0', 'access-control-allow-headers': 'Origin, Content-Type, Accept, apiuser, apikey', 'ratelimit-limit': '20', 'ratelimit-remaining': '19', 'ratelimit-reset': '8', 'etag': 'W/"56-eJ4Lg17lNMt6M+TZjt1rVEgdpac"', 'content-encoding': 'gzip', 'x-cloud-trace-context': 'd297501fd4c94df102cd1e33a700f196;o=1', 'date': 'Sat, 14 Feb 2026 20:18:36 GMT', 'server': 'Google Frontend', 'Transfer-Encoding': 'chunked'}
+INFO 2026-02-14 20:18:36,408 payment_service 267533 137461556573888 Payout response data: {
+  "message": "Accepted",
+  "transId": "LAGGXFYX",
+  "dateInitiated": "2026-02-14T20:18:36.303Z"
+}
+INFO 2026-02-14 20:18:36,409 payment_service 267533 137461556573888 Payout initiation result: {'message': 'Accepted', 'transId': 'LAGGXFYX', 'dateInitiated': '2026-02-14T20:18:36.303Z'}
+INFO 2026-02-14 20:18:36,411 payment_service 267533 137461556573888 Payout initiated successfully
+INFO 2026-02-14 20:18:38,667 payment_service 267533 137461556573888 FapshiPaymentService initialized for payment:
+INFO 2026-02-14 20:18:38,668 payment_service 267533 137461556573888   Base URL: https://live.fapshi.com
+INFO 2026-02-14 20:18:38,668 payment_service 267533 137461556573888   API Key set: Yes
+INFO 2026-02-14 20:18:38,668 payment_service 267533 137461556573888   API User set: Yes
+INFO 2026-02-14 20:18:38,668 views 267533 137461556573888 Processing webhook for transaction: LAGGXFYX
+WARNING 2026-02-14 20:19:49,296 log 267533 137461556573888 Not Found: /favicon.ico
+WARNING 2026-02-14 20:19:50,161 log 267533 137461556573888 Not Found: /sitemap.xml
+WARNING 2026-02-14 20:19:50,177 log 267533 137461556573888 Not Found: /robots.txt
+WARNING 2026-02-14 20:23:57,045 log 267533 137461556573888 Not Found: /index.php
+ERROR 2026-02-14 20:23:57,268 log 267533 137461556573888 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/admin/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-02-14 20:23:57,862 log 267533 137461556573888 Internal Server Error: /api
+Traceback (most recent call last):
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/utils/deprecation.py", line 311, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 109, in process_response
+    self.get_full_path_with_slash(request)
+  File "/home/infinitemarket/applications/E_COMMERCE/myenv/lib/python3.12/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to infinitemarket.cloud:443/api/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.

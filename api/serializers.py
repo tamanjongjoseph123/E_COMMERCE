@@ -257,13 +257,15 @@ class OrderSerializer(serializers.ModelSerializer):
 
 
 class SellerOrderSerializer(serializers.ModelSerializer):
-    """Custom serializer for seller orders that shows only seller's item totals"""
+    """Custom serializer for seller orders that shows only seller's item totals and progress"""
     buyer_name = serializers.CharField(source='buyer.name', read_only=True)
     buyer_email = serializers.CharField(source='buyer.email', read_only=True)
     items_count = serializers.SerializerMethodField()
     payment_id = serializers.SerializerMethodField()
     total_amount = serializers.SerializerMethodField()  # Seller's total only
     full_order_total = serializers.ReadOnlyField(source='total_amount')  # Full order total
+    status = serializers.SerializerMethodField()  # Seller's item status only
+    seller_progress = serializers.SerializerMethodField()  # Seller's item progress only
     
     class Meta:
         model = Order
@@ -271,7 +273,7 @@ class SellerOrderSerializer(serializers.ModelSerializer):
             'id', 'buyer_name', 'buyer_email', 'items_count', 'total_amount', 'full_order_total', 
             'status', 'payment_status', 'delivery_address', 'delivery_city', 'delivery_state', 
             'delivery_postal_code', 'delivery_phone', 'delivery_notes',
-            'delivered_at', 'created_at', 'updated_at', 'payment_id'
+            'delivered_at', 'created_at', 'updated_at', 'payment_id', 'seller_progress'
         ]
         read_only_fields = ['id', 'delivered_at', 'created_at', 'updated_at', 'payment_id']
     
@@ -280,6 +282,21 @@ class SellerOrderSerializer(serializers.ModelSerializer):
             return obj.payment.id if hasattr(obj, 'payment') and obj.payment else None
         except Payment.DoesNotExist:
             return None
+    
+    def get_status(self, obj):
+        """Get the status of this seller's items in the order"""
+        request = self.context.get('request')
+        if request and hasattr(request, 'user') and request.user.is_seller:
+            if hasattr(obj, '_prefetched_objects_cache') and 'items' in obj._prefetched_objects_cache:
+                seller_items = [item for item in obj._prefetched_objects_cache['items'] if item.seller == request.user]
+                if seller_items:
+                    # Return the status of the seller's items (they should all have the same status)
+                    return seller_items[0].status
+            else:
+                seller_item = obj.items.filter(seller=request.user).first()
+                if seller_item:
+                    return seller_item.status
+        return obj.status  # Fallback to overall order status
     
     def get_items_count(self, obj):
         # Count only this seller's items
@@ -309,6 +326,21 @@ class SellerOrderSerializer(serializers.ModelSerializer):
                 seller_total = obj.items.filter(seller=request.user).aggregate(total=Sum('subtotal'))['total']
                 return Decimal(str(seller_total)) if seller_total is not None else Decimal('0.00')
         return Decimal(str(obj.total_amount)) if obj.total_amount is not None else Decimal('0.00')
+    
+    def get_seller_progress(self, obj):
+        """Get the status of this seller's items in the order"""
+        request = self.context.get('request')
+        if request and hasattr(request, 'user') and request.user.is_seller:
+            if hasattr(obj, '_prefetched_objects_cache') and 'items' in obj._prefetched_objects_cache:
+                seller_items = [item for item in obj._prefetched_objects_cache['items'] if item.seller == request.user]
+                if seller_items:
+                    # Return the status of the seller's items (they should all have the same status)
+                    return seller_items[0].status
+            else:
+                seller_item = obj.items.filter(seller=request.user).first()
+                if seller_item:
+                    return seller_item.status
+        return obj.status  # Fallback to overall order status
 
 
 class TransactionSerializer(serializers.ModelSerializer):

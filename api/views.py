@@ -1320,12 +1320,18 @@ def update_order_status(request, order_id):
                 new_order_status = 'processing'
         elif status_counts['pending'] > 0:
             # There are pending items - order cannot be shipped or delivered
-            # Force order status to processing if there are pending items
-            if order.status in ['shipped', 'delivered']:
-                # Downgrade from shipped/delivered because there are pending items
+            # Only downgrade if order is currently shipped/delivered and there are no shipped/delivered items
+            if order.status in ['shipped', 'delivered'] and status_counts['shipped'] == 0 and status_counts['delivered'] == 0:
+                # Downgrade from shipped/delivered because all items are now pending
                 new_order_status = 'processing' if status_counts['processing'] > 0 else 'pending'
             else:
-                new_order_status = 'processing' if status_counts['processing'] > 0 else 'pending'
+                # Keep current status or upgrade based on processing items
+                if status_counts['processing'] > 0:
+                    new_order_status = 'processing'
+                elif status_counts['shipped'] > 0 or status_counts['delivered'] > 0:
+                    new_order_status = 'shipped'
+                else:
+                    new_order_status = 'pending'
         else:
             # All items are pending
             if order.status not in ['shipped', 'delivered']:  # Don't downgrade from shipped/delivered
@@ -1528,7 +1534,6 @@ def my_orders(request):
         orders_data.append({
             'id': order.id,
             'total_amount': str(order.total_amount),
-            'status': order.status,
             'payment_status': order.payment_status,
             'delivery_address': order.delivery_address,
             'delivery_phone': order.delivery_phone,
